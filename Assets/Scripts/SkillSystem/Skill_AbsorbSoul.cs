@@ -12,6 +12,13 @@ public class Skill_AbsorbSoul : Skill_Base
         base.Awake();
     }
 
+    public override void SetSkillUpgrade(Skill_DataSO skillData)
+    {
+        base.SetSkillUpgrade(skillData);
+
+        soul = skillData.skillObjectPrefab;
+    }
+
     public override void TryUseSkill()
     {
         if (!CanUseSkill())

@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class UI_SkillCard : MonoBehaviour
 {
+    private UI ui;
+
     [SerializeField] private Skill_DataSO skillData;
     [SerializeField] private Outline[] outlines;
 
@@ -13,6 +15,11 @@ public class UI_SkillCard : MonoBehaviour
     [SerializeField] private float flipDuration = 0.4f;
 
 
+    private void Awake()
+    {
+        ui = GetComponentInParent<UI>();
+    }
+
     private void Start()
     {
         Flip();
@@ -20,7 +27,8 @@ public class UI_SkillCard : MonoBehaviour
 
     public void ChooseCard()
     {
-        UI.instance.player.skillManager.GetSkillByType(skillData.skillType).SetSkillUpgrade(skillData);
+        ui.player.skillManager.GetSkillByType(skillData.skillType).SetSkillUpgrade(skillData);
+        ui.SwitchToIngameUI();
     }
 
     public void SetCardInfo(Skill_DataSO skillData, string colorText)

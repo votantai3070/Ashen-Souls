@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillCard.cs" />
     <Compile Include="Assets\Scripts\Enum\CardRarityType.cs" />
     <Compile Include="Assets\Scripts\SpawnSystem\SpawnSystem.cs" />
+    <Compile Include="Assets\Scripts\SkillSystem\Skill_SoulBurst.cs" />
     <Compile Include="Assets\Scripts\StateMachine.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_ExplodeState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_FireSoul.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Assets\Scripts\Data\Skill_DataSO.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_DashState.cs" />
     <Compile Include="Assets\Scripts\UI\UI.cs" />
+    <Compile Include="Assets\Scripts\SkillSystem\SkillObject_SoulBurst.cs" />
     <Compile Include="Assets\Scripts\Entity\EntityState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSould_ShootAntecipationState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_CreateState.cs" />

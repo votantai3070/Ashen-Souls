@@ -7,8 +7,6 @@ public class SkillObject_SpinningSword : SkillObject_Base
 
     private float orbitRadius;
     private float orbitSpeed;
-    private float duration;
-    private float spawnTime;
     private float currentAngle;
 
     protected override void Awake()
@@ -61,7 +59,7 @@ public class SkillObject_SpinningSword : SkillObject_Base
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
-    private void CheckDuration()
+    protected override void CheckDuration()
     {
         if (Time.time >= spawnTime + duration)
         {

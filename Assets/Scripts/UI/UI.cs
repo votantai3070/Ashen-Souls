@@ -57,4 +57,10 @@ public class UI : MonoBehaviour
         SwitchTo(skillBoardUI.gameObject);
         StopPlayerControlIfNeeded();
     }
+
+    public void SwitchToIngameUI()
+    {
+        StopPlayerControls(false);
+        SwitchTo(ingameUI.gameObject);
+    }
 }

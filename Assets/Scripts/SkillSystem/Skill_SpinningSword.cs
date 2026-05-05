@@ -7,7 +7,6 @@ public class Skill_SpinningSword : Skill_Base
     [SerializeField] private GameObject swordPrefab;
     [SerializeField] private float orbitRadius = 1.5f;
     [SerializeField] private float orbitSpeed = 180f;
-    [SerializeField] private float duration = 5f;
     [SerializeField] private int swordCount = 3;
 
     [SerializeField] private List<SkillObject_SpinningSword> activeSwords = new();
@@ -15,6 +14,17 @@ public class Skill_SpinningSword : Skill_Base
     protected override void Awake()
     {
         base.Awake();
+    }
+
+    public override void SetSkillUpgrade(Skill_DataSO skillData)
+    {
+        base.SetSkillUpgrade(skillData);
+
+        orbitRadius = skillData.orbitRadius;
+        orbitSpeed = skillData.orbitSpeed;
+        duration = skillData.duration;
+        swordCount = skillData.swordCount;
+        swordPrefab = skillData.skillObjectPrefab;
     }
 
     public override void TryUseSkill()
@@ -25,11 +35,16 @@ public class Skill_SpinningSword : Skill_Base
 
         if (activeSwords.Count > 0) return;
 
-        if (Vector2.Distance(target.position, transform.root.position) < checkEnemyRadius)
+        if (CheckEnemyRadius())
         {
             if (upgradeType == SkillUpgradeType.SpinningSword)
             {
-                Debug.Log("Spawn sword");
+                SpawnSwords(swordCount);
+                SetSkillOnCooldown();
+            }
+
+            if (upgradeType == SkillUpgradeType.SpinningSwordUpgrade)
+            {
                 SpawnSwords(swordCount);
                 SetSkillOnCooldown();
             }

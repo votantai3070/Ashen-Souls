@@ -20,6 +20,8 @@ public class Skill_Base : MonoBehaviour
     public float checkDamageRadius;
     private float lastTimeUsed;
 
+    [SerializeField] protected float duration = 5f;
+
     protected virtual void Awake()
     {
         skillManager = GetComponentInParent<Player_SkillManager>();
@@ -32,7 +34,7 @@ public class Skill_Base : MonoBehaviour
 
     }
 
-    public void SetSkillUpgrade(Skill_DataSO skillData)
+    public virtual void SetSkillUpgrade(Skill_DataSO skillData)
     {
         UpgradeData upgrade = skillData.upgradeData;
         upgradeType = upgrade.upgradeType;
@@ -119,4 +121,7 @@ public class Skill_Base : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(targetCheck.position, checkEnemyRadius);
     }
+
+
+    protected bool CheckEnemyRadius() => Vector2.Distance(target.position, transform.root.position) < checkEnemyRadius;
 }

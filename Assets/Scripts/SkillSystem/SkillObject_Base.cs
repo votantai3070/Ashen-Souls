@@ -25,6 +25,10 @@ public class SkillObject_Base : MonoBehaviour
     protected bool targetGoHit;
     protected SkillUpgradeType upgradeType;
 
+    protected float spawnTime;
+    protected float duration;
+
+
     protected virtual void Awake()
     {
         col = GetComponent<Collider2D>();
@@ -105,6 +109,10 @@ public class SkillObject_Base : MonoBehaviour
         rb.simulated = active;
     }
 
+    protected virtual void CheckDuration()
+    {
+
+    }
     protected virtual void OnDrawGizmos()
     {
         if (targetCheck == null)

@@ -5,12 +5,20 @@ using UnityEngine;
 public class Skill_DataSO : ScriptableObject
 {
     public string saveId;
+    public GameObject skillObjectPrefab;
+
 
     [Header("Skill Description")]
     public string displayName;
     [TextArea(3, 10)]
     public string description;
     public Sprite icon;
+    public float duration = 5f; // Duration of skill exist
+
+    [Header("Spinning Sword Skill")]
+    public float orbitRadius = 1.5f;
+    public float orbitSpeed = 180f;
+    public int swordCount = 3;
 
     [Header("Upgrade")]
     public SkillType skillType;

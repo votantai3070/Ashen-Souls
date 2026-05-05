@@ -5,9 +5,20 @@ public class Skill_FireSoul : Skill_Base
     [Header("Fire Soul Ball Config")]
     [SerializeField] private GameObject fireSoulGo;
 
+    private GameObject fireSoul;
+
     protected override void Awake()
     {
         base.Awake();
+    }
+
+    public override void SetSkillUpgrade(Skill_DataSO skillData)
+    {
+        base.SetSkillUpgrade(skillData);
+
+        fireSoulGo = skillData.skillObjectPrefab;
+        duration = skillData.duration;
+
     }
 
     public override void TryUseSkill()
@@ -17,7 +28,7 @@ public class Skill_FireSoul : Skill_Base
         if (!CanUseSkill())
             return;
 
-        if (Vector2.Distance(target.position, transform.root.position) < checkEnemyRadius)
+        if (CheckEnemyRadius())
         {
             if (upgradeType == SkillUpgradeType.FireSoul)
             {
@@ -35,15 +46,14 @@ public class Skill_FireSoul : Skill_Base
     // Create fire soul
     public void CreateFireSoul(Vector3 scale)
     {
-        GameObject fireSoul = ObjectPool.instance.Spawn(fireSoulGo.name, transform.position, transform.rotation);
+        fireSoul = ObjectPool.instance.Spawn(fireSoulGo.name, transform.position, transform.rotation);
         fireSoul.transform.localScale = scale;
         fireSoul.GetComponent<SkillObject_FireSoul>().SetupFireSoul(this);
     }
 
-    protected override void OnDrawGizmos()
+    public void OnSwordExpired()
     {
-        base.OnDrawGizmos();
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(targetCheck.position, checkEnemyRadius);
+        fireSoul = null;
     }
+
 }

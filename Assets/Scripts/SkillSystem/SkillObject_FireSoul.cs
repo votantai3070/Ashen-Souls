@@ -37,6 +37,8 @@ public class SkillObject_FireSoul : SkillObject_Base
         checkEnemyRadius = fireSoulManager.checkEnemyRadius;
         checkDamageRadius = fireSoulManager.checkDamageRadius;
         entity = fireSoulManager.entity;
+
+        spawnTime = Time.time;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -54,5 +56,14 @@ public class SkillObject_FireSoul : SkillObject_Base
         ObjectPool.instance.Despawn(gameObject);
 
         SetPhysicsActive(false);
+    }
+
+    protected override void CheckDuration()
+    {
+        if (Time.time > spawnTime + duration)
+        {
+            fireSoulManager.OnSwordExpired();
+            ObjectPool.instance.Despawn(gameObject);
+        }
     }
 }

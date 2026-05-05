@@ -10,27 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b8e413113d6c5a499648b98dc13fe60, type: 3}
-  m_Name: Skill - FireSoulBall
+  m_Name: Skill - SpinningSword
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  saveId: f8cda36d25245d04b90e589ac332c889
-  skillObjectPrefab: {fileID: 1168510075856658422, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
-  displayName: Fire Soul Ball
-  description: Launch a fire soul toward an enemy, dealing damage and applying a
-    burn over time.
+  saveId: 6f93ee8d2ae5e02469fd25a468a93217
+  skillObjectPrefab: {fileID: 4526101274153675507, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+  displayName: Spinning Sword
+  description: Swing your blade in a circle, dealing damage to all nearby enemies.
   icon: {fileID: 0}
-  duration: 5
+  duration: 3
   orbitRadius: 1.5
   orbitSpeed: 180
-  swordCount: 3
-  skillType: 5
+  swordCount: 2
+  skillType: 4
   upgradeData:
-    upgradeType: 11
-    cooldown: 2
-    distanceToAttack: 5
-    attackRadius: 3
-    speed: 5
+    upgradeType: 9
+    cooldown: 5
+    distanceToAttack: 3
+    attackRadius: 0.6
+    speed: 0
   upgradeBoostChance: 30
   cardType: 0
-  skillRarity: 81
-  skillRollChance: 81.2
-  maxSkillRollChance: 81.2
+  skillRarity: 100
+  skillRollChance: 65
+  maxSkillRollChance: 65
