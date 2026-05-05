@@ -1581,6 +1581,9 @@ MonoBehaviour:
   - tag: SkillObject_SpinningSword
     prefab: {fileID: 4526101274153675507, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
     initialSize: 3
+  - tag: SkillObject_SoulBurst
+    prefab: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+    initialSize: 3
 --- !u!4 &597912176
 Transform:
   m_ObjectHideFlags: 0
@@ -2390,6 +2393,7 @@ GameObject:
   - component: {fileID: 1261357901}
   - component: {fileID: 1261357902}
   - component: {fileID: 1261357903}
+  - component: {fileID: 1261357904}
   m_Layer: 7
   m_Name: Skill
   m_TagString: Untagged
@@ -2486,12 +2490,37 @@ MonoBehaviour:
   speed: 5
   checkEnemyRadius: 3
   checkDamageRadius: 0.6
-  duration: 5
+  duration: 3
   swordPrefab: {fileID: 4526101274153675507, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
   orbitRadius: 1.5
   orbitSpeed: 180
   swordCount: 2
   activeSwords: []
+--- !u!114 &1261357904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261357899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a85a82d90f156646b175438ccfcdf26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Skill_SoulBurst
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 64
+  target: {fileID: 0}
+  targetCheck: {fileID: 1261357900}
+  skillType: 8
+  upgradeType: 17
+  cooldown: 5
+  speed: 1
+  checkEnemyRadius: 2
+  checkDamageRadius: 3
+  duration: 5
+  soulExplodeGo: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
 --- !u!1 &1316584240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3192,7 +3221,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -412855583
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4334783836991956000, guid: 8cda01da4e9d1b44abfdbe92194946d5, type: 3}

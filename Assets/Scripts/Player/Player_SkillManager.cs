@@ -5,6 +5,7 @@ public class Player_SkillManager : MonoBehaviour
     public Skill_AbsorbSoul absorbSoul { get; private set; }
     public Skill_FireSoul fireSoul { get; private set; }
     public Skill_SpinningSword spinningSword { get; private set; }
+    public Skill_SoulBurst burst { get; private set; }
 
     public Skill_Base[] allSkills { get; private set; }
 
@@ -14,6 +15,7 @@ public class Player_SkillManager : MonoBehaviour
         absorbSoul = GetComponentInChildren<Skill_AbsorbSoul>();
         fireSoul = GetComponentInChildren<Skill_FireSoul>();
         spinningSword = GetComponentInChildren<Skill_SpinningSword>();
+        burst = GetComponentInChildren<Skill_SoulBurst>();
 
         allSkills = GetComponentsInChildren<Skill_Base>();
     }
@@ -40,6 +42,7 @@ public class Player_SkillManager : MonoBehaviour
             case SkillType.AbsorbSoul: return absorbSoul;
             case SkillType.FireSoul: return fireSoul;
             case SkillType.SpinningSword: return spinningSword;
+            case SkillType.SoulBurst: return burst;
 
             default:
                 Debug.Log($"Skill type {type} is not implemented yet.");

@@ -54,14 +54,14 @@ TagManager:
   - name: Item
     uniqueID: 2033960561
     locked: 0
-  - name: Player
-    uniqueID: 3882111713
-    locked: 0
   - name: Spell
     uniqueID: 3564138067
     locked: 0
   - name: Enemy
     uniqueID: 2604513843
+    locked: 0
+  - name: Player
+    uniqueID: 3882111713
     locked: 0
   m_RenderingLayers:
   - Default

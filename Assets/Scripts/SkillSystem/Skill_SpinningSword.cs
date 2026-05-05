@@ -22,16 +22,13 @@ public class Skill_SpinningSword : Skill_Base
 
         orbitRadius = skillData.orbitRadius;
         orbitSpeed = skillData.orbitSpeed;
-        duration = skillData.duration;
         swordCount = skillData.swordCount;
         swordPrefab = skillData.skillObjectPrefab;
     }
 
     public override void TryUseSkill()
     {
-        target = FindClosestTarget();
-
-        if (CanUseSkill() == false) return;
+        base.TryUseSkill();
 
         if (activeSwords.Count > 0) return;
 

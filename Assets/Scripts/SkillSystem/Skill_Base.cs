@@ -31,7 +31,10 @@ public class Skill_Base : MonoBehaviour
 
     public virtual void TryUseSkill()
     {
+        target = FindClosestTarget();
 
+        if (CanUseSkill() == false)
+            return;
     }
 
     public virtual void SetSkillUpgrade(Skill_DataSO skillData)
@@ -43,6 +46,9 @@ public class Skill_Base : MonoBehaviour
         checkEnemyRadius = upgrade.distanceToAttack;
         checkDamageRadius = upgrade.attackRadius;
         skillData.SetUpgrade(true);
+        speed = skillData.speed;
+        duration = skillData.duration;
+
         //damageScaleData = upgrade.damageScale;
 
         //player.ui.ingameUI.GetSkillSlot(skillType).SetupSkillSlot(skillData);
@@ -113,6 +119,16 @@ public class Skill_Base : MonoBehaviour
         return Physics2D.OverlapCircleAll(t.position, radius, whatIsEnemy);
     }
 
+    protected bool CheckEnemyRadius()
+    {
+        if (target == null)
+            return false;
+
+        return Vector2.Distance(target.position, transform.root.position) < checkEnemyRadius;
+    }
+
+
+
     protected virtual void OnDrawGizmos()
     {
         if (targetCheck == null)
@@ -123,5 +139,4 @@ public class Skill_Base : MonoBehaviour
     }
 
 
-    protected bool CheckEnemyRadius() => Vector2.Distance(target.position, transform.root.position) < checkEnemyRadius;
 }

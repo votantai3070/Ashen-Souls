@@ -29,9 +29,17 @@ public class SkillObject_FireSoul : SkillObject_Base
         stateMachine.Initialize(createState);
     }
 
-    public void SetupFireSoul(Skill_FireSoul fireSoulManager)
+    protected override void Update()
+    {
+        CheckDuration();
+        DamageEnemiesInRadius(transform, entity.transform);
+    }
+
+    public void SetupFireSoul(Skill_FireSoul fireSoulManager, LayerMask enemyLayer)
     {
         this.fireSoulManager = fireSoulManager;
+        whatIsEnemy = enemyLayer;
+
         speed = fireSoulManager.speed;
         target = fireSoulManager.target;
         checkEnemyRadius = fireSoulManager.checkEnemyRadius;
@@ -39,14 +47,6 @@ public class SkillObject_FireSoul : SkillObject_Base
         entity = fireSoulManager.entity;
 
         spawnTime = Time.time;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!collision.CompareTag("Enemy"))
-            return;
-
-        DamageEnemiesInRadius(transform, fireSoulManager.entity.transform);
     }
 
     public void OnHit()
@@ -62,7 +62,7 @@ public class SkillObject_FireSoul : SkillObject_Base
     {
         if (Time.time > spawnTime + duration)
         {
-            fireSoulManager.OnSwordExpired();
+            fireSoulManager.OnSoulBurstExpired();
             ObjectPool.instance.Despawn(gameObject);
         }
     }

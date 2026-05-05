@@ -86,7 +86,6 @@ public class Entity_Stats : MonoBehaviour
         float baseMaxHealth = resource.maxHealth.GetValue();
         float bonusMaxHealth = major.vitality.GetValue() * 5; // Assuming each point of vitality gives 5 additional health
 
-        Debug.Log("Bonus Max Health: " + bonusMaxHealth);
         float finalMaxHealth = baseMaxHealth + bonusMaxHealth;
 
         return finalMaxHealth;

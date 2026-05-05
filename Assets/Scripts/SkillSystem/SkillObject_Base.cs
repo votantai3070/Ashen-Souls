@@ -28,7 +28,6 @@ public class SkillObject_Base : MonoBehaviour
     protected float spawnTime;
     protected float duration;
 
-
     protected virtual void Awake()
     {
         col = GetComponent<Collider2D>();
@@ -113,6 +112,9 @@ public class SkillObject_Base : MonoBehaviour
     {
 
     }
+
+    protected void SetSpeedAnim(float speed) => anim.SetFloat("AttackSpeed", speed);
+
     protected virtual void OnDrawGizmos()
     {
         if (targetCheck == null)

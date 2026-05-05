@@ -14,6 +14,7 @@ public class Skill_DataSO : ScriptableObject
     public string description;
     public Sprite icon;
     public float duration = 5f; // Duration of skill exist
+    public float speed = 1f;
 
     [Header("Spinning Sword Skill")]
     public float orbitRadius = 1.5f;

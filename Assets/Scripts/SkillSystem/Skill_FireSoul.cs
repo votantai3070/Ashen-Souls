@@ -17,15 +17,13 @@ public class Skill_FireSoul : Skill_Base
         base.SetSkillUpgrade(skillData);
 
         fireSoulGo = skillData.skillObjectPrefab;
-        duration = skillData.duration;
-
     }
 
     public override void TryUseSkill()
     {
-        target = FindClosestTarget();
+        base.TryUseSkill();
 
-        if (!CanUseSkill())
+        if (fireSoul != null && upgradeType == SkillUpgradeType.FireSoul)
             return;
 
         if (CheckEnemyRadius())
@@ -48,10 +46,10 @@ public class Skill_FireSoul : Skill_Base
     {
         fireSoul = ObjectPool.instance.Spawn(fireSoulGo.name, transform.position, transform.rotation);
         fireSoul.transform.localScale = scale;
-        fireSoul.GetComponent<SkillObject_FireSoul>().SetupFireSoul(this);
+        fireSoul.GetComponent<SkillObject_FireSoul>().SetupFireSoul(this, whatIsEnemy);
     }
 
-    public void OnSwordExpired()
+    public void OnSoulBurstExpired()
     {
         fireSoul = null;
     }
