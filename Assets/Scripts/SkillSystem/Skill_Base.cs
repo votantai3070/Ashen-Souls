@@ -59,19 +59,19 @@ public class Skill_Base : MonoBehaviour
     {
         if (upgradeType == SkillUpgradeType.None)
         {
-            //Debug.Log("No Upgrade");
+            Debug.Log("No Upgrade");
             return false;
         }
 
         if (target == null)
         {
-            //Debug.Log("No Target");
+            Debug.Log("No Target");
             return false;
         }
 
         if (OnCooldown())
         {
-            //Debug.Log("On Cooldown");
+            Debug.Log("On Cooldown");
             return false;
         }
 

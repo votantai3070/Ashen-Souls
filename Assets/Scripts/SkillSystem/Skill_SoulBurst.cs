@@ -38,7 +38,7 @@ public class Skill_SoulBurst : Skill_Base
     private void CreateSoulExplode()
     {
         soulExplosionGo = ObjectPool.instance.Spawn(soulExplodeGo.name, transform.position, Quaternion.identity);
-        soulExplosionGo.GetComponent<SkillObject_SoulBurst>().SetSoulBurst(this, duration, whatIsEnemy);
+        soulExplosionGo.GetComponent<SkillObject_SoulBurst>().SetSoulBurst(this, whatIsEnemy);
     }
 
     public void OnSoulBurstExpired()

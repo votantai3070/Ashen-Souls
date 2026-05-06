@@ -23,7 +23,7 @@ public class Skill_FireSoul : Skill_Base
     {
         base.TryUseSkill();
 
-        if (fireSoul != null && upgradeType == SkillUpgradeType.FireSoul)
+        if (fireSoul != null)
             return;
 
         if (CheckEnemyRadius())
@@ -46,7 +46,7 @@ public class Skill_FireSoul : Skill_Base
     {
         fireSoul = ObjectPool.instance.Spawn(fireSoulGo.name, transform.position, transform.rotation);
         fireSoul.transform.localScale = scale;
-        fireSoul.GetComponent<SkillObject_FireSoul>().SetupFireSoul(this, whatIsEnemy);
+        fireSoul.GetComponent<SkillObject_FireSoul>().SetupFireSoul(this, duration, whatIsEnemy);
     }
 
     public void OnSoulBurstExpired()

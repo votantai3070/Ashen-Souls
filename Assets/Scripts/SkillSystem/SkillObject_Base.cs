@@ -82,7 +82,10 @@ public class SkillObject_Base : MonoBehaviour
             {
                 Debug.Log("Gay dmg");
                 if (upgradeType == SkillUpgradeType.FireSoul || upgradeType == SkillUpgradeType.FireSoulUpgrade)
+                {
+                    Debug.Log("Fire soul gay dmg");
                     SetPhysicsActive(false);
+                }
                 //lastTarget = target.transform;
                 //target.GetComponent<Entity>().ElementalVfx(defaultDuration, element);
                 //player?.playerVfx.GetImapctVfx(target.transform, attackData.isCrit);

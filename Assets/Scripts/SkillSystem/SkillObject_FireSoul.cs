@@ -31,20 +31,24 @@ public class SkillObject_FireSoul : SkillObject_Base
 
     protected override void Update()
     {
+        base.Update();
+
         CheckDuration();
-        DamageEnemiesInRadius(transform, entity.transform);
     }
 
-    public void SetupFireSoul(Skill_FireSoul fireSoulManager, LayerMask enemyLayer)
+    public void SetupFireSoul(Skill_FireSoul fireSoulManager, float duration, LayerMask enemyLayer)
     {
         this.fireSoulManager = fireSoulManager;
         whatIsEnemy = enemyLayer;
+        entity = fireSoulManager.entity;
 
         speed = fireSoulManager.speed;
         target = fireSoulManager.target;
         checkEnemyRadius = fireSoulManager.checkEnemyRadius;
         checkDamageRadius = fireSoulManager.checkDamageRadius;
-        entity = fireSoulManager.entity;
+        this.duration = duration;
+
+        Debug.Log("Duration: " + duration);
 
         spawnTime = Time.time;
     }
@@ -53,9 +57,17 @@ public class SkillObject_FireSoul : SkillObject_Base
     {
         stateMachine.ChangeState(createState);
         target = null;
+        fireSoulManager.OnSoulBurstExpired();
         ObjectPool.instance.Despawn(gameObject);
 
         SetPhysicsActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision == null || !collision.CompareTag("Enemy")) return;
+
+        DamageEnemiesInRadius(transform, entity.transform);
     }
 
     protected override void CheckDuration()

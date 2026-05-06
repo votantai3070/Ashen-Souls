@@ -2460,8 +2460,8 @@ MonoBehaviour:
   target: {fileID: 0}
   targetCheck: {fileID: 1261357900}
   skillType: 5
-  upgradeType: 0
-  cooldown: 3
+  upgradeType: 11
+  cooldown: 5
   speed: 5
   checkEnemyRadius: 10
   checkDamageRadius: 3
@@ -2514,7 +2514,7 @@ MonoBehaviour:
   target: {fileID: 0}
   targetCheck: {fileID: 1261357900}
   skillType: 8
-  upgradeType: 17
+  upgradeType: 0
   cooldown: 5
   speed: 1
   checkEnemyRadius: 2

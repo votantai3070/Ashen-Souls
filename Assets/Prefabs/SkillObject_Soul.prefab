@@ -165,9 +165,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   targetCheck: {fileID: 514162354064977459}
-  checkDamageRadius: 1
   checkEnemyRadius: 3
-  defaultDuration: 2
+  checkDamageRadius: 1
+  attackCooldownGuard: 0.1
   absorbSoulManager: {fileID: 0}
 --- !u!50 &1857434937596383297
 Rigidbody2D:
