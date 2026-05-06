@@ -29,12 +29,14 @@ public class Skill_Base : MonoBehaviour
         lastTimeUsed = lastTimeUsed - cooldown;
     }
 
-    public virtual void TryUseSkill()
+    public virtual bool TryUseSkill()
     {
         target = FindClosestTarget();
 
         if (CanUseSkill() == false)
-            return;
+            return false;
+
+        return true;
     }
 
     public virtual void SetSkillUpgrade(Skill_DataSO skillData)
@@ -46,7 +48,6 @@ public class Skill_Base : MonoBehaviour
         checkEnemyRadius = upgrade.distanceToAttack;
         checkDamageRadius = upgrade.attackRadius;
         skillData.SetUpgrade(true);
-        speed = skillData.speed;
         duration = skillData.duration;
 
         //damageScaleData = upgrade.damageScale;

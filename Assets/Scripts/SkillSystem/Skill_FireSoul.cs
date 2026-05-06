@@ -19,12 +19,13 @@ public class Skill_FireSoul : Skill_Base
         fireSoulGo = skillData.skillObjectPrefab;
     }
 
-    public override void TryUseSkill()
+    public override bool TryUseSkill()
     {
-        base.TryUseSkill();
+        if (base.TryUseSkill() == false)
+            return false;
 
         if (fireSoul != null)
-            return;
+            return false;
 
         if (CheckEnemyRadius())
         {
@@ -39,6 +40,8 @@ public class Skill_FireSoul : Skill_Base
                 SetSkillOnCooldown();
             }
         }
+
+        return true;
     }
 
     // Create fire soul

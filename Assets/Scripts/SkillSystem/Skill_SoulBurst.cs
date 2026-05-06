@@ -4,7 +4,7 @@ public class Skill_SoulBurst : Skill_Base
 {
     [SerializeField] private GameObject soulExplodeGo;
 
-    private GameObject soulExplosionGo;
+    private GameObject soulExplosion;
 
     protected override void Awake()
     {
@@ -18,31 +18,34 @@ public class Skill_SoulBurst : Skill_Base
         soulExplodeGo = skillData.skillObjectPrefab;
     }
 
-    public override void TryUseSkill()
+    public override bool TryUseSkill()
     {
-        base.TryUseSkill();
+        if (base.TryUseSkill() == false)
+            return false;
 
-        if (soulExplosionGo != null)
-            return;
+        if (soulExplosion != null)
+            return false;
 
         if (CheckEnemyRadius())
         {
-            if (upgradeType == SkillUpgradeType.SoulBurst)
+            if (upgradeType == SkillUpgradeType.SoulBurst || upgradeType == SkillUpgradeType.SoulBurstUpgrade)
             {
                 CreateSoulExplode();
                 SetSkillOnCooldown();
             }
         }
+
+        return true;
     }
 
     private void CreateSoulExplode()
     {
-        soulExplosionGo = ObjectPool.instance.Spawn(soulExplodeGo.name, transform.position, Quaternion.identity);
-        soulExplosionGo.GetComponent<SkillObject_SoulBurst>().SetSoulBurst(this, whatIsEnemy);
+        soulExplosion = ObjectPool.instance.Spawn(soulExplodeGo.name, transform.position, Quaternion.identity);
+        soulExplosion.GetComponent<SkillObject_SoulBurst>().SetSoulBurst(this, whatIsEnemy);
     }
 
     public void OnSoulBurstExpired()
     {
-        soulExplosionGo = null;
+        soulExplosion = null;
     }
 }

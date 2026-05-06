@@ -26,11 +26,13 @@ public class Skill_SpinningSword : Skill_Base
         swordPrefab = skillData.skillObjectPrefab;
     }
 
-    public override void TryUseSkill()
+    public override bool TryUseSkill()
     {
-        base.TryUseSkill();
+        if (base.TryUseSkill() == false)
+            return false;
 
-        if (activeSwords.Count > 0) return;
+        if (activeSwords.Count > 0)
+            return false;
 
         if (CheckEnemyRadius())
         {
@@ -47,6 +49,7 @@ public class Skill_SpinningSword : Skill_Base
             }
         }
 
+        return true;
     }
 
     private void SpawnSwords(float swordCount = 2)

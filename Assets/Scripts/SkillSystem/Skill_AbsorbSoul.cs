@@ -19,11 +19,10 @@ public class Skill_AbsorbSoul : Skill_Base
         soul = skillData.skillObjectPrefab;
     }
 
-    public override void TryUseSkill()
+    public override bool TryUseSkill()
     {
-        if (!CanUseSkill())
-            return;
-
+        if (base.TryUseSkill() == false)
+            return false;
 
         if (upgradeType == SkillUpgradeType.AbsorbSoulUpgrade)
         {
@@ -31,6 +30,8 @@ public class Skill_AbsorbSoul : Skill_Base
 
             SetSkillOnCooldown();
         }
+
+        return true;
     }
 
     public void AbsorbSoul(SkillObject_Soul soul)
