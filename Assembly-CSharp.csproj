@@ -81,11 +81,13 @@
     <Compile Include="Assets\Scripts\StatSystem\Stat_ResourceGroup.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyState\EnemyState.cs" />
     <Compile Include="Assets\Scripts\Player\PLayer_Stats.cs" />
+    <Compile Include="Assets\Scripts\Player\Player_VFX.cs" />
     <Compile Include="Assets\Scripts\Enum\CardType.cs" />
     <Compile Include="Assets\Scripts\ControlManager\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyState\Enemy_DeadState.cs" />
     <Compile Include="Assets\Scripts\Data\Stat_DataSO.cs" />
     <Compile Include="Assets\Scripts\Entity\EntityAnimationEvents.cs" />
+    <Compile Include="Assets\Scripts\Entity\Entity_VFX.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillBoard.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_DefenseGroup.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_FireSoul.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="Assets\Scripts\Player\Player_AnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyState\Enemy_IdleState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_AttackState.cs" />
+    <Compile Include="Assets\Scripts\VFX_AutoController.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillCardBack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_SprintState.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity.cs" />

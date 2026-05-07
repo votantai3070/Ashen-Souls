@@ -14,7 +14,7 @@ public class SkillObject_Base : MonoBehaviour
     [SerializeField] protected Transform targetCheck;
     [SerializeField] protected float checkEnemyRadius = 3;
     public float checkDamageRadius = 3;
-    //[SerializeField] private float defaultDuration = 2f;
+    [SerializeField] private float defaultImpactDuration = .2f;
 
     [Header("Attack Settings")]
     private float lastAttackTime = -999f;
@@ -83,12 +83,15 @@ public class SkillObject_Base : MonoBehaviour
                 Debug.Log("Gay dmg");
                 if (upgradeType == SkillUpgradeType.FireSoul || upgradeType == SkillUpgradeType.FireSoulUpgrade)
                 {
+                    target.GetComponent<Entity_VFX>().DamageVfx(defaultImpactDuration);
                     Debug.Log("Fire soul gay dmg");
                     SetPhysicsActive(false);
                 }
+
+                target.GetComponent<Entity_VFX>().DamageVfx(defaultImpactDuration);
+                entity?.entityVFX?.GetImapctVfx(target.transform, isCrit);
                 //lastTarget = target.transform;
                 //target.GetComponent<Entity>().ElementalVfx(defaultDuration, element);
-                //player?.playerVfx.GetImapctVfx(target.transform, attackData.isCrit);
             }
 
             //currentElement = element;

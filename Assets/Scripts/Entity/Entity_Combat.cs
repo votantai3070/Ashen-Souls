@@ -16,6 +16,9 @@ public class Entity_Combat : MonoBehaviour
     private float lastAttackTime = -999f;
     [SerializeField] private float attackCooldownGuard = 0.1f; // 100ms
 
+    [Space]
+    [SerializeField] private float defaultImpactDuration = .1f;
+
     private bool canHit;
 
     protected virtual void Awake()
@@ -35,8 +38,8 @@ public class Entity_Combat : MonoBehaviour
         if (!CanAttack()) return; // Guard against attacking too frequently
 
         lastAttackTime = Time.time;
-
         hitThisAttack.Clear();
+
         foreach (Collider2D enemy in FindAttackTarget(attackArea))
         {
             if (enemy.TryGetComponent(out IDamageable damageable))
@@ -50,7 +53,8 @@ public class Entity_Combat : MonoBehaviour
 
                 if (canHit)
                 {
-
+                    enemy.GetComponent<Entity_VFX>().DamageVfx(defaultImpactDuration);
+                    entity?.entityVFX?.GetImapctVfx(enemy.transform, isCriticalHit);
                 }
             }
         }

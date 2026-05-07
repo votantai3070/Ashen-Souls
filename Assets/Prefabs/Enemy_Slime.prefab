@@ -111,7 +111,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1690453453
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 368543389579951487, guid: b029f9947fa3a274c918131d2c5278ed, type: 3}
@@ -249,6 +249,7 @@ GameObject:
   - component: {fileID: 1401499105440479791}
   - component: {fileID: -696934059846269045}
   - component: {fileID: 4685216884774553067}
+  - component: {fileID: 593722884839174475}
   m_Layer: 6
   m_Name: Enemy_Slime
   m_TagString: Enemy
@@ -387,6 +388,7 @@ MonoBehaviour:
     m_Bits: 128
   showTargetEnemies: []
   attackCooldownGuard: 2
+  defaultImpactDuration: 0.1
 --- !u!114 &1401499105440479791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,6 +483,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+--- !u!114 &593722884839174475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547200286111319526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16aeb9b790c4de54e86f0eb3fba55c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Entity_VFX
+  critDamageVfx: {fileID: 0}
+  critDamageColor: {r: 1, g: 0.84, b: 0, a: 1}
+  hitImpactVfx: {fileID: 6462340573606345299, guid: 387b1216e46ee274fab176c7b35fb84c, type: 3}
+  impactColor: {r: 1, g: 1, b: 1, a: 1}
+  damagedMat: {fileID: 2100000, guid: 6ab4b867473c3724ea468dabb06b0e45, type: 2}
+  chillVfx: {r: 0, g: 0.75, b: 1, a: 1}
+  fireColor: {r: 1, g: 0.27, b: 0, a: 1}
+  lightningColor: {r: 1, g: 0.88, b: 0.2, a: 1}
+  thunderStrikePrefab: {fileID: 0}
 --- !u!1 &8446320465977628387
 GameObject:
   m_ObjectHideFlags: 0

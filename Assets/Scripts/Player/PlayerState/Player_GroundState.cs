@@ -23,38 +23,18 @@ public class Player_GroundState : PlayerState
         }
 
         #region Dash & Sprint
-        // Press Shift
-        if (controls.inputActions.Player.Sprint.WasPressedThisFrame())
+        if (controls.inputActions.Player.Dash.WasPressedThisFrame())
         {
-            if (player.hasDashed == false)
-            {
-                stateMachine.ChangeState(player.dashState);
-            }
-
-            player.isHolding = true;
-            player.holdTimer = 0f;
+            Debug.Log("Dash input nhận được!");
+            Debug.Log("Current state: " + stateMachine.currentState);
+            stateMachine.ChangeState(player.dashState);
+            Debug.Log("After change: " + stateMachine.currentState);
         }
 
-        // Hold Shift
-        if (player.isHolding)
-        {
-            player.holdTimer += Time.deltaTime;
 
-            if (player.holdTimer >= player.holdThreshold && player.hasDashed)
-            {
-                player.isSprinting = true;
-                player.hasDashed = true;
-                stateMachine.ChangeState(player.sprintState);
-            }
-        }
-
-        // Release Shift
-        if (controls.inputActions.Player.Sprint.WasReleasedThisFrame())
+        if (controls.inputActions.Player.Sprint.IsPressed())
         {
-            player.hasDashed = false;
-            player.isSprinting = false;
-            player.isHolding = false;
-            player.holdTimer = 0f;
+            stateMachine.ChangeState(player.sprintState);
         }
         #endregion
     }

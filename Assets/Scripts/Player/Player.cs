@@ -8,6 +8,7 @@ public class Player : Entity
     public Player_SkillManager skillManager { get; private set; }
     public Player_Health health { get; private set; }
     public Player_Stats stats { get; private set; }
+    public Player_VFX vFX { get; private set; }
 
     public Player_IdleState idleState { get; private set; }
     public Player_MoveState moveState { get; private set; }
@@ -20,8 +21,8 @@ public class Player : Entity
     public bool canLookAttack;
 
     [Header("Dash & Sprint")]
-    public float dashSpeed = 10f;
-    public float sprintSpeed = 15f;
+    public float dashSpeed = 20f;
+    public float sprintSpeed = 10f;
     public float holdTimer = 0f;
     public float holdThreshold = 0.2f;
     public bool isHolding = false;
@@ -39,6 +40,7 @@ public class Player : Entity
         skillManager = GetComponentInChildren<Player_SkillManager>();
         health = GetComponent<Player_Health>();
         stats = GetComponent<Player_Stats>();
+        vFX = GetComponent<Player_VFX>();
 
         controls.Init(this);
 

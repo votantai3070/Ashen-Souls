@@ -1174,6 +1174,7 @@ GameObject:
   - component: {fileID: 575607130}
   - component: {fileID: 575607134}
   - component: {fileID: 575607135}
+  - component: {fileID: 575607136}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1222,10 +1223,10 @@ MonoBehaviour:
   isKnockBack: 0
   canTrigger: 0
   canLookAttack: 0
-  dashSpeed: 10
-  sprintSpeed: 15
+  dashSpeed: 1000
+  sprintSpeed: 10
   holdTimer: 0
-  holdThreshold: 0.2
+  holdThreshold: 1
   isHolding: 0
   hasDashed: 0
   isSprinting: 0
@@ -1274,6 +1275,7 @@ MonoBehaviour:
     m_Bits: 64
   showTargetEnemies: []
   attackCooldownGuard: 0.1
+  defaultImpactDuration: 0.1
 --- !u!61 &575607132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1402,6 +1404,27 @@ MonoBehaviour:
     maxLevel: 99
     baseExp: 100
     expScalingFactor: 1.5
+--- !u!114 &575607136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575607126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef952259e7e9c0842be1f33c566fc928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player_VFX
+  critDamageVfx: {fileID: 0}
+  critDamageColor: {r: 1, g: 0.4, b: 0, a: 1}
+  hitImpactVfx: {fileID: 6462340573606345299, guid: 387b1216e46ee274fab176c7b35fb84c, type: 3}
+  impactColor: {r: 0.6784314, g: 0.84705883, b: 0.9019608, a: 1}
+  damagedMat: {fileID: 2100000, guid: 6ab4b867473c3724ea468dabb06b0e45, type: 2}
+  chillVfx: {r: 0, g: 0.7490196, b: 1, a: 0}
+  fireColor: {r: 1, g: 0.27, b: 0, a: 1}
+  lightningColor: {r: 1, g: 0.88, b: 0.2, a: 1}
+  thunderStrikePrefab: {fileID: 0}
 --- !u!1 &589699674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,6 +1607,12 @@ MonoBehaviour:
   - tag: SkillObject_SoulBurst
     prefab: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
     initialSize: 3
+  - tag: VFX_Dash
+    prefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
+    initialSize: 3
+  - tag: VFX_OnHit
+    prefab: {fileID: 6462340573606345299, guid: 387b1216e46ee274fab176c7b35fb84c, type: 3}
+    initialSize: 3
 --- !u!4 &597912176
 Transform:
   m_ObjectHideFlags: 0
@@ -1681,7 +1710,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000935840b0e15264e733ba3d9ba9f65dfeb1ee48fa71c63b79536e70d4
+  m_ApplyToSortingLayers: 00000000935840b0e15264e733ba3d9ba9f65dfeb1ee48fa71c63b79536e70d43fe1eb3d
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -3221,7 +3250,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -412855583
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4334783836991956000, guid: 8cda01da4e9d1b44abfdbe92194946d5, type: 3}

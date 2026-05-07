@@ -45,7 +45,7 @@ public class ObjectPool : MonoBehaviour
     {
         if (!poolDictionary.ContainsKey(tag))
         {
-            Debug.LogWarning($"Pool '{tag}' không tồn tại!");
+            Debug.LogWarning($"Pool '{tag}' does not exist!");
             return null;
         }
 
@@ -69,7 +69,7 @@ public class ObjectPool : MonoBehaviour
     {
         if (!spawnedObjects.TryGetValue(obj, out string tag))
         {
-            Debug.LogWarning("Object không thuộc pool nào!");
+            Debug.LogWarning("Object does not belong to any pool!");
             return;
         }
         ReturnToPool(tag, obj);

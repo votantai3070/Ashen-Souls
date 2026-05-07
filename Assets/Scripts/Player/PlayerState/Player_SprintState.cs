@@ -32,11 +32,14 @@ public class Player_SprintState : Player_GroundState
 
         player.SetVelocity(moveInputX * player.sprintSpeed, moveInputY * player.sprintSpeed);
 
-        if (controls.moveInput == Vector2.zero)
+        if (controls.inputActions.Player.Sprint.WasReleasedThisFrame())
         {
-            stateMachine.ChangeState(player.idleState);
+            if (controls.moveInput != Vector2.zero)
+                stateMachine.ChangeState(player.moveState);
+            else
+                stateMachine.ChangeState(player.idleState);
+
+            return;
         }
-
-
     }
 }

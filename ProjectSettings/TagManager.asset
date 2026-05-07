@@ -54,6 +54,9 @@ TagManager:
   - name: Item
     uniqueID: 2033960561
     locked: 0
+  - name: VFX
+    uniqueID: 1038868799
+    locked: 0
   - name: Spell
     uniqueID: 3564138067
     locked: 0
