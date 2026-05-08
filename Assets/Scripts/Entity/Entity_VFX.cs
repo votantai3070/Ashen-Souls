@@ -55,8 +55,6 @@ public class Entity_VFX : MonoBehaviour
         GameObject vfx = ObjectPool.instance.Spawn(hitPrefab.name, target.position, Quaternion.identity);
 
         vfx.GetComponentInChildren<SpriteRenderer>().color = isCrit ? critDamageColor : impactColor;
-
-        RotateVFX();
     }
 
     //public void GetElementVfx(float duration, ElementType element)
@@ -129,13 +127,4 @@ public class Entity_VFX : MonoBehaviour
         sr.material = originalMat;
     }
 
-    private void RotateVFX()
-    {
-        if (entity == null) return;
-
-        float yRotation = entity.xIdleAndAttack == -1 ? 180f : 0f;
-        float xRotation = entity.yIdleAndAttack == -1 ? 180f : 0f;
-
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
-    }
 }

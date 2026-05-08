@@ -25,8 +25,8 @@ MonoBehaviour:
   upgradeData:
     upgradeType: 19
     cooldown: 3
-    distanceToAttack: 2
-    attackRadius: 2
+    distanceToAttack: 1
+    attackRadius: 1
     speed: 0
   upgradeBoostChance: 30
   cardType: 0

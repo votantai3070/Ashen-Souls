@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Skill_DeathDash : Skill_Base
@@ -30,6 +30,7 @@ public class Skill_DeathDash : Skill_Base
         if (upgradeType == SkillUpgradeType.DeathDash)
         {
             DoDashEffect();
+            SetSkillOnCooldown();
         }
 
         return true;
@@ -56,10 +57,10 @@ public class Skill_DeathDash : Skill_Base
         }
     }
 
-
     private void CreateDash(GameObject dashPrefab)
     {
-        GameObject dash = ObjectPool.instance.Spawn(dashPrefab.name, transform.position, transform.rotation);
+        GameObject dash = ObjectPool.instance.Spawn(dashPrefab.name, transform.position, Quaternion.identity);
         dash.GetComponentInChildren<SpriteRenderer>().sprite = sr.sprite;
+        dash.GetComponent<SkillObject_DeathDash>().SetDeathDash(this, duration, whatIsEnemy);
     }
 }

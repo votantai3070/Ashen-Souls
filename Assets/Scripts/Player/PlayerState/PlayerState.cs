@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class PlayerState : EntityState
 {
     protected Player player;
@@ -31,13 +29,13 @@ public class PlayerState : EntityState
         base.Update();
 
         if (controls.inputActions.Player.Dash.WasPressedThisFrame() && CanDash())
-        {
-            skillManager.deathDash.SetSkillOnCooldown();
-            Debug.Log("Dash");
             stateMachine.ChangeState(player.dashState);
-        }
-    }
 
+        //if (controls.inputActions.Player.Sprint.IsPressed())
+        //{
+        //    stateMachine.ChangeState(player.sprintState);
+        //}
+    }
     private bool CanDash()
     {
         if (skillManager.deathDash.CanUseSkill() == false)

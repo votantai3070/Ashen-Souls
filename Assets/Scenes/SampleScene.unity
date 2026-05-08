@@ -1223,7 +1223,7 @@ MonoBehaviour:
   isKnockBack: 0
   canTrigger: 0
   canLookAttack: 0
-  dashSpeed: 15
+  dashSpeed: 20
   sprintSpeed: 10
   holdTimer: 0
   holdThreshold: 1
@@ -2422,7 +2422,7 @@ GameObject:
   - component: {fileID: 1261357904}
   - component: {fileID: 1261357905}
   m_Layer: 7
-  m_Name: Skill
+  m_Name: Skills
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2569,9 +2569,9 @@ MonoBehaviour:
   upgradeType: 19
   cooldown: 3
   speed: 0
-  checkEnemyRadius: 20
-  checkDamageRadius: 20
-  duration: 0.5
+  checkEnemyRadius: 1
+  checkDamageRadius: 1
+  duration: 0.2
   deadDashPrefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
   dashInterval: 0.05
 --- !u!1 &1316584240

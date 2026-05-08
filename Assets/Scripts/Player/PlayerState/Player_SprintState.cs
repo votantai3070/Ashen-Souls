@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class Player_SprintState : Player_GroundState
 {
     public Player_SprintState(Player player, StateMachine<EntityState> stateMachine, string animBoolName) : base(player, stateMachine, animBoolName)
@@ -28,16 +30,17 @@ public class Player_SprintState : Player_GroundState
         anim.SetFloat("xMove", moveInputX);
         anim.SetFloat("yMove", moveInputY);
 
-        player.SetVelocity(moveInputX * player.sprintSpeed, moveInputY * player.sprintSpeed);
+        if (stateMachine.currentState == player.dashState)
+            player.SetVelocity(moveInputX * player.sprintSpeed, moveInputY * player.sprintSpeed);
 
-        //if (controls.inputActions.Player.Sprint.WasReleasedThisFrame())
-        //{
-        //    if (controls.moveInput != Vector2.zero)
-        //        stateMachine.ChangeState(player.moveState);
-        //    else
-        //        stateMachine.ChangeState(player.idleState);
+        if (controls.inputActions.Player.Sprint.WasReleasedThisFrame())
+        {
+            if (controls.moveInput != Vector2.zero)
+                stateMachine.ChangeState(player.moveState);
+            else
+                stateMachine.ChangeState(player.idleState);
 
-        //    return;
-        //}
+            return;
+        }
     }
 }

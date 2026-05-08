@@ -45,7 +45,7 @@ public class SkillObject_Base : MonoBehaviour
 
     protected virtual void Update()
     {
-        stateMachine.currentState.Update();
+        stateMachine.currentState?.Update();
     }
 
     protected void DamageEnemiesInRadius(Transform t, Transform damageDealer)
@@ -84,8 +84,10 @@ public class SkillObject_Base : MonoBehaviour
                 if (upgradeType == SkillUpgradeType.FireSoul || upgradeType == SkillUpgradeType.FireSoulUpgrade)
                 {
                     target.GetComponent<Entity_VFX>().DamageVfx(defaultImpactDuration);
+                    entity?.entityVFX?.GetImapctVfx(target.transform, isCrit);
                     Debug.Log("Fire soul gay dmg");
                     SetPhysicsActive(false);
+                    return;
                 }
 
                 target.GetComponent<Entity_VFX>().DamageVfx(defaultImpactDuration);
