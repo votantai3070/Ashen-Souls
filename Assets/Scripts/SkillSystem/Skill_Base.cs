@@ -64,17 +64,21 @@ public class Skill_Base : MonoBehaviour
             return false;
         }
 
+        if (OnCooldown())
+        {
+            Debug.Log("On Cooldown");
+            return false;
+        }
+
+        if (skillType == SkillType.DeathDash)
+            return true;
+
         if (target == null)
         {
             Debug.Log("No Target");
             return false;
         }
 
-        if (OnCooldown())
-        {
-            Debug.Log("On Cooldown");
-            return false;
-        }
 
         return true;
     }
@@ -128,6 +132,8 @@ public class Skill_Base : MonoBehaviour
         return Vector2.Distance(target.position, transform.root.position) < checkEnemyRadius;
     }
 
+    public float GetCooldown() => cooldown;
+    public float GetDuration() => duration;
 
 
     protected virtual void OnDrawGizmos()

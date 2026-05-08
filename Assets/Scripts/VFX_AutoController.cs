@@ -14,6 +14,7 @@ public class VFX_AutoController : MonoBehaviour
     [SerializeField] private bool canFade;
     [SerializeField] private float fadeSpeed = 1;
 
+    private Coroutine fadeCoroutine;
 
     [Header("Random rotation")]
     [SerializeField] private float minRotation = 0;
@@ -31,19 +32,28 @@ public class VFX_AutoController : MonoBehaviour
         sr = GetComponentInChildren<SpriteRenderer>();
     }
 
-
-    private void Start()
+    private void OnEnable()
     {
+        if (sr != null)
+            sr.color = Color.white;
+
+        if (fadeCoroutine != null)
+            StopCoroutine(fadeCoroutine);
+
         if (canFade)
-            StartCoroutine(FadeCo());
+            fadeCoroutine = StartCoroutine(FadeCo());
 
         ApplyRandomOffset();
         ApplyRandomRotation();
 
         if (autoDestroy)
-        {
-            ObjectPool.instance.Despawn(gameObject, destroyDelay);
-        }
+            StartCoroutine(DespawnNextFrame());
+    }
+
+    private IEnumerator DespawnNextFrame()
+    {
+        yield return null;
+        ObjectPool.instance.Despawn(gameObject, destroyDelay);
     }
 
     private IEnumerator FadeCo()

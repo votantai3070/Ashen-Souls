@@ -72,14 +72,27 @@ public class ObjectPool : MonoBehaviour
             Debug.LogWarning("Object does not belong to any pool!");
             return;
         }
-        ReturnToPool(tag, obj);
-        spawnedObjects.Remove(obj);
+
+        if (delay <= 0f)
+        {
+            ReturnToPool(tag, obj);
+            spawnedObjects.Remove(obj);
+        }
+        else
+        {
+            StartCoroutine(DespawnRoutine(tag, obj, delay));
+        }
     }
 
     private IEnumerator DespawnRoutine(string tag, GameObject obj, float delay)
     {
         yield return new WaitForSeconds(delay);
-        ReturnToPool(tag, obj);
+
+        if (obj.activeSelf)
+        {
+            ReturnToPool(tag, obj);
+            spawnedObjects.Remove(obj);
+        }
     }
 
     private void ReturnToPool(string tag, GameObject obj)

@@ -22,7 +22,8 @@ public class Player_MoveState : Player_GroundState
             player.yIdleAndAttack = moveInputY;
         }
 
-        player.SetVelocity(moveInputX * player.moveSpeed, moveInputY * player.moveSpeed);
+        if (stateMachine.currentState != player.dashState)
+            player.SetVelocity(moveInputX * player.moveSpeed, moveInputY * player.moveSpeed);
 
         if (controls.moveInput == Vector2.zero)
         {

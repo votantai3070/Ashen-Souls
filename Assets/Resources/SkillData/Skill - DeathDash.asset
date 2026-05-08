@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8e413113d6c5a499648b98dc13fe60, type: 3}
+  m_Name: Skill - DeathDash
+  m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
+  saveId: ee41b42d9ec621249b8b0b4e32d57554
+  skillObjectPrefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
+  displayName: Death Dash
+  description: Dash forward at the speed of shadow, dealing damage along the path.
+  icon: {fileID: 0}
+  duration: 0.2
+  orbitRadius: 1.5
+  orbitSpeed: 180
+  swordCount: 3
+  skillType: 9
+  upgradeData:
+    upgradeType: 19
+    cooldown: 3
+    distanceToAttack: 2
+    attackRadius: 2
+    speed: 0
+  upgradeBoostChance: 30
+  cardType: 0
+  skillRarity: 100
+  skillRollChance: 65
+  maxSkillRollChance: 65

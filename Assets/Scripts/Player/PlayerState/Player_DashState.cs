@@ -1,13 +1,19 @@
 ﻿using UnityEngine;
 
-public class Player_DashState : Player_GroundState
+public class Player_DashState : PlayerState
 {
     public Player_DashState(Player player, StateMachine<EntityState> stateMachine, string animBoolName)
-        : base(player, stateMachine, animBoolName) { }
+        : base(player, stateMachine, animBoolName)
+    {
+
+    }
 
     public override void Enter()
     {
         base.Enter();
+
+        stateTimer = skillManager.deathDash.GetDuration();
+        player.skillManager.deathDash.TryUseSkill();
 
         player.SetVelocity(player.dashSpeed * controls.moveInput.x, player.dashSpeed * controls.moveInput.y);
     }
@@ -15,13 +21,19 @@ public class Player_DashState : Player_GroundState
     public override void Exit()
     {
         base.Exit();
+
+        player.SetVelocity(0, 0);
     }
 
     public override void Update()
     {
-        if (controls.moveInput != Vector2.zero)
-            stateMachine.ChangeState(player.moveState);
-        else
-            stateMachine.ChangeState(player.idleState);
+        base.Update();
+
+
+        if (stateTimer < 0)
+            if (controls.moveInput != Vector2.zero)
+                stateMachine.ChangeState(player.moveState);
+            else
+                stateMachine.ChangeState(player.idleState);
     }
 }

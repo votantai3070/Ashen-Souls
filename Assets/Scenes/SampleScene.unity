@@ -1223,13 +1223,10 @@ MonoBehaviour:
   isKnockBack: 0
   canTrigger: 0
   canLookAttack: 0
-  dashSpeed: 1000
+  dashSpeed: 15
   sprintSpeed: 10
   holdTimer: 0
   holdThreshold: 1
-  isHolding: 0
-  hasDashed: 0
-  isSprinting: 0
 --- !u!50 &575607129
 Rigidbody2D:
   serializedVersion: 5
@@ -1607,9 +1604,9 @@ MonoBehaviour:
   - tag: SkillObject_SoulBurst
     prefab: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
     initialSize: 3
-  - tag: VFX_Dash
+  - tag: VFX_DeathDash
     prefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
-    initialSize: 3
+    initialSize: 30
   - tag: VFX_OnHit
     prefab: {fileID: 6462340573606345299, guid: 387b1216e46ee274fab176c7b35fb84c, type: 3}
     initialSize: 3
@@ -2423,6 +2420,7 @@ GameObject:
   - component: {fileID: 1261357902}
   - component: {fileID: 1261357903}
   - component: {fileID: 1261357904}
+  - component: {fileID: 1261357905}
   m_Layer: 7
   m_Name: Skill
   m_TagString: Untagged
@@ -2550,6 +2548,32 @@ MonoBehaviour:
   checkDamageRadius: 3
   duration: 5
   soulExplodeGo: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+--- !u!114 &1261357905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261357899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571b0526a7164d94a833eb3ed786d8eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Skill_DeathDash
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 64
+  target: {fileID: 0}
+  targetCheck: {fileID: 1261357900}
+  skillType: 9
+  upgradeType: 19
+  cooldown: 3
+  speed: 0
+  checkEnemyRadius: 20
+  checkDamageRadius: 20
+  duration: 0.5
+  deadDashPrefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
+  dashInterval: 0.05
 --- !u!1 &1316584240
 GameObject:
   m_ObjectHideFlags: 0

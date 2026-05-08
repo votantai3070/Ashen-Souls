@@ -25,10 +25,6 @@ public class Player : Entity
     public float sprintSpeed = 10f;
     public float holdTimer = 0f;
     public float holdThreshold = 0.2f;
-    public bool isHolding = false;
-    public bool hasDashed = false;
-    public bool isSprinting = false;
-
 
     protected override void Awake()
     {

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5470736236675075892}
   - component: {fileID: 1582842770363503069}
   m_Layer: 7
-  m_Name: VFX_Dash
+  m_Name: VFX_DeathDash
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
