@@ -752,9 +752,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnSystem
   confinerBounds: {fileID: 1257635985}
   totalSpawnDuration: 300
-  minSpawnInterval: 1
-  maxSpawnInterval: 2
-  maxEnemiesAlive: 5
+  minSpawnInterval: 2
+  maxSpawnInterval: 5
+  maxEnemiesAlive: 2
   maxRetry: 50
   enemyPrefabs:
   - {fileID: 3547200286111319526, guid: 8abf69ca59ab109499d2d8341210b2cd, type: 3}
@@ -1399,7 +1399,7 @@ MonoBehaviour:
       modifiers: []
   levelSystem:
     maxLevel: 99
-    baseExp: 50
+    baseExp: 100
     expScalingFactor: 1.5
 --- !u!114 &575607136
 MonoBehaviour:
@@ -1790,7 +1790,7 @@ RectTransform:
   m_Father: {fileID: 775203865}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.235, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1969,7 +1969,6 @@ GameObject:
   m_Component:
   - component: {fileID: 789981627}
   - component: {fileID: 789981628}
-  - component: {fileID: 789981629}
   m_Layer: 0
   m_Name: MANAGER
   m_TagString: Untagged
@@ -2004,19 +2003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf6b570436dbfc4684888636a2c2988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControlsManager
---- !u!114 &789981629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789981626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f1d8cbe540d4ee46b96cc599f1cb2b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SkillProgressManager
-  unlockedSkills: []
 --- !u!1 &818823991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,7 +2019,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &818823992
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2583,7 +2569,7 @@ MonoBehaviour:
   target: {fileID: 0}
   targetCheck: {fileID: 1261357900}
   skillType: 9
-  upgradeType: 0
+  upgradeType: 20
   cooldown: 3
   speed: 0
   checkEnemyRadius: 1

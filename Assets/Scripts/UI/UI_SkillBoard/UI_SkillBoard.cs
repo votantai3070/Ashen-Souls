@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -17,7 +17,7 @@ public class UI_SkillBoard : MonoBehaviour
         cards = GetComponentsInChildren<UI_SkillCard>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
         GetSkillsRollRandom();
     }
@@ -27,7 +27,10 @@ public class UI_SkillBoard : MonoBehaviour
         //if (skillsData == null && skillsData.skillList == null)
         //    return;
 
-        List<Skill_DataSO> skillsToRoll = RollSkills();
+        foreach (var card in cards)
+            card.gameObject.SetActive(false);
+
+        List<Skill_BaseSO> skillsToRoll = RollSkills();
         int amountSkills = Mathf.Min(skillsToRoll.Count, maxSkillToRoll);
 
         Debug.Log("Amount Skills: " + amountSkills);
@@ -35,15 +38,16 @@ public class UI_SkillBoard : MonoBehaviour
         for (int i = 0; i < amountSkills; i++)
         {
             string colorText = GetColorByRarity(skillsToRoll[i].skillRarity);
+            cards[i].gameObject.SetActive(true);
             cards[i].SetCardInfo(skillsToRoll[i], colorText);
         }
     }
 
-    public List<Skill_DataSO> RollSkills()
+    public List<Skill_BaseSO> RollSkills()
     {
-        List<Skill_DataSO> possibleSkills = new();
-        List<Skill_DataSO> finalSkills = new();
-        List<Skill_DataSO> availiableSkills = InitializeSkills();
+        List<Skill_BaseSO> possibleSkills = new();
+        List<Skill_BaseSO> finalSkills = new();
+        List<Skill_BaseSO> availiableSkills = InitializeSkills();
 
         float maxRarityAmount = this.maxRarityAmount;
 
@@ -72,17 +76,28 @@ public class UI_SkillBoard : MonoBehaviour
         return finalSkills;
     }
 
-    private List<Skill_DataSO> InitializeSkills()
+    private List<Skill_BaseSO> InitializeSkills()
     {
-        List<Skill_DataSO> availiableSkills = new(skillsData.skillList.Length);
+        List<Skill_BaseSO> availableSkills = new();
+        var progress = SkillProgressManager.instance;
 
         foreach (var skill in skillsData.skillList)
         {
-            if (skill.canUpgrade == false)
-                availiableSkills.Add(skill);
+            if (progress.IsUnlocked(skill)) continue;
+
+            if (skill.prerequisiteSkill == null)
+            {
+                availableSkills.Add(skill);
+                continue;
+            }
+
+            if (progress.IsUnlocked(skill.prerequisiteSkill))
+            {
+                availableSkills.Add(skill);
+            }
         }
 
-        return availiableSkills;
+        return availableSkills;
     }
 
     private string GetColorByRarity(int rarity)

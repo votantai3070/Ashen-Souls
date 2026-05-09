@@ -10,25 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b8e413113d6c5a499648b98dc13fe60, type: 3}
-  m_Name: Skill - SoulBurst  - Upgrade
+  m_Name: Skill - DeathDash - Upgrade
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
-  saveId: 8a9475734d4a7a14492c8700d4c9e088
-  displayName: Soul Burst - Upgrade
-  description: Release pent-up soul energy in a wide burst around yourself.
+  saveId: d83a1b0216cef7740876323d2d089342
+  displayName: Death Dash - Upgrade
+  description: "The shadow condenses further \u2014 increases damage by 20% and reduces
+    cooldown by 1 second."
   icon: {fileID: 0}
-  duration: 0
-  skillObjectPrefab: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+  duration: 0.2
+  skillObjectPrefab: {fileID: 397943091315647349, guid: c14cb7cbe16055340b50b1c584d58be7, type: 3}
   orbitRadius: 1.5
   orbitSpeed: 180
   swordCount: 3
-  skillType: 8
+  skillType: 9
   upgradeData:
-    upgradeType: 18
-    cooldown: 1.5
-    distanceToAttack: 4
-    attackRadius: 5
-    speed: 1
-  prerequisiteSkill: {fileID: 11400000, guid: 7babedffdcf203143b53e44a9a148fd5, type: 2}
+    upgradeType: 20
+    cooldown: 2
+    distanceToAttack: 1
+    attackRadius: 1
+    speed: 0
+  prerequisiteSkill: {fileID: 11400000, guid: ee41b42d9ec621249b8b0b4e32d57554, type: 2}
   upgradeBoostChance: 30
   cardType: 0
   skillRarity: 100

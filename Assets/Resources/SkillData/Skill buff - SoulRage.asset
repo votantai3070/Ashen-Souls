@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
+  m_Name: Skill buff - SoulRage
+  m_EditorClassIdentifier: Assembly-CSharp::Skill_BuffDataSO
+  saveId: c7db3f2e1bca2504eba21b9fe44147d5
+  displayName: Soul Rage
+  description: "Unleash soul rage \u2014 increases attack speed and damage, but reduces
+    defense."
+  icon: {fileID: 0}
+  duration: 5
+  skillStatData:
+  - isPercent: 1
+    type: 0
+    value: 0.15
+  - isPercent: 1
+    type: 0
+    value: 0.15

@@ -33,6 +33,12 @@ public class Skill_DeathDash : Skill_Base
             SetSkillOnCooldown();
         }
 
+        if (upgradeType == SkillUpgradeType.DeathDashUpgrade)
+        {
+            DoDashEffect();
+            SetSkillOnCooldown();
+        }
+
         return true;
     }
 

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,9 +22,9 @@ public class Stat
         return finalValue;
     }
 
-    public void AddModifier(float value, string sourceName)
+    public void AddModifier(float value, string sourceName, bool isPercent)
     {
-        StatModifier modifier = new StatModifier(value, sourceName);
+        StatModifier modifier = new StatModifier(value, sourceName, isPercent);
         modifiers.Add(modifier);
         isDirty = true;
     }
@@ -38,10 +38,19 @@ public class Stat
     private float GetFinalValue()
     {
         float finalValue = baseValue;
+        float percentBonus = 0f;
+
         foreach (StatModifier modifier in modifiers)
         {
-            finalValue += modifier.value;
+            if (modifier.isPercent)
+                percentBonus += modifier.value;   //0.1 = 10%
+            else
+                finalValue += modifier.value;
         }
+
+        //baseValue * %
+        finalValue += baseValue * percentBonus;
+
         return finalValue;
     }
 
@@ -56,10 +65,12 @@ public class StatModifier
 {
     public string sourceName;
     public float value;
+    public bool isPercent;
 
-    public StatModifier(float value, string sourceName)
+    public StatModifier(float value, string sourceName, bool isPercent)
     {
         this.value = value;
         this.sourceName = sourceName;
+        this.isPercent = isPercent;
     }
 }

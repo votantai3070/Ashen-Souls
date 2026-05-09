@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Skill - FireSoulBall
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
   saveId: f8cda36d25245d04b90e589ac332c889
-  skillObjectPrefab: {fileID: 1168510075856658422, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
   displayName: Fire Soul Ball
   description: Launch a fire soul toward an enemy, dealing damage and applying a
     burn over time.
   icon: {fileID: 0}
   duration: 5
+  prerequisiteSkill: {fileID: 0}
+  skillObjectPrefab: {fileID: 1168510075856658422, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
   orbitRadius: 1.5
   orbitSpeed: 180
   swordCount: 3

@@ -6,7 +6,7 @@ public class UI_SkillCard : MonoBehaviour
 {
     private UI ui;
 
-    [SerializeField] private Skill_DataSO skillData;
+    [SerializeField] private Skill_BaseSO skillData;
     [SerializeField] private Outline[] outlines;
 
     [SerializeField] private RectTransform cardRect;
@@ -27,11 +27,23 @@ public class UI_SkillCard : MonoBehaviour
 
     public void ChooseCard()
     {
-        ui.player.skillManager.GetSkillByType(skillData.skillType).SetSkillUpgrade(skillData);
+        SkillProgressManager.instance.UnlockSkill(skillData);
+
+        if (skillData is Skill_DataSO skill)
+        {
+            // Skill thông thường
+            ui.player.skillManager.GetSkillByType(skill.skillType).SetSkillUpgrade(skill);
+        }
+        else if (skillData is Skill_BuffDataSO buff)
+        {
+            // Buff stat
+            ui.player.stats.ApplyBuff(buff.skillStatData, buff.displayName, buff.isPercent);
+        }
+
         ui.SwitchToIngameUI();
     }
 
-    public void SetCardInfo(Skill_DataSO skillData, string colorText)
+    public void SetCardInfo(Skill_BaseSO skillData, string colorText)
     {
         outlines = GetComponentsInChildren<Outline>();
         this.skillData = skillData;

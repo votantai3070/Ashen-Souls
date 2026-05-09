@@ -32,9 +32,9 @@ public class Enemy_Health : Entity_Health
     {
         if (currentHealth <= 0)
         {
-            enemy.TryToDieState();
             enemy.GetPlayer().stats.GainExp(enemy.stats.GetExpDrop());
             dropSystem.SpawnDrop();
+            enemy.TryToDieState();
         }
     }
 

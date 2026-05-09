@@ -9,7 +9,7 @@ public class UI_SkillCardBack : MonoBehaviour
     [SerializeField] private TextMeshProUGUI cardInfoText;
 
 
-    public void SetupInfoCard(Skill_DataSO skillData, string colorText)
+    public void SetupInfoCard(Skill_BaseSO skillData, string colorText)
     {
         if (skillData == null)
         {
@@ -21,7 +21,7 @@ public class UI_SkillCardBack : MonoBehaviour
         cardInfoText.text = GetDescriptionText(skillData);
     }
 
-    private string GetNameText(Skill_DataSO skillData, string colorText)
+    private string GetNameText(Skill_BaseSO skillData, string colorText)
     {
         StringBuilder sb = new StringBuilder();
 
@@ -30,7 +30,7 @@ public class UI_SkillCardBack : MonoBehaviour
         return sb.ToString();
     }
 
-    private string GetDescriptionText(Skill_DataSO skillData)
+    private string GetDescriptionText(Skill_BaseSO skillData)
     {
         StringBuilder sb = new StringBuilder();
 

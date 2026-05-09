@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Skill - DeathDash
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
   saveId: ee41b42d9ec621249b8b0b4e32d57554
-  skillObjectPrefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
   displayName: Death Dash
   description: Dash forward at the speed of shadow, dealing damage along the path.
   icon: {fileID: 0}
   duration: 0.2
+  prerequisiteSkill: {fileID: 0}
+  skillObjectPrefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
   orbitRadius: 1.5
   orbitSpeed: 180
   swordCount: 3

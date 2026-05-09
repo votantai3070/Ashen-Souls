@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Skill - FireSoulBall - Upgrade
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
   saveId: 4673b2e3812eaff4f9978753e7e50799
-  skillObjectPrefab: {fileID: 1168510075856658422, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
   displayName: Fire Soul Ball - Upgrade
   description: "The soul flame blazes fiercer \u2014 increases damage by 30% and
     reduces cooldown by 1.5 seconds."
   icon: {fileID: 0}
   duration: 5
+  skillObjectPrefab: {fileID: 1168510075856658422, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
   orbitRadius: 1.5
   orbitSpeed: 180
   swordCount: 3
@@ -29,6 +29,7 @@ MonoBehaviour:
     distanceToAttack: 10
     attackRadius: 5
     speed: 8
+  prerequisiteSkill: {fileID: 11400000, guid: f8cda36d25245d04b90e589ac332c889, type: 2}
   upgradeBoostChance: 30
   cardType: 0
   skillRarity: 325

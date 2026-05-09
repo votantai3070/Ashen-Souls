@@ -47,7 +47,6 @@ public class Skill_Base : MonoBehaviour
         speed = upgrade.speed;
         checkEnemyRadius = upgrade.distanceToAttack;
         checkDamageRadius = upgrade.attackRadius;
-        skillData.SetUpgrade(true);
         duration = skillData.duration;
 
         //damageScaleData = upgrade.damageScale;

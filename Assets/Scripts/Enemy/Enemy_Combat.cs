@@ -16,7 +16,8 @@ public class Enemy_Combat : Entity_Combat
     {
         Collider2D playerCol = Physics2D.OverlapCircle(transform.position, enemy.detectionRadius, enemyLayer);
 
-        enemy.SetPlayer(playerCol?.transform);
+        if (enemy.player == null)
+            enemy.SetPlayer(playerCol?.transform);
 
         if (playerCol == null || enemy.player == null)
             return false;

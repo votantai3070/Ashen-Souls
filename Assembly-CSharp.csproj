@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\Entity\EntityAnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_VFX.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillBoard.cs" />
+    <Compile Include="Assets\Scripts\Data\Skill_BuffDataSO.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_DefenseGroup.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_FireSoul.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SpellState.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="Assets\Scripts\Player\Player_AnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyState\Enemy_IdleState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_AttackState.cs" />
+    <Compile Include="Assets\Scripts\Data\Skill_BaseSO.cs" />
     <Compile Include="Assets\Scripts\VFX_AutoController.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillCardBack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_SprintState.cs" />
@@ -127,10 +129,12 @@
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_SpinningSword.cs" />
     <Compile Include="Assets\Scripts\DropSystem.cs" />
     <Compile Include="Assets\Scripts\Data\Skill_DataSO.cs" />
+    <Compile Include="Assets\Scripts\Data\BuffEffectData.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_DashState.cs" />
     <Compile Include="Assets\Scripts\UI\UI.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_SoulBurst.cs" />
     <Compile Include="Assets\Scripts\Entity\EntityState.cs" />
+    <Compile Include="Assets\Scripts\SkillSystem\SkillProgressManager.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSould_ShootAntecipationState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_CreateState.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Combat.cs" />

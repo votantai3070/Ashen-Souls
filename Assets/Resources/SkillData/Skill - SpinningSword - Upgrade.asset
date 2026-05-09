@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Skill - SpinningSword - Upgrade
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
   saveId: 0d207ad3345b93b4fbe78944f4963de8
-  skillObjectPrefab: {fileID: 4526101274153675507, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
   displayName: Spinning Sword - Upgrade
   description: Creating 3 additional swords increases damage by 25% and reduces cooldowns
     by 1 second.
   icon: {fileID: 0}
   duration: 4
+  skillObjectPrefab: {fileID: 4526101274153675507, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
   orbitRadius: 1.5
   orbitSpeed: 180
   swordCount: 5
@@ -29,8 +29,9 @@ MonoBehaviour:
     distanceToAttack: 3
     attackRadius: 0.6
     speed: 0
+  prerequisiteSkill: {fileID: 11400000, guid: 6f93ee8d2ae5e02469fd25a468a93217, type: 2}
   upgradeBoostChance: 30
   cardType: 0
-  skillRarity: 100
+  skillRarity: 209
   skillRollChance: 65
   maxSkillRollChance: 65
