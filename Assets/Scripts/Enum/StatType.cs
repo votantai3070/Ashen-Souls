@@ -12,6 +12,7 @@ public enum StatType
     IceResistance,
     LightningResistance,
     Damage,
+    Speed,
     CriticalChance,
     CriticalDamage,
     AttackSpeed,

@@ -31,10 +31,10 @@ public class UI_SkillCard : MonoBehaviour
 
         if (skillData is Skill_DataSO skill)
         {
-            // Skill thông thường
+            // Skill
             ui.player.skillManager.GetSkillByType(skill.skillType).SetSkillUpgrade(skill);
         }
-        else if (skillData is Skill_BuffDataSO buff)
+        else if (skillData is SkillBuff_DataSO buff)
         {
             // Buff stat
             ui.player.stats.ApplyBuff(buff.skillStatData, buff.displayName, buff.isPercent);

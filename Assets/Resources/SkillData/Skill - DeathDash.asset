@@ -18,6 +18,10 @@ MonoBehaviour:
   icon: {fileID: 0}
   duration: 0.2
   prerequisiteSkill: {fileID: 0}
+  cardType: 0
+  skillRarity: 150
+  skillRollChance: 80
+  maxSkillRollChance: 80
   skillObjectPrefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
   orbitRadius: 1.5
   orbitSpeed: 180
@@ -30,7 +34,3 @@ MonoBehaviour:
     attackRadius: 1
     speed: 0
   upgradeBoostChance: 30
-  cardType: 0
-  skillRarity: 100
-  skillRollChance: 65
-  maxSkillRollChance: 65

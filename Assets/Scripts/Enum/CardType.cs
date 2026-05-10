@@ -1,5 +1,6 @@
 public enum CardType
 {
     Skill,
-    Consumable,
+    Buff,
+    Defense
 }

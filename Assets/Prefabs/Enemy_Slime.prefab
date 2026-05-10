@@ -439,6 +439,9 @@ MonoBehaviour:
     attackSpeed:
       baseValue: 0
       modifiers: []
+    speed:
+      baseValue: 0
+      modifiers: []
     damage:
       baseValue: 0
       modifiers: []
@@ -456,15 +459,6 @@ MonoBehaviour:
       baseValue: 0
       modifiers: []
     evasion:
-      baseValue: 0
-      modifiers: []
-    fireResistance:
-      baseValue: 0
-      modifiers: []
-    iceResistance:
-      baseValue: 0
-      modifiers: []
-    lightninghResistance:
       baseValue: 0
       modifiers: []
   baseExpDrop: 20

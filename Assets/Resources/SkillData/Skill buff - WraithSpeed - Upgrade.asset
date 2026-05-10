@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - SoulRage
-  m_EditorClassIdentifier: Assembly-CSharp::Skill_BuffDataSO
-  saveId: c7db3f2e1bca2504eba21b9fe44147d5
-  displayName: Soul Rage
-  description: "Unleash soul rage \u2014 increases 15% attack speed and damage, but
-    reduces 10% armor."
+  m_Name: Skill buff - WraithSpeed - Upgrade
+  m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
+  saveId: 930b4201128c79446a94d378d645bd77
+  displayName: Wraith Speed - Upgrade
+  description: "Faster than the wind \u2014 further increases speed and evasion by
+    20%, attack power reduced by an additional 5%."
   icon: {fileID: 0}
   duration: 5
   prerequisiteSkill: {fileID: 0}
@@ -25,9 +25,9 @@ MonoBehaviour:
   maxSkillRollChance: 50
   isPercent: 1
   skillStatData:
-  - type: 11
-    value: 0.15
   - type: 12
-    value: 0.15
-  - type: 6
-    value: -0.1
+    value: 0.3
+  - type: 7
+    value: 0.3
+  - type: 11
+    value: -0.2

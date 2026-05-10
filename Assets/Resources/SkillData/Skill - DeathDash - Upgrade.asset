@@ -18,6 +18,11 @@ MonoBehaviour:
     cooldown by 1 second."
   icon: {fileID: 0}
   duration: 0.2
+  prerequisiteSkill: {fileID: 11400000, guid: ee41b42d9ec621249b8b0b4e32d57554, type: 2}
+  cardType: 0
+  skillRarity: 400
+  skillRollChance: 60.1
+  maxSkillRollChance: 80
   skillObjectPrefab: {fileID: 397943091315647349, guid: c14cb7cbe16055340b50b1c584d58be7, type: 3}
   orbitRadius: 1.5
   orbitSpeed: 180
@@ -29,9 +34,4 @@ MonoBehaviour:
     distanceToAttack: 1
     attackRadius: 1
     speed: 0
-  prerequisiteSkill: {fileID: 11400000, guid: ee41b42d9ec621249b8b0b4e32d57554, type: 2}
   upgradeBoostChance: 30
-  cardType: 0
-  skillRarity: 100
-  skillRollChance: 65
-  maxSkillRollChance: 65

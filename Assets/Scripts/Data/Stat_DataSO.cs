@@ -9,6 +9,7 @@ public class Stat_SO : ScriptableObject
 
     [Header("Offense Info - Physical Damage")]
     public float attackSpeed;
+    public float speed;
     public float damage;
     public float critChance;
     public float critDamage;

@@ -17,6 +17,11 @@ MonoBehaviour:
   description: Release pent-up soul energy in a wide burst around yourself.
   icon: {fileID: 0}
   duration: 0
+  prerequisiteSkill: {fileID: 11400000, guid: 7babedffdcf203143b53e44a9a148fd5, type: 2}
+  cardType: 0
+  skillRarity: 750
+  skillRollChance: 25.1
+  maxSkillRollChance: 80
   skillObjectPrefab: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
   orbitRadius: 1.5
   orbitSpeed: 180
@@ -28,9 +33,4 @@ MonoBehaviour:
     distanceToAttack: 4
     attackRadius: 5
     speed: 1
-  prerequisiteSkill: {fileID: 11400000, guid: 7babedffdcf203143b53e44a9a148fd5, type: 2}
   upgradeBoostChance: 30
-  cardType: 0
-  skillRarity: 100
-  skillRollChance: 65
-  maxSkillRollChance: 65

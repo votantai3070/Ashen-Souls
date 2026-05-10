@@ -4,6 +4,7 @@ using System;
 public class Stat_OffenseGroup
 {
     public Stat attackSpeed;
+    public Stat speed;
 
     // Physical Offense
     public Stat damage;

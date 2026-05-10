@@ -20,6 +20,7 @@ public class Entity_Combat : MonoBehaviour
     [SerializeField] private float defaultImpactDuration = .1f;
 
     private bool canHit;
+    private bool becomeInvulnerable;
 
     protected virtual void Awake()
     {
@@ -35,7 +36,8 @@ public class Entity_Combat : MonoBehaviour
 
     public virtual void Attack(Entity dealer)
     {
-        if (!CanAttack()) return; // Guard against attacking too frequently
+        if (CanAttack() == false)
+            return; // Guard against attacking too frequently
 
         lastAttackTime = Time.time;
         hitThisAttack.Clear();
@@ -47,8 +49,15 @@ public class Entity_Combat : MonoBehaviour
                 if (hitThisAttack.Contains(damageable)) continue;
                 hitThisAttack.Add(damageable);
 
-                float dealerDamage = entity.entityStats.GetPhysicalDamage(out bool isCriticalHit);
+                float evasion = enemy.GetComponent<Entity>().entityStats.GetEvasion();
 
+                if (evasion > Random.value)
+                {
+                    Debug.Log("Evasion");
+                    return;
+                }
+
+                float dealerDamage = entity.entityStats.GetPhysicalDamage(out bool isCriticalHit);
                 canHit = damageable.TakeDamage(isCriticalHit, dealerDamage, dealer.transform);
 
                 if (canHit)
@@ -66,8 +75,16 @@ public class Entity_Combat : MonoBehaviour
         return Physics2D.OverlapCircleAll(attackArea.position, attackRadius, enemyLayer);
     }
 
+    public void SetInvulnerable(bool invulnerable) => becomeInvulnerable = invulnerable;
+
     public bool CanAttack()
     {
-        return Time.time >= lastAttackTime + attackCooldownGuard;
+        if (becomeInvulnerable)
+            return false;
+
+        if (Time.time < lastAttackTime + attackCooldownGuard)
+            return false;
+
+        return true;
     }
 }

@@ -8,8 +8,8 @@ public class Stat_DefenseGroup
     public Stat evasion;
 
     // Elemental Defense
-    public Stat fireResistance;
-    public Stat iceResistance;
-    public Stat lightninghResistance;
+    //public Stat fireResistance;
+    //public Stat iceResistance;
+    //public Stat lightninghResistance;
 
 }

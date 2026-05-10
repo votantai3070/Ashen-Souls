@@ -12,6 +12,7 @@ public class Player_DashState : PlayerState
     {
         base.Enter();
 
+        player.combat.SetInvulnerable(true);
         stateTimer = skillManager.deathDash.GetDuration();
         player.skillManager.deathDash.TryUseSkill();
 
@@ -22,6 +23,7 @@ public class Player_DashState : PlayerState
     {
         base.Exit();
 
+        player.combat.SetInvulnerable(false);
         player.SetVelocity(0, 0);
     }
 

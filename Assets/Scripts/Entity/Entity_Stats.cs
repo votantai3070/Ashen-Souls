@@ -1,7 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Entity_Stats : MonoBehaviour
 {
+    public Action onStatChanged;
+
     public Stat_SO defaultStatSetup;
 
     [Header("Stat")]
@@ -10,7 +14,10 @@ public class Entity_Stats : MonoBehaviour
     public Stat_OffenseGroup offense;
     public Stat_DefenseGroup defense;
 
-
+    private void Start()
+    {
+        //ApplyDefaultStatSetup();
+    }
 
     //public float GetElementalDamage(out ElementType element, float scaleFactor)
     //{
@@ -51,13 +58,23 @@ public class Entity_Stats : MonoBehaviour
     //    return totalElementalDamage * scaleFactor;
     //}
 
+    public float GetSpeed()
+    {
+        float baseSpeed = offense.speed.GetValue();
+        float bonusSpeed = major.agility.GetValue() * .5f; // Bonus speed from AGI: +0.5 per AGI
+
+        float finalSpeed = baseSpeed + bonusSpeed;
+
+        return finalSpeed;
+    }
+
     public float GetPhysicalDamage(out bool isCriticalHit, float scaleFactor = 1)
     {
         float baseDamage = GetBasePhysicalDamage();
         float baseCritChance = GetCritChance();
         float baseCritDamage = GetCritDamage();
 
-        isCriticalHit = Random.Range(0, 100) < baseCritChance;
+        isCriticalHit = UnityEngine.Random.Range(0, 100) < baseCritChance;
         float finalDamage = isCriticalHit ? baseDamage * baseCritDamage : baseDamage;
 
         return finalDamage * scaleFactor;
@@ -76,11 +93,9 @@ public class Entity_Stats : MonoBehaviour
         float bonusEvasion = major.agility.GetValue() * 0.5f;
 
         float totalEvasion = baseEvasion + bonusEvasion;
-        float evasionCap = 0.85f; // Cap evasion at 85%
+        float evasionCap = 0.85f;
 
-        float finalEvasion = Mathf.Clamp(totalEvasion, 0, evasionCap);
-
-        return finalEvasion;
+        return Mathf.Clamp(totalEvasion, 0f, evasionCap);
     }
 
     public float GetMaxHealth()
@@ -93,11 +108,9 @@ public class Entity_Stats : MonoBehaviour
         return finalMaxHealth;
     }
 
-    // ===================== SKILL DAMAGE =====================
-
     /// <summary>
-    /// Tính damage cho skill với scaleFactor riêng mỗi skill
-    /// scaleFactor = 1.5 → damage bằng 150% base damage
+    /// Calculate skill damage using a separate ScaleFactor for each skill.
+    /// scaleFactor = 1.5 → damage equal to 150% base damage
     /// Normal × (1 + upgradeBonus%)
     /// </summary>
     public float GetSkillDamage(SkillUpgradeType skillType, out bool isCriticalHit)
@@ -106,38 +119,38 @@ public class Entity_Stats : MonoBehaviour
         return GetPhysicalDamage(out isCriticalHit, scaleFactor);
     }
 
+    private static readonly Dictionary<SkillUpgradeType, float> skillScaleFactors = new()
+{
+    // ------ Skill Attack ------
+    { SkillUpgradeType.SpinningSword,        1.40f },
+    { SkillUpgradeType.SpinningSwordUpgrade, 1.75f },
+
+    { SkillUpgradeType.FireSoul,             1.50f },
+    { SkillUpgradeType.FireSoulUpgrade,      1.95f },
+
+    //{ SkillUpgradeType.SoulCleave,           1.30f },
+    //{ SkillUpgradeType.SoulCleaveUpgrade,    1.56f },
+
+    //{ SkillUpgradeType.SpriritArrow,         1.60f },
+    //{ SkillUpgradeType.SpriritArrowUpgrade,  2.00f },
+
+    { SkillUpgradeType.SoulBurst,            1.80f },
+    { SkillUpgradeType.SoulBurstUpgrade,     2.34f },
+
+    { SkillUpgradeType.DeathDash,            1.20f },
+    { SkillUpgradeType.DeathDashUpgrade,     1.44f },
+
+    // ------ Ultimate ------
+    { SkillUpgradeType.BlackHole,            2.50f },
+    { SkillUpgradeType.BlackHoleUpgrade,     3.25f },
+
+    { SkillUpgradeType.SoulEruption,         3.00f },
+    { SkillUpgradeType.SoulEruptionUpgrade,  4.05f },
+};
+
     private float GetSkillScaleFactor(SkillUpgradeType skillType)
     {
-        switch (skillType)
-        {
-            // ------ Skill Attack ------
-            case SkillUpgradeType.SpinningSword: return 1.4f;
-            case SkillUpgradeType.SpinningSwordUpgrade: return 1.75f; // +25% damage
-
-            case SkillUpgradeType.FireSoul: return 1.5f;
-            case SkillUpgradeType.FireSoulUpgrade: return 1.95f; // +30% damage
-
-            case SkillUpgradeType.SoulCleave: return 1.3f;
-            case SkillUpgradeType.SoulCleaveUpgrade: return 1.56f; // +20% damage
-
-            case SkillUpgradeType.SpriritArrow: return 1.6f;
-            case SkillUpgradeType.SpriritArrowUpgrade: return 2.0f;  // +25% damage
-
-            case SkillUpgradeType.SoulBurst: return 1.8f;
-            case SkillUpgradeType.SoulBurstUpgrade: return 2.34f; // +30% damage
-
-            case SkillUpgradeType.DeathDash: return 1.2f;
-            case SkillUpgradeType.DeathDashUpgrade: return 1.44f; // +20% damage
-
-            // ------ Ultimate ------
-            case SkillUpgradeType.BlackHole: return 2.5f;
-            case SkillUpgradeType.BlackHoleUpgrade: return 3.25f; // +30% DoT
-
-            case SkillUpgradeType.SoulEruption: return 3.0f;
-            case SkillUpgradeType.SoulEruptionUpgrade: return 4.05f; // +35% damage
-
-            default: return 1.0f;
-        }
+        return skillScaleFactors.TryGetValue(skillType, out float factor) ? factor : 1.0f;
     }
 
     public Stat GetStatByType(StatType type)
@@ -160,14 +173,16 @@ public class Entity_Stats : MonoBehaviour
                 return defense.armor;
             case StatType.Evasion:
                 return defense.evasion;
-            case StatType.FireResistance:
-                return defense.fireResistance;
-            case StatType.IceResistance:
-                return defense.iceResistance;
-            case StatType.LightningResistance:
-                return defense.lightninghResistance;
+            //case StatType.FireResistance:
+            //    return defense.fireResistance;
+            //case StatType.IceResistance:
+            //    return defense.iceResistance;
+            //case StatType.LightningResistance:
+            //    return defense.lightninghResistance;
             case StatType.Damage:
                 return offense.damage;
+            case StatType.Speed:
+                return offense.speed;
             case StatType.CriticalChance:
                 return offense.critChance;
             case StatType.CriticalDamage:
@@ -202,6 +217,7 @@ public class Entity_Stats : MonoBehaviour
 
         // Default offense stats
         offense.attackSpeed.SetBaseValue(defaultStatSetup.attackSpeed);
+        offense.speed.SetBaseValue(defaultStatSetup.speed);
         offense.damage.SetBaseValue(defaultStatSetup.damage);
         offense.critChance.SetBaseValue(defaultStatSetup.critChance);
         offense.critDamage.SetBaseValue(defaultStatSetup.critDamage);

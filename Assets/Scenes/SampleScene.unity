@@ -1171,10 +1171,10 @@ GameObject:
   - component: {fileID: 575607132}
   - component: {fileID: 575607129}
   - component: {fileID: 575607128}
-  - component: {fileID: 575607130}
   - component: {fileID: 575607134}
   - component: {fileID: 575607135}
   - component: {fileID: 575607136}
+  - component: {fileID: 575607137}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1254,25 +1254,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &575607130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575607126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d56c5d2d90a3ba442a6cfa39d67e9c2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Entity_Combat
-  attackArea: {fileID: 337634377}
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  showTargetEnemies: []
-  attackCooldownGuard: 0.1
-  defaultImpactDuration: 0.1
 --- !u!61 &575607132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1369,6 +1350,9 @@ MonoBehaviour:
     attackSpeed:
       baseValue: 1
       modifiers: []
+    speed:
+      baseValue: 5
+      modifiers: []
     damage:
       baseValue: 20
       modifiers: []
@@ -1386,16 +1370,7 @@ MonoBehaviour:
       baseValue: 0
       modifiers: []
     evasion:
-      baseValue: 0
-      modifiers: []
-    fireResistance:
-      baseValue: 0
-      modifiers: []
-    iceResistance:
-      baseValue: 0
-      modifiers: []
-    lightninghResistance:
-      baseValue: 0
+      baseValue: 0.8
       modifiers: []
   levelSystem:
     maxLevel: 99
@@ -1422,6 +1397,25 @@ MonoBehaviour:
   fireColor: {r: 1, g: 0.27, b: 0, a: 1}
   lightningColor: {r: 1, g: 0.88, b: 0.2, a: 1}
   thunderStrikePrefab: {fileID: 0}
+--- !u!114 &575607137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575607126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853dbf3bb5bcd634197eb859899992be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player_Combat
+  attackArea: {fileID: 337634377}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  showTargetEnemies: []
+  attackCooldownGuard: 0.1
+  defaultImpactDuration: 0.1
 --- !u!1 &589699674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,7 +1784,7 @@ RectTransform:
   m_Father: {fileID: 775203865}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.235, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2033,7 +2027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &818823992
 RectTransform:
   m_ObjectHideFlags: 0

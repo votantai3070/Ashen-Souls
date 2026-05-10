@@ -18,6 +18,11 @@ MonoBehaviour:
     by 1 second.
   icon: {fileID: 0}
   duration: 4
+  prerequisiteSkill: {fileID: 11400000, guid: 6f93ee8d2ae5e02469fd25a468a93217, type: 2}
+  cardType: 0
+  skillRarity: 750
+  skillRollChance: 25.1
+  maxSkillRollChance: 80
   skillObjectPrefab: {fileID: 4526101274153675507, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
   orbitRadius: 1.5
   orbitSpeed: 180
@@ -29,9 +34,4 @@ MonoBehaviour:
     distanceToAttack: 3
     attackRadius: 0.6
     speed: 0
-  prerequisiteSkill: {fileID: 11400000, guid: 6f93ee8d2ae5e02469fd25a468a93217, type: 2}
   upgradeBoostChance: 30
-  cardType: 0
-  skillRarity: 209
-  skillRollChance: 65
-  maxSkillRollChance: 65

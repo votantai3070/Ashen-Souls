@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Enum\CardRarityType.cs" />
     <Compile Include="Assets\Scripts\SpawnSystem\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_SoulBurst.cs" />
+    <Compile Include="Assets\Scripts\Data\SkillBuff_DataSO.cs" />
     <Compile Include="Assets\Scripts\StateMachine.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_ExplodeState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_FireSoul.cs" />
@@ -90,7 +91,6 @@
     <Compile Include="Assets\Scripts\Entity\EntityAnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_VFX.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillBoard.cs" />
-    <Compile Include="Assets\Scripts\Data\Skill_BuffDataSO.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_DefenseGroup.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_FireSoul.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SpellState.cs" />

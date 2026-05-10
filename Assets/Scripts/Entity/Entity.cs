@@ -46,12 +46,24 @@ public class Entity : MonoBehaviour
 
     protected virtual void Start()
     {
-        attackSpeed = entityStats.GetStatByType(StatType.AttackSpeed).GetValue();
+        RefreshStats();
+        entityStats.onStatChanged += RefreshStats; // subscribe event
+    }
+
+    private void OnDestroy()
+    {
+        entityStats.onStatChanged -= RefreshStats; // unsubscribe avoid memory leak
     }
 
     protected virtual void Update()
     {
         stateMachine.currentState?.Update();
+    }
+
+    private void RefreshStats()
+    {
+        moveSpeed = entityStats.GetSpeed();
+        attackSpeed = entityStats.GetStatByType(StatType.AttackSpeed).GetValue();
     }
 
     public void SetVelocity(float x, float y)

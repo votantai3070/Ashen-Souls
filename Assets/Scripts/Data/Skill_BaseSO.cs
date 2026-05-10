@@ -11,7 +11,7 @@ public class Skill_BaseSO : ScriptableObject
     public string description;
     public Sprite icon;
     public float duration = 5f;
-
+    [Space]
     public Skill_BaseSO prerequisiteSkill;
 
 

@@ -8,7 +8,7 @@ public enum SkillType
     SpiritLink, // Link with a soul, sharing damage taken and increasing attack power.
 
     // ------ Active Abilities ------
-    // Skill Attacks
+    // Card Skill Attacks
     SpinningSword, // A powerful spinning attack that hits all nearby enemies.
     FireSoul, // Unleash a fiery soul blast that damages enemies in a line.
     SoulCleave, // A sweeping attack that cleaves through enemies, dealing damage
@@ -16,7 +16,7 @@ public enum SkillType
     SoulBurst, // Unleash a burst of soul energy around the character, damaging and knocking back enemies.
     DeathDash, // Dash forward, dealing damage to enemies in the path and leaving a trail of soul energy that damages enemies over time.
 
-    // Skill Buffs
+    // Card Skill Buffs
     SoulRage, // Increase attack speed and damage for a short duration, but reduce defense.
     WraithSpeed, // Increase movement speed and evasion for a short duration, but reduce attack power.
     SoulShield, // Create a shield that absorbs damage for a short duration, but reduces movement speed.

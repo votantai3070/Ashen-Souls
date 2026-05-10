@@ -13,6 +13,8 @@ public class Stat
 
     public float GetValue()
     {
+        finalValue = baseValue;
+
         if (isDirty)
         {
             finalValue = GetFinalValue();

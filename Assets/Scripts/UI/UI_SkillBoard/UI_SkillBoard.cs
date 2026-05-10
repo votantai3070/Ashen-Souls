@@ -24,16 +24,11 @@ public class UI_SkillBoard : MonoBehaviour
 
     public void GetSkillsRollRandom()
     {
-        //if (skillsData == null && skillsData.skillList == null)
-        //    return;
-
         foreach (var card in cards)
             card.gameObject.SetActive(false);
 
         List<Skill_BaseSO> skillsToRoll = RollSkills();
         int amountSkills = Mathf.Min(skillsToRoll.Count, maxSkillToRoll);
-
-        Debug.Log("Amount Skills: " + amountSkills);
 
         for (int i = 0; i < amountSkills; i++)
         {
@@ -102,10 +97,10 @@ public class UI_SkillBoard : MonoBehaviour
 
     private string GetColorByRarity(int rarity)
     {
-        if (rarity <= 150) return "#FFFFFF"; // Common
+        if (rarity <= 200) return "#FFFFFF"; // Common
         if (rarity <= 400) return "#437A22"; // Uncommon
         if (rarity <= 600) return "#006494"; // Rare
-        if (rarity <= 800) return "#7A39BB"; // Epic
+        if (rarity <= 900) return "#7A39BB"; // Epic
         return "#FFD700";                    // Legendary
     }
 }
