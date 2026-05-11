@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Skill buff - WraithSpeed - Upgrade
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
   saveId: 930b4201128c79446a94d378d645bd77
-  displayName: Wraith Speed - Upgrade
+  displayName: Wraith Speed
   description: "Faster than the wind \u2014 further increases speed and evasion by
     20%, attack power reduced by an additional 5%."
   icon: {fileID: 0}
   duration: 5
-  prerequisiteSkill: {fileID: 0}
+  prerequisiteSkill: {fileID: 11400000, guid: 2337cb57d64cf374d8464a7d1b5c6976, type: 2}
   cardType: 1
   skillRarity: 400
   skillRollChance: 50

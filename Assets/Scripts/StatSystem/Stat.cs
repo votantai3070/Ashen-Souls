@@ -8,7 +8,7 @@ public class Stat
     [SerializeField] private float baseValue;
     [SerializeField] private List<StatModifier> modifiers = new List<StatModifier>();
 
-    private float finalValue;
+    [SerializeField] private float finalValue;
     private bool isDirty = true;
 
     public float GetValue()

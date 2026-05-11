@@ -20,7 +20,7 @@ public class UI_SkillCard : MonoBehaviour
         ui = GetComponentInParent<UI>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
         Flip();
     }
@@ -81,5 +81,13 @@ public class UI_SkillCard : MonoBehaviour
 
         seq.Append(cardRect.DOLocalRotate(new Vector3(0, 0, 0), flipDuration / 2f)
             .SetEase(Ease.OutQuad));
+    }
+
+    public void ResetCard()
+    {
+        DOTween.Kill(cardRect);
+        cardRect.localEulerAngles = Vector3.zero;
+        frontFace.SetActive(true);
+        backFace.gameObject.SetActive(false);
     }
 }

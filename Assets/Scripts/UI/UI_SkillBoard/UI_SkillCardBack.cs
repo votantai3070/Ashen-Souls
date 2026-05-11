@@ -11,12 +11,6 @@ public class UI_SkillCardBack : MonoBehaviour
 
     public void SetupInfoCard(Skill_BaseSO skillData, string colorText)
     {
-        if (skillData == null)
-        {
-            gameObject.SetActive(false);
-            return;
-        }
-
         cardNameText.text = GetNameText(skillData, colorText);
         cardInfoText.text = GetDescriptionText(skillData);
     }

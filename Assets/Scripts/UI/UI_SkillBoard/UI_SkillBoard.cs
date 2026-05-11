@@ -24,17 +24,20 @@ public class UI_SkillBoard : MonoBehaviour
 
     public void GetSkillsRollRandom()
     {
-        foreach (var card in cards)
-            card.gameObject.SetActive(false);
-
         List<Skill_BaseSO> skillsToRoll = RollSkills();
         int amountSkills = Mathf.Min(skillsToRoll.Count, maxSkillToRoll);
 
-        for (int i = 0; i < amountSkills; i++)
+        for (int i = 0; i < cards.Length; i++)
         {
-            string colorText = GetColorByRarity(skillsToRoll[i].skillRarity);
-            cards[i].gameObject.SetActive(true);
-            cards[i].SetCardInfo(skillsToRoll[i], colorText);
+            if (i < amountSkills)
+            {
+                string colorText = GetColorByRarity(skillsToRoll[i].skillRarity);
+                cards[i].SetCardInfo(skillsToRoll[i], colorText);
+                cards[i].ResetCard();
+                cards[i].gameObject.SetActive(true);
+            }
+            else
+                cards[i].gameObject.SetActive(false);
         }
     }
 

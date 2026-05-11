@@ -419,48 +419,62 @@ MonoBehaviour:
     maxHealth:
       baseValue: 100
       modifiers: []
+      finalValue: 0
     regenHealth:
       baseValue: 0
       modifiers: []
+      finalValue: 0
   major:
     strength:
       baseValue: 0
       modifiers: []
+      finalValue: 0
     agility:
       baseValue: 0
       modifiers: []
+      finalValue: 0
     intelligence:
       baseValue: 0
       modifiers: []
+      finalValue: 0
     vitality:
       baseValue: 0
       modifiers: []
+      finalValue: 0
   offense:
     attackSpeed:
       baseValue: 0
       modifiers: []
+      finalValue: 0
     speed:
       baseValue: 0
       modifiers: []
+      finalValue: 0
     damage:
-      baseValue: 0
+      baseValue: 20
       modifiers: []
+      finalValue: 0
     critDamage:
       baseValue: 0
       modifiers: []
+      finalValue: 0
     critChance:
       baseValue: 0
       modifiers: []
+      finalValue: 0
     armorReduction:
       baseValue: 0
       modifiers: []
+      finalValue: 0
   defense:
     armor:
       baseValue: 0
       modifiers: []
+      finalValue: 0
     evasion:
       baseValue: 0
       modifiers: []
+      finalValue: 0
   baseExpDrop: 20
   expScalingPerLevel: 0.2
 --- !u!114 &4685216884774553067

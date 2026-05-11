@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Skill buff - SoulRage - Upgrade
   m_EditorClassIdentifier: Assembly-CSharp::Skill_BuffDataSO
   saveId: c422ac50bfbefbc4a9a27ebc31e8ec03
-  displayName: Soul Rage - Upgrade
+  displayName: Soul Rage
   description: "The rage boils hotter \u2014 further increases attack speed and damage
     by 15%, defense reduced by an additional 5%."
   icon: {fileID: 0}
