@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Fire Soul Ball
   description: Launch a fire soul toward an enemy, dealing damage and applying a
     burn over time.
-  icon: {fileID: 0}
+  icon: {fileID: 128636590, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
   cardType: 0

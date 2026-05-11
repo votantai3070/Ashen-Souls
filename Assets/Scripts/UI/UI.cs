@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class UI : MonoBehaviour
 {
+    public Action onSkillSlotChange;
+
     public static UI instance { get; private set; }
     public Player player { get; private set; }
 
@@ -20,6 +23,14 @@ public class UI : MonoBehaviour
     public void SetPlayer(Player player)
     {
         this.player = player;
+
+        onSkillSlotChange += ingameUI.skillHolder.SetupSkillSlots;
+        ingameUI.skillHolder.SetupSkillSlots();
+    }
+
+    private void OnDestroy()
+    {
+        onSkillSlotChange -= ingameUI.skillHolder.SetupSkillSlots;
     }
 
     private void StopPlayerControls(bool stopControls)
@@ -62,5 +73,10 @@ public class UI : MonoBehaviour
     {
         StopPlayerControls(false);
         SwitchTo(ingameUI.gameObject);
+    }
+
+    public void OnSkillSlotChange()
+    {
+        onSkillSlotChange?.Invoke();
     }
 }

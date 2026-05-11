@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Soul Rage
   description: "Unleash soul rage \u2014 increases 15% attack speed and damage, but
     reduces 10% armor."
-  icon: {fileID: 0}
+  icon: {fileID: 1814028019, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
   cardType: 1

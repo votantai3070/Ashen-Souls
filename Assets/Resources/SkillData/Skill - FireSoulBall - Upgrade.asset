@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Fire Soul Ball - Upgrade
   description: "The soul flame blazes fiercer \u2014 increases damage by 30% and
     reduces cooldown by 1.5 seconds."
-  icon: {fileID: 0}
+  icon: {fileID: -763230067, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 11400000, guid: f8cda36d25245d04b90e589ac332c889, type: 2}
   cardType: 0

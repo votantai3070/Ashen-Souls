@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Wraith Speed
   description: "Faster than the wind \u2014 further increases speed and evasion by
     20%, attack power reduced by an additional 5%."
-  icon: {fileID: 0}
+  icon: {fileID: -627571751, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 11400000, guid: 2337cb57d64cf374d8464a7d1b5c6976, type: 2}
   cardType: 1

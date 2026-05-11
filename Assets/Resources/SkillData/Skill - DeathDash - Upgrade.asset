@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Death Dash - Upgrade
   description: "The shadow condenses further \u2014 increases damage by 20% and reduces
     cooldown by 1 second."
-  icon: {fileID: 0}
+  icon: {fileID: 1731028068, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 0.2
   prerequisiteSkill: {fileID: 11400000, guid: ee41b42d9ec621249b8b0b4e32d57554, type: 2}
   cardType: 0

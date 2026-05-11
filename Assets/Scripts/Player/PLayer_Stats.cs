@@ -43,13 +43,13 @@ public class Player_Stats : Entity_Stats
 
     private void HandleLevelUp(int newLevel)
     {
-        player?.ui?.OpenSkillBoard();
-        player.ui?.ingameUI?.ShowLevelUpEffect(newLevel);
+        UI.instance?.OpenSkillBoard();
+        UI.instance?.ingameUI?.ShowLevelUpEffect(newLevel);
     }
 
     private void HandleExpChanged(float current, float max)
     {
-        player.ui?.ingameUI?.UpdateExpBar(current, max);
-        player.ui?.ingameUI?.UpdateLevelText(levelSystem.CurrentLevel());
+        UI.instance?.ingameUI?.UpdateExpBar(current, max);
+        UI.instance?.ingameUI?.UpdateLevelText(levelSystem.CurrentLevel());
     }
 }

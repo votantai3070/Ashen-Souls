@@ -5,6 +5,7 @@ public class Skill_Base : MonoBehaviour
 {
     public Player_SkillManager skillManager { get; private set; }
     public Entity entity { get; private set; }
+    public Skill_DataSO skillData { get; private set; }
 
     [Space]
     public LayerMask whatIsEnemy;
@@ -48,6 +49,8 @@ public class Skill_Base : MonoBehaviour
         checkEnemyRadius = upgrade.distanceToAttack;
         checkDamageRadius = upgrade.attackRadius;
         duration = skillData.duration;
+        this.skillData = skillData;
+        UI.instance.OnSkillSlotChange();
 
         //damageScaleData = upgrade.damageScale;
 
@@ -89,7 +92,7 @@ public class Skill_Base : MonoBehaviour
     protected bool OnCooldown() => Time.time < lastTimeUsed + cooldown;
     public void SetSkillOnCooldown()
     {
-        //player.ui.ingameUI.GetSkillSlot(skillType).StartCooldown(cooldown);
+        UI.instance.ingameUI.skillHolder.StartCooldownSkillSlot(skillType, cooldown);
         lastTimeUsed = Time.time;
     }
     public void ReduceCooldownBy(float cooldownReduction) => lastTimeUsed = lastTimeUsed + cooldownReduction;

@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Wraith Speed
   description: "Become a wraith \u2014 increases movement speed and evasion, but
     reduces attack power."
-  icon: {fileID: 0}
+  icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
   cardType: 1

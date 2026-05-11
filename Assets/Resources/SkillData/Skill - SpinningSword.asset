@@ -15,7 +15,7 @@ MonoBehaviour:
   saveId: 6f93ee8d2ae5e02469fd25a468a93217
   displayName: Spinning Sword
   description: Swing your blade in a circle, dealing damage to all nearby enemies.
-  icon: {fileID: 0}
+  icon: {fileID: -748005180, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 3
   prerequisiteSkill: {fileID: 0}
   cardType: 0

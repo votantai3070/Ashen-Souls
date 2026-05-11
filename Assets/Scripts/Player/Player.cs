@@ -3,7 +3,6 @@ using UnityEngine;
 public class Player : Entity
 {
     public ControlsManager controls { get; private set; }
-    public UI ui { get; private set; }
     public Player_Combat combat { get; private set; }
     public Player_SkillManager skillManager { get; private set; }
     public Player_Health health { get; private set; }
@@ -31,9 +30,8 @@ public class Player : Entity
         base.Awake();
 
         controls = ControlsManager.instance;
-        ui = FindFirstObjectByType<UI>();
-        combat = GetComponent<Player_Combat>();
         skillManager = GetComponentInChildren<Player_SkillManager>();
+        combat = GetComponent<Player_Combat>();
         health = GetComponent<Player_Health>();
         stats = GetComponent<Player_Stats>();
         vFX = GetComponent<Player_VFX>();

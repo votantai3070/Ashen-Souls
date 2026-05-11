@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: db48f555213fe6f40af912257e4226df
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 170878
+  packageName: Free Ui Pack
+  packageVersion: 1.0
+  assetPath: Assets/Prefabs/UI/Buttons/Button_4.prefab
+  uploadId: 373354

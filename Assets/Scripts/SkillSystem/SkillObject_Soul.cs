@@ -33,7 +33,6 @@ public class SkillObject_Soul : SkillObject_Base
 
     public void AbsorbSoul()
     {
-        Debug.Log("Absorbing soul...");
         absorbSoulManager.AbsorbSoul(this);
         ObjectPool.instance.Despawn(gameObject);
     }

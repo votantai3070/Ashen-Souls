@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\StateMachine.cs" />
     <Compile Include="Assets\Scripts\GameColors.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_ExplodeState.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_SkillSlot.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_FireSoul.cs" />
     <Compile Include="Assets\Scripts\Data\Skill_ListDataSO.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_ResourceGroup.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\Scripts\Data\Stat_DataSO.cs" />
     <Compile Include="Assets\Scripts\Entity\EntityAnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_VFX.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_SkillHolder.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillBoard.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_DefenseGroup.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_FireSoul.cs" />
@@ -100,10 +102,12 @@
     <Compile Include="Assets\Scripts\StatSystem\Stat_MajorGroup.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_SpinningSword.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_IdleState.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_Bar.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_Base.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyState\Enemy_MoveState.cs" />
     <Compile Include="Assets\Scripts\Interface\IDamageable.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_Ingame.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillUpgradeType.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Combat.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Stats.cs" />
@@ -114,7 +118,6 @@
     <Compile Include="Assets\Scripts\SkillSystem\SkillObject_DeathDash.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_MoveState.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyState\Enemy_AttackState.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_Ingame.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Stats.cs" />
     <Compile Include="Assets\Scripts\Player\Player_AnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyState\Enemy_IdleState.cs" />

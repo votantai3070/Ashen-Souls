@@ -1,18 +1,21 @@
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_SkillCardBack : MonoBehaviour
 {
 
     [SerializeField] private TextMeshProUGUI cardNameText;
     [SerializeField] private TextMeshProUGUI cardInfoText;
+    [SerializeField] private Image cardSkillImage;
 
 
     public void SetupInfoCard(Skill_BaseSO skillData, string colorText)
     {
         cardNameText.text = GetNameText(skillData, colorText);
         cardInfoText.text = GetDescriptionText(skillData);
+        cardSkillImage.sprite = skillData.icon;
     }
 
     private string GetNameText(Skill_BaseSO skillData, string colorText)
@@ -33,6 +36,4 @@ public class UI_SkillCardBack : MonoBehaviour
 
         return sb.ToString();
     }
-
-
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   saveId: 7babedffdcf203143b53e44a9a148fd5
   displayName: Soul Burst
   description: Release pent-up soul energy in a wide burst around yourself.
-  icon: {fileID: 0}
+  icon: {fileID: 1734541318, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 0
   prerequisiteSkill: {fileID: 0}
   cardType: 0

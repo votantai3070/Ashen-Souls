@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Player_SkillManager : MonoBehaviour
 {
+    private Player player;
+
     public Skill_AbsorbSoul absorbSoul { get; private set; }
     public Skill_FireSoul fireSoul { get; private set; }
     public Skill_SpinningSword spinningSword { get; private set; }
@@ -13,6 +15,8 @@ public class Player_SkillManager : MonoBehaviour
 
     private void Awake()
     {
+        player = GetComponent<Player>();
+
         absorbSoul = GetComponentInChildren<Skill_AbsorbSoul>();
         fireSoul = GetComponentInChildren<Skill_FireSoul>();
         spinningSword = GetComponentInChildren<Skill_SpinningSword>();
@@ -20,6 +24,11 @@ public class Player_SkillManager : MonoBehaviour
         deathDash = GetComponentInChildren<Skill_DeathDash>();
 
         allSkills = GetComponentsInChildren<Skill_Base>();
+    }
+
+    private void Start()
+    {
+        UI.instance.ingameUI.skillHolder.SetupSkillSlots();
     }
 
     private void Update()
