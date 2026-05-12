@@ -990,7 +990,6 @@ MonoBehaviour:
   barFill: {fileID: 0}
   barDelayed: {fileID: 0}
   delayTime: 0.4
-  lerpSpeed: 3
 --- !u!1 &212345585
 GameObject:
   m_ObjectHideFlags: 0
@@ -8407,10 +8406,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089c89727e214c7479a06fc2af95d7c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_Ingame
-  skillHolder: {fileID: 0}
   healthBar: {fileID: 369598174552349864}
   healthText: {fileID: 2739321897606209953}
-  expBar: {fileID: 1741620610}
+  expBar: {fileID: 1918075998}
   expText: {fileID: 0}
   levelText: {fileID: 6895112673765612625}
 --- !u!1 &1588744919
@@ -17122,7 +17120,6 @@ MonoBehaviour:
   barFill: {fileID: 1741620610}
   barDelayed: {fileID: 0}
   delayTime: 0.4
-  lerpSpeed: 3
 --- !u!1 &1945840277
 GameObject:
   m_ObjectHideFlags: 0
@@ -19170,7 +19167,6 @@ MonoBehaviour:
   barFill: {fileID: 369598174552349864}
   barDelayed: {fileID: 208862777}
   delayTime: 0.4
-  lerpSpeed: 3
 --- !u!224 &552412577039612588
 RectTransform:
   m_ObjectHideFlags: 0

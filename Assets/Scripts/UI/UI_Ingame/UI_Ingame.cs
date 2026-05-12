@@ -4,20 +4,23 @@ using UnityEngine.UI;
 
 public class UI_Ingame : MonoBehaviour
 {
-    public UI_SkillHolder skillHolder;
+    public UI_SkillHolder skillHolder { get; private set; }
 
     [Header("Health Bar")]
     [SerializeField] private Image healthBar;
     [SerializeField] private TextMeshProUGUI healthText;
 
     [Header("Exp Bar")]
-    [SerializeField] private Image expBar;
+    [SerializeField] private UI_Bar expBar;
     [SerializeField] private TextMeshProUGUI expText;
     [SerializeField] private TextMeshProUGUI levelText;
 
     private void Awake()
     {
         skillHolder = GetComponentInChildren<UI_SkillHolder>(true);
+
+        if (expBar == null)
+            expBar = GetComponentInParent<UI_Bar>();
     }
 
     private void Start()
@@ -48,9 +51,10 @@ public class UI_Ingame : MonoBehaviour
 
     public void UpdateExpBar(float current, float max)
     {
-        float percent = current / max;
+        if (max <= 0) return;
 
-        expBar.GetComponentInParent<UI_Bar>().SetFill(percent);
+        float percent = current / max;
+        expBar.SetFill(percent);
 
         if (expText != null)
             expText.text = $"{Mathf.FloorToInt(current)} / {Mathf.FloorToInt(max)}";

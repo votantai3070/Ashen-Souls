@@ -30,17 +30,19 @@ public class UI_SkillCard : MonoBehaviour
         SkillProgressManager.instance.UnlockSkill(skillData);
 
         if (skillData is Skill_DataSO skill)
-        {
-            // Skill
             ui.player.skillManager.GetSkillByType(skill.skillType).SetSkillUpgrade(skill);
-        }
         else if (skillData is SkillBuff_DataSO buff)
-        {
-            // Buff stat
             ui.player.stats.ApplyBuff(buff.skillStatData, buff.displayName, buff.isPercent);
-        }
 
-        ui.SwitchToIngameUI();
+        cardRect.DOScale(1.15f, 0.15f)
+            .SetEase(Ease.OutBack)
+            .SetUpdate(true)
+            .OnComplete(() =>
+            {
+                cardRect.DOScale(1f, 0.1f)
+                    .SetUpdate(true)
+                    .OnComplete(() => ui.SwitchToIngameUI());
+            });
     }
 
     public void SetCardInfo(Skill_BaseSO skillData, string colorText)
