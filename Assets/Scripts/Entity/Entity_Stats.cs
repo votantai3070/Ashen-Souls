@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Entity_Stats : MonoBehaviour
 {
-    public Action onStatChanged;
+    public event Action OnStatChanged;
 
     public Stat_SO defaultStatSetup;
 
@@ -96,6 +96,30 @@ public class Entity_Stats : MonoBehaviour
         float evasionCap = 0.85f;
 
         return Mathf.Clamp(totalEvasion, 0f, evasionCap);
+    }
+
+    public float GetArmorMitigation(float armorReduction)
+    {
+        float baseArmor = GetBaseArmor();
+
+        float reductionMultiplier = Mathf.Clamp(1 - armorReduction, 0, 1); // Apply armor reduction to the total armor
+        float effectiveArmor = baseArmor * reductionMultiplier;
+
+        float mitigation = effectiveArmor / (effectiveArmor + 100); // Percentage damage reduction formula
+        float mitigationCap = 0.85f; // Cap mitigation at 85%
+
+        float finalMitigation = Mathf.Clamp(mitigation, 0, mitigationCap);
+
+        return finalMitigation;
+    }
+
+    // Assuming each point of vitality gives 1 additional armor
+    public float GetBaseArmor() => defense.armor.GetValue() + major.vitality.GetValue();
+    public float GetArmorReduction()
+    {
+        float finalArmorReduction = offense.armorReduction.GetValue() / 100; // Convert percentage to decimal
+
+        return finalArmorReduction;
     }
 
     public float GetMaxHealth()
@@ -239,4 +263,6 @@ public class Entity_Stats : MonoBehaviour
         major.intelligence.SetBaseValue(defaultStatSetup.intelligence);
         major.vitality.SetBaseValue(defaultStatSetup.vitality);
     }
+
+    public void OnStatChangedInvoke() => OnStatChanged?.Invoke();
 }

@@ -52,22 +52,15 @@ public class UI_SkillCard : MonoBehaviour
 
         foreach (var outline in outlines)
         {
-            outline.effectColor = HexToColor(colorText);
+            outline.effectColor = GameColors.HexToColor(colorText);
         }
     }
 
-    private Color HexToColor(string hex)
-    {
-        if (ColorUtility.TryParseHtmlString(hex, out Color color))
-            return color;
-
-        Debug.LogWarning($"Invalid color string: {hex}");
-        return Color.white;
-    }
-
+    // Flip card
     public void Flip()
     {
         Sequence seq = DOTween.Sequence();
+        seq.SetUpdate(true);
 
         seq.Append(cardRect.DOLocalRotate(new Vector3(0, 90, 0), flipDuration / 2f)
             .SetEase(Ease.InQuad));

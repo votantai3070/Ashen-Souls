@@ -69,7 +69,9 @@
     <Compile Include="Assets\Scripts\Player\PlayerState\PlayerState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_GroundState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_State.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_StatSlot.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_PlayerStats.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Skill_DeathDash.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillCard.cs" />
     <Compile Include="Assets\Scripts\Enum\CardRarityType.cs" />

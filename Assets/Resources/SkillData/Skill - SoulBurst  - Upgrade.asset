@@ -15,7 +15,7 @@ MonoBehaviour:
   saveId: 8a9475734d4a7a14492c8700d4c9e088
   displayName: Soul Burst - Upgrade
   description: Release pent-up soul energy in a wide burst around yourself.
-  icon: {fileID: 0}
+  icon: {fileID: 1646213721, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 0
   prerequisiteSkill: {fileID: 11400000, guid: 7babedffdcf203143b53e44a9a148fd5, type: 2}
   cardType: 0

@@ -35,7 +35,7 @@ public class Player_Stats : Entity_Stats
         foreach (var buff in buffs)
             GetStatByType(buff.type).AddModifier(buff.value, source, isPercent);
 
-        onStatChanged?.Invoke();
+        OnStatChangedInvoke();
     }
 
     public void GainExp(float amount) => levelSystem.AddExp(amount);

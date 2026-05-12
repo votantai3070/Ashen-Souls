@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class UI : MonoBehaviour
 {
-    public Action onSkillSlotChange;
+    public event Action onSkillSlotChange;
+    public event Action OnPlayerSet;
 
     public static UI instance { get; private set; }
     public Player player { get; private set; }
@@ -23,6 +24,7 @@ public class UI : MonoBehaviour
     public void SetPlayer(Player player)
     {
         this.player = player;
+        OnPlayerSet?.Invoke();
 
         onSkillSlotChange += ingameUI.skillHolder.SetupSkillSlots;
         ingameUI.skillHolder.SetupSkillSlots();

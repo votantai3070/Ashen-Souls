@@ -47,12 +47,12 @@ public class Entity : MonoBehaviour
     protected virtual void Start()
     {
         RefreshStats();
-        entityStats.onStatChanged += RefreshStats; // subscribe event
+        entityStats.OnStatChanged += RefreshStats;
     }
 
     private void OnDestroy()
     {
-        entityStats.onStatChanged -= RefreshStats; // unsubscribe avoid memory leak
+        entityStats.OnStatChanged -= RefreshStats;
     }
 
     protected virtual void Update()

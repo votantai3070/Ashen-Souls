@@ -19,7 +19,13 @@ public class UI_SkillBoard : MonoBehaviour
 
     private void OnEnable()
     {
+        Time.timeScale = 0f;
         GetSkillsRollRandom();
+    }
+
+    private void OnDisable()
+    {
+        Time.timeScale = 1f;
     }
 
     public void GetSkillsRollRandom()
@@ -31,8 +37,8 @@ public class UI_SkillBoard : MonoBehaviour
         {
             if (i < amountSkills)
             {
-                string colorText = GetColorByRarity(skillsToRoll[i].skillRarity);
-                cards[i].SetCardInfo(skillsToRoll[i], colorText);
+                string color = GetColorByRarity(skillsToRoll[i].skillRarity);
+                cards[i].SetCardInfo(skillsToRoll[i], color);
                 cards[i].ResetCard();
                 cards[i].gameObject.SetActive(true);
             }
@@ -100,10 +106,10 @@ public class UI_SkillBoard : MonoBehaviour
 
     private string GetColorByRarity(int rarity)
     {
-        if (rarity <= 200) return "#FFFFFF"; // Common
-        if (rarity <= 400) return "#437A22"; // Uncommon
-        if (rarity <= 600) return "#006494"; // Rare
-        if (rarity <= 900) return "#7A39BB"; // Epic
-        return "#FFD700";                    // Legendary
+        if (rarity <= 200) return GameColors.Common; // Common
+        if (rarity <= 400) return GameColors.Uncommon; // Uncommon
+        if (rarity <= 600) return GameColors.Rare; // Rare
+        if (rarity <= 900) return GameColors.Epic; // Epic
+        return GameColors.Legendary;               // Legendary
     }
 }

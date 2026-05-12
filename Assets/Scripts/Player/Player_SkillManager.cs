@@ -26,11 +26,6 @@ public class Player_SkillManager : MonoBehaviour
         allSkills = GetComponentsInChildren<Skill_Base>();
     }
 
-    private void Start()
-    {
-        UI.instance.ingameUI.skillHolder.SetupSkillSlots();
-    }
-
     private void Update()
     {
         foreach (var spell in allSkills)
