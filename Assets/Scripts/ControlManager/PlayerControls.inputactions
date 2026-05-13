@@ -521,8 +521,50 @@
         {
             "name": "UI",
             "id": "272f6d14-89ba-496f-b7ff-215263d3219f",
-            "actions": [],
-            "bindings": []
+            "actions": [
+                {
+                    "name": "OpenStatBoard",
+                    "type": "Button",
+                    "id": "90be8f05-fdcd-4c82-bee7-56e3934e4883",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwitchToInGame",
+                    "type": "Button",
+                    "id": "bfb2b728-9c3e-443d-8197-66b736188aac",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9d583a7b-e675-4173-964b-664044e2a030",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "OpenStatBoard",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4f2fe6ac-aa92-4b36-b2b2-0358bbb2310e",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SwitchToInGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

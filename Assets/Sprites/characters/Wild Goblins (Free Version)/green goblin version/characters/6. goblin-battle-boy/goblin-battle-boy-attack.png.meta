@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 96b4ece183f33ec459e2dfd7f9bb37df
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4522095315919369266
+    second: goblin-battle-boy-attack_0
+  - first:
+      213: 6308775395815961665
+    second: goblin-battle-boy-attack_1
+  - first:
+      213: 4389486720262151427
+    second: goblin-battle-boy-attack_2
+  - first:
+      213: 642126610789688700
+    second: goblin-battle-boy-attack_3
+  - first:
+      213: 1181133463454765772
+    second: goblin-battle-boy-attack_4
+  - first:
+      213: 8719817889381341788
+    second: goblin-battle-boy-attack_5
+  - first:
+      213: -8300434783093151579
+    second: goblin-battle-boy-attack_6
+  - first:
+      213: 7870328246832654775
+    second: goblin-battle-boy-attack_7
+  - first:
+      213: 4669449495451901672
+    second: goblin-battle-boy-attack_8
+  - first:
+      213: -363778902028913092
+    second: goblin-battle-boy-attack_9
+  - first:
+      213: -3708815678376757721
+    second: goblin-battle-boy-attack_10
+  - first:
+      213: 6481942170544917853
+    second: goblin-battle-boy-attack_11
+  - first:
+      213: -7467380144883842129
+    second: goblin-battle-boy-attack_12
+  - first:
+      213: 6041645213015247193
+    second: goblin-battle-boy-attack_13
+  - first:
+      213: 4672126823641447464
+    second: goblin-battle-boy-attack_14
+  - first:
+      213: -6633671078941085982
+    second: goblin-battle-boy-attack_15
+  - first:
+      213: -7108837398457773088
+    second: goblin-battle-boy-attack_16
+  - first:
+      213: -9091155279625897831
+    second: goblin-battle-boy-attack_17
+  - first:
+      213: -4312500621231355607
+    second: goblin-battle-boy-attack_18
+  - first:
+      213: -7060593201551885950
+    second: goblin-battle-boy-attack_19
+  - first:
+      213: 8724045300634860412
+    second: goblin-battle-boy-attack_20
+  - first:
+      213: -7283894970074161749
+    second: goblin-battle-boy-attack_21
+  - first:
+      213: 1455757381135128655
+    second: goblin-battle-boy-attack_22
+  - first:
+      213: 6724436418889799873
+    second: goblin-battle-boy-attack_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 146
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 234f4d11bb5b1ce30800000000000000
+      internalID: 4522095315919369266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 146
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 144b5531cc54d8750800000000000000
+      internalID: 6308775395815961665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 146
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d15836ae69aec30800000000000000
+      internalID: 4389486720262151427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 146
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75e1f810ca49e800800000000000000
+      internalID: 642126610789688700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 146
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc25c8980aa346010800000000000000
+      internalID: 1181133463454765772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 146
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5adbaabb24030970800000000000000
+      internalID: 8719817889381341788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 98
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a8af68da8eeecc80800000000000000
+      internalID: -8300434783093151579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_7
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 98
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9ee2a77d5093d60800000000000000
+      internalID: 7870328246832654775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_8
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 98
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee990983973dc040800000000000000
+      internalID: 4669449495451901672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_9
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 98
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36f8c7140993faf0800000000000000
+      internalID: -363778902028913092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_10
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 98
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72634f86ac3a78cc0800000000000000
+      internalID: -3708815678376757721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_11
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 98
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d44f1bf0c74f950800000000000000
+      internalID: 6481942170544917853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 50
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa3c46572598e5890800000000000000
+      internalID: -7467380144883842129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 50
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95986bcaf4c38d350800000000000000
+      internalID: 6041645213015247193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 50
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82cf8b4979ab6d040800000000000000
+      internalID: 4672126823641447464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_15
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 50
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee2fe6ec4770f3a0800000000000000
+      internalID: -6633671078941085982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_16
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 50
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e399e2ec06585d90800000000000000
+      internalID: -7108837398457773088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_17
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 50
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9983bffa07ab5d180800000000000000
+      internalID: -9091155279625897831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_18
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9298ad9988be624c0800000000000000
+      internalID: -4312500621231355607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_19
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28936fd44ebb30e90800000000000000
+      internalID: -7060593201551885950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_20
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 2
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7bb1cc9af8021970800000000000000
+      internalID: 8724045300634860412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_21
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 2
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad997fcd186aea90800000000000000
+      internalID: -7283894970074161749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_22
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 2
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4856bd00a3e33410800000000000000
+      internalID: 1455757381135128655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-attack_23
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 2
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c850ae9b4ff15d50800000000000000
+      internalID: 6724436418889799873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      goblin-battle-boy-attack_0: 4522095315919369266
+      goblin-battle-boy-attack_1: 6308775395815961665
+      goblin-battle-boy-attack_10: -3708815678376757721
+      goblin-battle-boy-attack_11: 6481942170544917853
+      goblin-battle-boy-attack_12: -7467380144883842129
+      goblin-battle-boy-attack_13: 6041645213015247193
+      goblin-battle-boy-attack_14: 4672126823641447464
+      goblin-battle-boy-attack_15: -6633671078941085982
+      goblin-battle-boy-attack_16: -7108837398457773088
+      goblin-battle-boy-attack_17: -9091155279625897831
+      goblin-battle-boy-attack_18: -4312500621231355607
+      goblin-battle-boy-attack_19: -7060593201551885950
+      goblin-battle-boy-attack_2: 4389486720262151427
+      goblin-battle-boy-attack_20: 8724045300634860412
+      goblin-battle-boy-attack_21: -7283894970074161749
+      goblin-battle-boy-attack_22: 1455757381135128655
+      goblin-battle-boy-attack_23: 6724436418889799873
+      goblin-battle-boy-attack_3: 642126610789688700
+      goblin-battle-boy-attack_4: 1181133463454765772
+      goblin-battle-boy-attack_5: 8719817889381341788
+      goblin-battle-boy-attack_6: -8300434783093151579
+      goblin-battle-boy-attack_7: 7870328246832654775
+      goblin-battle-boy-attack_8: 4669449495451901672
+      goblin-battle-boy-attack_9: -363778902028913092
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

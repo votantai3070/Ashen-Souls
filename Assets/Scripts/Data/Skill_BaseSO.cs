@@ -14,7 +14,6 @@ public class Skill_BaseSO : ScriptableObject
     [Space]
     public Skill_BaseSO prerequisiteSkill;
 
-
     [Header("Skill Card")]
     public CardType cardType;
     [Range(0, 1000)]

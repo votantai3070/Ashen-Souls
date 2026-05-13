@@ -48,8 +48,6 @@ public class SkillObject_FireSoul : SkillObject_Base
         checkDamageRadius = fireSoulManager.checkDamageRadius;
         this.duration = duration;
 
-        Debug.Log("Duration: " + duration);
-
         spawnTime = Time.time;
     }
 

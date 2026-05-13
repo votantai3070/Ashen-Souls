@@ -607,8 +607,50 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         {
             ""name"": ""UI"",
             ""id"": ""272f6d14-89ba-496f-b7ff-215263d3219f"",
-            ""actions"": [],
-            ""bindings"": []
+            ""actions"": [
+                {
+                    ""name"": ""OpenStatBoard"",
+                    ""type"": ""Button"",
+                    ""id"": ""90be8f05-fdcd-4c82-bee7-56e3934e4883"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwitchToInGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""bfb2b728-9c3e-443d-8197-66b736188aac"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""9d583a7b-e675-4173-964b-664044e2a030"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""OpenStatBoard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4f2fe6ac-aa92-4b36-b2b2-0358bbb2310e"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""SwitchToInGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -688,6 +730,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_OpenStatBoard = m_UI.FindAction("OpenStatBoard", throwIfNotFound: true);
+        m_UI_SwitchToInGame = m_UI.FindAction("SwitchToInGame", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -964,6 +1008,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     // UI
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
+    private readonly InputAction m_UI_OpenStatBoard;
+    private readonly InputAction m_UI_SwitchToInGame;
     /// <summary>
     /// Provides access to input actions defined in input action map "UI".
     /// </summary>
@@ -975,6 +1021,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
         public UIActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "UI/OpenStatBoard".
+        /// </summary>
+        public InputAction @OpenStatBoard => m_Wrapper.m_UI_OpenStatBoard;
+        /// <summary>
+        /// Provides access to the underlying input action "UI/SwitchToInGame".
+        /// </summary>
+        public InputAction @SwitchToInGame => m_Wrapper.m_UI_SwitchToInGame;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1001,6 +1055,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
+            @OpenStatBoard.started += instance.OnOpenStatBoard;
+            @OpenStatBoard.performed += instance.OnOpenStatBoard;
+            @OpenStatBoard.canceled += instance.OnOpenStatBoard;
+            @SwitchToInGame.started += instance.OnSwitchToInGame;
+            @SwitchToInGame.performed += instance.OnSwitchToInGame;
+            @SwitchToInGame.canceled += instance.OnSwitchToInGame;
         }
 
         /// <summary>
@@ -1012,6 +1072,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UIActions" />
         private void UnregisterCallbacks(IUIActions instance)
         {
+            @OpenStatBoard.started -= instance.OnOpenStatBoard;
+            @OpenStatBoard.performed -= instance.OnOpenStatBoard;
+            @OpenStatBoard.canceled -= instance.OnOpenStatBoard;
+            @SwitchToInGame.started -= instance.OnSwitchToInGame;
+            @SwitchToInGame.performed -= instance.OnSwitchToInGame;
+            @SwitchToInGame.canceled -= instance.OnSwitchToInGame;
         }
 
         /// <summary>
@@ -1195,5 +1261,19 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     /// <seealso cref="UIActions.RemoveCallbacks(IUIActions)" />
     public interface IUIActions
     {
+        /// <summary>
+        /// Method invoked when associated input action "OpenStatBoard" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnOpenStatBoard(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SwitchToInGame" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSwitchToInGame(InputAction.CallbackContext context);
     }
 }

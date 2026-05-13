@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: aed6fb218ade47840aa258b2aa3317dd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 26999600656045146
+    second: goblin-heavyguard-attack_0
+  - first:
+      213: 3470186764346692641
+    second: goblin-heavyguard-attack_1
+  - first:
+      213: -5268281697964093616
+    second: goblin-heavyguard-attack_2
+  - first:
+      213: -7714041276943251376
+    second: goblin-heavyguard-attack_3
+  - first:
+      213: 770361422049254581
+    second: goblin-heavyguard-attack_4
+  - first:
+      213: -9042504623658322402
+    second: goblin-heavyguard-attack_5
+  - first:
+      213: -4809665082639552500
+    second: goblin-heavyguard-attack_6
+  - first:
+      213: -1795531429981396995
+    second: goblin-heavyguard-attack_7
+  - first:
+      213: -2864697697614967017
+    second: goblin-heavyguard-attack_8
+  - first:
+      213: -6712945722144302120
+    second: goblin-heavyguard-attack_9
+  - first:
+      213: -5189203099012427576
+    second: goblin-heavyguard-attack_10
+  - first:
+      213: 6064654341305527536
+    second: goblin-heavyguard-attack_11
+  - first:
+      213: 1545590918307100723
+    second: goblin-heavyguard-attack_12
+  - first:
+      213: -2251670953916242922
+    second: goblin-heavyguard-attack_13
+  - first:
+      213: -3119680143148763121
+    second: goblin-heavyguard-attack_14
+  - first:
+      213: 8117231249402994202
+    second: goblin-heavyguard-attack_15
+  - first:
+      213: -181697863343462819
+    second: goblin-heavyguard-attack_16
+  - first:
+      213: 3098622796629220860
+    second: goblin-heavyguard-attack_17
+  - first:
+      213: -588224459542816805
+    second: goblin-heavyguard-attack_18
+  - first:
+      213: -4096622278507556945
+    second: goblin-heavyguard-attack_19
+  - first:
+      213: -2802841757970359995
+    second: goblin-heavyguard-attack_20
+  - first:
+      213: -3174316192722410959
+    second: goblin-heavyguard-attack_21
+  - first:
+      213: 4378601237819363122
+    second: goblin-heavyguard-attack_22
+  - first:
+      213: 8531179654346742209
+    second: goblin-heavyguard-attack_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 146
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a545e266efbef5000800000000000000
+      internalID: 26999600656045146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 146
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1249521f974982030800000000000000
+      internalID: 3470186764346692641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 146
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05f882055bd43e6b0800000000000000
+      internalID: -5268281697964093616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 143
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058c811545832f490800000000000000
+      internalID: -7714041276943251376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 143
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc19edb1afd0ba00800000000000000
+      internalID: 770361422049254581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 143
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16b40b34f1928280800000000000000
+      internalID: -9042504623658322402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_6
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 98
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c007bac0713a04db0800000000000000
+      internalID: -4809665082639552500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_7
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 98
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dffd8e47dadf417e0800000000000000
+      internalID: -1795531429981396995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_8
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 98
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71fc7c03f9c8e38d0800000000000000
+      internalID: -2864697697614967017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_9
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 98
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db5c13be63d6d2a0800000000000000
+      internalID: -6712945722144302120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 98
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c01208664f3cf7b0800000000000000
+      internalID: -5189203099012427576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_11
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 98
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fceb03ddfaf92450800000000000000
+      internalID: 6064654341305527536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 50
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338b3c550ca037510800000000000000
+      internalID: 1545590918307100723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 50
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614e1c0823570c0e0800000000000000
+      internalID: -2251670953916242922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 50
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0837c6407ba4b4d0800000000000000
+      internalID: -3119680143148763121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_15
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 50
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e9d5c70d236a070800000000000000
+      internalID: 8117231249402994202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_16
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 50
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5627f681ca7a7df0800000000000000
+      internalID: -181697863343462819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_17
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 50
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfd130e2405800b20800000000000000
+      internalID: 3098622796629220860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_18
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 2
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd711c878f436d7f0800000000000000
+      internalID: -588224459542816805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_19
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 2
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faf0b961ebfd527c0800000000000000
+      internalID: -4096622278507556945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_20
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 2
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5499b8e654e4a19d0800000000000000
+      internalID: -2802841757970359995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_21
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 2
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132a200bd3092f3d0800000000000000
+      internalID: -3174316192722410959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_22
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 2
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23f0f4180aae3cc30800000000000000
+      internalID: 4378601237819363122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-attack_23
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 2
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c9906c02b6d46670800000000000000
+      internalID: 8531179654346742209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      goblin-heavyguard-attack_0: 26999600656045146
+      goblin-heavyguard-attack_1: 3470186764346692641
+      goblin-heavyguard-attack_10: -5189203099012427576
+      goblin-heavyguard-attack_11: 6064654341305527536
+      goblin-heavyguard-attack_12: 1545590918307100723
+      goblin-heavyguard-attack_13: -2251670953916242922
+      goblin-heavyguard-attack_14: -3119680143148763121
+      goblin-heavyguard-attack_15: 8117231249402994202
+      goblin-heavyguard-attack_16: -181697863343462819
+      goblin-heavyguard-attack_17: 3098622796629220860
+      goblin-heavyguard-attack_18: -588224459542816805
+      goblin-heavyguard-attack_19: -4096622278507556945
+      goblin-heavyguard-attack_2: -5268281697964093616
+      goblin-heavyguard-attack_20: -2802841757970359995
+      goblin-heavyguard-attack_21: -3174316192722410959
+      goblin-heavyguard-attack_22: 4378601237819363122
+      goblin-heavyguard-attack_23: 8531179654346742209
+      goblin-heavyguard-attack_3: -7714041276943251376
+      goblin-heavyguard-attack_4: 770361422049254581
+      goblin-heavyguard-attack_5: -9042504623658322402
+      goblin-heavyguard-attack_6: -4809665082639552500
+      goblin-heavyguard-attack_7: -1795531429981396995
+      goblin-heavyguard-attack_8: -2864697697614967017
+      goblin-heavyguard-attack_9: -6712945722144302120
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

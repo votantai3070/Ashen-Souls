@@ -29,7 +29,8 @@ public class Entity_Combat : MonoBehaviour
 
     private void Update()
     {
-        showTargetEnemies = FindAttackTarget(attackArea);
+        if (attackArea != null)
+            showTargetEnemies = FindAttackTarget(attackArea);
     }
 
     public void ResetHitList() => hitThisAttack.Clear();

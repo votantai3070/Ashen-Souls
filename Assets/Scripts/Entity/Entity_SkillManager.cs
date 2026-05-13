@@ -1,0 +1,30 @@
+using UnityEngine;
+
+public class Entity_SkillManager : MonoBehaviour
+{
+    public Skill_Base[] allSkills { get; private set; }
+
+    protected virtual void Awake()
+    {
+        allSkills = GetComponentsInChildren<Skill_Base>();
+    }
+
+    protected virtual void Update()
+    {
+        foreach (var spell in allSkills)
+        {
+            if (spell.upgradeType == SkillUpgradeType.DeathDash ||
+                spell.upgradeType == SkillUpgradeType.DeathDashUpgrade)
+                return;
+
+            if (spell.upgradeType != SkillUpgradeType.None)
+                spell.TryUseSkill();
+        }
+    }
+
+    public void ReduceAllSkillCooldownBy(float amount)
+    {
+        foreach (var skill in allSkills)
+            skill.ReduceCooldownBy(amount);
+    }
+}

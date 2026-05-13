@@ -8,13 +8,11 @@ public class Stat
     [SerializeField] private float baseValue;
     [SerializeField] private List<StatModifier> modifiers = new List<StatModifier>();
 
-    [SerializeField] private float finalValue;
+    private float finalValue;
     private bool isDirty = true;
 
     public float GetValue()
     {
-        finalValue = baseValue;
-
         if (isDirty)
         {
             finalValue = GetFinalValue();
@@ -22,6 +20,23 @@ public class Stat
         }
 
         return finalValue;
+    }
+
+    public void UpdateModifier(float newValue, string sourceName, bool isPercent)
+    {
+        StatModifier existing = modifiers.Find(m => m.sourceName == sourceName);
+
+        if (existing != null)
+        {
+            existing.value = newValue;
+            existing.isPercent = isPercent;
+        }
+        else
+        {
+            AddModifier(newValue, sourceName, isPercent);
+        }
+
+        isDirty = true;
     }
 
     public void AddModifier(float value, string sourceName, bool isPercent)

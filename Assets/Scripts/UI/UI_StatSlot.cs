@@ -21,6 +21,8 @@ public class UI_StatSlot : MonoBehaviour
     {
         playerStats = UI.instance.player.stats;
 
+        Debug.Log("Player Stats: " + playerStats);
+
         Stat statToUpdate = playerStats.GetStatByType(statSlotType);
 
         if (statToUpdate == null)

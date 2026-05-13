@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 249cfa4a58229324e990e79200e9826d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1588739748348173973
+    second: goblin-apprentice-shaman-attack_0
+  - first:
+      213: -8569662670003312786
+    second: goblin-apprentice-shaman-attack_1
+  - first:
+      213: 2971017738037208707
+    second: goblin-apprentice-shaman-attack_2
+  - first:
+      213: -8220506161268920486
+    second: goblin-apprentice-shaman-attack_3
+  - first:
+      213: -7862920300926430473
+    second: goblin-apprentice-shaman-attack_4
+  - first:
+      213: -5023050171974399105
+    second: goblin-apprentice-shaman-attack_5
+  - first:
+      213: -1545185274251489407
+    second: goblin-apprentice-shaman-attack_6
+  - first:
+      213: -7241931485393145334
+    second: goblin-apprentice-shaman-attack_7
+  - first:
+      213: -4709758318084220263
+    second: goblin-apprentice-shaman-attack_8
+  - first:
+      213: -8840366361891642224
+    second: goblin-apprentice-shaman-attack_9
+  - first:
+      213: -4997532158274479288
+    second: goblin-apprentice-shaman-attack_10
+  - first:
+      213: 3864999122616883446
+    second: goblin-apprentice-shaman-attack_11
+  - first:
+      213: -7986862142401781202
+    second: goblin-apprentice-shaman-attack_12
+  - first:
+      213: -4895295131594814793
+    second: goblin-apprentice-shaman-attack_13
+  - first:
+      213: -836431941921931271
+    second: goblin-apprentice-shaman-attack_14
+  - first:
+      213: -5397806873038458492
+    second: goblin-apprentice-shaman-attack_15
+  - first:
+      213: 123014120485716068
+    second: goblin-apprentice-shaman-attack_16
+  - first:
+      213: 47890041477671506
+    second: goblin-apprentice-shaman-attack_17
+  - first:
+      213: 8092232930927562840
+    second: goblin-apprentice-shaman-attack_18
+  - first:
+      213: 838370986531327332
+    second: goblin-apprentice-shaman-attack_19
+  - first:
+      213: 6782787037241343174
+    second: goblin-apprentice-shaman-attack_20
+  - first:
+      213: -4706502422089785178
+    second: goblin-apprentice-shaman-attack_21
+  - first:
+      213: -345623049286835276
+    second: goblin-apprentice-shaman-attack_22
+  - first:
+      213: 1201151911363376035
+    second: goblin-apprentice-shaman-attack_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 146
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e16d432665c0610800000000000000
+      internalID: 1588739748348173973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 146
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67e685a431721980800000000000000
+      internalID: -8569662670003312786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 146
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 386a71144ec2b3920800000000000000
+      internalID: 2971017738037208707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 144
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5fe7af4335eaed80800000000000000
+      internalID: -8220506161268920486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 144
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2921655ab41e290800000000000000
+      internalID: -7862920300926430473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 144
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b408a5b7a8a4ab0800000000000000
+      internalID: -5023050171974399105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 98
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f43180e266e8ae0800000000000000
+      internalID: -1545185274251489407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_7
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 98
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a02bc65fead7f7b90800000000000000
+      internalID: -7241931485393145334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_8
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 98
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a16a853c393aeb0800000000000000
+      internalID: -4709758318084220263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_9
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 98
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094e223d1a5b05580800000000000000
+      internalID: -8840366361891642224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_10
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 98
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b5578eaf235aab0800000000000000
+      internalID: -4997532158274479288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_11
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 98
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f896c0793c33a530800000000000000
+      internalID: 3864999122616883446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 50
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e22602c9237f82190800000000000000
+      internalID: -7986862142401781202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 50
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba8792a30b601cb0800000000000000
+      internalID: -4895295131594814793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 50
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fff3f694956464f0800000000000000
+      internalID: -836431941921931271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_15
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 50
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481716e6f332715b0800000000000000
+      internalID: -5397806873038458492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_16
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 50
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46088e9d0b805b100800000000000000
+      internalID: 123014120485716068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_17
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 50
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a2e8e2db32aa000800000000000000
+      internalID: 47890041477671506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_18
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 850d7a7e9f26d4070800000000000000
+      internalID: 8092232930927562840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_19
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d813a68fd72ab00800000000000000
+      internalID: 838370986531327332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_20
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 2
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ccf4e5afdc412e50800000000000000
+      internalID: 6782787037241343174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_21
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 2
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0a2d4bbf42faeb0800000000000000
+      internalID: -4706502422089785178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_22
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 2
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b32219faa9143bf0800000000000000
+      internalID: -345623049286835276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-attack_23
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 2
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a37816ac495ba010800000000000000
+      internalID: 1201151911363376035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      goblin-apprentice-shaman-attack_0: 1588739748348173973
+      goblin-apprentice-shaman-attack_1: -8569662670003312786
+      goblin-apprentice-shaman-attack_10: -4997532158274479288
+      goblin-apprentice-shaman-attack_11: 3864999122616883446
+      goblin-apprentice-shaman-attack_12: -7986862142401781202
+      goblin-apprentice-shaman-attack_13: -4895295131594814793
+      goblin-apprentice-shaman-attack_14: -836431941921931271
+      goblin-apprentice-shaman-attack_15: -5397806873038458492
+      goblin-apprentice-shaman-attack_16: 123014120485716068
+      goblin-apprentice-shaman-attack_17: 47890041477671506
+      goblin-apprentice-shaman-attack_18: 8092232930927562840
+      goblin-apprentice-shaman-attack_19: 838370986531327332
+      goblin-apprentice-shaman-attack_2: 2971017738037208707
+      goblin-apprentice-shaman-attack_20: 6782787037241343174
+      goblin-apprentice-shaman-attack_21: -4706502422089785178
+      goblin-apprentice-shaman-attack_22: -345623049286835276
+      goblin-apprentice-shaman-attack_23: 1201151911363376035
+      goblin-apprentice-shaman-attack_3: -8220506161268920486
+      goblin-apprentice-shaman-attack_4: -7862920300926430473
+      goblin-apprentice-shaman-attack_5: -5023050171974399105
+      goblin-apprentice-shaman-attack_6: -1545185274251489407
+      goblin-apprentice-shaman-attack_7: -7241931485393145334
+      goblin-apprentice-shaman-attack_8: -4709758318084220263
+      goblin-apprentice-shaman-attack_9: -8840366361891642224
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

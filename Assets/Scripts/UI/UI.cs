@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 public class UI : MonoBehaviour
 {
-    public event Action onSkillSlotChange;
+    public event Action OnSkillSlotChange;
     public event Action OnPlayerSet;
 
     public static UI instance { get; private set; }
@@ -12,6 +12,7 @@ public class UI : MonoBehaviour
     public GameObject[] uiElements;
     public UI_Ingame ingameUI { get; private set; }
     public UI_SkillBoard skillBoardUI { get; private set; }
+    public UI_Merchant merchantUI { get; private set; }
 
     private void Awake()
     {
@@ -19,20 +20,24 @@ public class UI : MonoBehaviour
 
         ingameUI = GetComponentInChildren<UI_Ingame>(true);
         skillBoardUI = GetComponentInChildren<UI_SkillBoard>(true);
+        merchantUI = GetComponentInChildren<UI_Merchant>(true);
     }
+
 
     public void SetPlayer(Player player)
     {
         this.player = player;
+
+        OnSkillSlotChange += ingameUI.skillHolder.SetupSkillSlots;
         OnPlayerSet?.Invoke();
 
-        onSkillSlotChange += ingameUI.skillHolder.SetupSkillSlots;
         ingameUI.skillHolder.SetupSkillSlots();
     }
 
     private void OnDestroy()
     {
-        onSkillSlotChange -= ingameUI.skillHolder.SetupSkillSlots;
+        if (ingameUI != null && ingameUI.skillHolder != null)
+            OnSkillSlotChange -= ingameUI.skillHolder.SetupSkillSlots;
     }
 
     private void StopPlayerControls(bool stopControls)
@@ -65,6 +70,13 @@ public class UI : MonoBehaviour
         objectSwitching.SetActive(true);
     }
 
+    public void OpenStatBoard()
+    {
+        SwitchTo(merchantUI.gameObject);
+        //merchantUI.playerStatsUI.UpdateStatUI();
+        StopPlayerControlIfNeeded();
+    }
+
     public void OpenSkillBoard()
     {
         SwitchTo(skillBoardUI.gameObject);
@@ -77,8 +89,8 @@ public class UI : MonoBehaviour
         SwitchTo(ingameUI.gameObject);
     }
 
-    public void OnSkillSlotChange()
+    public void OnSkillSlotChangeInvoke()
     {
-        onSkillSlotChange?.Invoke();
+        OnSkillSlotChange?.Invoke();
     }
 }

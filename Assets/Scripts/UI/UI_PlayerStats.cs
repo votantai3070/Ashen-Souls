@@ -2,35 +2,20 @@ using UnityEngine;
 
 public class UI_PlayerStats : MonoBehaviour
 {
-    private UI ui;
-    private UI_StatSlot[] statSlots;
+    [SerializeField] private UI_StatSlot[] statSlots;
 
     private void Awake()
     {
-        ui = GetComponentInParent<UI>();
         statSlots = GetComponentsInChildren<UI_StatSlot>(true);
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        ui.OnPlayerSet += OnPlayerReady;
+        if (UI.instance?.player != null)
+            UpdateStatUI();
     }
 
-    private void OnPlayerReady()
-    {
-        ui.player.stats.OnStatChanged += UpdateStatUI;
-        UpdateStatUI();
-    }
-
-    private void OnDestroy()
-    {
-        ui.OnPlayerSet -= OnPlayerReady;
-
-        if (ui.player != null)
-            ui.player.stats.OnStatChanged -= UpdateStatUI;
-    }
-
-    private void UpdateStatUI()
+    public void UpdateStatUI()
     {
         foreach (var stat in statSlots)
             stat.UpdateStatValue();

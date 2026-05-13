@@ -9,7 +9,8 @@ public class Enemy_Combat : Entity_Combat
         base.Awake();
         enemy = GetComponent<Enemy>();
 
-        showTargetEnemies = FindAttackTarget(attackArea);
+        if (attackArea != null)
+            showTargetEnemies = FindAttackTarget(attackArea);
     }
 
     public bool CanSeePlayer()

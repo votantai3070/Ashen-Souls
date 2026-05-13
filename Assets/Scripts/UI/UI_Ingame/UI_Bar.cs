@@ -13,8 +13,9 @@ public class UI_Bar : MonoBehaviour
     {
         percent = Mathf.Clamp01(percent);
 
+        barFill.DOKill();
         barFill.DOFillAmount(percent, delayTime)
-            .SetEase(Ease.OutCubic);
+            .SetEase(Ease.OutExpo);
 
         if (barDelayed == null) return;
 

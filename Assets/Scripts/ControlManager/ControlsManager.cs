@@ -57,6 +57,9 @@ public class ControlsManager : MonoBehaviour
         inputActions.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         inputActions.Player.Move.canceled += ctx => moveInput = Vector2.zero;
 
+        // UI
+        inputActions.UI.OpenStatBoard.performed += ctx => UI.instance.OpenStatBoard();
+        inputActions.UI.SwitchToInGame.performed += ctx => UI.instance.SwitchToIngameUI();
     }
 
     // Attack input

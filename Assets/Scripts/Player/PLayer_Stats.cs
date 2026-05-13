@@ -25,15 +25,14 @@ public class Player_Stats : Entity_Stats
         if (activeBuff.Contains(source))
         {
             foreach (var buff in buffs)
-                GetStatByType(buff.type).RemoveModifier(source);
+                GetStatByType(buff.type).UpdateModifier(buff.value, source, isPercent);
         }
         else
         {
             activeBuff.Add(source);
+            foreach (var buff in buffs)
+                GetStatByType(buff.type).AddModifier(buff.value, source, isPercent);
         }
-
-        foreach (var buff in buffs)
-            GetStatByType(buff.type).AddModifier(buff.value, source, isPercent);
 
         OnStatChangedInvoke();
     }

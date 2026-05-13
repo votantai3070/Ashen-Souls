@@ -7,21 +7,19 @@ public class Enemy : Entity
     public Enemy_Health health { get; private set; }
     public Enemy_Stats stats { get; private set; }
 
-    public Enemy_IdleState idleState { get; private set; }
-    public Enemy_MoveState moveState { get; private set; }
-    public Enemy_ChaseState chaseState { get; private set; }
-    public Enemy_AttackState attackState { get; private set; }
-    public Enemy_DeadState deadState { get; private set; }
+
 
     [SerializeField] private Transform[] patrolPoints;
     private Vector3[] patrolPointsPosition;
     private int currentPatrolIndex;
 
-    public float idleTimer { get; set; } = 2f;
+    public float idleTimer = 2f;
+    protected bool isFacingRight = true;
 
     [Header("Detection")]
     public float detectionRadius = 5f;
     public float detectionAngle = 90f;
+
 
     [Header("Chase Info")]
     public float chaseSpeed = 8f;
@@ -40,20 +38,11 @@ public class Enemy : Entity
         combat = GetComponent<Enemy_Combat>();
         health = GetComponent<Enemy_Health>();
         stats = GetComponent<Enemy_Stats>();
-
-        idleState = new(this, stateMachine, "Idle");
-        moveState = new(this, stateMachine, "Move");
-        chaseState = new(this, stateMachine, "Chase");
-        attackState = new(this, stateMachine, "Attack");
-        deadState = new(this, stateMachine, "Dead");
     }
 
     protected override void Start()
     {
-        InitializePatrolPoints();
-
-        stateMachine.Initialize(idleState);
-
+        //InitializePatrolPoints();
         facingDirection = Vector2.down;
     }
 
@@ -66,19 +55,16 @@ public class Enemy : Entity
             facingDirection = input.normalized;
     }
 
-    public void TryToIdleState()
-    {
-        if (stateMachine.currentState == idleState)
-            return;
+    public Vector2 GetDirectionPlayer() => (player.position - transform.position).normalized;
 
-        stateMachine.ChangeState(idleState);
+    public virtual void TryToIdleState()
+    {
+
     }
 
-    public void TryToDieState()
+    public virtual void TryToDieState()
     {
-        if (stateMachine.currentState == deadState)
-            return;
-        stateMachine.ChangeState(deadState);
+
     }
 
     public void SetPlayer(Transform player)
@@ -96,28 +82,31 @@ public class Enemy : Entity
         return distance <= attackDistanceToPlayer;
     }
 
-    public Vector3 GetPatrolDestination()
-    {
-        Vector3 destination = patrolPointsPosition[currentPatrolIndex];
+    //public Vector3 GetPatrolDestination()
+    //{
+    //    Vector3 destination = patrolPointsPosition[currentPatrolIndex];
 
-        currentPatrolIndex++;
+    //    currentPatrolIndex++;
 
-        if (currentPatrolIndex >= patrolPoints.Length)
-            currentPatrolIndex = 0;
+    //    if (currentPatrolIndex >= patrolPoints.Length)
+    //        currentPatrolIndex = 0;
 
-        return destination;
-    }
+    //    return destination;
+    //}
 
-    private void InitializePatrolPoints()
-    {
-        patrolPointsPosition = new Vector3[patrolPoints.Length];
+    //private void InitializePatrolPoints()
+    //{
+    //    patrolPointsPosition = new Vector3[patrolPoints.Length];
 
-        for (int i = 0; i < patrolPoints.Length; i++)
-        {
-            patrolPointsPosition[i] = patrolPoints[i].position;
-            patrolPoints[i].gameObject.SetActive(false);
-        }
-    }
+    //    for (int i = 0; i < patrolPoints.Length; i++)
+    //    {
+    //        patrolPointsPosition[i] = patrolPoints[i].position;
+    //        patrolPoints[i].gameObject.SetActive(false);
+    //    }
+    //}
+
+    public bool CanStopChaseRange() => Vector2.Distance(transform.position, player.position) <= chaseStopDistance;
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
@@ -129,4 +118,6 @@ public class Enemy : Entity
         Gizmos.DrawRay(transform.position, leftDir * detectionRadius);
         Gizmos.DrawRay(transform.position, rightDir * detectionRadius);
     }
+
+
 }

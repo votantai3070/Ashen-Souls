@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 53bb51a1b7d3bce4eb23b5a25beeb3af
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6909794486330389004
+    second: goblin-heavyguard-hurt_0
+  - first:
+      213: 5748230635314375746
+    second: goblin-heavyguard-hurt_1
+  - first:
+      213: 6540237438746278345
+    second: goblin-heavyguard-hurt_2
+  - first:
+      213: -9107717697772396209
+    second: goblin-heavyguard-hurt_3
+  - first:
+      213: 6284457372626503355
+    second: goblin-heavyguard-hurt_4
+  - first:
+      213: 6864558433470501529
+    second: goblin-heavyguard-hurt_5
+  - first:
+      213: -4035755262564085750
+    second: goblin-heavyguard-hurt_6
+  - first:
+      213: 7470971564530978670
+    second: goblin-heavyguard-hurt_7
+  - first:
+      213: 3200873146995545339
+    second: goblin-heavyguard-hurt_8
+  - first:
+      213: -4954574486306739092
+    second: goblin-heavyguard-hurt_9
+  - first:
+      213: 2744197208763309328
+    second: goblin-heavyguard-hurt_10
+  - first:
+      213: 871207478961166018
+    second: goblin-heavyguard-hurt_11
+  - first:
+      213: 8013923820176316689
+    second: goblin-heavyguard-hurt_12
+  - first:
+      213: -3048190984472999969
+    second: goblin-heavyguard-hurt_13
+  - first:
+      213: 667191999919793487
+    second: goblin-heavyguard-hurt_14
+  - first:
+      213: 8316355080108557792
+    second: goblin-heavyguard-hurt_15
+  - first:
+      213: 4515436436494061189
+    second: goblin-heavyguard-hurt_16
+  - first:
+      213: 5517582666798441582
+    second: goblin-heavyguard-hurt_17
+  - first:
+      213: -5494242018598662762
+    second: goblin-heavyguard-hurt_18
+  - first:
+      213: -6123403879681366511
+    second: goblin-heavyguard-hurt_19
+  - first:
+      213: 1795511228218292406
+    second: goblin-heavyguard-hurt_20
+  - first:
+      213: 4499553213918501448
+    second: goblin-heavyguard-hurt_21
+  - first:
+      213: -8732569661546414767
+    second: goblin-heavyguard-hurt_22
+  - first:
+      213: 331649497815428687
+    second: goblin-heavyguard-hurt_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 146
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd035b368a7b10a0800000000000000
+      internalID: -6909794486330389004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 146
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c6ee0be41d5cf40800000000000000
+      internalID: 5748230635314375746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 146
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9be238c4793ca50800000000000000
+      internalID: 6540237438746278345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 146
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41ecb53203ea9180800000000000000
+      internalID: -9107717697772396209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 146
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb6cc751fa0e63750800000000000000
+      internalID: 6284457372626503355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 146
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 992dbe6768fc34f50800000000000000
+      internalID: 6864558433470501529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_6
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 98
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00547698fd1ef7c0800000000000000
+      internalID: -4035755262564085750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_7
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 98
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6fc9e61e093ea760800000000000000
+      internalID: 7470971564530978670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_8
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 98
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf491c11b29cb6c20800000000000000
+      internalID: 3200873146995545339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_9
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 98
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6c297251c0dd3bb0800000000000000
+      internalID: -4954574486306739092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_10
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 98
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d94fd62d8551620800000000000000
+      internalID: 2744197208763309328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_11
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 98
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c6d4251696271c00800000000000000
+      internalID: 871207478961166018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 50
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11996ae314d273f60800000000000000
+      internalID: 8013923820176316689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 50
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd740fa1376a2b5d0800000000000000
+      internalID: -3048190984472999969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 50
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45a338c697524900800000000000000
+      internalID: 667191999919793487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_15
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 50
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e5c2e722e0a96370800000000000000
+      internalID: 8316355080108557792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_16
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 50
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e8513e38d0aae30800000000000000
+      internalID: 4515436436494061189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_17
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 50
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64af59b334629c40800000000000000
+      internalID: 5517582666798441582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_18
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69dc66b6ef780c3b0800000000000000
+      internalID: -5494242018598662762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_19
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116e7575d9c450ba0800000000000000
+      internalID: -6123403879681366511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_20
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 2
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b83d24f2ffeae810800000000000000
+      internalID: 1795511228218292406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_21
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 2
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a5493fecf917e30800000000000000
+      internalID: 4499553213918501448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_22
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 2
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d3c23f82eafc680800000000000000
+      internalID: -8732569661546414767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-heavyguard-hurt_23
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 2
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ea93b06714a9400800000000000000
+      internalID: 331649497815428687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      goblin-heavyguard-hurt_0: -6909794486330389004
+      goblin-heavyguard-hurt_1: 5748230635314375746
+      goblin-heavyguard-hurt_10: 2744197208763309328
+      goblin-heavyguard-hurt_11: 871207478961166018
+      goblin-heavyguard-hurt_12: 8013923820176316689
+      goblin-heavyguard-hurt_13: -3048190984472999969
+      goblin-heavyguard-hurt_14: 667191999919793487
+      goblin-heavyguard-hurt_15: 8316355080108557792
+      goblin-heavyguard-hurt_16: 4515436436494061189
+      goblin-heavyguard-hurt_17: 5517582666798441582
+      goblin-heavyguard-hurt_18: -5494242018598662762
+      goblin-heavyguard-hurt_19: -6123403879681366511
+      goblin-heavyguard-hurt_2: 6540237438746278345
+      goblin-heavyguard-hurt_20: 1795511228218292406
+      goblin-heavyguard-hurt_21: 4499553213918501448
+      goblin-heavyguard-hurt_22: -8732569661546414767
+      goblin-heavyguard-hurt_23: 331649497815428687
+      goblin-heavyguard-hurt_3: -9107717697772396209
+      goblin-heavyguard-hurt_4: 6284457372626503355
+      goblin-heavyguard-hurt_5: 6864558433470501529
+      goblin-heavyguard-hurt_6: -4035755262564085750
+      goblin-heavyguard-hurt_7: 7470971564530978670
+      goblin-heavyguard-hurt_8: 3200873146995545339
+      goblin-heavyguard-hurt_9: -4954574486306739092
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

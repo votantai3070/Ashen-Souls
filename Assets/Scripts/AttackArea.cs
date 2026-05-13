@@ -19,5 +19,4 @@ public class AttackArea : MonoBehaviour
     {
         gameObject.name = transform.root.name + " - " + "AttackArea";
     }
-
 }

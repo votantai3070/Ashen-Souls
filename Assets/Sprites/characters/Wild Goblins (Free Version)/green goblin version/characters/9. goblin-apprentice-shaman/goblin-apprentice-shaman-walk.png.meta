@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 632f569a7966a7349aecc087775ab607
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8975060035330063751
+    second: goblin-apprentice-shaman-walk_0
+  - first:
+      213: 8721063035842977875
+    second: goblin-apprentice-shaman-walk_1
+  - first:
+      213: 764798735963563174
+    second: goblin-apprentice-shaman-walk_2
+  - first:
+      213: 472667068995695448
+    second: goblin-apprentice-shaman-walk_3
+  - first:
+      213: 365379677583720182
+    second: goblin-apprentice-shaman-walk_4
+  - first:
+      213: 9023410050194191362
+    second: goblin-apprentice-shaman-walk_5
+  - first:
+      213: -2149250710760133370
+    second: goblin-apprentice-shaman-walk_6
+  - first:
+      213: -4793804092742490157
+    second: goblin-apprentice-shaman-walk_7
+  - first:
+      213: -2032089919345661533
+    second: goblin-apprentice-shaman-walk_8
+  - first:
+      213: 3904776092958002366
+    second: goblin-apprentice-shaman-walk_9
+  - first:
+      213: -708484806647433881
+    second: goblin-apprentice-shaman-walk_10
+  - first:
+      213: 3587039725576526463
+    second: goblin-apprentice-shaman-walk_11
+  - first:
+      213: -5239339889017382564
+    second: goblin-apprentice-shaman-walk_12
+  - first:
+      213: 2182907578603826276
+    second: goblin-apprentice-shaman-walk_13
+  - first:
+      213: -5952333901373661772
+    second: goblin-apprentice-shaman-walk_14
+  - first:
+      213: 3207006743034304611
+    second: goblin-apprentice-shaman-walk_15
+  - first:
+      213: -2383745984101591373
+    second: goblin-apprentice-shaman-walk_16
+  - first:
+      213: -1559895533823012597
+    second: goblin-apprentice-shaman-walk_17
+  - first:
+      213: 8334583765095922484
+    second: goblin-apprentice-shaman-walk_18
+  - first:
+      213: 4453435932114302162
+    second: goblin-apprentice-shaman-walk_19
+  - first:
+      213: 2966155816228709349
+    second: goblin-apprentice-shaman-walk_20
+  - first:
+      213: -657404273116318476
+    second: goblin-apprentice-shaman-walk_21
+  - first:
+      213: 277909549592508518
+    second: goblin-apprentice-shaman-walk_22
+  - first:
+      213: -8321184358284799553
+    second: goblin-apprentice-shaman-walk_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 146
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d37abdc81dd8c70800000000000000
+      internalID: 8975060035330063751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 146
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 350e53bff90770970800000000000000
+      internalID: 8721063035842977875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 145
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a4a6c5f56c1d9a00800000000000000
+      internalID: 764798735963563174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 146
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8537388e1304f8600800000000000000
+      internalID: 472667068995695448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 145
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe368281e6121500800000000000000
+      internalID: 365379677583720182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 145
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 204b380f1a7993d70800000000000000
+      internalID: 9023410050194191362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 98
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60de2e3add35c22e0800000000000000
+      internalID: -2149250710760133370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_7
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 98
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d72549839cf87db0800000000000000
+      internalID: -4793804092742490157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_8
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 98
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a9efbd1cf09cc3e0800000000000000
+      internalID: -2032089919345661533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_9
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 98
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc033c0b2d803630800000000000000
+      internalID: 3904776092958002366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_10
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 98
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765b40372d4fa26f0800000000000000
+      internalID: -708484806647433881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_11
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 98
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7a143e10a9b7c130800000000000000
+      internalID: 3587039725576526463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 49
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59959151202a47b0800000000000000
+      internalID: -5239339889017382564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 50
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46c603090ee3b4e10800000000000000
+      internalID: 2182907578603826276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 50
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd9b108adf056da0800000000000000
+      internalID: -5952333901373661772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_15
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 49
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36897de24a3918c20800000000000000
+      internalID: 3207006743034304611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_16
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 50
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b65cd638ab3beed0800000000000000
+      internalID: -2383745984101591373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_17
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 50
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01d2c3d6432a5ae0800000000000000
+      internalID: -1559895533823012597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_18
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43bb74d96c36aa370800000000000000
+      internalID: 8334583765095922484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_19
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d432ab8268cdcd30800000000000000
+      internalID: 4453435932114302162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_20
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 2
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e365cedff6e92920800000000000000
+      internalID: 2966155816228709349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_21
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 2
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4f313fb4e60e6f0800000000000000
+      internalID: -657404273116318476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_22
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 2
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668762f43455bd300800000000000000
+      internalID: 277909549592508518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-walk_23
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 2
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1d5e5e9e6358c80800000000000000
+      internalID: -8321184358284799553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      goblin-apprentice-shaman-walk_0: 8975060035330063751
+      goblin-apprentice-shaman-walk_1: 8721063035842977875
+      goblin-apprentice-shaman-walk_10: -708484806647433881
+      goblin-apprentice-shaman-walk_11: 3587039725576526463
+      goblin-apprentice-shaman-walk_12: -5239339889017382564
+      goblin-apprentice-shaman-walk_13: 2182907578603826276
+      goblin-apprentice-shaman-walk_14: -5952333901373661772
+      goblin-apprentice-shaman-walk_15: 3207006743034304611
+      goblin-apprentice-shaman-walk_16: -2383745984101591373
+      goblin-apprentice-shaman-walk_17: -1559895533823012597
+      goblin-apprentice-shaman-walk_18: 8334583765095922484
+      goblin-apprentice-shaman-walk_19: 4453435932114302162
+      goblin-apprentice-shaman-walk_2: 764798735963563174
+      goblin-apprentice-shaman-walk_20: 2966155816228709349
+      goblin-apprentice-shaman-walk_21: -657404273116318476
+      goblin-apprentice-shaman-walk_22: 277909549592508518
+      goblin-apprentice-shaman-walk_23: -8321184358284799553
+      goblin-apprentice-shaman-walk_3: 472667068995695448
+      goblin-apprentice-shaman-walk_4: 365379677583720182
+      goblin-apprentice-shaman-walk_5: 9023410050194191362
+      goblin-apprentice-shaman-walk_6: -2149250710760133370
+      goblin-apprentice-shaman-walk_7: -4793804092742490157
+      goblin-apprentice-shaman-walk_8: -2032089919345661533
+      goblin-apprentice-shaman-walk_9: 3904776092958002366
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,962 @@
+fileFormatVersion: 2
+guid: 246f19529718ddf4cbf4851088e60f95
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4304519771238015164
+    second: goblin-apprentice-shaman-death_0
+  - first:
+      213: -2930006135434412498
+    second: goblin-apprentice-shaman-death_1
+  - first:
+      213: 69848238704139943
+    second: goblin-apprentice-shaman-death_2
+  - first:
+      213: -8601459376664865773
+    second: goblin-apprentice-shaman-death_3
+  - first:
+      213: -5076910121529063768
+    second: goblin-apprentice-shaman-death_4
+  - first:
+      213: 3547915287365165819
+    second: goblin-apprentice-shaman-death_5
+  - first:
+      213: 5102372062036361486
+    second: goblin-apprentice-shaman-death_6
+  - first:
+      213: 1805667906040727181
+    second: goblin-apprentice-shaman-death_7
+  - first:
+      213: 5582529333314742694
+    second: goblin-apprentice-shaman-death_8
+  - first:
+      213: 7698134747075176611
+    second: goblin-apprentice-shaman-death_9
+  - first:
+      213: -65913314427425338
+    second: goblin-apprentice-shaman-death_10
+  - first:
+      213: -7099847711232163431
+    second: goblin-apprentice-shaman-death_11
+  - first:
+      213: 6402799969735518686
+    second: goblin-apprentice-shaman-death_12
+  - first:
+      213: -2500405079886034246
+    second: goblin-apprentice-shaman-death_13
+  - first:
+      213: 3406246302989977540
+    second: goblin-apprentice-shaman-death_14
+  - first:
+      213: 3312591333284619574
+    second: goblin-apprentice-shaman-death_15
+  - first:
+      213: 2680035962731544871
+    second: goblin-apprentice-shaman-death_16
+  - first:
+      213: 9011616812841389521
+    second: goblin-apprentice-shaman-death_17
+  - first:
+      213: -5098688352089367651
+    second: goblin-apprentice-shaman-death_18
+  - first:
+      213: -7006467253467959976
+    second: goblin-apprentice-shaman-death_19
+  - first:
+      213: 8438278350158329789
+    second: goblin-apprentice-shaman-death_20
+  - first:
+      213: -7344026901794737783
+    second: goblin-apprentice-shaman-death_21
+  - first:
+      213: 8628387141430691167
+    second: goblin-apprentice-shaman-death_22
+  - first:
+      213: -1610346990288554277
+    second: goblin-apprentice-shaman-death_23
+  - first:
+      213: 6627614394075441486
+    second: goblin-apprentice-shaman-death_24
+  - first:
+      213: -1142981207347165512
+    second: goblin-apprentice-shaman-death_25
+  - first:
+      213: -8657983314953959693
+    second: goblin-apprentice-shaman-death_26
+  - first:
+      213: 4904754669777694822
+    second: goblin-apprentice-shaman-death_27
+  - first:
+      213: -1376437693770938792
+    second: goblin-apprentice-shaman-death_28
+  - first:
+      213: 1881892655074867378
+    second: goblin-apprentice-shaman-death_29
+  - first:
+      213: 1197941871098986183
+    second: goblin-apprentice-shaman-death_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 145
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb0a945fce9bcbb30800000000000000
+      internalID: 4304519771238015164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 145
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e77b391f68657d0800000000000000
+      internalID: -2930006135434412498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 145
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae95206a9628f000800000000000000
+      internalID: 69848238704139943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_3
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 164
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31410f7f44a71a880800000000000000
+      internalID: -8601459376664865773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_4
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 145
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6cca1a4213b89b0800000000000000
+      internalID: -5076910121529063768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_5
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 145
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf2249cf72abc3130800000000000000
+      internalID: 3547915287365165819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_6
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 145
+        width: 41
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e010e8d5b544fc640800000000000000
+      internalID: 5102372062036361486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_7
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 98
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8681e9c4650f0910800000000000000
+      internalID: 1805667906040727181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_8
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 101
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a96c64e9d0297d40800000000000000
+      internalID: 5582529333314742694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 98
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a8e18814c445da60800000000000000
+      internalID: 7698134747075176611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_10
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 112
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cda5939034d51ff0800000000000000
+      internalID: -65913314427425338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_11
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 97
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99103ac8f16487d90800000000000000
+      internalID: -7099847711232163431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_12
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 99
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed9a7f326a05bd850800000000000000
+      internalID: 6402799969735518686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 97
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba8fcad3d6cc4dd0800000000000000
+      internalID: -2500405079886034246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_14
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 97
+        width: 45
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c7843b27fa654f20800000000000000
+      internalID: 3406246302989977540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_15
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 49
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 635a77a4440b8fd20800000000000000
+      internalID: 3312591333284619574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_16
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 49
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721c2e73286613520800000000000000
+      internalID: 2680035962731544871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_17
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 68
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd4955eeb1bf0d70800000000000000
+      internalID: 9011616812841389521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_18
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 65
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b9a4135f1dd39b0800000000000000
+      internalID: -5098688352089367651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_19
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 49
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85da2a2a72704ce90800000000000000
+      internalID: -7006467253467959976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_20
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 49
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db77e099379ca1570800000000000000
+      internalID: 8438278350158329789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_21
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 49
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 981bc917176c41a90800000000000000
+      internalID: -7344026901794737783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_22
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 49
+        width: 41
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f554685d3603eb770800000000000000
+      internalID: 8628387141430691167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_23
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 2
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd63bbeb1f5e6a9e0800000000000000
+      internalID: -1610346990288554277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_24
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 5
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49e1234d240afb50800000000000000
+      internalID: 6627614394075441486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_25
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 16
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6002fc5a05320f0800000000000000
+      internalID: -1142981207347165512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 2
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f609e80c0aa8d780800000000000000
+      internalID: -8657983314953959693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_27
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 3
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 660b98ab260311440800000000000000
+      internalID: 4904754669777694822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_28
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856435fc539e5ece0800000000000000
+      internalID: -1376437693770938792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_29
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b8772b2663dd1a10800000000000000
+      internalID: 1881892655074867378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-apprentice-shaman-death_30
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1
+        width: 44
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cefb68e8c1ff9010800000000000000
+      internalID: 1197941871098986183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      goblin-apprentice-shaman-death_0: 4304519771238015164
+      goblin-apprentice-shaman-death_1: -2930006135434412498
+      goblin-apprentice-shaman-death_10: -65913314427425338
+      goblin-apprentice-shaman-death_11: -7099847711232163431
+      goblin-apprentice-shaman-death_12: 6402799969735518686
+      goblin-apprentice-shaman-death_13: -2500405079886034246
+      goblin-apprentice-shaman-death_14: 3406246302989977540
+      goblin-apprentice-shaman-death_15: 3312591333284619574
+      goblin-apprentice-shaman-death_16: 2680035962731544871
+      goblin-apprentice-shaman-death_17: 9011616812841389521
+      goblin-apprentice-shaman-death_18: -5098688352089367651
+      goblin-apprentice-shaman-death_19: -7006467253467959976
+      goblin-apprentice-shaman-death_2: 69848238704139943
+      goblin-apprentice-shaman-death_20: 8438278350158329789
+      goblin-apprentice-shaman-death_21: -7344026901794737783
+      goblin-apprentice-shaman-death_22: 8628387141430691167
+      goblin-apprentice-shaman-death_23: -1610346990288554277
+      goblin-apprentice-shaman-death_24: 6627614394075441486
+      goblin-apprentice-shaman-death_25: -1142981207347165512
+      goblin-apprentice-shaman-death_26: -8657983314953959693
+      goblin-apprentice-shaman-death_27: 4904754669777694822
+      goblin-apprentice-shaman-death_28: -1376437693770938792
+      goblin-apprentice-shaman-death_29: 1881892655074867378
+      goblin-apprentice-shaman-death_3: -8601459376664865773
+      goblin-apprentice-shaman-death_30: 1197941871098986183
+      goblin-apprentice-shaman-death_4: -5076910121529063768
+      goblin-apprentice-shaman-death_5: 3547915287365165819
+      goblin-apprentice-shaman-death_6: 5102372062036361486
+      goblin-apprentice-shaman-death_7: 1805667906040727181
+      goblin-apprentice-shaman-death_8: 5582529333314742694
+      goblin-apprentice-shaman-death_9: 7698134747075176611
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

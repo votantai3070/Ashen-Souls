@@ -50,10 +50,9 @@ public class Skill_Base : MonoBehaviour
         checkDamageRadius = upgrade.attackRadius;
         duration = skillData.duration;
         this.skillData = skillData;
-        UI.instance.OnSkillSlotChange();
+        UI.instance.OnSkillSlotChangeInvoke();
 
         //damageScaleData = upgrade.damageScale;
-
         //player.ui.ingameUI.GetSkillSlot(skillType).SetupSkillSlot(skillData);
         ResetCooldown();
     }

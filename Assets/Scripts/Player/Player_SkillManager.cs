@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player_SkillManager : MonoBehaviour
+public class Player_SkillManager : Entity_SkillManager
 {
     private Player player;
 
@@ -10,11 +10,12 @@ public class Player_SkillManager : MonoBehaviour
     public Skill_SoulBurst burst { get; private set; }
     public Skill_DeathDash deathDash { get; private set; }
 
-    public Skill_Base[] allSkills { get; private set; }
 
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         player = GetComponent<Player>();
 
         absorbSoul = GetComponentInChildren<Skill_AbsorbSoul>();
@@ -22,27 +23,6 @@ public class Player_SkillManager : MonoBehaviour
         spinningSword = GetComponentInChildren<Skill_SpinningSword>();
         burst = GetComponentInChildren<Skill_SoulBurst>();
         deathDash = GetComponentInChildren<Skill_DeathDash>();
-
-        allSkills = GetComponentsInChildren<Skill_Base>();
-    }
-
-    private void Update()
-    {
-        foreach (var spell in allSkills)
-        {
-            if (spell.upgradeType == SkillUpgradeType.DeathDash ||
-                spell.upgradeType == SkillUpgradeType.DeathDashUpgrade)
-                return;
-
-            if (spell.upgradeType != SkillUpgradeType.None)
-                spell.TryUseSkill();
-        }
-    }
-
-    public void ReduceAllSkillCooldownBy(float amount)
-    {
-        foreach (var skill in allSkills)
-            skill.ReduceCooldownBy(amount);
     }
 
     public Skill_Base GetSkillByType(SkillType type)
@@ -60,5 +40,4 @@ public class Player_SkillManager : MonoBehaviour
                 return null;
         }
     }
-
 }

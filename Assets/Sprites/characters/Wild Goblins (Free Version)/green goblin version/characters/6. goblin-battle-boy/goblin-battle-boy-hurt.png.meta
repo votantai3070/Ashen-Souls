@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 63a4f692000abb74ebe4d0fe640e4346
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8047684562104794651
+    second: goblin-battle-boy-hurt_0
+  - first:
+      213: -9215945502017082511
+    second: goblin-battle-boy-hurt_1
+  - first:
+      213: -8868783391361915468
+    second: goblin-battle-boy-hurt_2
+  - first:
+      213: 5951825959293669561
+    second: goblin-battle-boy-hurt_3
+  - first:
+      213: 3387217387820626337
+    second: goblin-battle-boy-hurt_4
+  - first:
+      213: 2626403074888310135
+    second: goblin-battle-boy-hurt_5
+  - first:
+      213: 2694197649547846906
+    second: goblin-battle-boy-hurt_6
+  - first:
+      213: 7206524660452275947
+    second: goblin-battle-boy-hurt_7
+  - first:
+      213: 5688140291050254027
+    second: goblin-battle-boy-hurt_8
+  - first:
+      213: 8314947338516959107
+    second: goblin-battle-boy-hurt_9
+  - first:
+      213: 6961679177325492270
+    second: goblin-battle-boy-hurt_10
+  - first:
+      213: 5951609521597269820
+    second: goblin-battle-boy-hurt_11
+  - first:
+      213: -5432561299476048880
+    second: goblin-battle-boy-hurt_12
+  - first:
+      213: 1395608499532009538
+    second: goblin-battle-boy-hurt_13
+  - first:
+      213: -5465721438194110026
+    second: goblin-battle-boy-hurt_14
+  - first:
+      213: -7788852933851095842
+    second: goblin-battle-boy-hurt_15
+  - first:
+      213: -7383553935984714372
+    second: goblin-battle-boy-hurt_16
+  - first:
+      213: -3388237998643091843
+    second: goblin-battle-boy-hurt_17
+  - first:
+      213: -5508123222862660974
+    second: goblin-battle-boy-hurt_18
+  - first:
+      213: -1557132435218456184
+    second: goblin-battle-boy-hurt_19
+  - first:
+      213: -2509648705013503013
+    second: goblin-battle-boy-hurt_20
+  - first:
+      213: 518822923960577275
+    second: goblin-battle-boy-hurt_21
+  - first:
+      213: -7613503102953390640
+    second: goblin-battle-boy-hurt_22
+  - first:
+      213: 3179114666584107395
+    second: goblin-battle-boy-hurt_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 146
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1eb6a4887e1faf60800000000000000
+      internalID: 8047684562104794651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 146
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17ba9e2e4626a1080800000000000000
+      internalID: -9215945502017082511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 146
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b52dff8e70cbe480800000000000000
+      internalID: -8868783391361915468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 146
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b0d5a40d22299250800000000000000
+      internalID: 5951825959293669561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 146
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a1331a9440d10f20800000000000000
+      internalID: 3387217387820626337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 146
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d16bb6eabd27420800000000000000
+      internalID: 2626403074888310135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 98
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4edffdc76b36520800000000000000
+      internalID: 2694197649547846906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_7
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 98
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6b9533ff7b20460800000000000000
+      internalID: 7206524660452275947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_8
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 98
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce23a8257550fe40800000000000000
+      internalID: 5688140291050254027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_9
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 98
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38f0266cc80a46370800000000000000
+      internalID: 8314947338516959107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_10
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 98
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2838b4c35adc9060800000000000000
+      internalID: 6961679177325492270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_11
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 98
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3743a0b35d589250800000000000000
+      internalID: 5951609521597269820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_12
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 50
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0141234f74aab94b0800000000000000
+      internalID: -5432561299476048880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 50
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2401f1c39823e5310800000000000000
+      internalID: 1395608499532009538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_14
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 50
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b1f3338f4bd524b0800000000000000
+      internalID: -5465721438194110026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_15
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 50
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edcdb06168f68e390800000000000000
+      internalID: -7788852933851095842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_16
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 50
+        width: 26
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7d91b1a0d8588990800000000000000
+      internalID: -7383553935984714372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_17
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 50
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d76e56ced7f8af0d0800000000000000
+      internalID: -3388237998643091843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_18
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 2
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29af032bc173f83b0800000000000000
+      internalID: -5508123222862660974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_19
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 881a09adc44f36ae0800000000000000
+      internalID: -1557132435218456184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_20
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 2
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdba6aaaccfeb2dd0800000000000000
+      internalID: -2509648705013503013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_21
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 2
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfceff353ba333700800000000000000
+      internalID: 518822923960577275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_22
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 2
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ddf0241447675690800000000000000
+      internalID: -7613503102953390640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goblin-battle-boy-hurt_23
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 2
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389eaf112fb7e1c20800000000000000
+      internalID: 3179114666584107395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      goblin-battle-boy-hurt_0: 8047684562104794651
+      goblin-battle-boy-hurt_1: -9215945502017082511
+      goblin-battle-boy-hurt_10: 6961679177325492270
+      goblin-battle-boy-hurt_11: 5951609521597269820
+      goblin-battle-boy-hurt_12: -5432561299476048880
+      goblin-battle-boy-hurt_13: 1395608499532009538
+      goblin-battle-boy-hurt_14: -5465721438194110026
+      goblin-battle-boy-hurt_15: -7788852933851095842
+      goblin-battle-boy-hurt_16: -7383553935984714372
+      goblin-battle-boy-hurt_17: -3388237998643091843
+      goblin-battle-boy-hurt_18: -5508123222862660974
+      goblin-battle-boy-hurt_19: -1557132435218456184
+      goblin-battle-boy-hurt_2: -8868783391361915468
+      goblin-battle-boy-hurt_20: -2509648705013503013
+      goblin-battle-boy-hurt_21: 518822923960577275
+      goblin-battle-boy-hurt_22: -7613503102953390640
+      goblin-battle-boy-hurt_23: 3179114666584107395
+      goblin-battle-boy-hurt_3: 5951825959293669561
+      goblin-battle-boy-hurt_4: 3387217387820626337
+      goblin-battle-boy-hurt_5: 2626403074888310135
+      goblin-battle-boy-hurt_6: 2694197649547846906
+      goblin-battle-boy-hurt_7: 7206524660452275947
+      goblin-battle-boy-hurt_8: 5688140291050254027
+      goblin-battle-boy-hurt_9: 8314947338516959107
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
