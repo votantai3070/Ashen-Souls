@@ -7,12 +7,12 @@ public class SkillEnemy_Base : MonoBehaviour
     public Entity entity { get; private set; }
     public Enemy enemy { get; private set; }
     private Vector2 direction;
-    [SerializeField] private GameObject energyBallGo;
+    [SerializeField] private GameObject skillObjectGo;
     public SkillEnemyType skillEnemyType;
     [SerializeField] private LayerMask whatIsEnemy;
     public Transform target;
 
-    private GameObject energyBall;
+    private GameObject skillObject;
 
     [Header("Settings")]
     public float cooldown;
@@ -29,56 +29,61 @@ public class SkillEnemy_Base : MonoBehaviour
         enemy = entity as Enemy;
     }
 
-    public void SetSkillUpgrade(SkillEnemy_DataSO skillData)
+    public virtual void SetSkillUpgrade(SkillEnemy_DataSO skillData)
     {
-        UpgradeData upgrade = skillData.upgradeData;
-        skillEnemyType = upgrade.enemyType;
+        SkillEnemyData skill = skillData.upgradeData;
+        skillEnemyType = skill.enemyType;
         whatIsEnemy = skillData.whatIsEnemy;
-        energyBallGo = skillData.skillObjectPrefab;
+        skillObjectGo = skillData.skillObjectPrefab;
         skillEnemyData = skillData;
 
-        cooldown = upgrade.cooldown;
-        speed = upgrade.speed;
-        checkEnemyRadius = upgrade.distanceToAttack;
-        checkDamageRadius = upgrade.attackRadius;
+        cooldown = skill.cooldown;
+        speed = skill.speed;
+
+        checkEnemyRadius = skill.distanceToAttack;
+        enemy.chaseStopDistance = skill.distanceToAttack;
+        enemy.attackDistanceToPlayer = skill.distanceToAttack;
+
+        checkDamageRadius = skill.attackRadius;
         duration = skillData.duration;
 
         lastTimeUsed = Time.time;
     }
 
-    public bool TryUseSkill()
+    public virtual bool TryUseSkill()
     {
         target = FindClosestTarget();
 
-        if (skillEnemyData == null)
+        if (CanUseSkill() == false)
             return false;
-
-        if (target == null)
-            return false;
-
-        if (OnCooldown())
-            return false;
-
-        if (energyBall != null)
-            return false;
-
-        SetOnCooldown();
-        CreateEnergyBall();
 
         return true;
     }
 
-    private void CreateEnergyBall()
+    public bool CanUseSkill()
+    {
+        if (skillEnemyData == null) return false;
+
+        if (target == null) return false;
+
+        if (OnCooldown()) return false;
+
+        if (skillObject != null) return false;
+
+        return true;
+    }
+
+    protected virtual void CreateSkillObject()
     {
         direction = enemy.GetDirectionPlayer();
 
-        energyBall = ObjectPool.instance.Spawn(energyBallGo.name, transform.position, Quaternion.identity);
-        energyBall.GetComponent<SkillObjectEnemy_EnergyBall>().SetupEnergyBall(this, duration, direction, whatIsEnemy);
+        skillObject = ObjectPool.instance.Spawn(skillObjectGo.name, transform.position, Quaternion.identity);
+        skillObject.GetComponent<SkillObjectEnemy_EnergyBall>().SetupEnergyBall(this, duration, direction, whatIsEnemy);
     }
 
     public void OnSoulBurstExpired()
     {
-        energyBall = null;
+        skillObject = null;
     }
 
     public Transform FindClosestTarget()

@@ -1964,7 +1964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &369658217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2829,10 +2829,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 503958931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fc56be22ddb16741b333394edc2653a, type: 3}
+  m_Script: {fileID: 11500000, guid: 700a29cd4fe76e24d996cbd8cba58e55, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SkillEnemy_Base
-  energyBallGo: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::SkillEnemy_EnergyBall
+  skillObjectGo: {fileID: 0}
   skillEnemyType: 0
   whatIsEnemy:
     serializedVersion: 2
@@ -19469,7 +19469,7 @@ GameObject:
   - component: {fileID: 2803847913644387797}
   - component: {fileID: 8632064209348175730}
   - component: {fileID: 6026304663460619261}
-  - component: {fileID: 6608869913349694632}
+  - component: {fileID: 8632064209348175731}
   m_Layer: 0
   m_Name: Animator
   m_TagString: Untagged
@@ -19817,7 +19817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3812084423152879024
 Transform:
   m_ObjectHideFlags: 0
@@ -19918,18 +19918,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6608869913349694632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 701359766450387194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30c3bf38ef8d4914fad68f8ff90dd1db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EntityAnimationEvents
 --- !u!114 &6809677902216104680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20143,9 +20131,9 @@ MonoBehaviour:
   detectionRadius: 100
   detectionAngle: 360
   chaseSpeed: 4
-  chaseStopDistance: 2
+  chaseStopDistance: 3
   backOffset: {x: 10, y: 10}
-  attackDistanceToPlayer: 1
+  attackDistanceToPlayer: 3
 --- !u!1 &7688407218671589856
 GameObject:
   m_ObjectHideFlags: 0
@@ -20221,6 +20209,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &8632064209348175731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701359766450387194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00645d27781704245883d26553f2d03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_AnimationEvents
 --- !u!4 &8714249881513835741
 Transform:
   m_ObjectHideFlags: 0

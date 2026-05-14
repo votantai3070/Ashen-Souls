@@ -6,11 +6,11 @@ public class SkillEnemy_DataSO : Skill_BaseSO
 {
     [Header("Skill Enemy")]
     public LayerMask whatIsEnemy;
-    public UpgradeData upgradeData;
+    public SkillEnemyData upgradeData;
     public GameObject skillObjectPrefab;
 
     [Serializable]
-    public class UpgradeData
+    public class SkillEnemyData
     {
         public SkillEnemyType enemyType;
         public float cooldown;

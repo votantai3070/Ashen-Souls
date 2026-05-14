@@ -27,7 +27,9 @@ public class EnemyMelee_ChaseState : EnemyMelee_GroundState
         if (enemyMelee.combat.CanSeePlayer() == false)
             stateMachine.ChangeState(enemyMelee.moveState);
 
-        Vector2 dir = (enemyMelee.player.position - enemyMelee.transform.position).normalized;
+        Vector2 dir = enemyMelee.GetDirectionPlayer();
+
+        enemyMelee.MovementAnimation(dir);
 
         if (enemyMelee.combat.CanAttack() == false)
         {

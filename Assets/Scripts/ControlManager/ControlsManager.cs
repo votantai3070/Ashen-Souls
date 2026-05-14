@@ -40,8 +40,9 @@ public class ControlsManager : MonoBehaviour
         if (Mouse.current != null)
         {
             Vector2 mouseScreen = Mouse.current.position.ReadValue();
-            float camZ = -Camera.main.transform.position.z;
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreen.x, mouseScreen.y, camZ));
+            float camZ = Mathf.Abs(Camera.main.transform.position.z);
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(new Vector3(mouseScreen.x, mouseScreen.y, camZ)
+);
             lookInput = ((Vector2)(worldPos - player.transform.position)).normalized;
         }
         else

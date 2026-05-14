@@ -60,8 +60,6 @@ public class Player : Entity
         base.Update();
     }
 
-
-
     public void LookAttackIfNeeded()
     {
         if (canLookAttack == false) return;

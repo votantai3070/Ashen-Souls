@@ -27,8 +27,8 @@ MonoBehaviour:
     m_Bits: 128
   upgradeData:
     enemyType: 0
-    cooldown: 3
+    cooldown: 1
     distanceToAttack: 5
     attackRadius: 1.5
-    speed: 3
+    speed: 4
   skillObjectPrefab: {fileID: 5612906296824489825, guid: 8f02cc9443d691644a7c0c992c2b984b, type: 3}

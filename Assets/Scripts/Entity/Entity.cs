@@ -104,4 +104,16 @@ public class Entity : MonoBehaviour
 
         return knockback;
     }
+
+    public void IdleAndAttackAnimation()
+    {
+        anim.SetFloat("xIdleAndAttack", xIdleAndAttack);
+        anim.SetFloat("yIdleAndAttack", yIdleAndAttack);
+    }
+
+    public void MovementAnimation(Vector2 direction)
+    {
+        anim.SetFloat("xMove", Mathf.Round(direction.x));
+        anim.SetFloat("yMove", Mathf.Round(direction.y));
+    }
 }

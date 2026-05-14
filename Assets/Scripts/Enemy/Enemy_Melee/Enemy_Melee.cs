@@ -29,6 +29,7 @@ public class Enemy_Melee : Enemy
         base.Update();
     }
 
+
     public override void TryToIdleState()
     {
         if (stateMachine.currentState == idleState)

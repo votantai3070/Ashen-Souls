@@ -24,9 +24,6 @@ public class EnemyMelee_MoveState : EnemyMelee_GroundState
 
         enemyMelee.SetVelocity(direction.x * enemyMelee.moveSpeed, direction.y * enemyMelee.moveSpeed);
 
-        anim.SetFloat("xMove", Mathf.Round(direction.x));
-        anim.SetFloat("yMove", Mathf.Round(direction.y));
-
         if (enemyMelee.CanStopChaseRange())
             stateMachine.ChangeState(enemyMelee.idleState);
 

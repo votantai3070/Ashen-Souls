@@ -11,6 +11,13 @@ public class Entity_SkillManager : MonoBehaviour
 
     protected virtual void Update()
     {
+        TryUseSkillByType();
+    }
+
+    public void TryUseSkillByType()
+    {
+        if (allSkills.Length == 0) return;
+
         foreach (var spell in allSkills)
         {
             if (spell.upgradeType == SkillUpgradeType.DeathDash ||

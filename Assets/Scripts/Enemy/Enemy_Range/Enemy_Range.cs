@@ -2,6 +2,8 @@
 
 public class Enemy_Range : Enemy
 {
+    public EnemyRange_SkillManager skillManager { get; private set; }
+
     public EnemyRange_IdleState idleState { get; private set; }
     public Enemy_RangeMoveState moveState { get; private set; }
     public EnemyRange_ChaseState chaseState { get; private set; }
@@ -10,6 +12,8 @@ public class Enemy_Range : Enemy
     protected override void Awake()
     {
         base.Awake();
+
+        skillManager = GetComponentInChildren<EnemyRange_SkillManager>();
 
         idleState = new(this, stateMachine, "Idle");
         moveState = new(this, stateMachine, "Move");

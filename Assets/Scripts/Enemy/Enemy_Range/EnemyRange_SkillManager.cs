@@ -7,15 +7,19 @@ public class EnemyRange_SkillManager : Entity_SkillManager
     public SkillEnemy_Base[] skills { get; private set; }
     public Enemy enemy { get; private set; }
 
+    public SkillEnemy_Base energyBall { get; private set; }
+
     protected override void Awake()
     {
         enemy = GetComponentInParent<Enemy>();
+
         skills = GetComponentsInChildren<SkillEnemy_Base>();
+        energyBall = GetComponentInChildren<SkillEnemy_EnergyBall>();
     }
 
     private void Start()
     {
-        for (int i = 0; i < skillData.Length; i++)
+        for (int i = 0; i < skills.Length; i++)
         {
             if (i <= skillData.Length - 1)
                 if (skillData[i].upgradeData.enemyType == skills[i].skillEnemyType)
@@ -25,9 +29,18 @@ public class EnemyRange_SkillManager : Entity_SkillManager
 
     protected override void Update()
     {
-        foreach (var skill in skills)
+
+    }
+
+    public SkillEnemy_Base GetSkillEnemyByType(SkillEnemyType type)
+    {
+        switch (type)
         {
-            skill.TryUseSkill();
+            case SkillEnemyType.EnergyBall: return energyBall;
+
+            default:
+                Debug.Log($"Skill enemy type {type} is not implemented yet.");
+                return null;
         }
     }
 }
