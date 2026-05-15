@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Entity\Entity_Health.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\PlayerState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_GroundState.cs" />
+    <Compile Include="Assets\Scripts\Data\WaveData.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_State.cs" />
     <Compile Include="Assets\Scripts\UI\UI_StatSlot.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\EnemyRange_SkillManager.cs" />

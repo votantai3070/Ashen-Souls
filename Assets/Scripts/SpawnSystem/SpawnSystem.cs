@@ -7,33 +7,37 @@ public class SpawnSystem : MonoBehaviour
 
     [Header("Spawn Settings")]
     [SerializeField] private float totalSpawnDuration = 300f;
-    [SerializeField] private float minSpawnInterval = 2f;
-    [SerializeField] private float maxSpawnInterval = 5f;
-    [SerializeField] private int maxEnemiesAlive = 10;
     [SerializeField] private float maxRetry = 50;
-    [SerializeField] private GameObject[] enemyPrefabs;
+    [SerializeField] private List<WaveData> waves = new();
 
     [Space]
     [SerializeField] private float spawnTimer;
     [SerializeField] private float nextSpawnInterval;
     [SerializeField] private float elapsedTime;
+
     private bool isSpawning;
     [SerializeField] private List<GameObject> aliveEnemies = new();
+
+    private WaveData currentWave;
+
     private void Start()
     {
         StartSpawning();
     }
 
-    public void StartSpawning()
-    {
-        elapsedTime = 0f;
-        isSpawning = true;
-        SetNextInterval();
-    }
 
     private void Update()
     {
         SpawningEnemy();
+    }
+
+    public void StartSpawning()
+    {
+        elapsedTime = 0f;
+        spawnTimer = 0f;
+        isSpawning = true;
+        UpdateCurrentWave();
+        SetNextInterval();
     }
 
     private void SpawningEnemy()
@@ -41,6 +45,7 @@ public class SpawnSystem : MonoBehaviour
         if (!isSpawning) return;
 
         elapsedTime += Time.deltaTime;
+        aliveEnemies.RemoveAll(e => e == null || !e.activeSelf);
 
         if (elapsedTime >= totalSpawnDuration)
         {
@@ -48,6 +53,9 @@ public class SpawnSystem : MonoBehaviour
             Debug.Log("Spawn phase ended!");
             return;
         }
+
+        UpdateCurrentWave();
+        if (currentWave == null) return;
 
         spawnTimer += Time.deltaTime;
 
@@ -59,33 +67,76 @@ public class SpawnSystem : MonoBehaviour
         }
     }
 
-    // Remove null entries and check if we can spawn more enemies
+    private void UpdateCurrentWave()
+    {
+        currentWave = null;
+
+        for (int i = 0; i < waves.Count; i++)
+        {
+            if (elapsedTime >= waves[i].startTime && elapsedTime < waves[i].endTime)
+            {
+                currentWave = waves[i];
+                return;
+            }
+        }
+    }
+
     private void TrySpawnEnemy()
     {
-        aliveEnemies.RemoveAll(e => e == null || !e.activeSelf);
-
-        if (aliveEnemies.Count >= maxEnemiesAlive) return;
+        if (currentWave == null) return;
+        if (aliveEnemies.Count >= currentWave.maxEnemiesAlive) return;
+        if (currentWave.enemies == null || currentWave.enemies.Count == 0) return;
 
         Vector2 spawnPos = GetRandomPointInBounds();
-        GameObject prefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
-        GameObject enemy = ObjectPool.instance.Spawn(prefab.name, spawnPos, Quaternion.identity);
+        GameObject prefab = GetRandomEnemyByWeight(currentWave.enemies);
+        if (prefab == null) return;
 
-        aliveEnemies.Add(enemy);
+        GameObject enemy = ObjectPool.instance.Spawn(prefab.name, spawnPos, Quaternion.identity);
+        if (enemy != null)
+        {
+            aliveEnemies.Add(enemy);
+        }
     }
 
     private void SetNextInterval()
     {
-        nextSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
+        if (currentWave == null) return;
+
+        nextSpawnInterval = Random.Range(currentWave.minSpawnInterval, currentWave.maxSpawnInterval);
     }
 
+    private GameObject GetRandomEnemyByWeight(List<EnemySpawnWeight> list)
+    {
+        int totalWeight = 0;
 
-    // Get a random point within the confiner bounds that is outside the camera's view
+        for (int i = 0; i < list.Count; i++)
+        {
+            if (list[i].prefab != null && list[i].weight > 0)
+                totalWeight += list[i].weight;
+        }
+
+        if (totalWeight <= 0) return null;
+
+        int randomValue = Random.Range(0, totalWeight);
+
+        for (int i = 0; i < list.Count; i++)
+        {
+            if (list[i].prefab == null || list[i].weight <= 0) continue;
+
+            randomValue -= list[i].weight;
+            if (randomValue < 0)
+                return list[i].prefab;
+        }
+
+        return null;
+    }
+
     private Vector2 GetRandomPointInBounds()
     {
         Bounds bounds = confinerBounds.bounds;
         Camera cam = Camera.main;
 
-        Vector2 randomPoint;
+        Vector2 randomPoint = Vector2.zero;
         int attempts = 0;
 
         do
@@ -94,9 +145,9 @@ public class SpawnSystem : MonoBehaviour
                 Random.Range(bounds.min.x, bounds.max.x),
                 Random.Range(bounds.min.y, bounds.max.y)
             );
+
             attempts++;
 
-            // Kiểm tra nằm trong confiner VÀ ngoài tầm nhìn camera
             Vector3 viewportPos = cam.WorldToViewportPoint(randomPoint);
             bool outsideCamera = viewportPos.x < 0 || viewportPos.x > 1 ||
                                  viewportPos.y < 0 || viewportPos.y > 1;

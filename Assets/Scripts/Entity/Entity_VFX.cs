@@ -114,6 +114,15 @@ public class Entity_VFX : MonoBehaviour
 
     public void DamageVfx(float duration)
     {
+        if (!gameObject.activeInHierarchy || !isActiveAndEnabled)
+            return;
+
+        //if (sr == null)
+        //    return;
+
+        //if (originalMat == null)
+        //    originalMat = sr.material;
+
         if (damageVfxCo != null)
             StopCoroutine(damageVfxCo);
 
@@ -127,4 +136,18 @@ public class Entity_VFX : MonoBehaviour
         sr.material = originalMat;
     }
 
+    private void OnDisable()
+    {
+        if (damageVfxCo != null)
+        {
+            StopCoroutine(damageVfxCo);
+            damageVfxCo = null;
+        }
+
+        //if (sr != null && originalMat != null)
+        //    sr.material = originalMat;
+
+        //if (sr != null)
+        //    sr.color = originalColor;
+    }
 }

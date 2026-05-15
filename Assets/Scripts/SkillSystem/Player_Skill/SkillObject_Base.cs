@@ -56,20 +56,25 @@ public class SkillObject_Base : MonoBehaviour
 
         foreach (var target in GetEnemyAround(t, checkDamageRadius))
         {
-            //if (!target.CompareTag(targetStr))
-            //    continue;
-
             IDamageable damageable = target.GetComponent<IDamageable>();
 
-            Debug.Log("Damageable: " + damageable);
-
             if (damageable == null) continue;
+
+            float evasion = target.GetComponent<Entity>().entityStats.GetEvasion();
+
+            if (evasion > Random.value)
+            {
+                Debug.Log("Evasion");
+                return;
+            }
 
             //AttackData attackData = playerStats.GetAttackData(damageScale);
             //ElementType element = attackData.element;
 
             //int physicalDamage = (int)attackData.physicalDamage;
             //int elementalDamage = (int)attackData.elementalDamage;
+
+
 
             int damage = (int)entity.entityStats.GetSkillDamage(upgradeType, out bool isCrit);
 
@@ -80,12 +85,10 @@ public class SkillObject_Base : MonoBehaviour
 
             if (targetGoHit)
             {
-                Debug.Log("Gay dmg");
                 if (upgradeType == SkillUpgradeType.FireSoul || upgradeType == SkillUpgradeType.FireSoulUpgrade)
                 {
                     target.GetComponent<Entity_VFX>().DamageVfx(defaultImpactDuration);
                     entity?.entityVFX?.GetImapctVfx(target.transform, isCrit);
-                    Debug.Log("Fire soul gay dmg");
                     SetPhysicsActive(false);
                     return;
                 }

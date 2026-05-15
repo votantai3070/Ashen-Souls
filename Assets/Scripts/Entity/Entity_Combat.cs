@@ -63,8 +63,13 @@ public class Entity_Combat : MonoBehaviour
 
                 if (canHit)
                 {
-                    enemy.GetComponent<Entity_VFX>().DamageVfx(defaultImpactDuration);
-                    entity?.entityVFX?.GetImapctVfx(enemy.transform, isCriticalHit);
+                    Entity_VFX targetVfx = enemy.GetComponent<Entity_VFX>();
+
+                    if (targetVfx != null && enemy.gameObject.activeInHierarchy)
+                        targetVfx.DamageVfx(defaultImpactDuration);
+
+                    if (entity != null && entity.entityVFX != null)
+                        entity.entityVFX.GetImapctVfx(enemy.transform, isCriticalHit);
                 }
             }
         }

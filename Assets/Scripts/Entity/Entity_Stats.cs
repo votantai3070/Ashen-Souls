@@ -102,7 +102,7 @@ public class Entity_Stats : MonoBehaviour
     {
         float baseArmor = GetBaseArmor();
 
-        float reductionMultiplier = Mathf.Clamp(1 - armorReduction, 0, 1); // Apply armor reduction to the total armor
+        float reductionMultiplier = Mathf.Clamp(1f - armorReduction, 0, 1); // Apply armor reduction to the total armor
         float effectiveArmor = baseArmor * reductionMultiplier;
 
         float mitigation = effectiveArmor / (effectiveArmor + 100); // Percentage damage reduction formula

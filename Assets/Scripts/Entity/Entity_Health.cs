@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Entity_Health : MonoBehaviour, IDamageable
 {
-    public Action OnHealthChanged;
+    public event Action OnHealthChanged;
 
     protected Entity entity;
 
@@ -29,14 +29,30 @@ public class Entity_Health : MonoBehaviour, IDamageable
         if (currentHealth <= 0)
             return false;
 
-        TakeKnockback(damagedDealer, damage);
-        currentHealth -= (int)damage;
+        Entity_Stats attackerStats = damagedDealer.GetComponent<Entity_Stats>();
 
-        OnHealthChanged?.Invoke();
+        float armorReduction = attackerStats != null ? attackerStats.GetArmorReduction() : 0f;
+        float migitation = entity.entityStats != null ? entity.entityStats.GetArmorMitigation(armorReduction) : 0;
+
+        int physicalDamageTaken = Mathf.RoundToInt(damage * (1 - migitation));
+
+        int finalDamage = physicalDamageTaken;
+
+        TakeKnockback(damagedDealer, physicalDamageTaken);
+        ReduceHp(finalDamage);
 
         UnBloody();
 
         return true;
+    }
+
+    public void ReduceHp(int damage)
+    {
+        currentHealth -= damage;
+        OnHealthChanged?.Invoke();
+
+        if (currentHealth < 0)
+            currentHealth = 0;
     }
 
     protected virtual void UnBloody()
