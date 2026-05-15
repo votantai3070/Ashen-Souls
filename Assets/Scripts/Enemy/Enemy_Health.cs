@@ -38,6 +38,12 @@ public class Enemy_Health : Entity_Health
         }
     }
 
+    protected override void KnockBack(Transform damagedDealer, float damage)
+    {
+        //enemy.TryToHitState();
+        base.KnockBack(damagedDealer, damage);
+    }
+
 
     private void OnDisable()
     {

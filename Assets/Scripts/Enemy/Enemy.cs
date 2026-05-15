@@ -67,6 +67,11 @@ public class Enemy : Entity
 
     }
 
+    public virtual void TryToHitState()
+    {
+
+    }
+
     public void SetPlayer(Transform player)
     {
         this.player = player;
@@ -118,6 +123,4 @@ public class Enemy : Entity
         Gizmos.DrawRay(transform.position, leftDir * detectionRadius);
         Gizmos.DrawRay(transform.position, rightDir * detectionRadius);
     }
-
-
 }

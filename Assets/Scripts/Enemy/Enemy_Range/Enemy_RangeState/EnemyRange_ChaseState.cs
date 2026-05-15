@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyRange_ChaseState : Enemy_RangeState
+public class EnemyRange_ChaseState : EnemyRange_State
 {
     public EnemyRange_ChaseState(Enemy enemy, StateMachine<EntityState> stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {

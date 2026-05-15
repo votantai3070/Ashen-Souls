@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Enemy_RangeMoveState : Enemy_RangeState
+public class EnemyRange_MoveState : EnemyRange_State
 {
-    public Enemy_RangeMoveState(Enemy enemy, StateMachine<EntityState> stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
+    public EnemyRange_MoveState(Enemy enemy, StateMachine<EntityState> stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
     }
 

@@ -73,10 +73,9 @@
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_State.cs" />
     <Compile Include="Assets\Scripts\UI\UI_StatSlot.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\EnemyRange_SkillManager.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\Enemy_RangeHitState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_Range.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\Enemy_RangeMoveState.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_HitState.cs" />
     <Compile Include="Assets\Scripts\UI\UI_PlayerStats.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillCard.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_ChaseState.cs" />
@@ -97,7 +96,6 @@
     <Compile Include="Assets\Scripts\Data\Skill_ListDataSO.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\Skill_Base.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_ResourceGroup.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\Enemy_RangeAttackState.cs" />
     <Compile Include="Assets\Scripts\Player\PLayer_Stats.cs" />
     <Compile Include="Assets\Scripts\Player\Player_VFX.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillEnemyType.cs" />
@@ -111,13 +109,13 @@
     <Compile Include="Assets\Scripts\Entity\EntityAnimationEvents.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_VFX.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_MeleeState\EnemyMelee_DeadState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_MoveState.cs" />
     <Compile Include="Assets\Scripts\Enum\EnemyType.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_MeleeState\EnemyMelee_MoveState.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_SkillHolder.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillBoard.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\Skill_FireSoul.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_DefenseGroup.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\Enemy_RangeState.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillType.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_DeathDash.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_MajorGroup.cs" />
@@ -132,12 +130,13 @@
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_Soul.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Stats.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\Enemy_RangeDeadState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_AttackState.cs" />
     <Compile Include="Assets\Scripts\Enum\StatType.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Health.cs" />
     <Compile Include="Assets\Scripts\LevelSystem.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillEnemy_EnergyBall.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_MoveState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_DeadState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Stats.cs" />
     <Compile Include="Assets\Scripts\Data\SkillEnemy_DataSO.cs" />
     <Compile Include="Assets\Scripts\Player\Player_AnimationEvents.cs" />
@@ -169,6 +168,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_IdleState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\Skill_DeathDash.cs" />
     <Compile Include="Assets\Scripts\Player\Player_SkillManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_State.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_IdleState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SpellState.cs" />
   </ItemGroup>

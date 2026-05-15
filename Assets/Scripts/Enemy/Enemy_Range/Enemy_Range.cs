@@ -5,9 +5,11 @@ public class Enemy_Range : Enemy
     public EnemyRange_SkillManager skillManager { get; private set; }
 
     public EnemyRange_IdleState idleState { get; private set; }
-    public Enemy_RangeMoveState moveState { get; private set; }
+    public EnemyRange_MoveState moveState { get; private set; }
     public EnemyRange_ChaseState chaseState { get; private set; }
-    public Enemy_RangeAttackState attackState { get; private set; }
+    public EnemyRange_AttackState attackState { get; private set; }
+    public EnemyRange_DeadState deadState { get; private set; }
+    public EnemyRange_HitState hitState { get; private set; }
 
     protected override void Awake()
     {
@@ -19,7 +21,8 @@ public class Enemy_Range : Enemy
         moveState = new(this, stateMachine, "Move");
         chaseState = new(this, stateMachine, "Chase");
         attackState = new(this, stateMachine, "Attack");
-        //deadState = new(this, stateMachine, "Dead");
+        deadState = new(this, stateMachine, "Dead");
+        hitState = new(this, stateMachine, "Hit");
     }
 
     protected override void Start()
@@ -32,8 +35,6 @@ public class Enemy_Range : Enemy
     protected override void Update()
     {
         base.Update();
-
-
     }
 
     public override void TryToIdleState()
@@ -46,9 +47,16 @@ public class Enemy_Range : Enemy
 
     public override void TryToDieState()
     {
-        //if (stateMachine.currentState == deadState)
-        //    return;
-        //stateMachine.ChangeState(deadState);
+        if (stateMachine.currentState == deadState)
+            return;
+        stateMachine.ChangeState(deadState);
+    }
+
+    public override void TryToHitState()
+    {
+        if (stateMachine.currentState == hitState)
+            return;
+        stateMachine.ChangeState(hitState);
     }
 
     public void Flip(Vector2 direction)

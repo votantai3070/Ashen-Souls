@@ -35,12 +35,10 @@ public class Entity_Health : MonoBehaviour, IDamageable
         float migitation = entity.entityStats != null ? entity.entityStats.GetArmorMitigation(armorReduction) : 0;
 
         int physicalDamageTaken = Mathf.RoundToInt(damage * (1 - migitation));
-
         int finalDamage = physicalDamageTaken;
 
-        TakeKnockback(damagedDealer, physicalDamageTaken);
+        KnockBack(damagedDealer, physicalDamageTaken);
         ReduceHp(finalDamage);
-
         UnBloody();
 
         return true;
@@ -58,6 +56,11 @@ public class Entity_Health : MonoBehaviour, IDamageable
     protected virtual void UnBloody()
     {
 
+    }
+
+    protected virtual void KnockBack(Transform damagedDealer, float damage)
+    {
+        TakeKnockback(damagedDealer, damage);
     }
 
     public virtual void Die()

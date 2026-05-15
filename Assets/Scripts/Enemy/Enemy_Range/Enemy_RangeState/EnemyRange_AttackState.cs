@@ -1,6 +1,6 @@
-public class Enemy_RangeAttackState : Enemy_RangeState
+public class EnemyRange_AttackState : EnemyRange_State
 {
-    public Enemy_RangeAttackState(Enemy enemy, StateMachine<EntityState> stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
+    public EnemyRange_AttackState(Enemy enemy, StateMachine<EntityState> stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
     }
 

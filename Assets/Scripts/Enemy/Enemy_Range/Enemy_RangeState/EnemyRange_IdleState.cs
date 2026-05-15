@@ -1,4 +1,4 @@
-public class EnemyRange_IdleState : Enemy_RangeState
+public class EnemyRange_IdleState : EnemyRange_State
 {
     public EnemyRange_IdleState(Enemy enemy, StateMachine<EntityState> stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
