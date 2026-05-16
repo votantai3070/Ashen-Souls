@@ -10,20 +10,18 @@ public class Player_MoveState : Player_GroundState
     {
         base.Update();
 
-        float moveInputX = controls.moveInput.x;
-        float moveInputY = controls.moveInput.y;
+        Vector2 moveInput = controls.moveInput;
 
-        anim.SetFloat("xMove", moveInputX);
-        anim.SetFloat("yMove", moveInputY);
+        anim.SetFloat("xMove", moveInput.x);
+        anim.SetFloat("yMove", moveInput.y);
 
         if (controls.moveInput != Vector2.zero)
         {
-            player.xIdleAndAttack = moveInputX;
-            player.yIdleAndAttack = moveInputY;
+            player.SetValueIdleAndAttackAnimation(moveInput);
         }
 
         if (stateMachine.currentState != player.dashState)
-            player.SetVelocity(moveInputX * player.moveSpeed, moveInputY * player.moveSpeed);
+            player.SetVelocity(moveInput.x * player.moveSpeed, moveInput.y * player.moveSpeed);
 
         if (controls.moveInput == Vector2.zero)
         {

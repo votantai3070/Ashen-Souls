@@ -368,6 +368,10 @@ MonoBehaviour:
   chaseStopDistance: 1.5
   backOffset: {x: 10, y: 10}
   attackDistanceToPlayer: 0.5
+  specialDistance: 0
+  specialSpeed: 0
+  specialDashDuration: 0
+  enemyType: 0
 --- !u!114 &6411094133754084699
 MonoBehaviour:
   m_ObjectHideFlags: 0

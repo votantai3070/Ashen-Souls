@@ -28,8 +28,9 @@ public class EnemyMelee_ChaseState : EnemyMelee_GroundState
             stateMachine.ChangeState(enemyMelee.moveState);
 
         Vector2 dir = enemyMelee.GetDirectionPlayer();
-
         enemyMelee.MovementAnimation(dir);
+
+        enemyMelee.SetValueIdleAndAttackAnimation(dir);
 
         if (enemyMelee.combat.CanAttack() == false)
         {
@@ -43,7 +44,12 @@ public class EnemyMelee_ChaseState : EnemyMelee_GroundState
         {
             enemyMelee.SetVelocity(dir.x * enemyMelee.chaseSpeed, dir.y * enemyMelee.chaseSpeed);
             if (enemyMelee.IsPlayerInAttackRange())
-                stateMachine.ChangeState(enemyMelee.attackState);
+            {
+                if (enemyMelee.enemyType == EnemyMeleeType.Normal)
+                    stateMachine.ChangeState(enemyMelee.attackState);
+                else if (enemyMelee.enemyType == EnemyMeleeType.Special)
+                    stateMachine.ChangeState(enemyMelee.prepareAttackState);
+            }
         }
     }
 }

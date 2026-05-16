@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_State.cs" />
     <Compile Include="Assets\Scripts\UI\UI_StatSlot.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\EnemyRange_SkillManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_MeleeState\EnemyMelee_PrepareAttackState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_Range.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_HitState.cs" />
@@ -150,6 +151,7 @@
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_FireSoul.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Health.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\EnemyMeleeAttackTelegraph.cs" />
     <Compile Include="Assets\Scripts\DropSystem.cs" />
     <Compile Include="Assets\Scripts\Data\Skill_DataSO.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_SkillManager.cs" />

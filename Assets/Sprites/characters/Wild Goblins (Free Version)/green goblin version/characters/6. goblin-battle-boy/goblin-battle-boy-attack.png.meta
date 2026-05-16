@@ -211,12 +211,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 146
-        width: 26
-        height: 28
+        x: 0
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -233,12 +233,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_1
       rect:
         serializedVersion: 2
-        x: 59
-        y: 146
-        width: 26
-        height: 28
+        x: 48
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -255,12 +255,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_2
       rect:
         serializedVersion: 2
-        x: 107
-        y: 146
-        width: 26
-        height: 27
+        x: 96
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -277,12 +277,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_3
       rect:
         serializedVersion: 2
-        x: 155
-        y: 146
-        width: 26
-        height: 27
+        x: 144
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -299,12 +299,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_4
       rect:
         serializedVersion: 2
-        x: 203
-        y: 146
-        width: 26
-        height: 27
+        x: 192
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -321,12 +321,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_5
       rect:
         serializedVersion: 2
-        x: 251
-        y: 146
-        width: 26
-        height: 27
+        x: 240
+        y: 144
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -343,12 +343,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_6
       rect:
         serializedVersion: 2
-        x: 14
-        y: 98
-        width: 20
-        height: 28
+        x: 0
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -365,12 +365,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_7
       rect:
         serializedVersion: 2
-        x: 62
-        y: 98
-        width: 20
-        height: 28
+        x: 48
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -387,12 +387,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_8
       rect:
         serializedVersion: 2
-        x: 106
-        y: 98
-        width: 25
-        height: 27
+        x: 96
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -409,12 +409,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_9
       rect:
         serializedVersion: 2
-        x: 155
-        y: 98
-        width: 24
-        height: 26
+        x: 144
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -431,12 +431,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_10
       rect:
         serializedVersion: 2
-        x: 203
-        y: 98
-        width: 23
-        height: 26
+        x: 192
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -453,12 +453,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_11
       rect:
         serializedVersion: 2
-        x: 251
-        y: 98
-        width: 23
-        height: 26
+        x: 240
+        y: 96
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -475,12 +475,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_12
       rect:
         serializedVersion: 2
-        x: 11
-        y: 50
-        width: 26
-        height: 28
+        x: 0
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -497,12 +497,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_13
       rect:
         serializedVersion: 2
-        x: 59
-        y: 50
-        width: 26
-        height: 28
+        x: 48
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -519,12 +519,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_14
       rect:
         serializedVersion: 2
-        x: 107
-        y: 50
-        width: 26
-        height: 27
+        x: 96
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -541,12 +541,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_15
       rect:
         serializedVersion: 2
-        x: 155
-        y: 50
-        width: 26
-        height: 27
+        x: 144
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -563,12 +563,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_16
       rect:
         serializedVersion: 2
-        x: 203
-        y: 50
-        width: 26
-        height: 27
+        x: 192
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -585,12 +585,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_17
       rect:
         serializedVersion: 2
-        x: 251
-        y: 50
-        width: 26
-        height: 27
+        x: 240
+        y: 48
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -607,12 +607,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_18
       rect:
         serializedVersion: 2
-        x: 14
-        y: 2
-        width: 20
-        height: 28
+        x: 0
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -629,12 +629,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_19
       rect:
         serializedVersion: 2
-        x: 62
-        y: 2
-        width: 20
-        height: 28
+        x: 48
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -651,12 +651,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_20
       rect:
         serializedVersion: 2
-        x: 109
-        y: 2
-        width: 25
-        height: 27
+        x: 96
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -673,12 +673,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_21
       rect:
         serializedVersion: 2
-        x: 157
-        y: 2
-        width: 24
-        height: 26
+        x: 144
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -695,12 +695,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_22
       rect:
         serializedVersion: 2
-        x: 206
-        y: 2
-        width: 23
-        height: 26
+        x: 192
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -717,12 +717,12 @@ TextureImporter:
       name: goblin-battle-boy-attack_23
       rect:
         serializedVersion: 2
-        x: 254
-        y: 2
-        width: 23
-        height: 26
+        x: 240
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -739,7 +739,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 80c4c50fef2f0dd44a4384667ca1650f
     internalID: 0
     vertices: []
     indices: 
@@ -747,7 +747,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":48.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       goblin-battle-boy-attack_0: 4522095315919369266
       goblin-battle-boy-attack_1: 6308775395815961665

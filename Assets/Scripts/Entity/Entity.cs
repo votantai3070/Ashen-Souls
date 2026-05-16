@@ -105,7 +105,7 @@ public class Entity : MonoBehaviour
         return knockback;
     }
 
-    public void IdleAndAttackAnimation()
+    public void SetAnimIdleAndAttackAnimation()
     {
         anim.SetFloat("xIdleAndAttack", xIdleAndAttack);
         anim.SetFloat("yIdleAndAttack", yIdleAndAttack);
@@ -115,5 +115,11 @@ public class Entity : MonoBehaviour
     {
         anim.SetFloat("xMove", Mathf.Round(direction.x));
         anim.SetFloat("yMove", Mathf.Round(direction.y));
+    }
+
+    public void SetValueIdleAndAttackAnimation(Vector2 direction)
+    {
+        xIdleAndAttack = direction.x;
+        yIdleAndAttack = direction.y;
     }
 }

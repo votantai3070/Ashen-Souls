@@ -29,6 +29,11 @@ public class Enemy : Entity
     public Vector2 backOffset = new(10f, 10f);
     public float attackDistanceToPlayer = 1f;
 
+    [Header("Enemy Special Info")]
+    public float specialDistance;
+    public float specialSpeed;
+    public float specialDashDuration;
+
     public Vector2 facingDirection { get; private set; }
 
     protected override void Awake()
@@ -122,5 +127,8 @@ public class Enemy : Entity
         Vector3 rightDir = Quaternion.Euler(0, 0, -detectionAngle / 2f) * facingDirection;
         Gizmos.DrawRay(transform.position, leftDir * detectionRadius);
         Gizmos.DrawRay(transform.position, rightDir * detectionRadius);
+
+        //Gizmos.color = Color.gray;
+        //Gizmos.DrawRay(transform.position, GetDirectionPlayer() * specialDistance);
     }
 }

@@ -11,7 +11,7 @@ public class Player_IdleState : Player_GroundState
     {
         base.Enter();
 
-        player.IdleAndAttackAnimation();
+        player.SetAnimIdleAndAttackAnimation();
     }
 
     public override void Update()

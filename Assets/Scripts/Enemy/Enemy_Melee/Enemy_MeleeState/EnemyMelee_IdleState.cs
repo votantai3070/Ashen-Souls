@@ -11,7 +11,7 @@ public class EnemyMelee_IdleState : EnemyMelee_GroundState
         stateTimer = enemyMelee.idleTimer;
 
         enemyMelee.SetVelocity(0f, 0f);
-        enemyMelee.IdleAndAttackAnimation();
+        enemyMelee.SetAnimIdleAndAttackAnimation();
     }
 
     public override void Exit()

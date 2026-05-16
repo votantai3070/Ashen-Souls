@@ -21,6 +21,7 @@ public class Entity_Combat : MonoBehaviour
 
     private bool canHit;
     private bool becomeInvulnerable;
+    private bool attackWindow;
 
     protected virtual void Awake()
     {
@@ -39,6 +40,9 @@ public class Entity_Combat : MonoBehaviour
     {
         if (CanAttack() == false)
             return; // Guard against attacking too frequently
+
+        //if (attackWindow == false)
+        //return;
 
         lastAttackTime = Time.time;
         hitThisAttack.Clear();
@@ -74,6 +78,8 @@ public class Entity_Combat : MonoBehaviour
             }
         }
     }
+
+    public void SetAttackWindow(bool active) => attackWindow = active;
 
     public virtual Collider2D[] FindAttackTarget(Transform attackArea)
     {

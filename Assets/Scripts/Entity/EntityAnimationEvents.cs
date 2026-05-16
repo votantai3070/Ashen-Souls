@@ -11,9 +11,15 @@ public class EntityAnimationEvents : MonoBehaviour
 
     protected virtual void TriggerEvent() => entity.canTrigger = true;
 
-    private void AttackTrigger()
+    protected virtual void AttackTrigger()
     {
         entity.entityCombat.ResetHitList();
         entity.entityCombat.Attack(entity);
+        //entity.entityCombat.SetAttackWindow(true);
+    }
+
+    protected virtual void AttackEnd()
+    {
+        //entity.entityCombat.SetAttackWindow(false);
     }
 }
