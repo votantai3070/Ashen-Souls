@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyRange_DeadState : EnemyRange_State
 {
+    private AnimatorStateInfo info;
     private bool despawned;
 
     public EnemyRange_DeadState(Enemy enemy, StateMachine<EntityState> stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
