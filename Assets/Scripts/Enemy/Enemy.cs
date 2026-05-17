@@ -67,11 +67,6 @@ public class Enemy : Entity
 
     }
 
-    public virtual void TryToDieState()
-    {
-
-    }
-
     public virtual void TryToHitState()
     {
 

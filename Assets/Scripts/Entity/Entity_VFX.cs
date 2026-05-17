@@ -144,8 +144,7 @@ public class Entity_VFX : MonoBehaviour
             damageVfxCo = null;
         }
 
-        //if (sr != null && originalMat != null)
-        //    sr.material = originalMat;
+        //sr.material = originalMat;
 
         //if (sr != null)
         //    sr.color = originalColor;

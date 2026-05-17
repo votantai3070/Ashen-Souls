@@ -2,7 +2,7 @@
 
 public class EntityAnimationEvents : MonoBehaviour
 {
-    private Entity entity;
+    protected Entity entity;
 
     protected virtual void Awake()
     {

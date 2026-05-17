@@ -9,6 +9,7 @@ public class Entity_Health : MonoBehaviour, IDamageable
 
     [Space]
     [SerializeField] protected int currentHealth;
+    public bool isDead;
 
     protected virtual void Awake()
     {
@@ -26,18 +27,25 @@ public class Entity_Health : MonoBehaviour, IDamageable
 
     public virtual bool TakeDamage(bool isCrit, float damage, Transform damagedDealer)
     {
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 || isDead)
             return false;
 
         Entity_Stats attackerStats = damagedDealer.GetComponent<Entity_Stats>();
 
         float armorReduction = attackerStats != null ? attackerStats.GetArmorReduction() : 0f;
-        float migitation = entity.entityStats != null ? entity.entityStats.GetArmorMitigation(armorReduction) : 0;
+        float mitigation = entity.entityStats != null ? entity.entityStats.GetArmorMitigation(armorReduction) : 0f;
 
-        int physicalDamageTaken = Mathf.RoundToInt(damage * (1 - migitation));
+        int physicalDamageTaken = Mathf.RoundToInt(damage * (1 - mitigation));
         int finalDamage = physicalDamageTaken;
 
-        KnockBack(damagedDealer, physicalDamageTaken);
+        if (finalDamage <= 0)
+            return false;
+
+        bool willDie = currentHealth - finalDamage <= 0;
+
+        if (!willDie)
+            KnockBack(damagedDealer, physicalDamageTaken);
+
         ReduceHp(finalDamage);
         UnBloody();
 
@@ -47,10 +55,14 @@ public class Entity_Health : MonoBehaviour, IDamageable
     public void ReduceHp(int damage)
     {
         currentHealth -= damage;
-        OnHealthChanged?.Invoke();
 
         if (currentHealth < 0)
             currentHealth = 0;
+
+        OnHealthChanged?.Invoke();
+
+        if (IsDead() && !isDead)
+            Die();
     }
 
     protected virtual void UnBloody()
@@ -63,11 +75,6 @@ public class Entity_Health : MonoBehaviour, IDamageable
         TakeKnockback(damagedDealer, damage);
     }
 
-    public virtual void Die()
-    {
-        ObjectPool.instance.Despawn(gameObject);
-    }
-
     protected virtual void TakeKnockback(Transform damagedDealer, float finalDamage)
     {
         //float averangeDamage = finalDamage / entityStats.GetMaxHealth();
@@ -76,5 +83,15 @@ public class Entity_Health : MonoBehaviour, IDamageable
         entity?.KnockBack(damagedDealer, averangeDamage);
     }
 
+    protected virtual void Die()
+    {
+        if (isDead)
+            return;
+
+        isDead = true;
+        entity?.TryToDieState();
+    }
+
     public int GetCurrentHealth() => currentHealth;
+    protected bool IsDead() => currentHealth <= 0;
 }

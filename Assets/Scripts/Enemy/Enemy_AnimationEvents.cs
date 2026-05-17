@@ -9,6 +9,8 @@ public class Enemy_AnimationEvents : EntityAnimationEvents
         enemyRange = GetComponentInParent<Enemy_Range>();
     }
 
+    //private void FinishDeadState() => entity.entityHealth.Die();
+
     private void TryUseEnergyBall()
     {
         enemyRange.skillManager.GetSkillEnemyByType(SkillEnemyType.EnergyBall).TryUseSkill();

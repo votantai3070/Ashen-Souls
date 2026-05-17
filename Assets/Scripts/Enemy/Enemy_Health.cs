@@ -4,6 +4,7 @@ public class Enemy_Health : Entity_Health
 {
     private Enemy enemy;
     private DropSystem dropSystem;
+    private bool rewardGiven;
 
     protected override void Awake()
     {
@@ -13,40 +14,41 @@ public class Enemy_Health : Entity_Health
         dropSystem = GetComponent<DropSystem>();
     }
 
-    protected override void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            TakeDamage(true, 999, enemy.player);
-        }
-    }
-
     public override bool TakeDamage(bool isCrit, float damage, Transform damagedDealer)
     {
-        enemy.TryToIdleState();
+        if (currentHealth <= 0 || isDead)
+            return false;
 
-        return base.TakeDamage(isCrit, damage, damagedDealer);
+        bool result = base.TakeDamage(isCrit, damage, damagedDealer);
+
+        if (!isDead && currentHealth > 0)
+            enemy.TryToIdleState();
+
+        return result;
     }
 
     protected override void UnBloody()
     {
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !rewardGiven)
         {
+            rewardGiven = true;
             enemy.GetPlayer().stats.GainExp(enemy.stats.GetExpDrop());
             dropSystem.SpawnDrop();
-            enemy.TryToDieState();
         }
     }
 
     protected override void KnockBack(Transform damagedDealer, float damage)
     {
-        //enemy.TryToHitState();
+        if (isDead || currentHealth <= 0)
+            return;
+
         base.KnockBack(damagedDealer, damage);
     }
-
 
     private void OnDisable()
     {
         currentHealth = (int)enemy.stats.GetMaxHealth();
+        isDead = false;
+        rewardGiven = false;
     }
 }

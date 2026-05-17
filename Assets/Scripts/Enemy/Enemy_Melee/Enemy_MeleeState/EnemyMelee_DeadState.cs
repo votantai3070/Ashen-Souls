@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class EnemyMelee_DeadState : EnemyMelee_State
 {
+    private AnimatorStateInfo info;
+    private bool despawned;
+
     public EnemyMelee_DeadState(Enemy enemy, StateMachine<EntityState> stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
     }
@@ -10,11 +13,18 @@ public class EnemyMelee_DeadState : EnemyMelee_State
     {
         base.Enter();
 
-        stateTimer = anim.GetCurrentAnimatorStateInfo(0).length;
+        despawned = false;
+
+        info = anim.GetCurrentAnimatorStateInfo(0);
+        stateTimer = info.length;
 
         enemyMelee.SetVelocity(0, 0);
+        enemyMelee.rb.linearVelocity = Vector2.zero;
         enemyMelee.rb.simulated = false;
-        enemyMelee.GetComponent<Collider2D>().enabled = false;
+
+        Collider2D col = enemyMelee.GetComponent<Collider2D>();
+        if (col != null)
+            col.enabled = false;
     }
 
     public override void Exit()
@@ -22,18 +32,23 @@ public class EnemyMelee_DeadState : EnemyMelee_State
         base.Exit();
 
         enemyMelee.rb.simulated = true;
-        enemyMelee.GetComponent<Collider2D>().enabled = true;
+
+        Collider2D col = enemyMelee.GetComponent<Collider2D>();
+        if (col != null)
+            col.enabled = true;
     }
 
     public override void Update()
     {
         base.Update();
 
-        if (stateTimer <= 0f)
+        if (despawned)
+            return;
+
+        if (stateTimer < 0)
         {
-            stateMachine.ChangeState(enemyMelee.idleState);
-            enemyMelee.health.Die();
+            despawned = true;
+            ObjectPool.instance.Despawn(enemyMelee.gameObject);
         }
     }
-
 }

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EnemyRange_DeadState : EnemyRange_State
 {
+    private bool despawned;
+
     public EnemyRange_DeadState(Enemy enemy, StateMachine<EntityState> stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
     }
@@ -10,11 +12,18 @@ public class EnemyRange_DeadState : EnemyRange_State
     {
         base.Enter();
 
-        stateTimer = anim.GetCurrentAnimatorStateInfo(0).length;
+        despawned = false;
+
+        info = anim.GetCurrentAnimatorStateInfo(0);
+        stateTimer = info.length;
 
         enemyRange.SetVelocity(0, 0);
+        enemyRange.rb.linearVelocity = Vector2.zero;
         enemyRange.rb.simulated = false;
-        enemyRange.GetComponent<Collider2D>().enabled = false;
+
+        Collider2D col = enemyRange.GetComponent<Collider2D>();
+        if (col != null)
+            col.enabled = false;
     }
 
     public override void Exit()
@@ -22,17 +31,23 @@ public class EnemyRange_DeadState : EnemyRange_State
         base.Exit();
 
         enemyRange.rb.simulated = true;
-        enemyRange.GetComponent<Collider2D>().enabled = true;
+
+        Collider2D col = enemyRange.GetComponent<Collider2D>();
+        if (col != null)
+            col.enabled = true;
     }
 
     public override void Update()
     {
         base.Update();
 
-        if (stateTimer <= 0f)
+        if (despawned)
+            return;
+
+        if (stateTimer < 0)
         {
-            stateMachine.ChangeState(enemyRange.idleState);
-            enemyRange.health.Die();
+            despawned = true;
+            ObjectPool.instance.Despawn(enemyRange.gameObject);
         }
     }
 }

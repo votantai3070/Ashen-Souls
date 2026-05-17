@@ -5,6 +5,7 @@ public class Entity : MonoBehaviour
 {
     public Entity_Combat entityCombat { get; private set; }
     public Entity_Stats entityStats { get; private set; }
+    public Entity_Health entityHealth { get; private set; }
     public Entity_VFX entityVFX { get; private set; }
     public StateMachine<EntityState> stateMachine { get; private set; }
     public Rigidbody2D rb { get; private set; }
@@ -33,6 +34,7 @@ public class Entity : MonoBehaviour
     {
         entityStats = GetComponent<Entity_Stats>();
         entityCombat = GetComponent<Entity_Combat>();
+        entityHealth = GetComponent<Entity_Health>();
         entityVFX = GetComponent<Entity_VFX>();
 
         stateMachine = new();
@@ -58,6 +60,11 @@ public class Entity : MonoBehaviour
     protected virtual void Update()
     {
         stateMachine.currentState?.Update();
+    }
+
+    public virtual void TryToDieState()
+    {
+
     }
 
     private void RefreshStats()
@@ -99,8 +106,7 @@ public class Entity : MonoBehaviour
 
         Vector2 knockback = averageDamage > heavyKnockBackThreshold ? heavyKnockBackPower : knockBackPower;
 
-        knockback.x *= direction.x;
-        knockback.y *= direction.y;
+        knockback *= direction;
 
         return knockback;
     }

@@ -379,7 +379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8016689569130248356
 Transform:
   m_ObjectHideFlags: 0
@@ -431,6 +431,9 @@ MonoBehaviour:
   chaseStopDistance: 3
   backOffset: {x: 10, y: 10}
   attackDistanceToPlayer: 3
+  specialDistance: 0
+  specialSpeed: 0
+  specialDashDuration: 0
 --- !u!50 &4402378571144689366
 Rigidbody2D:
   serializedVersion: 5
