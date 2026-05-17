@@ -41,8 +41,8 @@ public class Entity_Combat : MonoBehaviour
         if (CanAttack() == false)
             return; // Guard against attacking too frequently
 
-        //if (attackWindow == false)
-        //return;
+        if (attackWindow == false)
+            return;
 
         lastAttackTime = Time.time;
         hitThisAttack.Clear();
@@ -92,7 +92,10 @@ public class Entity_Combat : MonoBehaviour
     public bool CanAttack()
     {
         if (becomeInvulnerable)
+        {
+            Debug.Log("Become Invulnerable");
             return false;
+        }
 
         if (Time.time < lastAttackTime + attackCooldownGuard)
             return false;

@@ -1964,7 +1964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &369658217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3366,7 +3366,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   showTargetEnemies: []
-  attackCooldownGuard: 0.1
+  attackCooldownGuard: 0.5
   defaultImpactDuration: 0.1
 --- !u!1 &589699674
 GameObject:
@@ -4362,7 +4362,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3547200286111319526, guid: 8abf69ca59ab109499d2d8341210b2cd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411094133754084699, guid: 8abf69ca59ab109499d2d8341210b2cd, type: 3}
+      propertyPath: attackCooldownGuard
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19648,7 +19652,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   showTargetEnemies: []
-  attackCooldownGuard: 0.2
+  attackCooldownGuard: 0.5
   defaultImpactDuration: 0.1
 --- !u!114 &2739321897606209953
 MonoBehaviour:

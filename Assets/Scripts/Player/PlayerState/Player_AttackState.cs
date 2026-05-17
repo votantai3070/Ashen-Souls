@@ -29,11 +29,11 @@ public class Player_AttackState : PlayerState
 
         player.SetVelocity(0, 0);
 
+        player.combat.Attack(player);
 
         if (player.canTrigger)
         {
             player.canLookAttack = false;
-
             stateMachine.ChangeState(player.idleState);
         }
     }

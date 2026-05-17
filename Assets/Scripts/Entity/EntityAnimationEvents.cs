@@ -9,17 +9,16 @@ public class EntityAnimationEvents : MonoBehaviour
         entity = GetComponentInParent<Entity>();
     }
 
-    protected virtual void TriggerEvent() => entity.canTrigger = true;
+    protected virtual void TriggerEvent()
+    {
+        entity.canTrigger = true;
+        entity.entityCombat.SetAttackWindow(false);
+    }
 
     protected virtual void AttackTrigger()
     {
         entity.entityCombat.ResetHitList();
-        entity.entityCombat.Attack(entity);
-        //entity.entityCombat.SetAttackWindow(true);
-    }
-
-    protected virtual void AttackEnd()
-    {
-        //entity.entityCombat.SetAttackWindow(false);
+        //entity.entityCombat.Attack(entity);
+        entity.entityCombat.SetAttackWindow(true);
     }
 }

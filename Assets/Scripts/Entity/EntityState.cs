@@ -5,7 +5,6 @@ public class EntityState : IState
     protected StateMachine<EntityState> stateMachine;
     protected string animBoolName;
 
-    protected Entity entity;
     protected Rigidbody2D rb;
     protected Animator anim;
 

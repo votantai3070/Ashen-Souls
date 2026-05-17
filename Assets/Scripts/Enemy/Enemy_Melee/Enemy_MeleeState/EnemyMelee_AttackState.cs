@@ -34,6 +34,8 @@ public class EnemyMelee_AttackState : EnemyMelee_State
     {
         base.Update();
 
+        enemyMelee.combat.Attack(enemyMelee);
+
         switch (enemyMelee.enemyType)
         {
             case EnemyMeleeType.Normal:
@@ -60,6 +62,8 @@ public class EnemyMelee_AttackState : EnemyMelee_State
 
     private void OnSpecialAttackFinished()
     {
+        enemyMelee.canTrigger = true;
         specialAttackFinished = true;
+        enemyMelee.combat.SetAttackWindow(false);
     }
 }
