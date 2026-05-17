@@ -123,7 +123,7 @@ public class UI_StatSlot : MonoBehaviour
             case StatType.Intelligence: return "Intelligence";
             case StatType.Vitality: return "Vitality";
 
-            case StatType.AttackSpeed: return "Attack Speed";
+            case StatType.AttackSpeed: return "PerformAttack Speed";
             case StatType.Speed: return "Speed";
             case StatType.Damage: return "Damage";
             case StatType.CriticalChance: return "Critical Chance";

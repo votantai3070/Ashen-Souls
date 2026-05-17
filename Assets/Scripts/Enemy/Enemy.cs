@@ -25,7 +25,7 @@ public class Enemy : Entity
     public float chaseSpeed = 8f;
     public float chaseStopDistance = 1.5f;
 
-    [Header("Attack Info")]
+    [Header("PerformAttack Info")]
     public Vector2 backOffset = new(10f, 10f);
     public float attackDistanceToPlayer = 1f;
 

@@ -34,7 +34,7 @@ public class EnemyMelee_AttackState : EnemyMelee_State
     {
         base.Update();
 
-        enemyMelee.combat.Attack(enemyMelee);
+        enemyMelee.combat.PerformAttack(enemyMelee);
 
         switch (enemyMelee.enemyType)
         {

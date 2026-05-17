@@ -29,7 +29,7 @@ public class Player_AttackState : PlayerState
 
         player.SetVelocity(0, 0);
 
-        player.combat.Attack(player);
+        player.combat.PerformAttack(player);
 
         if (player.canTrigger)
         {

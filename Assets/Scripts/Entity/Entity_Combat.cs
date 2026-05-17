@@ -11,7 +11,7 @@ public class Entity_Combat : MonoBehaviour
     [SerializeField] protected LayerMask enemyLayer;
     [SerializeField] protected Collider2D[] showTargetEnemies;
 
-    [Header("Attack Settings")]
+    [Header("PerformAttack Settings")]
     protected float attackRadius = 1f;
     private float lastAttackTime = -999f;
     [SerializeField] private float attackCooldownGuard = 0.1f; // 100ms
@@ -36,7 +36,7 @@ public class Entity_Combat : MonoBehaviour
 
     public void ResetHitList() => hitThisAttack.Clear();
 
-    public virtual void Attack(Entity dealer)
+    public virtual void PerformAttack(Entity dealer)
     {
         if (CanAttack() == false)
             return; // Guard against attacking too frequently
@@ -54,13 +54,8 @@ public class Entity_Combat : MonoBehaviour
                 if (hitThisAttack.Contains(damageable)) continue;
                 hitThisAttack.Add(damageable);
 
-                float evasion = enemy.GetComponent<Entity>().entityStats.GetEvasion();
-
-                if (evasion > Random.value)
-                {
-                    Debug.Log("Evasion");
+                if (CanApplyDamage(enemy.GetComponent<Entity>()) == false)
                     return;
-                }
 
                 float dealerDamage = entity.entityStats.GetPhysicalDamage(out bool isCriticalHit);
                 canHit = damageable.TakeDamage(isCriticalHit, dealerDamage, dealer.transform);
@@ -79,7 +74,24 @@ public class Entity_Combat : MonoBehaviour
         }
     }
 
-    public void SetAttackWindow(bool active) => attackWindow = active;
+    private bool CanApplyDamage(Entity target)
+    {
+        float evasion = target.entityStats.GetEvasion();
+
+        if (evasion > Random.value)
+        {
+            Debug.Log("Evasion");
+            return false;
+        }
+
+        if (target.entityCombat.becomeInvulnerable)
+        {
+            Debug.Log("Become Invulnerable");
+            return false;
+        }
+
+        return true;
+    }
 
     public virtual Collider2D[] FindAttackTarget(Transform attackArea)
     {
@@ -87,16 +99,12 @@ public class Entity_Combat : MonoBehaviour
         return Physics2D.OverlapCircleAll(attackArea.position, attackRadius, enemyLayer);
     }
 
+    public void SetAttackWindow(bool active) => attackWindow = active;
+
     public void SetInvulnerable(bool invulnerable) => becomeInvulnerable = invulnerable;
 
     public bool CanAttack()
     {
-        if (becomeInvulnerable)
-        {
-            Debug.Log("Become Invulnerable");
-            return false;
-        }
-
         if (Time.time < lastAttackTime + attackCooldownGuard)
             return false;
 

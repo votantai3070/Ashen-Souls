@@ -16,7 +16,7 @@ public class SkillObject_Base : MonoBehaviour
     public float checkDamageRadius = 3;
     [SerializeField] private float defaultImpactDuration = .2f;
 
-    [Header("Attack Settings")]
+    [Header("PerformAttack Settings")]
     private float lastAttackTime = -999f;
     [SerializeField] private float attackCooldownGuard = 0.1f; // 100ms
     //protected DamageScaleData damageScale;
