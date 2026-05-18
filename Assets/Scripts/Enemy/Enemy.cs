@@ -60,6 +60,12 @@ public class Enemy : Entity
             facingDirection = input.normalized;
     }
 
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        TryToIdleState();
+    }
+
     public Vector2 GetDirectionPlayer() => (player.position - transform.position).normalized;
 
     public virtual void TryToIdleState()

@@ -27,6 +27,7 @@ public class SkillObject_SoulBurst : SkillObject_Base
 
         checkDamageRadius = soulBurstManager.checkDamageRadius;
         checkEnemyRadius = soulBurstManager.checkEnemyRadius;
+        attackCooldownGuard = soulBurstManager.attackCooldownGuard;
         duration = actualDuration;
 
         Debug.Log("Duration:  " + duration);

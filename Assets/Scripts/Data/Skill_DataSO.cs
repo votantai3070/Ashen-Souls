@@ -12,9 +12,10 @@ public class Skill_DataSO : Skill_BaseSO
 
     [Header("Upgrade")]
     public SkillType skillType;
-    public UpgradeData upgradeData;
     [Range(0, 100)]
     public float upgradeBoostChance = 30f;
+    public float attackCooldownGuard = .5f;
+    public UpgradeData upgradeData;
 
 
     [System.Serializable]

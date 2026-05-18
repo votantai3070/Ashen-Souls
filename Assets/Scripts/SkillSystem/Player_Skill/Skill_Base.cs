@@ -13,15 +13,17 @@ public class Skill_Base : MonoBehaviour
     [SerializeField] protected Transform targetCheck;
 
     [Header("General details")]
-    [SerializeField] protected SkillType skillType;
     public SkillUpgradeType upgradeType;
-    [SerializeField] protected float cooldown;
+    [SerializeField] protected SkillType skillType;
     public float speed;
     public float checkEnemyRadius;
     public float checkDamageRadius;
+    public float attackCooldownGuard;
+    [SerializeField] protected float cooldown;
+    [SerializeField] protected float duration = 5f;
+
     private float lastTimeUsed;
 
-    [SerializeField] protected float duration = 5f;
 
     protected virtual void Awake()
     {
@@ -50,6 +52,8 @@ public class Skill_Base : MonoBehaviour
         checkDamageRadius = upgrade.attackRadius;
         duration = skillData.duration;
         this.skillData = skillData;
+        attackCooldownGuard = skillData.attackCooldownGuard;
+
         UI.instance.OnSkillSlotChangeInvoke();
 
         //damageScaleData = upgrade.damageScale;

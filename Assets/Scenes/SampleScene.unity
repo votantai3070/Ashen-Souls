@@ -2006,7 +2006,7 @@ MonoBehaviour:
     endTime: 100
     minSpawnInterval: 1
     maxSpawnInterval: 3
-    maxEnemiesAlive: 1
+    maxEnemiesAlive: 20
     enemies:
     - prefab: {fileID: 3285970535671639790, guid: 2cc547d883b811240927e8e7d1bd3bb6, type: 3}
       weight: 50
@@ -6710,12 +6710,13 @@ MonoBehaviour:
     m_Bits: 128
   target: {fileID: 0}
   targetCheck: {fileID: 1261357900}
-  skillType: 0
   upgradeType: 0
-  cooldown: 0
+  skillType: 0
   speed: 0
   checkEnemyRadius: 2
   checkDamageRadius: 0
+  attackCooldownGuard: 0
+  cooldown: 0
   duration: 5
   soul: {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
   speedOfSoul: 5
@@ -6736,12 +6737,13 @@ MonoBehaviour:
     m_Bits: 64
   target: {fileID: 0}
   targetCheck: {fileID: 1261357900}
-  skillType: 5
   upgradeType: 0
-  cooldown: 5
+  skillType: 5
   speed: 5
   checkEnemyRadius: 10
   checkDamageRadius: 3
+  attackCooldownGuard: 0
+  cooldown: 5
   duration: 5
   fireSoulGo: {fileID: 1168510075856658422, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
 --- !u!114 &1261357903
@@ -6761,12 +6763,13 @@ MonoBehaviour:
     m_Bits: 64
   target: {fileID: 0}
   targetCheck: {fileID: 1261357900}
-  skillType: 4
   upgradeType: 0
-  cooldown: 5
+  skillType: 4
   speed: 5
   checkEnemyRadius: 3
   checkDamageRadius: 0.6
+  attackCooldownGuard: 0
+  cooldown: 5
   duration: 3
   swordPrefab: {fileID: 4526101274153675507, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
   orbitRadius: 1.5
@@ -6790,12 +6793,13 @@ MonoBehaviour:
     m_Bits: 64
   target: {fileID: 0}
   targetCheck: {fileID: 1261357900}
-  skillType: 8
   upgradeType: 0
-  cooldown: 6
+  skillType: 8
   speed: 1
   checkEnemyRadius: 2
   checkDamageRadius: 3
+  attackCooldownGuard: 0
+  cooldown: 6
   duration: 5
   soulExplodeGo: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
 --- !u!114 &1261357905
@@ -6815,12 +6819,13 @@ MonoBehaviour:
     m_Bits: 64
   target: {fileID: 0}
   targetCheck: {fileID: 1261357900}
-  skillType: 9
   upgradeType: 0
-  cooldown: 3
+  skillType: 9
   speed: 0
   checkEnemyRadius: 1
   checkDamageRadius: 1
+  attackCooldownGuard: 0
+  cooldown: 3
   duration: 0.2
   deadDashPrefab: {fileID: 397943091315647349, guid: c14cb7cbe16055340b50b1c584d58be7, type: 3}
   dashInterval: 0.05

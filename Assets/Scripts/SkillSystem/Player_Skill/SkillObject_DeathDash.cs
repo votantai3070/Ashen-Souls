@@ -12,8 +12,7 @@ public class SkillObject_DeathDash : SkillObject_Base
 
         checkDamageRadius = deathDashManager.checkDamageRadius;
         checkEnemyRadius = deathDashManager.checkEnemyRadius;
-
-
+        attackCooldownGuard = deathDashManager.attackCooldownGuard;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -10,6 +10,7 @@ public class Entity : MonoBehaviour
     public StateMachine<EntityState> stateMachine { get; private set; }
     public Rigidbody2D rb { get; private set; }
     public Animator anim { get; private set; }
+    public Collider2D col { get; private set; }
 
     public float xIdleAndAttack { get; set; }
     public float yIdleAndAttack { get; set; }
@@ -40,7 +41,7 @@ public class Entity : MonoBehaviour
         stateMachine = new();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
-
+        col = GetComponent<Collider2D>();
 
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.gravityScale = 0f;
@@ -60,6 +61,18 @@ public class Entity : MonoBehaviour
     protected virtual void Update()
     {
         stateMachine.currentState?.Update();
+    }
+
+    protected virtual void OnEnable()
+    {
+        if (rb != null && rb.simulated == false)
+            rb.simulated = true;
+
+        if (col != null && col.enabled == false)
+            col.enabled = true;
+
+        if (isKnockBack == true)
+            isKnockBack = false;
     }
 
     public virtual void TryToDieState()

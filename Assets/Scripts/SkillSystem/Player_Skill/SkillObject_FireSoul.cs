@@ -46,6 +46,7 @@ public class SkillObject_FireSoul : SkillObject_Base
         target = fireSoulManager.target;
         checkEnemyRadius = fireSoulManager.checkEnemyRadius;
         checkDamageRadius = fireSoulManager.checkDamageRadius;
+        attackCooldownGuard = fireSoulManager.attackCooldownGuard;
         this.duration = duration;
 
         spawnTime = Time.time;

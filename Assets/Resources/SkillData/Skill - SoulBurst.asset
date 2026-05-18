@@ -27,10 +27,11 @@ MonoBehaviour:
   orbitSpeed: 180
   swordCount: 3
   skillType: 8
+  upgradeBoostChance: 30
+  attackCooldownGuard: 1.5
   upgradeData:
     upgradeType: 17
     cooldown: 3
     distanceToAttack: 2
     attackRadius: 3
     speed: 0.6
-  upgradeBoostChance: 30

@@ -22,7 +22,6 @@ public class EnemyMelee_DeadState : EnemyMelee_State
         enemyMelee.rb.linearVelocity = Vector2.zero;
         enemyMelee.rb.simulated = false;
 
-        Collider2D col = enemyMelee.GetComponent<Collider2D>();
         if (col != null)
             col.enabled = false;
     }
@@ -30,12 +29,6 @@ public class EnemyMelee_DeadState : EnemyMelee_State
     public override void Exit()
     {
         base.Exit();
-
-        enemyMelee.rb.simulated = true;
-
-        Collider2D col = enemyMelee.GetComponent<Collider2D>();
-        if (col != null)
-            col.enabled = true;
     }
 
     public override void Update()

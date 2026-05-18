@@ -136,6 +136,12 @@ public class Entity_VFX : MonoBehaviour
         sr.material = originalMat;
     }
 
+    private void OnEnable()
+    {
+        if (originalMat != null)
+            sr.material = originalMat;
+    }
+
     private void OnDisable()
     {
         if (damageVfxCo != null)
@@ -143,9 +149,6 @@ public class Entity_VFX : MonoBehaviour
             StopCoroutine(damageVfxCo);
             damageVfxCo = null;
         }
-
-        //sr.material = originalMat;
-
         //if (sr != null)
         //    sr.color = originalColor;
     }

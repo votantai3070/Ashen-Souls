@@ -4,6 +4,6 @@ public class EnemyState : EntityState
     {
         anim = enemy.anim;
         rb = enemy.rb;
+        col = enemy.col;
     }
-
 }

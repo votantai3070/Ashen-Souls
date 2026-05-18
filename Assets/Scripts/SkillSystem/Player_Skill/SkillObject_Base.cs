@@ -18,7 +18,7 @@ public class SkillObject_Base : MonoBehaviour
 
     [Header("PerformAttack Settings")]
     private float lastAttackTime = -999f;
-    [SerializeField] private float attackCooldownGuard = 0.1f; // 100ms
+    protected float attackCooldownGuard = 0.1f; // 100ms
     //protected DamageScaleData damageScale;
     //protected ElementType currentElement;
     protected Transform lastTarget;
@@ -27,6 +27,10 @@ public class SkillObject_Base : MonoBehaviour
 
     protected float spawnTime;
     protected float duration;
+
+    private bool canHit;
+    //private bool becomeInvulnerable;
+    private bool attackWindow;
 
     protected virtual void Awake()
     {
@@ -54,53 +58,55 @@ public class SkillObject_Base : MonoBehaviour
 
         lastAttackTime = Time.time;
 
-        foreach (var target in GetEnemyAround(t, checkDamageRadius))
+        foreach (var enemy in GetEnemyAround(t, checkDamageRadius))
         {
-            IDamageable damageable = target.GetComponent<IDamageable>();
-
-            if (damageable == null) continue;
-
-            float evasion = target.GetComponent<Entity>().entityStats.GetEvasion();
-
-            if (evasion > Random.value)
+            if (enemy.TryGetComponent(out IDamageable damageable))
             {
-                Debug.Log("Evasion");
-                return;
-            }
-
-            //AttackData attackData = playerStats.GetAttackData(damageScale);
-            //ElementType element = attackData.element;
-
-            //int physicalDamage = (int)attackData.physicalDamage;
-            //int elementalDamage = (int)attackData.elementalDamage;
-
-
-
-            int damage = (int)entity.entityStats.GetSkillDamage(upgradeType, out bool isCrit);
-
-            targetGoHit = damageable.TakeDamage(isCrit, damage, damageDealer);
-
-            //if (element != ElementType.None)
-            //target.GetComponent<Entity_StatusHandler>().ApplyStatusEffect(element, attackData.effectData);
-
-            if (targetGoHit)
-            {
-                if (upgradeType == SkillUpgradeType.FireSoul || upgradeType == SkillUpgradeType.FireSoulUpgrade)
-                {
-                    target.GetComponent<Entity_VFX>().DamageVfx(defaultImpactDuration);
-                    entity?.entityVFX?.GetImapctVfx(target.transform, isCrit);
-                    SetPhysicsActive(false);
+                if (CanApplyDamage(enemy.GetComponent<Entity>()) == false)
                     return;
+
+                float dealerDamage = entity.entityStats.GetPhysicalDamage(out bool isCriticalHit);
+                canHit = damageable.TakeDamage(isCriticalHit, dealerDamage, damageDealer.transform);
+
+                if (canHit)
+                {
+                    if (upgradeType == SkillUpgradeType.FireSoul || upgradeType == SkillUpgradeType.FireSoulUpgrade)
+                    {
+                        enemy.GetComponent<Entity_VFX>().DamageVfx(defaultImpactDuration);
+                        entity?.entityVFX?.GetImapctVfx(enemy.transform, isCriticalHit);
+                        SetPhysicsActive(false);
+                        return;
+                    }
+
+                    Entity_VFX targetVfx = enemy.GetComponent<Entity_VFX>();
+
+                    if (targetVfx != null && enemy.gameObject.activeInHierarchy)
+                        targetVfx.DamageVfx(defaultImpactDuration);
+
+                    if (entity != null && entity.entityVFX != null)
+                        entity.entityVFX.GetImapctVfx(enemy.transform, isCriticalHit);
                 }
-
-                target.GetComponent<Entity_VFX>().DamageVfx(defaultImpactDuration);
-                entity?.entityVFX?.GetImapctVfx(target.transform, isCrit);
-                //lastTarget = target.transform;
-                //target.GetComponent<Entity>().ElementalVfx(defaultDuration, element);
             }
-
-            //currentElement = element;
         }
+    }
+
+    private bool CanApplyDamage(Entity target)
+    {
+        float evasion = target.entityStats.GetEvasion();
+
+        if (evasion > Random.value)
+        {
+            Debug.Log("Evasion");
+            return false;
+        }
+
+        //if (target.entityCombat.becomeInvulnerable)
+        //{
+        //    Debug.Log("Become Invulnerable");
+        //    return false;
+        //}
+
+        return true;
     }
 
     protected Collider2D[] GetEnemyAround(Transform t, float radius)
