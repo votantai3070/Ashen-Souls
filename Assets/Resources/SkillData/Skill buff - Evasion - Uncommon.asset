@@ -10,24 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - WraithSpeed
+  m_Name: Skill buff - Evasion - Uncommon
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: 2337cb57d64cf374d8464a7d1b5c6976
-  displayName: Wraith Speed
-  description: "Become a wraith \u2014 increases movement speed and evasion, but
-    reduces attack power."
+  saveId: caa81fbd328ae324d88fc415c8b3f97d
+  skillId: caa81fbd328ae324d88fc415c8b3f97d
+  displayName: Evasion
+  description: Max Health + 100
   icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
+  skillType: 0
   cardType: 1
   skillRarity: 400
   skillRollChance: 50
   maxSkillRollChance: 50
   isPercent: 1
   skillStatData:
-  - type: 12
-    value: 0.15
-  - type: 7
-    value: 0.15
-  - type: 11
-    value: -0.1
+    type: 7
+    value: 10

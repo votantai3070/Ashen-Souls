@@ -36,7 +36,10 @@ public class UI_SkillCard : MonoBehaviour
             ui.player.skillManager.GetSkillByType(data.skillType).SetSkill(data);
 
         else if (skillData is SkillBuff_DataSO buff && buff.cardType == CardType.Buff)
-            ui.player.stats.ApplyBuff(buff.skillStatData, buff.displayName, buff.isPercent);
+        {
+            string buffName = $"{buff.displayName} + {buff.skillId}";
+            ui.player.stats.ApplyBuff(buff.skillStatData, buffName, buff.isPercent);
+        }
 
         ZoomInOutCard();
     }

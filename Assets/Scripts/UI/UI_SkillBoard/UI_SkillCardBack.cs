@@ -32,7 +32,7 @@ public class UI_SkillCardBack : MonoBehaviour
         StringBuilder sb = new StringBuilder();
 
         sb.AppendLine();
-        sb.AppendLine($"{skillData.description}");
+        sb.AppendLine($"{skillData.GetUpgradeDescription()}");
 
         return sb.ToString();
     }

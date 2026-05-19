@@ -104,7 +104,7 @@ public class Entity_Stats : MonoBehaviour
 
     public float GetEvasion()
     {
-        float baseEvasion = defense.evasion.GetValue();
+        float baseEvasion = defense.evasion.GetValue() / 100;
         float bonusEvasion = major.agility.GetValue() * 0.5f;
 
         float totalEvasion = baseEvasion + bonusEvasion;

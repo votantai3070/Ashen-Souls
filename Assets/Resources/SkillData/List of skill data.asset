@@ -13,7 +13,17 @@ MonoBehaviour:
   m_Name: List of skill data
   m_EditorClassIdentifier: Assembly-CSharp::Skill_ListDataSO
   skillList:
+  - {fileID: 11400000, guid: d83a1b0216cef7740876323d2d089342, type: 2}
+  - {fileID: 11400000, guid: ee41b42d9ec621249b8b0b4e32d57554, type: 2}
   - {fileID: 11400000, guid: f8cda36d25245d04b90e589ac332c889, type: 2}
+  - {fileID: 11400000, guid: 8a9475734d4a7a14492c8700d4c9e088, type: 2}
+  - {fileID: 11400000, guid: 7babedffdcf203143b53e44a9a148fd5, type: 2}
+  - {fileID: 11400000, guid: 0d207ad3345b93b4fbe78944f4963de8, type: 2}
+  - {fileID: 11400000, guid: 6f93ee8d2ae5e02469fd25a468a93217, type: 2}
+  - {fileID: 11400000, guid: 25c550a5ad9419f4a8fc64c66dfd09c7, type: 2}
+  - {fileID: 11400000, guid: 0af47a394992a4e408e1da125a5a3351, type: 2}
+  - {fileID: 11400000, guid: 6dc49c3f14c6e70439a05db70e41b7ff, type: 2}
+  - {fileID: 11400000, guid: caa81fbd328ae324d88fc415c8b3f97d, type: 2}
   - {fileID: 11400000, guid: 7f25a656b3de80741950a81e2862738b, type: 2}
   - {fileID: 11400000, guid: cd4aacd93ef138a488d7ec4c2d29b5b7, type: 2}
   - {fileID: 11400000, guid: ca6ee159598d1cf49bc7c739a0f0c0be, type: 2}
@@ -26,3 +36,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 72b075e88fc1a0940bb1c29f97e361fa, type: 2}
   - {fileID: 11400000, guid: 5085ed7af8e2e5d48a8a7df8733ff790, type: 2}
   - {fileID: 11400000, guid: 99434150f06ca0649abacf6524f7c964, type: 2}
+  - {fileID: 11400000, guid: 2337cb57d64cf374d8464a7d1b5c6976, type: 2}
+  - {fileID: 11400000, guid: 0f2e1521666f5294c8d60f38b9996edb, type: 2}
+  - {fileID: 11400000, guid: c8292175523d97d419e0be5f5d8561a3, type: 2}
+  - {fileID: 11400000, guid: e6038881ece619349b971cb5350e52cd, type: 2}
+  - {fileID: 11400000, guid: c7db3f2e1bca2504eba21b9fe44147d5, type: 2}
+  - {fileID: 11400000, guid: e714a753487074e45937046463811564, type: 2}
+  - {fileID: 11400000, guid: 276808520dc84da4ebfd1b72ee7217be, type: 2}
+  - {fileID: 11400000, guid: 76055c0cd51f5fb4fb68b9ca206b3201, type: 2}
+  - {fileID: 11400000, guid: 420a98dd6bbae0341b8e0463e8c9ba68, type: 2}

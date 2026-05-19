@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: Skill buff - FireSoulBall - Buff Damage -  Legendary
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
   saveId: 7f25a656b3de80741950a81e2862738b
-  displayName: FireSoulBall - Buff Damage - Legendary
+  skillId: 7f25a656b3de80741950a81e2862738b
+  displayName: Fire Soul Ball
   description: 
   icon: {fileID: 0}
   duration: 5
   prerequisiteSkill: {fileID: 11400000, guid: f8cda36d25245d04b90e589ac332c889, type: 2}
   skillType: 6
   cardType: 0
-  skillRarity: 100
-  skillRollChance: 75
+  skillRarity: 944
+  skillRollChance: 5.7
   maxSkillRollChance: 75
   isPercent: 0
   skillStatData:

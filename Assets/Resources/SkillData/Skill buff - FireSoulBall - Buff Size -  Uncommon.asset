@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Skill buff - FireSoulBall - Buff Size -  Uncommon
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
   saveId: 60322b8d11a44f449a66ae31f2da27af
-  displayName: FireSoulBall - Buff Size - Uncommon
+  skillId: 60322b8d11a44f449a66ae31f2da27af
+  displayName: Fire Soul Ball
   description: 
   icon: {fileID: 0}
   duration: 5

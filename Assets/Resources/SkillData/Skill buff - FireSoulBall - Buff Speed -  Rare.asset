@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Skill buff - FireSoulBall - Buff Speed -  Rare
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
   saveId: 72b075e88fc1a0940bb1c29f97e361fa
-  displayName: FireSoulBall - Buff Speed - Rare
+  skillId: 72b075e88fc1a0940bb1c29f97e361fa
+  displayName: Fire Soul Ball
   description: 
   icon: {fileID: 0}
   duration: 5

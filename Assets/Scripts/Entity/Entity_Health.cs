@@ -59,7 +59,7 @@ public class Entity_Health : MonoBehaviour, IDamageable
         if (currentHealth < 0)
             currentHealth = 0;
 
-        OnHealthChanged?.Invoke();
+        OnHealthChangedInvoke();
 
         if (IsDead() && !isDead)
             Die();
@@ -94,4 +94,6 @@ public class Entity_Health : MonoBehaviour, IDamageable
 
     public int GetCurrentHealth() => currentHealth;
     protected bool IsDead() => currentHealth <= 0;
+
+    public void OnHealthChangedInvoke() => OnHealthChanged?.Invoke();
 }

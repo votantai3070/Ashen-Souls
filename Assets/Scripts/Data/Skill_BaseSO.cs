@@ -4,6 +4,7 @@ using UnityEngine;
 public class Skill_BaseSO : ScriptableObject
 {
     public string saveId;
+    public string skillId;
 
     [Header("Skill Description")]
     public string displayName;
@@ -26,14 +27,14 @@ public class Skill_BaseSO : ScriptableObject
     [Range(0, 100)]
     public float maxSkillRollChance = 65f;
 
-    private void OnValidate()
+    protected virtual void OnValidate()
     {
         skillRollChance = GetSkillRollChance();
 
 #if UNITY_EDITOR
-        string path = AssetDatabase.GetAssetPath(this);
-        saveId = AssetDatabase.AssetPathToGUID(path);
-#endif  
+        saveId = AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(this));
+        skillId = saveId;
+#endif
     }
 
     public float GetSkillRollChance()
@@ -42,5 +43,10 @@ public class Skill_BaseSO : ScriptableObject
         float chance = (maxRarity - skillRarity + 1) / maxRarity * 100;
 
         return Mathf.Min(chance, maxSkillRollChance);
+    }
+
+    public virtual string GetUpgradeDescription()
+    {
+        return string.Empty;
     }
 }

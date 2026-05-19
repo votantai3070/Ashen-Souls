@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - FireSoulBall - Buff Damage -  Rare
+  m_Name: Skill buff - Evasion - Rare
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: cd4aacd93ef138a488d7ec4c2d29b5b7
-  skillId: cd4aacd93ef138a488d7ec4c2d29b5b7
-  displayName: Fire Soul Ball
-  description: 
-  icon: {fileID: 0}
+  saveId: 6dc49c3f14c6e70439a05db70e41b7ff
+  skillId: 6dc49c3f14c6e70439a05db70e41b7ff
+  displayName: Evasion
+  description: Max Health + 100
+  icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
-  prerequisiteSkill: {fileID: 11400000, guid: f8cda36d25245d04b90e589ac332c889, type: 2}
-  skillType: 6
-  cardType: 0
+  prerequisiteSkill: {fileID: 0}
+  skillType: 0
+  cardType: 1
   skillRarity: 750
   skillRollChance: 25.1
-  maxSkillRollChance: 75
-  isPercent: 0
+  maxSkillRollChance: 50
+  isPercent: 1
   skillStatData:
-    type: 11
+    type: 7
     value: 15

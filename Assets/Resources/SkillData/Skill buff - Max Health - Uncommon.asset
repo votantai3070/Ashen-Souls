@@ -10,24 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - WraithSpeed - Upgrade
+  m_Name: Skill buff - Max Health - Uncommon
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: 930b4201128c79446a94d378d645bd77
-  displayName: Wraith Speed
-  description: "Faster than the wind \u2014 further increases speed and evasion by
-    20%, attack power reduced by an additional 5%."
-  icon: {fileID: -627571751, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
+  saveId: e6038881ece619349b971cb5350e52cd
+  skillId: e6038881ece619349b971cb5350e52cd
+  displayName: Max Health
+  description: Max Health + 100
+  icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
-  prerequisiteSkill: {fileID: 11400000, guid: 2337cb57d64cf374d8464a7d1b5c6976, type: 2}
+  prerequisiteSkill: {fileID: 0}
+  skillType: 0
   cardType: 1
   skillRarity: 400
   skillRollChance: 50
   maxSkillRollChance: 50
-  isPercent: 1
+  isPercent: 0
   skillStatData:
-  - type: 12
-    value: 0.3
-  - type: 7
-    value: 0.3
-  - type: 11
-    value: -0.2
+    type: 0
+    value: 200

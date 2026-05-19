@@ -74,7 +74,8 @@ public class Skill_Base : MonoBehaviour
 
     public void SetSkillUpgrade(SkillBuff_DataSO skillData)
     {
-        GetStat(skillData.skillStatData.type).AddModifier(skillData.skillStatData.value, skillData.displayName, skillData.isPercent);
+        string buffName = $"{skillData.displayName} + {skillData.skillId}";
+        GetStat(skillData.skillStatData.type).AddModifier(skillData.skillStatData.value, buffName, skillData.isPercent);
     }
 
     public virtual bool CanUseSkill()
