@@ -17,8 +17,10 @@ public enum SkillUpgradeType
     // Skill Attack Upgrades
     SpinningSword,
     SpinningSwordUpgrade, // Increase damage by 25% and reduce cooldown by 1 second.
+
     FireSoul,
     FireSoulUpgrade, // Increase damage by 30% and reduce cooldown by 1.5 seconds.
+
     SoulCleave,
     SoulCleaveUpgrade, // Increase damage by 20% and reduce cooldown by 1 second.
     SpriritArrow,
@@ -55,4 +57,10 @@ public enum SkillUpgradeType
     BlackHoleUpgrade, // Increase damage over time by 30% and increase pull strength by 20%.
     SoulEruption,
     SoulEruptionUpgrade, // Increase damage by 35% and increase stun duration by 1 second.
+
+
+    Damage,
+    Speed,
+    Size,
+    Cooldown,
 }

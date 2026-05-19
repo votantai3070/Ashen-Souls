@@ -18,26 +18,17 @@ public class Skill_DeathDash : Skill_Base
         sr = entity.GetComponentInChildren<SpriteRenderer>();
     }
 
-    public override void SetSkillUpgrade(Skill_DataSO skillData)
+    public override void SetSkill(Skill_DataSO skillData)
     {
-        base.SetSkillUpgrade(skillData);
+        base.SetSkill(skillData);
 
         deadDashPrefab = skillData.skillObjectPrefab;
     }
 
     public override bool TryUseSkill()
     {
-        if (upgradeType == SkillUpgradeType.DeathDash)
-        {
-            DoDashEffect();
-            SetSkillOnCooldown();
-        }
-
-        if (upgradeType == SkillUpgradeType.DeathDashUpgrade)
-        {
-            DoDashEffect();
-            SetSkillOnCooldown();
-        }
+        DoDashEffect();
+        SetSkillOnCooldown();
 
         return true;
     }

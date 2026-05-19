@@ -16,7 +16,6 @@ public class SkillObject_SpinningSword : SkillObject_Base
 
     public void SetupSword(Skill_SpinningSword spinSwordManager, Entity owner, float radius, float speed, float dur, float startAngle = 0f)
     {
-        upgradeType = spinSwordManager.upgradeType;
         swordManager = spinSwordManager;
         entity = owner;
         centerTarget = owner.transform;

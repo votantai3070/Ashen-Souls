@@ -9,7 +9,6 @@ public class SkillObject_FireSoul : SkillObject_Base
     public FireSoul_ExplodeState explodeState { get; private set; }
 
     [Header("Fire Soul Settings")]
-    public float speed { get; private set; }
     private Skill_FireSoul fireSoulManager;
     public Transform target { get; private set; }
 
@@ -42,14 +41,20 @@ public class SkillObject_FireSoul : SkillObject_Base
         whatIsEnemy = enemyLayer;
         entity = fireSoulManager.entity;
 
-        speed = fireSoulManager.speed;
+        speed = fireSoulManager.speedSkill.GetValue();
+        damage = fireSoulManager.damageSkill.GetValue();
+        size = fireSoulManager.sizeSkill.GetValue();
+
         target = fireSoulManager.target;
         checkEnemyRadius = fireSoulManager.checkEnemyRadius;
-        checkDamageRadius = fireSoulManager.checkDamageRadius;
+        checkDamageRadius = size * .26f; // The explosion radius is smaller than the visual size of the fire soul, so we use a fraction of the size for the damage radius.
         attackCooldownGuard = fireSoulManager.attackCooldownGuard;
         this.duration = duration;
 
         spawnTime = Time.time;
+
+        transform.localScale = Vector3.one * size;
+        SetPhysicsActive(true);
     }
 
     public void OnHit()
@@ -67,6 +72,7 @@ public class SkillObject_FireSoul : SkillObject_Base
         if (collision == null || !collision.CompareTag("Enemy")) return;
 
         DamageEnemiesInRadius(transform, entity.transform);
+        OnHit();
     }
 
     protected override void CheckDuration()

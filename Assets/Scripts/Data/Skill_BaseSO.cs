@@ -15,7 +15,10 @@ public class Skill_BaseSO : ScriptableObject
     public Skill_BaseSO prerequisiteSkill;
 
     [Header("Skill Card")]
+    public SkillType skillType;
     public CardType cardType;
+
+    [Space]
     [Range(0, 1000)]
     public int skillRarity = 100;
     [Range(0, 100)]

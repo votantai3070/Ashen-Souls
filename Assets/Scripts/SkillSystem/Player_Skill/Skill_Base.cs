@@ -1,5 +1,4 @@
 using UnityEngine;
-using static Skill_DataSO;
 
 public class Skill_Base : MonoBehaviour
 {
@@ -13,14 +12,24 @@ public class Skill_Base : MonoBehaviour
     [SerializeField] protected Transform targetCheck;
 
     [Header("General details")]
-    public SkillUpgradeType upgradeType;
-    [SerializeField] protected SkillType skillType;
+    public SkillType skillType;
+
     public float speed;
     public float checkEnemyRadius;
     public float checkDamageRadius;
     public float attackCooldownGuard;
     [SerializeField] protected float cooldown;
     [SerializeField] protected float duration = 5f;
+
+    [Header("Level Details")]
+    public int currentLevel = 1;
+    public int maxLevel = 10;
+
+    [Header("Stat Details")]
+    public Stat damageSkill;
+    public Stat speedSkill;
+    public Stat sizeSkill;
+    public Stat attackSpeedSkill;
 
     private float lastTimeUsed;
 
@@ -42,33 +51,34 @@ public class Skill_Base : MonoBehaviour
         return true;
     }
 
-    public virtual void SetSkillUpgrade(Skill_DataSO skillData)
+    public virtual void SetSkill(Skill_DataSO skillData)
     {
-        UpgradeData upgrade = skillData.upgradeData;
-        upgradeType = upgrade.upgradeType;
-        cooldown = upgrade.cooldown;
-        speed = upgrade.speed;
-        checkEnemyRadius = upgrade.distanceToAttack;
-        checkDamageRadius = upgrade.attackRadius;
-        duration = skillData.duration;
         this.skillData = skillData;
+        skillType = skillData.skillType;
+
+        attackSpeedSkill.SetBaseValue(skillData.cooldown);
+        speedSkill.SetBaseValue(skillData.speed);
+        sizeSkill.SetBaseValue(skillData.size);
+        damageSkill.SetBaseValue(skillData.damage);
+
+        cooldown = attackSpeedSkill.GetValue();
+        checkEnemyRadius = skillData.distanceToAttack;
+        checkDamageRadius = skillData.size;
+        duration = skillData.duration;
         attackCooldownGuard = skillData.attackCooldownGuard;
 
         UI.instance.OnSkillSlotChangeInvoke();
 
-        //damageScaleData = upgrade.damageScale;
-        //player.ui.ingameUI.GetSkillSlot(skillType).SetupSkillSlot(skillData);
         ResetCooldown();
+    }
+
+    public void SetSkillUpgrade(SkillBuff_DataSO skillData)
+    {
+        GetStat(skillData.skillStatData.type).AddModifier(skillData.skillStatData.value, skillData.displayName, skillData.isPercent);
     }
 
     public virtual bool CanUseSkill()
     {
-        if (upgradeType == SkillUpgradeType.None)
-        {
-            Debug.Log("No Upgrade");
-            return false;
-        }
-
         if (OnCooldown())
         {
             Debug.Log("On Cooldown");
@@ -88,8 +98,17 @@ public class Skill_Base : MonoBehaviour
         return true;
     }
 
-    protected bool Unlocked(SkillUpgradeType upgradeToCheck) => upgradeType == upgradeToCheck;
-    public SkillUpgradeType GetUpgrade() => upgradeType;
+    private Stat GetStat(StatType upgradeType)
+    {
+        return upgradeType switch
+        {
+            StatType.Damage => damageSkill,
+            StatType.Speed => speedSkill,
+            StatType.Size => sizeSkill,
+            _ => null
+        };
+    }
+
     public SkillType GetSkillType() => skillType;
 
     protected bool OnCooldown() => Time.time < lastTimeUsed + cooldown;
@@ -97,6 +116,11 @@ public class Skill_Base : MonoBehaviour
     {
         UI.instance.ingameUI.skillHolder.StartCooldownSkillSlot(skillType, cooldown);
         lastTimeUsed = Time.time;
+
+        if (attackSpeedSkill.GetValue() != cooldown)
+        {
+            cooldown = attackSpeedSkill.GetValue();
+        }
     }
     public void ReduceCooldownBy(float cooldownReduction) => lastTimeUsed = lastTimeUsed + cooldownReduction;
     public void ResetCooldown()

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Entity_Stats : MonoBehaviour
@@ -74,10 +73,26 @@ public class Entity_Stats : MonoBehaviour
         float baseCritChance = GetCritChance();
         float baseCritDamage = GetCritDamage();
 
-        isCriticalHit = UnityEngine.Random.Range(0, 100) < baseCritChance;
+        isCriticalHit = IsCriticalHit(baseCritChance);
         float finalDamage = isCriticalHit ? baseDamage * baseCritDamage : baseDamage;
 
         return finalDamage * scaleFactor;
+    }
+
+    public float GetSkillDamage(float damage, out bool isCriticalHit)
+    {
+        float baseCritChance = GetCritChance();
+        float baseCritDamage = GetCritDamage();
+
+        isCriticalHit = IsCriticalHit(baseCritChance);
+        float finalDamage = isCriticalHit ? damage * baseCritDamage : damage;
+
+        return finalDamage;
+    }
+
+    private bool IsCriticalHit(float critChance)
+    {
+        return UnityEngine.Random.Range(0, 100) < critChance;
     }
 
     // Bonus damage from Strength: +1 per STR
@@ -132,50 +147,6 @@ public class Entity_Stats : MonoBehaviour
         return finalMaxHealth;
     }
 
-    /// <summary>
-    /// Calculate skill damage using a separate ScaleFactor for each skill.
-    /// scaleFactor = 1.5 → damage equal to 150% base damage
-    /// Normal × (1 + upgradeBonus%)
-    /// </summary>
-    public float GetSkillDamage(SkillUpgradeType skillType, out bool isCriticalHit)
-    {
-        float scaleFactor = GetSkillScaleFactor(skillType);
-        return GetPhysicalDamage(out isCriticalHit, scaleFactor);
-    }
-
-    private static readonly Dictionary<SkillUpgradeType, float> skillScaleFactors = new()
-{
-    // ------ Skill Attack ------
-    { SkillUpgradeType.SpinningSword,        1.40f },
-    { SkillUpgradeType.SpinningSwordUpgrade, 1.75f },
-
-    { SkillUpgradeType.FireSoul,             1.50f },
-    { SkillUpgradeType.FireSoulUpgrade,      1.95f },
-
-    //{ SkillUpgradeType.SoulCleave,           1.30f },
-    //{ SkillUpgradeType.SoulCleaveUpgrade,    1.56f },
-
-    //{ SkillUpgradeType.SpriritArrow,         1.60f },
-    //{ SkillUpgradeType.SpriritArrowUpgrade,  2.00f },
-
-    { SkillUpgradeType.SoulBurst,            1.80f },
-    { SkillUpgradeType.SoulBurstUpgrade,     2.34f },
-
-    { SkillUpgradeType.DeathDash,            1.20f },
-    { SkillUpgradeType.DeathDashUpgrade,     1.44f },
-
-    // ------ Ultimate ------
-    { SkillUpgradeType.BlackHole,            2.50f },
-    { SkillUpgradeType.BlackHoleUpgrade,     3.25f },
-
-    { SkillUpgradeType.SoulEruption,         3.00f },
-    { SkillUpgradeType.SoulEruptionUpgrade,  4.05f },
-};
-
-    private float GetSkillScaleFactor(SkillUpgradeType skillType)
-    {
-        return skillScaleFactors.TryGetValue(skillType, out float factor) ? factor : 1.0f;
-    }
 
     public Stat GetStatByType(StatType type)
     {

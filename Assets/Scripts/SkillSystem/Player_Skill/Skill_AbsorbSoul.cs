@@ -12,9 +12,9 @@ public class Skill_AbsorbSoul : Skill_Base
         base.Awake();
     }
 
-    public override void SetSkillUpgrade(Skill_DataSO skillData)
+    public override void SetSkill(Skill_DataSO skillData)
     {
-        base.SetSkillUpgrade(skillData);
+        base.SetSkill(skillData);
 
         soul = skillData.skillObjectPrefab;
     }
@@ -24,12 +24,7 @@ public class Skill_AbsorbSoul : Skill_Base
         if (base.TryUseSkill() == false)
             return false;
 
-        if (upgradeType == SkillUpgradeType.AbsorbSoulUpgrade)
-        {
-            speedOfSoul = 10f;
-
-            SetSkillOnCooldown();
-        }
+        SetSkillOnCooldown();
 
         return true;
     }

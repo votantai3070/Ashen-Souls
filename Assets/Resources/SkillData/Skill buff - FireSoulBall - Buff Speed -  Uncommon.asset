@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
+  m_Name: Skill buff - FireSoulBall - Buff Speed -  Uncommon
+  m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
+  saveId: 5085ed7af8e2e5d48a8a7df8733ff790
+  displayName: FireSoulBall - Buff Speed - Uncommon
+  description: 
+  icon: {fileID: 0}
+  duration: 5
+  prerequisiteSkill: {fileID: 11400000, guid: f8cda36d25245d04b90e589ac332c889, type: 2}
+  skillType: 6
+  cardType: 0
+  skillRarity: 450
+  skillRollChance: 55.1
+  maxSkillRollChance: 75
+  isPercent: 1
+  skillStatData:
+    type: 12
+    value: 3

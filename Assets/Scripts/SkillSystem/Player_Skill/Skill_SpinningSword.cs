@@ -16,9 +16,9 @@ public class Skill_SpinningSword : Skill_Base
         base.Awake();
     }
 
-    public override void SetSkillUpgrade(Skill_DataSO skillData)
+    public override void SetSkill(Skill_DataSO skillData)
     {
-        base.SetSkillUpgrade(skillData);
+        base.SetSkill(skillData);
 
         orbitRadius = skillData.orbitRadius;
         orbitSpeed = skillData.orbitSpeed;
@@ -36,17 +36,8 @@ public class Skill_SpinningSword : Skill_Base
 
         if (CheckEnemyRadius())
         {
-            if (upgradeType == SkillUpgradeType.SpinningSword)
-            {
-                SpawnSwords(swordCount);
-                SetSkillOnCooldown();
-            }
-
-            if (upgradeType == SkillUpgradeType.SpinningSwordUpgrade)
-            {
-                SpawnSwords(swordCount);
-                SetSkillOnCooldown();
-            }
+            SpawnSwords(swordCount);
+            SetSkillOnCooldown();
         }
 
         return true;

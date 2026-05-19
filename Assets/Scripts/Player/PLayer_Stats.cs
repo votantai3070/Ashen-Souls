@@ -20,18 +20,16 @@ public class Player_Stats : Entity_Stats
         HandleExpChanged(levelSystem.CurrentExp(), levelSystem.CurrentMaxExp());
     }
 
-    public void ApplyBuff(BuffEffectData[] buffs, string source, bool isPercent)
+    public void ApplyBuff(BuffEffectData buff, string source, bool isPercent)
     {
         if (activeBuff.Contains(source))
         {
-            foreach (var buff in buffs)
-                GetStatByType(buff.type).UpdateModifier(buff.value, source, isPercent);
+            GetStatByType(buff.type).UpdateModifier(buff.value, source, isPercent);
         }
         else
         {
             activeBuff.Add(source);
-            foreach (var buff in buffs)
-                GetStatByType(buff.type).AddModifier(buff.value, source, isPercent);
+            GetStatByType(buff.type).AddModifier(buff.value, source, isPercent);
         }
 
         OnStatChangedInvoke();

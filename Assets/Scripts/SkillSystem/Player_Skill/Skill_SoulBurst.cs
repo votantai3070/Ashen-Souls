@@ -11,9 +11,9 @@ public class Skill_SoulBurst : Skill_Base
         base.Awake();
     }
 
-    public override void SetSkillUpgrade(Skill_DataSO skillData)
+    public override void SetSkill(Skill_DataSO skillData)
     {
-        base.SetSkillUpgrade(skillData);
+        base.SetSkill(skillData);
 
         soulExplodeGo = skillData.skillObjectPrefab;
     }
@@ -28,11 +28,8 @@ public class Skill_SoulBurst : Skill_Base
 
         if (CheckEnemyRadius())
         {
-            if (upgradeType == SkillUpgradeType.SoulBurst || upgradeType == SkillUpgradeType.SoulBurstUpgrade)
-            {
-                CreateSoulExplode();
-                SetSkillOnCooldown();
-            }
+            CreateSoulExplode();
+            SetSkillOnCooldown();
         }
 
         return true;

@@ -20,11 +20,10 @@ public class Entity_SkillManager : MonoBehaviour
 
         foreach (var spell in allSkills)
         {
-            if (spell.upgradeType == SkillUpgradeType.DeathDash ||
-                spell.upgradeType == SkillUpgradeType.DeathDashUpgrade)
+            if (spell.skillType == SkillType.DeathDash)
                 return;
 
-            if (spell.upgradeType != SkillUpgradeType.None)
+            if (spell.skillType != SkillType.None)
                 spell.TryUseSkill();
         }
     }

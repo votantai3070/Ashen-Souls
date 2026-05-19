@@ -4,7 +4,6 @@ public class SkillObject_Soul : SkillObject_Base
 {
     public Skill_AbsorbSoul absorbSoulManager;
     private Transform target;
-    private float speed;
 
 
     protected override void Update()

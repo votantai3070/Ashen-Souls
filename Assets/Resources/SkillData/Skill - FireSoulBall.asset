@@ -19,6 +19,7 @@ MonoBehaviour:
   icon: {fileID: 128636590, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
+  skillType: 6
   cardType: 0
   skillRarity: 150
   skillRollChance: 80
@@ -27,11 +28,10 @@ MonoBehaviour:
   orbitRadius: 1.5
   orbitSpeed: 180
   swordCount: 3
-  skillType: 5
-  upgradeData:
-    upgradeType: 11
-    cooldown: 2
-    distanceToAttack: 5
-    attackRadius: 3
-    speed: 5
+  speed: 3
+  size: 3
+  cooldown: 3
+  distanceToAttack: 7
+  damage: 5
   upgradeBoostChance: 30
+  attackCooldownGuard: 0.5

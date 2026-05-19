@@ -10,6 +10,7 @@ public class Player_SkillManager : Entity_SkillManager
     public Skill_SoulBurst burst { get; private set; }
     public Skill_DeathDash deathDash { get; private set; }
 
+    public Skill_DataSO[] skills;
 
 
     protected override void Awake()
@@ -24,6 +25,7 @@ public class Player_SkillManager : Entity_SkillManager
         burst = GetComponentInChildren<Skill_SoulBurst>();
         deathDash = GetComponentInChildren<Skill_DeathDash>();
     }
+
 
     public Skill_Base GetSkillByType(SkillType type)
     {

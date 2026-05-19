@@ -4,7 +4,6 @@ public class SkillObjectEnemy_EnergyBall : SkillObject_Base
 {
     [Header("Energy Ball Settings")]
     private SkillEnemy_Base energyBallManager;
-    public float speed { get; private set; }
     public Transform target { get; private set; }
 
     protected override void Awake()

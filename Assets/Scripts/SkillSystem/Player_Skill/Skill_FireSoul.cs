@@ -12,9 +12,9 @@ public class Skill_FireSoul : Skill_Base
         base.Awake();
     }
 
-    public override void SetSkillUpgrade(Skill_DataSO skillData)
+    public override void SetSkill(Skill_DataSO skillData)
     {
-        base.SetSkillUpgrade(skillData);
+        base.SetSkill(skillData);
 
         fireSoulGo = skillData.skillObjectPrefab;
     }
@@ -29,26 +29,17 @@ public class Skill_FireSoul : Skill_Base
 
         if (CheckEnemyRadius())
         {
-            if (upgradeType == SkillUpgradeType.FireSoul)
-            {
-                CreateFireSoul(Vector3.one * 3);
-                SetSkillOnCooldown();
-            }
-            else if (upgradeType == SkillUpgradeType.FireSoulUpgrade)
-            {
-                CreateFireSoul(Vector3.one * 5);
-                SetSkillOnCooldown();
-            }
+            CreateFireSoul();
+            SetSkillOnCooldown();
         }
 
         return true;
     }
 
     // Create fire soul
-    public void CreateFireSoul(Vector3 scale)
+    public void CreateFireSoul()
     {
         fireSoul = ObjectPool.instance.Spawn(fireSoulGo.name, transform.position, transform.rotation);
-        fireSoul.transform.localScale = scale;
         fireSoul.GetComponent<SkillObject_FireSoul>().SetupFireSoul(this, duration, whatIsEnemy);
     }
 

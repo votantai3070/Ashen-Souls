@@ -10,24 +10,15 @@ public class Skill_DataSO : Skill_BaseSO
     public float orbitSpeed = 180f;
     public int swordCount = 3;
 
+    [Header("Default Skill")]
+    public float speed;
+    public float size;
+    public float cooldown;
+    public float distanceToAttack;
+    public float damage;
+
     [Header("Upgrade")]
-    public SkillType skillType;
     [Range(0, 100)]
     public float upgradeBoostChance = 30f;
     public float attackCooldownGuard = .5f;
-    public UpgradeData upgradeData;
-
-
-    [System.Serializable]
-    public class UpgradeData
-    {
-        public SkillUpgradeType upgradeType;
-        public float cooldown;
-        public float distanceToAttack;
-        public float attackRadius;
-        public float speed;
-        //public DamageScaleData damageScale;
-    }
-
-
 }

@@ -8,22 +8,27 @@ public class SkillObject_Base : MonoBehaviour
     public Collider2D col { get; private set; }
 
     protected Entity entity;
+    protected SkillUpgradeType upgradeType;
 
     [Header("Detected Settings")]
+    public float checkDamageRadius = 3;
     [SerializeField] protected LayerMask whatIsEnemy;
     [SerializeField] protected Transform targetCheck;
     [SerializeField] protected float checkEnemyRadius = 3;
-    public float checkDamageRadius = 3;
     [SerializeField] private float defaultImpactDuration = .2f;
 
-    [Header("PerformAttack Settings")]
+    [Header("Attack Settings")]
     private float lastAttackTime = -999f;
     protected float attackCooldownGuard = 0.1f; // 100ms
-    //protected DamageScaleData damageScale;
-    //protected ElementType currentElement;
     protected Transform lastTarget;
     protected bool targetGoHit;
-    protected SkillUpgradeType upgradeType;
+
+    public float speed { get; protected set; }
+    public float damage { get; protected set; }
+    public float size { get; protected set; } = 1f;
+
+    //protected ElementType currentElement;
+    //protected DamageScaleData damageScale;
 
     protected float spawnTime;
     protected float duration;
@@ -65,7 +70,7 @@ public class SkillObject_Base : MonoBehaviour
                 if (CanApplyDamage(enemy.GetComponent<Entity>()) == false)
                     return;
 
-                float dealerDamage = entity.entityStats.GetPhysicalDamage(out bool isCriticalHit);
+                float dealerDamage = entity.entityStats.GetSkillDamage(damage, out bool isCriticalHit);
                 canHit = damageable.TakeDamage(isCriticalHit, dealerDamage, damageDealer.transform);
 
                 if (canHit)

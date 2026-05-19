@@ -529,6 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Health
   currentHealth: 0
+  isDead: 0
 --- !u!114 &7461186425516454309
 MonoBehaviour:
   m_ObjectHideFlags: 0

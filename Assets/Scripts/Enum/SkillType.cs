@@ -1,5 +1,7 @@
 public enum SkillType
 {
+    None,
+
     // ------ Passive Ability ------
     // Passive Abilities
     AbsorbSoul, // Absorb souls from defeated enemies.

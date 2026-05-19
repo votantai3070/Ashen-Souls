@@ -29,11 +29,20 @@ public class UI_SkillCard : MonoBehaviour
     {
         SkillProgressManager.instance.UnlockSkill(skillData);
 
-        if (skillData is Skill_DataSO skill)
+        if (skillData is SkillBuff_DataSO skill && skill.cardType == CardType.Skill)
             ui.player.skillManager.GetSkillByType(skill.skillType).SetSkillUpgrade(skill);
-        else if (skillData is SkillBuff_DataSO buff)
+
+        else if (skillData is Skill_DataSO data && data.cardType == CardType.Skill)
+            ui.player.skillManager.GetSkillByType(data.skillType).SetSkill(data);
+
+        else if (skillData is SkillBuff_DataSO buff && buff.cardType == CardType.Buff)
             ui.player.stats.ApplyBuff(buff.skillStatData, buff.displayName, buff.isPercent);
 
+        ZoomInOutCard();
+    }
+
+    private void ZoomInOutCard()
+    {
         cardRect.DOScale(1.15f, 0.15f)
             .SetEase(Ease.OutBack)
             .SetUpdate(true)
