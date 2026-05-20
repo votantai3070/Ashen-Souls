@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Skill buff - ", menuName = "RPG Setup/Skill/Skill Buff")]
@@ -10,6 +11,7 @@ public class SkillBuff_DataSO : Skill_BaseSO
     public override string GetUpgradeDescription()
     {
         string valueText = isPercent ? $"{skillStatData.value}%" : skillStatData.value.ToString();
-        return $" + {valueText} {skillStatData.type}";
+        string typeText = Regex.Replace(skillStatData.type.ToString(), "([a-z])([A-Z])", "$1 $2");
+        return $"{valueText} {typeText}";
     }
 }

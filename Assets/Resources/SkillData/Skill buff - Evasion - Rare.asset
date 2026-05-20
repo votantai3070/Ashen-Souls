@@ -21,8 +21,8 @@ MonoBehaviour:
   prerequisiteSkill: {fileID: 0}
   skillType: 0
   cardType: 1
-  skillRarity: 750
-  skillRollChance: 25.1
+  skillRarity: 500
+  skillRollChance: 50
   maxSkillRollChance: 50
   isPercent: 1
   skillStatData:

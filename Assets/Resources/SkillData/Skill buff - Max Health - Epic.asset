@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - SoulBurst - Buff Size - Common
+  m_Name: Skill buff - Max Health - Epic
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: 5299e43de28e9664699aca11c0da0a5f
-  skillId: 5299e43de28e9664699aca11c0da0a5f
-  displayName: Soul Burst
-  description: 
-  icon: {fileID: 0}
+  saveId: b8fb07fd323d1194385a3795ae687f91
+  skillId: b8fb07fd323d1194385a3795ae687f91
+  displayName: Max Health
+  description: Max Health + 100
+  icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
-  prerequisiteSkill: {fileID: 11400000, guid: 7babedffdcf203143b53e44a9a148fd5, type: 2}
-  skillType: 9
-  cardType: 0
-  skillRarity: 122
-  skillRollChance: 75
-  maxSkillRollChance: 75
-  isPercent: 1
+  prerequisiteSkill: {fileID: 0}
+  skillType: 0
+  cardType: 1
+  skillRarity: 750
+  skillRollChance: 25.1
+  maxSkillRollChance: 50
+  isPercent: 0
   skillStatData:
-    type: 13
-    value: 1.2
+    type: 0
+    value: 400

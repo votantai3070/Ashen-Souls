@@ -24,7 +24,7 @@ MonoBehaviour:
   skillRarity: 450
   skillRollChance: 55.1
   maxSkillRollChance: 75
-  isPercent: 1
+  isPercent: 0
   skillStatData:
     type: 16
     value: -0.4

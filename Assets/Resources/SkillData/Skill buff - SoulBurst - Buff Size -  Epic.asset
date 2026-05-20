@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - SoulBurst - Buff Size - Common
+  m_Name: Skill buff - SoulBurst - Buff Size -  Epic
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: 5299e43de28e9664699aca11c0da0a5f
-  skillId: 5299e43de28e9664699aca11c0da0a5f
+  saveId: fe1c7e0edf721414483b0041d7ff9e21
+  skillId: fe1c7e0edf721414483b0041d7ff9e21
   displayName: Soul Burst
   description: 
   icon: {fileID: 0}
@@ -21,10 +21,10 @@ MonoBehaviour:
   prerequisiteSkill: {fileID: 11400000, guid: 7babedffdcf203143b53e44a9a148fd5, type: 2}
   skillType: 9
   cardType: 0
-  skillRarity: 122
-  skillRollChance: 75
+  skillRarity: 750
+  skillRollChance: 25.1
   maxSkillRollChance: 75
   isPercent: 1
   skillStatData:
     type: 13
-    value: 1.2
+    value: 1.6
