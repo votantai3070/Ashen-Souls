@@ -13,6 +13,18 @@ public class Enemy_Stats : Entity_Stats
         enemy = GetComponent<Enemy>();
     }
 
+    //public override float GetMaxHealth()
+    //{
+    //    Player player = enemy.GetPlayer();
+    //    int playerLevel = player != null ? player.stats.GetLevel() : 1;
+    //    float baseMaxHealth = resource.maxHealth.GetValue();
+
+    //    float healthPerLevelPercent = 0.15f;
+    //    int levelOffset = Mathf.Max(0, playerLevel - 1);
+
+    //    return baseMaxHealth * (1f + levelOffset * healthPerLevelPercent);
+    //}
+
     public float GetExpDrop()
     {
         Player player = enemy.GetPlayer();

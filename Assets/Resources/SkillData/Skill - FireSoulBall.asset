@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Skill - FireSoulBall
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
   saveId: f8cda36d25245d04b90e589ac332c889
+  skillId: f8cda36d25245d04b90e589ac332c889
   displayName: Fire Soul Ball
   description: Launch a fire soul toward an enemy, dealing damage and applying a
     burn over time.

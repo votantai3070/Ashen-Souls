@@ -2716,6 +2716,91 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419926648}
   m_CullTransparentMesh: 1
+--- !u!1001 &431883581
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1977620398913965897, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: checkEnemyRadius
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977620398913965897, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: checkDamageRadius
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.7464316
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.025268257
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_Name
+      value: SkillObject_SoulBurst
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
 --- !u!1 &487258330
 GameObject:
   m_ObjectHideFlags: 0
@@ -3618,7 +3703,7 @@ MonoBehaviour:
       baseValue: 0
       modifiers: []
     evasion:
-      baseValue: 0.8
+      baseValue: 0
       modifiers: []
   levelSystem:
     maxLevel: 99
@@ -7234,12 +7319,12 @@ MonoBehaviour:
   target: {fileID: 0}
   targetCheck: {fileID: 1261357900}
   skillType: 0
-  speed: 5
-  checkEnemyRadius: 7
-  checkDamageRadius: 3
+  speed: 0
+  checkEnemyRadius: 0
+  checkDamageRadius: 0
   attackCooldownGuard: 0
-  cooldown: 5
-  duration: 5
+  cooldown: 0
+  duration: 0
   currentLevel: 1
   maxLevel: 10
   damageSkill:
@@ -7316,12 +7401,12 @@ MonoBehaviour:
   target: {fileID: 0}
   targetCheck: {fileID: 1261357900}
   skillType: 0
-  speed: 1
-  checkEnemyRadius: 2
-  checkDamageRadius: 3
+  speed: 0
+  checkEnemyRadius: 0
+  checkDamageRadius: 0
   attackCooldownGuard: 0
-  cooldown: 6
-  duration: 5
+  cooldown: 0
+  duration: 0
   currentLevel: 1
   maxLevel: 10
   damageSkill:
@@ -8095,10 +8180,6 @@ PrefabInstance:
     - target: {fileID: 1168510075856658422, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
       propertyPath: m_Name
       value: SkillObject_FireSoul
-      objectReference: {fileID: 0}
-    - target: {fileID: 1168510075856658422, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1374786472206361792, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19909,3 +19990,4 @@ SceneRoots:
   - {fileID: 2620592960979803881}
   - {fileID: 4209715031514573286}
   - {fileID: 1426481175}
+  - {fileID: 431883581}

@@ -26,6 +26,13 @@ public static class GameColors
     public static readonly string Epic = "#7A39BB";
     public static readonly string Legendary = "#E8C840";
 
+    // ── Soul ──────────────────────────────
+    public static readonly Color Soul = HexToColor("#8A7DFF");
+    public static readonly Color SoulDark = HexToColor("#3C5CFF");
+    public static readonly Color SoulCorrupted = HexToColor("#5A4B8A");
+    public static readonly Color SoulEffect = HexToColor("#00FFFF");
+    public static readonly Color SoulOrb = HexToColor("#7DE7FF");
+
     // ── Stats Panel ─────────────────────────
     public static readonly Color StatHeader = HexToColor("#1A0A00"); // tiêu đề nhóm
     public static readonly Color StatLabel = HexToColor("#2E1A0A"); // tên stat

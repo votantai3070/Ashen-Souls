@@ -137,7 +137,7 @@ public class Entity_Stats : MonoBehaviour
         return finalArmorReduction;
     }
 
-    public float GetMaxHealth()
+    public virtual float GetMaxHealth()
     {
         float baseMaxHealth = resource.maxHealth.GetValue();
         float bonusMaxHealth = major.vitality.GetValue() * 5; // Assuming each point of vitality gives 5 additional health

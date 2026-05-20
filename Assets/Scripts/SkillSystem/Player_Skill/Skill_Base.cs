@@ -106,6 +106,7 @@ public class Skill_Base : MonoBehaviour
             StatType.Damage => damageSkill,
             StatType.Speed => speedSkill,
             StatType.Size => sizeSkill,
+            StatType.AttackSpeed => attackSpeedSkill,
             _ => null
         };
     }
@@ -115,13 +116,13 @@ public class Skill_Base : MonoBehaviour
     protected bool OnCooldown() => Time.time < lastTimeUsed + cooldown;
     public void SetSkillOnCooldown()
     {
-        UI.instance.ingameUI.skillHolder.StartCooldownSkillSlot(skillType, cooldown);
-        lastTimeUsed = Time.time;
-
         if (attackSpeedSkill.GetValue() != cooldown)
         {
             cooldown = attackSpeedSkill.GetValue();
         }
+
+        UI.instance.ingameUI.skillHolder.StartCooldownSkillSlot(skillType, cooldown);
+        lastTimeUsed = Time.time;
     }
     public void ReduceCooldownBy(float cooldownReduction) => lastTimeUsed = lastTimeUsed + cooldownReduction;
     public void ResetCooldown()

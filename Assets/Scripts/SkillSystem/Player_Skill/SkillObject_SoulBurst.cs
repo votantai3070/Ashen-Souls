@@ -17,23 +17,30 @@ public class SkillObject_SoulBurst : SkillObject_Base
 
     public void SetSoulBurst(Skill_SoulBurst soulBurstManager, LayerMask enemyLayer)
     {
-        this.soulBurstManager = soulBurstManager;
         entity = soulBurstManager.entity;
+        this.soulBurstManager = soulBurstManager;
         whatIsEnemy = enemyLayer;
 
-        SetSpeedAnim(soulBurstManager.speed);
-        float clipLength = GetClipLength();
-        float actualDuration = clipLength / soulBurstManager.speed;
+        speed = soulBurstManager.speedSkill.GetValue();
+        damage = soulBurstManager.damageSkill.GetValue();
+        size = soulBurstManager.sizeSkill.GetValue();
 
-        checkDamageRadius = soulBurstManager.checkDamageRadius;
-        checkEnemyRadius = soulBurstManager.checkEnemyRadius;
+        Debug.Log($"SoulBurst - Speed: {speed}, Damage: {damage}, Size: {size}");
+
+        SetSpeedAnim(speed);
+        float clipLength = GetClipLength();
+        float actualDuration = clipLength / speed;
+
+        //transform.GetComponentInChildren<Image>().color = GameColors.Soul;
+
+        checkDamageRadius = size * 3f;
+        checkEnemyRadius = size * 2f;
         attackCooldownGuard = soulBurstManager.attackCooldownGuard;
         duration = actualDuration;
 
-        Debug.Log("Duration:  " + duration);
-
-        transform.localScale = Vector3.one * checkEnemyRadius;
         spawnTime = Time.time;
+
+        transform.localScale = Vector3.one * size;
     }
 
     protected override void CheckDuration()
