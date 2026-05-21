@@ -3,11 +3,10 @@ using UnityEngine;
 
 public class Skill_SpinningSword : Skill_Base
 {
+    public Stat swordCount;
     [Header("Spinning Sword")]
     [SerializeField] private GameObject swordPrefab;
     [SerializeField] private float orbitRadius = 1.5f;
-    [SerializeField] private float orbitSpeed = 180f;
-    [SerializeField] private int swordCount = 3;
 
     [SerializeField] private List<SkillObject_SpinningSword> activeSwords = new();
 
@@ -20,9 +19,9 @@ public class Skill_SpinningSword : Skill_Base
     {
         base.SetSkill(skillData);
 
+        swordCount.SetBaseValue(skillData.swordCount);
         orbitRadius = skillData.orbitRadius;
-        orbitSpeed = skillData.orbitSpeed;
-        swordCount = skillData.swordCount;
+
         swordPrefab = skillData.skillObjectPrefab;
     }
 
@@ -36,7 +35,7 @@ public class Skill_SpinningSword : Skill_Base
 
         if (CheckEnemyRadius())
         {
-            SpawnSwords(swordCount);
+            SpawnSwords(swordCount.GetValue());
             SetSkillOnCooldown();
         }
 
@@ -53,10 +52,23 @@ public class Skill_SpinningSword : Skill_Base
 
             GameObject obj = ObjectPool.instance.Spawn(swordPrefab.name, transform.position, Quaternion.identity);
             SkillObject_SpinningSword sword = obj.GetComponent<SkillObject_SpinningSword>();
-            sword.SetupSword(this, entity, orbitRadius, orbitSpeed, duration, startAngle);
+            sword.SetupSword(this, entity, orbitRadius, duration, whatIsEnemy, startAngle);
 
             activeSwords.Add(sword);
         }
+    }
+
+    protected override Stat GetStat(StatType upgradeType)
+    {
+        return upgradeType switch
+        {
+            StatType.Damage => damageSkill,
+            StatType.Speed => speedSkill,
+            StatType.Size => sizeSkill,
+            StatType.AttackSpeed => attackSpeedSkill,
+            StatType.SwordCount => swordCount,
+            _ => null
+        };
     }
 
     // Call from SkillObject when duration expires

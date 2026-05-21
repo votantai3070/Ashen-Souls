@@ -13,25 +13,24 @@ MonoBehaviour:
   m_Name: Skill - SpinningSword
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
   saveId: 6f93ee8d2ae5e02469fd25a468a93217
+  skillId: 6f93ee8d2ae5e02469fd25a468a93217
   displayName: Spinning Sword
   description: Swing your blade in a circle, dealing damage to all nearby enemies.
   icon: {fileID: -748005180, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 3
   prerequisiteSkill: {fileID: 0}
+  skillType: 5
   cardType: 0
   skillRarity: 300
   skillRollChance: 70.1
   maxSkillRollChance: 80
   skillObjectPrefab: {fileID: 4526101274153675507, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
-  orbitRadius: 1.5
-  orbitSpeed: 180
-  swordCount: 2
-  skillType: 4
+  orbitRadius: 1.2
+  swordCount: 1
+  speed: 150
+  size: 1
+  cooldown: 5
+  distanceToAttack: 3
+  damage: 20
   upgradeBoostChance: 30
   attackCooldownGuard: 0.5
-  upgradeData:
-    upgradeType: 9
-    cooldown: 5
-    distanceToAttack: 3
-    attackRadius: 0.6
-    speed: 0

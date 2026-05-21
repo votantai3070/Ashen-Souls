@@ -35,9 +35,19 @@ public class UI_Ingame : MonoBehaviour
 
         int currentHealth = UI.instance.player.health.GetCurrentHealth();
         float maxHealth = UI.instance.player.stats.GetMaxHealth();
+
+        if (maxHealth <= 0f)
+        {
+            healthText.text = $"{currentHealth} / {maxHealth}";
+            healthBar.fillAmount = 0f;
+            return;
+        }
+
         float percent = currentHealth / maxHealth;
 
         healthText.text = $"{currentHealth} / {maxHealth}";
+
+        Debug.Log($"[UI] Health Updated: {currentHealth} / {maxHealth} ");
 
         healthBar.GetComponentInParent<UI_Bar>().SetFill(percent);
 

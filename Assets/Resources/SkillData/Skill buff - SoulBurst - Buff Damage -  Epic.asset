@@ -26,5 +26,5 @@ MonoBehaviour:
   maxSkillRollChance: 75
   isPercent: 0
   skillStatData:
-    type: 11
+    type: 12
     value: 16

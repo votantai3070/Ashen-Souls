@@ -7,7 +7,6 @@ public class Skill_DataSO : Skill_BaseSO
 
     [Header("Spinning Sword Skill")]
     public float orbitRadius = 1.5f;
-    public float orbitSpeed = 180f;
     public int swordCount = 3;
 
     [Header("Default Skill")]

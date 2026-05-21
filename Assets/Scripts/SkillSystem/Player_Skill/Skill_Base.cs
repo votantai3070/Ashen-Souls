@@ -99,7 +99,7 @@ public class Skill_Base : MonoBehaviour
         return true;
     }
 
-    private Stat GetStat(StatType upgradeType)
+    protected virtual Stat GetStat(StatType upgradeType)
     {
         return upgradeType switch
         {

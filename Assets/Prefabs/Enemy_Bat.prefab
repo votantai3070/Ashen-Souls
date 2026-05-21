@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a264d33956daf4ab23d0c2ea95edbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Stats
-  defaultStatSetup: {fileID: 0}
+  defaultStatSetup: {fileID: 11400000, guid: 6f1d2f3e6ec0a5e4b819c2e244acc6c9, type: 2}
   resource:
     maxHealth:
       baseValue: 20

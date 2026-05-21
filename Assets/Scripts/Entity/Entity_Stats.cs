@@ -13,9 +13,9 @@ public class Entity_Stats : MonoBehaviour
     public Stat_OffenseGroup offense;
     public Stat_DefenseGroup defense;
 
-    private void Start()
+    private void Awake()
     {
-        //ApplyDefaultStatSetup();
+        ApplyDefaultStatSetup();
     }
 
     //public float GetElementalDamage(out ElementType element, float scaleFactor)
@@ -200,6 +200,14 @@ public class Entity_Stats : MonoBehaviour
 
     public void ApplyDefaultStatSetup()
     {
+        Debug.Log($"defaultStatSetup null? {defaultStatSetup == null}");
+        Debug.Log($"resource null? {resource == null}");
+        Debug.Log($"resource.maxHealth null? {resource.maxHealth == null}");
+        Debug.Log($"resource.regenHealth null? {resource.regenHealth == null}");
+        Debug.Log($"major null? {major == null}");
+        Debug.Log($"offense null? {offense == null}");
+        Debug.Log($"defense null? {defense == null}");
+
         if (defaultStatSetup == null)
         {
             Debug.LogWarning("Default stat setup is not assigned.");

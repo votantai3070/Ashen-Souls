@@ -1087,7 +1087,7 @@ GameObject:
   - component: {fileID: 242661436}
   - component: {fileID: 242661435}
   m_Layer: 5
-  m_Name: UI_Stat - Unknow Stat
+  m_Name: UI_Stat - Speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Unknow Stat
+  m_text: Speed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 255b4cb8b3c4b0143b8756b7b8fc605b, type: 2}
   m_sharedMaterial: {fileID: 1344213776019363923, guid: 255b4cb8b3c4b0143b8756b7b8fc605b, type: 2}
@@ -2474,26 +2474,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1977620398913965897, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
-      propertyPath: checkEnemyRadius
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1977620398913965897, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
-      propertyPath: checkDamageRadius
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.7464316
@@ -2534,17 +2514,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3606230067762492169, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
       propertyPath: m_Name
       value: SkillObject_SoulBurst
-      objectReference: {fileID: 0}
-    - target: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3226,7 +3198,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &575607132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3302,7 +3274,7 @@ MonoBehaviour:
   defaultStatSetup: {fileID: 11400000, guid: 88b44131fbacb964e9decefca3de8aec, type: 2}
   resource:
     maxHealth:
-      baseValue: 200
+      baseValue: 100
       modifiers: []
     regenHealth:
       baseValue: 0
@@ -4333,6 +4305,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806846356}
   m_CullTransparentMesh: 1
+--- !u!1001 &810876325
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4526101274153675507, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+      propertyPath: m_Name
+      value: SkillObject_SpinningSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169442452970331142, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.83771
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169442452970331142, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.23616
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169442452970331142, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169442452970331142, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169442452970331142, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169442452970331142, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169442452970331142, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169442452970331142, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169442452970331142, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169442452970331142, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
 --- !u!1 &821351539
 GameObject:
   m_ObjectHideFlags: 0
@@ -6188,7 +6217,7 @@ GameObject:
   - component: {fileID: 1198308747}
   - component: {fileID: 1198308746}
   m_Layer: 5
-  m_Name: UI_Stat - PerformAttack Speed
+  m_Name: UI_Stat - Unknow Stat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6249,7 +6278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PerformAttack Speed
+  m_text: Unknow Stat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 255b4cb8b3c4b0143b8756b7b8fc605b, type: 2}
   m_sharedMaterial: {fileID: 1344213776019363923, guid: 255b4cb8b3c4b0143b8756b7b8fc605b, type: 2}
@@ -6696,12 +6725,12 @@ MonoBehaviour:
   target: {fileID: 0}
   targetCheck: {fileID: 1261357900}
   skillType: 0
-  speed: 5
-  checkEnemyRadius: 3
+  speed: 0
+  checkEnemyRadius: 0
   checkDamageRadius: 0.6
   attackCooldownGuard: 0
-  cooldown: 5
-  duration: 3
+  cooldown: 0
+  duration: 0
   currentLevel: 1
   maxLevel: 10
   damageSkill:
@@ -6716,10 +6745,11 @@ MonoBehaviour:
   attackSpeedSkill:
     baseValue: 0
     modifiers: []
+  swordCount:
+    baseValue: 0
+    modifiers: []
   swordPrefab: {fileID: 4526101274153675507, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
   orbitRadius: 1.5
-  orbitSpeed: 180
-  swordCount: 2
   activeSwords: []
 --- !u!114 &1261357904
 MonoBehaviour:
@@ -7369,7 +7399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_SkillManager
   skills:
-  - {fileID: 11400000, guid: f8cda36d25245d04b90e589ac332c889, type: 2}
+  - {fileID: 11400000, guid: 6f93ee8d2ae5e02469fd25a468a93217, type: 2}
 --- !u!1 &1410680732
 GameObject:
   m_ObjectHideFlags: 0
@@ -8356,7 +8386,7 @@ GameObject:
   - component: {fileID: 1549201058}
   - component: {fileID: 1549201057}
   m_Layer: 5
-  m_Name: UI_Stat - Damage
+  m_Name: UI_Stat - Armor Reduction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8417,7 +8447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Damage
+  m_text: Armor Reduction
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 255b4cb8b3c4b0143b8756b7b8fc605b, type: 2}
   m_sharedMaterial: {fileID: 1344213776019363923, guid: 255b4cb8b3c4b0143b8756b7b8fc605b, type: 2}
@@ -9734,7 +9764,7 @@ GameObject:
   - component: {fileID: 1827635435}
   - component: {fileID: 1827635434}
   m_Layer: 5
-  m_Name: UI_Stat - Critical Chance
+  m_Name: UI_Stat - Unknow Stat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9795,7 +9825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Critical Chance
+  m_text: Unknow Stat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 255b4cb8b3c4b0143b8756b7b8fc605b, type: 2}
   m_sharedMaterial: {fileID: 1344213776019363923, guid: 255b4cb8b3c4b0143b8756b7b8fc605b, type: 2}
@@ -9953,7 +9983,7 @@ GameObject:
   - component: {fileID: 1837242926}
   - component: {fileID: 1837242925}
   m_Layer: 5
-  m_Name: UI_Stat - Speed
+  m_Name: UI_Stat - Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10014,7 +10044,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Speed
+  m_text: Damage
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 255b4cb8b3c4b0143b8756b7b8fc605b, type: 2}
   m_sharedMaterial: {fileID: 1344213776019363923, guid: 255b4cb8b3c4b0143b8756b7b8fc605b, type: 2}
@@ -19991,3 +20021,4 @@ SceneRoots:
   - {fileID: 4209715031514573286}
   - {fileID: 1426481175}
   - {fileID: 431883581}
+  - {fileID: 810876325}

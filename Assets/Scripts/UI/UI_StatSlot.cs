@@ -21,8 +21,6 @@ public class UI_StatSlot : MonoBehaviour
     {
         playerStats = UI.instance.player.stats;
 
-        Debug.Log("Player Stats: " + playerStats);
-
         Stat statToUpdate = playerStats.GetStatByType(statSlotType);
 
         if (statToUpdate == null)
@@ -130,14 +128,14 @@ public class UI_StatSlot : MonoBehaviour
             case StatType.CriticalDamage: return "Critical Damage";
             case StatType.ArmorReduction: return "Armor Reduction";
 
-            case StatType.FireDamage: return "Fire Damage";
-            case StatType.IceDamage: return "Ice Damage";
-            case StatType.LightningDamage: return "Lightning Damage";
-            case StatType.ElementalDamage: return "Elemental Damage";
+            //case StatType.FireDamage: return "Fire Damage";
+            //case StatType.IceDamage: return "Ice Damage";
+            //case StatType.LightningDamage: return "Lightning Damage";
+            //case StatType.ElementalDamage: return "Elemental Damage";
 
-            case StatType.FireResistance: return "Fire Resistance";
-            case StatType.IceResistance: return "Ice Resistance";
-            case StatType.LightningResistance: return "Lightning Resistance";
+            //case StatType.FireResistance: return "Fire Resistance";
+            //case StatType.IceResistance: return "Ice Resistance";
+            //case StatType.LightningResistance: return "Lightning Resistance";
             default: return "Unknow Stat";
         }
     }
