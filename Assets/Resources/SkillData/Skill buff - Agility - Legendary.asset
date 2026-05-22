@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - Evasion - Legendary
-  m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: 0af47a394992a4e408e1da125a5a3351
-  skillId: 0af47a394992a4e408e1da125a5a3351
-  displayName: Evasion
-  description: Max Health + 100
-  icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
+  m_Name: Skill buff - Agility - Legendary
+  m_EditorClassIdentifier: Assembly-CSharp::Skill_BuffDataSO
+  saveId: e714a753487074e45937046463811564
+  skillId: e714a753487074e45937046463811564
+  displayName: Agility
+  description: 
+  icon: {fileID: 1814028019, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
   skillType: 0
@@ -26,5 +26,5 @@ MonoBehaviour:
   maxSkillRollChance: 10
   isPercent: 0
   skillStatData:
-    type: 7
-    value: 20
+    type: 3
+    value: 6

@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Skill Enemy - Energy Ball
   m_EditorClassIdentifier: Assembly-CSharp::SkillEnemy_DataSO
   saveId: 420a98dd6bbae0341b8e0463e8c9ba68
+  skillId: 420a98dd6bbae0341b8e0463e8c9ba68
   displayName: Energy Ball
   description: 
   icon: {fileID: 0}
   duration: 5
   prerequisiteSkill: {fileID: 0}
+  skillType: 0
   cardType: 0
   skillRarity: 100
   skillRollChance: 65
@@ -27,8 +29,10 @@ MonoBehaviour:
     m_Bits: 128
   upgradeData:
     enemyType: 0
+    damage: 5
     cooldown: 1
     distanceToAttack: 5
     attackRadius: 1.5
     speed: 4
+    attackCooldownGuard: 0.1
   skillObjectPrefab: {fileID: 5612906296824489825, guid: 8f02cc9443d691644a7c0c992c2b984b, type: 3}

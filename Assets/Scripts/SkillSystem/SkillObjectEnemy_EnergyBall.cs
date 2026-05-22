@@ -11,6 +11,11 @@ public class SkillObjectEnemy_EnergyBall : SkillObject_Base
         base.Awake();
     }
 
+    protected override void Update()
+    {
+        CheckDuration();
+    }
+
     public void SetupEnergyBall(SkillEnemy_Base energyBallManager, float duration, Vector2 direction, LayerMask enemyLayer)
     {
         this.energyBallManager = energyBallManager;
@@ -18,13 +23,15 @@ public class SkillObjectEnemy_EnergyBall : SkillObject_Base
         entity = energyBallManager.entity;
         SetPhysicsActive(true);
 
+        damage = energyBallManager.damage;
         speed = energyBallManager.speed;
         target = energyBallManager.target;
         checkEnemyRadius = energyBallManager.checkEnemyRadius;
         checkDamageRadius = energyBallManager.checkDamageRadius;
+        attackCooldownGuard = energyBallManager.attackCooldownGuard;
         this.duration = duration;
 
-        rb.linearVelocity = new(direction.x * speed, direction.y * speed);
+        rb.linearVelocity = direction * speed;
 
         spawnTime = Time.time;
     }

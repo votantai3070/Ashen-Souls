@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - FireSoulBall - Buff Size - Common
+  m_Name: Skill buff - Vitality - Uncommon
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: 09143ae782403384191f0666242e0fdc
-  skillId: 09143ae782403384191f0666242e0fdc
-  displayName: Fire Soul Ball
-  description: 
-  icon: {fileID: 0}
+  saveId: e6038881ece619349b971cb5350e52cd
+  skillId: e6038881ece619349b971cb5350e52cd
+  displayName: Vitality
+  description: Max Health + 100
+  icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
-  prerequisiteSkill: {fileID: 11400000, guid: f8cda36d25245d04b90e589ac332c889, type: 2}
-  skillType: 6
-  cardType: 0
-  skillRarity: 122
-  skillRollChance: 75
-  maxSkillRollChance: 75
-  isPercent: 1
+  prerequisiteSkill: {fileID: 0}
+  skillType: 0
+  cardType: 1
+  skillRarity: 300
+  skillRollChance: 50
+  maxSkillRollChance: 50
+  isPercent: 0
   skillStatData:
-    type: 14
-    value: 0.2
+    type: 5
+    value: 20

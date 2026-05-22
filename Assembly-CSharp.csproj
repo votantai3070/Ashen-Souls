@@ -87,7 +87,6 @@
     <Compile Include="Assets\Scripts\SpawnSystem\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_MeleeState\EnemyMelee_GroundState.cs" />
     <Compile Include="Assets\Scripts\Data\SkillBuff_DataSO.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_Merchant.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_MeleeState\EnemyMelee_State.cs" />
     <Compile Include="Assets\Scripts\StateMachine.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_AnimationEvents.cs" />
@@ -136,6 +135,7 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy_Health.cs" />
     <Compile Include="Assets\Scripts\LevelSystem.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillEnemy_EnergyBall.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Stats.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_MoveState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_DeadState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Stats.cs" />
@@ -158,6 +158,7 @@
     <Compile Include="Assets\Scripts\Data\BuffEffectData.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_DashState.cs" />
     <Compile Include="Assets\Scripts\UI\UI.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Entity\EntityState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_SoulBurst.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSould_ShootAntecipationState.cs" />

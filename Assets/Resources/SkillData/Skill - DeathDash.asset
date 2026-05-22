@@ -13,25 +13,24 @@ MonoBehaviour:
   m_Name: Skill - DeathDash
   m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
   saveId: ee41b42d9ec621249b8b0b4e32d57554
+  skillId: ee41b42d9ec621249b8b0b4e32d57554
   displayName: Death Dash
   description: Dash forward at the speed of shadow, dealing damage along the path.
   icon: {fileID: -1623334351, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 0.2
   prerequisiteSkill: {fileID: 0}
+  skillType: 10
   cardType: 0
   skillRarity: 150
   skillRollChance: 80
   maxSkillRollChance: 80
   skillObjectPrefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
   orbitRadius: 1.5
-  orbitSpeed: 180
   swordCount: 3
-  skillType: 9
+  speed: 0
+  size: 0
+  cooldown: 3
+  distanceToAttack: 0
+  damage: 5
   upgradeBoostChance: 30
-  attackCooldownGuard: 1
-  upgradeData:
-    upgradeType: 19
-    cooldown: 3
-    distanceToAttack: 1
-    attackRadius: 1
-    speed: 0
+  attackCooldownGuard: 0.2

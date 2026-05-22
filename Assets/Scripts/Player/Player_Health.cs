@@ -16,9 +16,13 @@ public class Player_Health : Entity_Health
         return currentHealth / player.stats.GetMaxHealth();
     }
 
-    public float InscreaseHealth(int amount)
+    public float IncreaseHealth(int amount, StatType type)
     {
-        currentHealth += amount;
+        if (type == StatType.Vitality)
+            currentHealth += amount * 5;
+        else if (type == StatType.MaxHealth)
+            currentHealth += amount;
+
         if (currentHealth > player.stats.GetMaxHealth())
             currentHealth = (int)player.stats.GetMaxHealth();
         OnHealthChangedInvoke();

@@ -46,7 +46,7 @@ public class UI_StatSlot : MonoBehaviour
 
             // Offense stats
             case StatType.Damage:
-                value = playerStats.offense.damage.GetValue();
+                value = playerStats.GetPhysicalDamage(out bool isCriticalHit);
                 break;
             case StatType.CriticalChance:
                 value = playerStats.GetCritChance();
@@ -61,7 +61,7 @@ public class UI_StatSlot : MonoBehaviour
                 value = playerStats.offense.attackSpeed.GetValue() * 100;
                 break;
             case StatType.Speed:
-                value = playerStats.offense.speed.GetValue();
+                value = playerStats.GetSpeed();
                 break;
 
             // Defense stats
@@ -72,7 +72,7 @@ public class UI_StatSlot : MonoBehaviour
                 value = playerStats.resource.regenHealth.GetValue();
                 break;
             case StatType.Evasion:
-                value = playerStats.GetEvasion();
+                value = playerStats.GetEvasion() * 100;
                 break;
             case StatType.Armor:
                 value = playerStats.GetBaseArmor();
@@ -104,7 +104,7 @@ public class UI_StatSlot : MonoBehaviour
                 //    break;
         }
 
-        statValue.text = IsPercentageStat(statSlotType) ? value + "%" : value.ToString();
+        statValue.text = IsPercentageStat(statSlotType) ? $"{value:0.#}%" : $"{value:0.#}";
     }
 
     private string GetStatNameByType(StatType type)

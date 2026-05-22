@@ -34,8 +34,7 @@ public class Player_Stats : Entity_Stats
 
         OnStatChangedInvoke();
 
-        if (buff.type == StatType.MaxHealth)
-            player.health.InscreaseHealth(Mathf.RoundToInt(buff.value));
+        player.health.IncreaseHealth(Mathf.RoundToInt(buff.value), buff.type);
     }
 
     public void GainExp(float amount) => levelSystem.AddExp(amount);

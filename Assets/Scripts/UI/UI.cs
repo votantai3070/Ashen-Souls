@@ -12,7 +12,7 @@ public class UI : MonoBehaviour
     public GameObject[] uiElements;
     public UI_Ingame ingameUI { get; private set; }
     public UI_SkillBoard skillBoardUI { get; private set; }
-    public UI_Merchant merchantUI { get; private set; }
+    public UI_Stats statsUI { get; private set; }
 
     private void Awake()
     {
@@ -20,9 +20,8 @@ public class UI : MonoBehaviour
 
         ingameUI = GetComponentInChildren<UI_Ingame>(true);
         skillBoardUI = GetComponentInChildren<UI_SkillBoard>(true);
-        merchantUI = GetComponentInChildren<UI_Merchant>(true);
+        statsUI = GetComponentInChildren<UI_Stats>(true);
     }
-
 
     public void SetPlayer(Player player)
     {
@@ -72,14 +71,14 @@ public class UI : MonoBehaviour
 
     public void OpenStatBoard()
     {
-        SwitchTo(merchantUI.gameObject);
-        //merchantUI.playerStatsUI.UpdateStatUI();
+        SwitchTo(statsUI.gameObject);
         StopPlayerControlIfNeeded();
     }
 
     public void OpenSkillBoard()
     {
         SwitchTo(skillBoardUI.gameObject);
+        statsUI.playerStatsUI.UpdateStatUI();
         StopPlayerControlIfNeeded();
     }
 

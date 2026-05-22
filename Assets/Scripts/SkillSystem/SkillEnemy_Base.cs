@@ -15,11 +15,13 @@ public class SkillEnemy_Base : MonoBehaviour
     private GameObject skillObject;
 
     [Header("Settings")]
+    public float damage;
     public float cooldown;
     public float speed;
     public float checkEnemyRadius;
     public float checkDamageRadius;
     public float duration;
+    public float attackCooldownGuard;
 
     private float lastTimeUsed;
 
@@ -37,12 +39,14 @@ public class SkillEnemy_Base : MonoBehaviour
         skillObjectGo = skillData.skillObjectPrefab;
         skillEnemyData = skillData;
 
+        damage = skill.damage;
         cooldown = skill.cooldown;
         speed = skill.speed;
 
         checkEnemyRadius = skill.distanceToAttack;
         enemy.chaseStopDistance = skill.distanceToAttack;
         enemy.attackDistanceToPlayer = skill.distanceToAttack;
+        attackCooldownGuard = skill.attackCooldownGuard;
 
         checkDamageRadius = skill.attackRadius;
         duration = skillData.duration;

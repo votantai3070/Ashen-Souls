@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - Speed - Uncommon
+  m_Name: Skill buff - Agility - Uncommon
   m_EditorClassIdentifier: Assembly-CSharp::Skill_BuffDataSO
   saveId: 76055c0cd51f5fb4fb68b9ca206b3201
   skillId: 76055c0cd51f5fb4fb68b9ca206b3201
-  displayName: Speed
+  displayName: Agility
   description: 
   icon: {fileID: 1814028019, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
@@ -24,7 +24,7 @@ MonoBehaviour:
   skillRarity: 150
   skillRollChance: 75
   maxSkillRollChance: 75
-  isPercent: 1
+  isPercent: 0
   skillStatData:
-    type: 13
-    value: 1.5
+    type: 3
+    value: 3

@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - Max Health - Legendary
+  m_Name: Skill buff - Vitality - Common
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: 0f2e1521666f5294c8d60f38b9996edb
-  skillId: 0f2e1521666f5294c8d60f38b9996edb
-  displayName: Max Health
+  saveId: 2337cb57d64cf374d8464a7d1b5c6976
+  skillId: 2337cb57d64cf374d8464a7d1b5c6976
+  displayName: Vitality
   description: Max Health + 100
   icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
   skillType: 0
   cardType: 1
-  skillRarity: 900
-  skillRollChance: 10
-  maxSkillRollChance: 10
+  skillRarity: 150
+  skillRollChance: 75
+  maxSkillRollChance: 75
   isPercent: 0
   skillStatData:
-    type: 0
-    value: 500
+    type: 5
+    value: 10

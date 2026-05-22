@@ -67,7 +67,7 @@ public class Entity_Stats : MonoBehaviour
         return finalSpeed;
     }
 
-    public float GetPhysicalDamage(out bool isCriticalHit, float scaleFactor = 1)
+    public float GetPhysicalDamage(out bool isCriticalHit)
     {
         float baseDamage = GetBasePhysicalDamage();
         float baseCritChance = GetCritChance();
@@ -76,16 +76,19 @@ public class Entity_Stats : MonoBehaviour
         isCriticalHit = IsCriticalHit(baseCritChance);
         float finalDamage = isCriticalHit ? baseDamage * baseCritDamage : baseDamage;
 
-        return finalDamage * scaleFactor;
+        return finalDamage;
     }
 
     public float GetSkillDamage(float damage, out bool isCriticalHit)
     {
+        float baseDamage = damage + GetBasePhysicalDamage();
+
         float baseCritChance = GetCritChance();
         float baseCritDamage = GetCritDamage();
 
         isCriticalHit = IsCriticalHit(baseCritChance);
-        float finalDamage = isCriticalHit ? damage * baseCritDamage : damage;
+
+        float finalDamage = isCriticalHit ? baseDamage * baseCritDamage : baseDamage;
 
         return finalDamage;
     }
@@ -95,8 +98,8 @@ public class Entity_Stats : MonoBehaviour
         return UnityEngine.Random.Range(0, 100) < critChance;
     }
 
-    // Bonus damage from Strength: +1 per STR
-    public float GetBasePhysicalDamage() => offense.damage.GetValue() + major.strength.GetValue();
+    // Bonus damage from Strength: +.5 per STR
+    public float GetBasePhysicalDamage() => offense.damage.GetValue() + major.strength.GetValue() * .5f;
     // Assuming each point of AGI gives 0.3% additional crit chance
     public float GetCritChance() => offense.critChance.GetValue() + (major.agility.GetValue() * .3f);
     // Assuming each point of STR gives 0.5% additional crit damage
@@ -105,7 +108,7 @@ public class Entity_Stats : MonoBehaviour
     public float GetEvasion()
     {
         float baseEvasion = defense.evasion.GetValue() / 100;
-        float bonusEvasion = major.agility.GetValue() * 0.5f;
+        float bonusEvasion = major.agility.GetValue() * 0.5f / 100f;
 
         float totalEvasion = baseEvasion + bonusEvasion;
         float evasionCap = 0.85f;
@@ -128,8 +131,8 @@ public class Entity_Stats : MonoBehaviour
         return finalMitigation;
     }
 
-    // Assuming each point of vitality gives 1 additional armor
-    public float GetBaseArmor() => defense.armor.GetValue() + major.vitality.GetValue();
+    // Assuming each point of vitality gives 0.2 additional armor
+    public float GetBaseArmor() => defense.armor.GetValue() + major.vitality.GetValue() * .2f;
     public float GetArmorReduction()
     {
         float finalArmorReduction = offense.armorReduction.GetValue() / 100; // Convert percentage to decimal
@@ -200,14 +203,6 @@ public class Entity_Stats : MonoBehaviour
 
     public void ApplyDefaultStatSetup()
     {
-        Debug.Log($"defaultStatSetup null? {defaultStatSetup == null}");
-        Debug.Log($"resource null? {resource == null}");
-        Debug.Log($"resource.maxHealth null? {resource.maxHealth == null}");
-        Debug.Log($"resource.regenHealth null? {resource.regenHealth == null}");
-        Debug.Log($"major null? {major == null}");
-        Debug.Log($"offense null? {offense == null}");
-        Debug.Log($"defense null? {defense == null}");
-
         if (defaultStatSetup == null)
         {
             Debug.LogWarning("Default stat setup is not assigned.");

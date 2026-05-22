@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class UI_Merchant : MonoBehaviour
+public class UI_Stats : MonoBehaviour
 {
     private UI ui;
     public UI_PlayerStats playerStatsUI { get; private set; }

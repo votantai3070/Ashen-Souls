@@ -49,7 +49,6 @@ public class SkillObject_Base : MonoBehaviour
 
     protected virtual void Start()
     {
-
     }
 
     protected virtual void Update()
@@ -61,17 +60,23 @@ public class SkillObject_Base : MonoBehaviour
     {
         if (!CanAttack()) return; // Guard against attacking too frequently
 
+        Debug.Log("DamageEnemiesInRadius called");
+
         lastAttackTime = Time.time;
 
         foreach (var enemy in GetEnemyAround(t, checkDamageRadius))
         {
             if (enemy.TryGetComponent(out IDamageable damageable))
             {
+                Debug.Log($"Found damageable enemy: {damageable}");
+
                 if (CanApplyDamage(enemy.GetComponent<Entity>()) == false)
                     return;
 
                 float dealerDamage = entity.entityStats.GetSkillDamage(damage, out bool isCriticalHit);
                 canHit = damageable.TakeDamage(isCriticalHit, dealerDamage, damageDealer.transform);
+
+                Debug.Log($"Attempting to damage {enemy.name}. Can hit: {canHit}");
 
                 if (canHit)
                 {

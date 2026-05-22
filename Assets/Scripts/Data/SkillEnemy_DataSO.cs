@@ -13,9 +13,11 @@ public class SkillEnemy_DataSO : Skill_BaseSO
     public class SkillEnemyData
     {
         public SkillEnemyType enemyType;
+        public float damage;
         public float cooldown;
         public float distanceToAttack;
         public float attackRadius;
         public float speed;
+        public float attackCooldownGuard = 0.1f;
     }
 }

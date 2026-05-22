@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - Max Health - Common
+  m_Name: Skill buff - Strength - Legendary
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: 2337cb57d64cf374d8464a7d1b5c6976
-  skillId: 2337cb57d64cf374d8464a7d1b5c6976
-  displayName: Max Health
+  saveId: f145d47e73b99a94998251fcc0e4e27b
+  skillId: f145d47e73b99a94998251fcc0e4e27b
+  displayName: Strength
   description: Max Health + 100
   icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
   skillType: 0
   cardType: 1
-  skillRarity: 150
-  skillRollChance: 75
-  maxSkillRollChance: 75
+  skillRarity: 900
+  skillRollChance: 10
+  maxSkillRollChance: 10
   isPercent: 0
   skillStatData:
-    type: 0
-    value: 100
+    type: 2
+    value: 50

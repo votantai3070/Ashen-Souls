@@ -9,11 +9,11 @@ public class UI_PlayerStats : MonoBehaviour
         statSlots = GetComponentsInChildren<UI_StatSlot>(true);
     }
 
-    private void OnEnable()
-    {
-        if (UI.instance?.player != null)
-            UpdateStatUI();
-    }
+    //private void OnEnable()
+    //{
+    //    if (UI.instance?.player != null)
+    //        UpdateStatUI();
+    //}
 
     public void UpdateStatUI()
     {

@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - Max Health - Rare
+  m_Name: Skill buff - Vitality - Epic
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: c8292175523d97d419e0be5f5d8561a3
-  skillId: c8292175523d97d419e0be5f5d8561a3
-  displayName: Max Health
+  saveId: b8fb07fd323d1194385a3795ae687f91
+  skillId: b8fb07fd323d1194385a3795ae687f91
+  displayName: Vitality
   description: Max Health + 100
   icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
   skillType: 0
   cardType: 1
-  skillRarity: 500
-  skillRollChance: 50
+  skillRarity: 750
+  skillRollChance: 25.1
   maxSkillRollChance: 50
   isPercent: 0
   skillStatData:
-    type: 0
-    value: 300
+    type: 5
+    value: 40
