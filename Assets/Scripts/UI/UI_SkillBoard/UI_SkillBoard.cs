@@ -19,13 +19,7 @@ public class UI_SkillBoard : MonoBehaviour
 
     private void OnEnable()
     {
-        Time.timeScale = 0f;
         GetSkillsRollRandom();
-    }
-
-    private void OnDisable()
-    {
-        Time.timeScale = 1f;
     }
 
     public void GetSkillsRollRandom()

@@ -1,0 +1,41 @@
+using UnityEngine;
+
+public class UI_TotalSummary : MonoBehaviour
+{
+    public UI_TotalSlot[] totalSlots;
+
+    private void Awake()
+    {
+        totalSlots = GetComponentsInChildren<UI_TotalSlot>(true);
+    }
+
+    public void UpdateTotalSummary()
+    {
+        foreach (var slot in totalSlots)
+        {
+            int value = 0;
+            switch (slot.totalType)
+            {
+                case TotalSummaryType.DamageDealt:
+                    value = (int)UI.instance.player.combat.totalDamageDealt;
+                    break;
+                case TotalSummaryType.Time:
+                    value = SpawnSystem.instance.GetElapsedTime();
+                    break;
+                //case TotalSummaryType.SoulsGained:
+                //    value = GameManager.instance.playerStats.GetSoulsGained();
+                //    break;
+                case TotalSummaryType.EnemiesKilled:
+                    value = (int)UI.instance.player.combat.totalEnemiesKilled;
+                    break;
+                case TotalSummaryType.LevelReached:
+                    value = UI.instance.player.stats.levelSystem.CurrentLevel();
+                    break;
+                case TotalSummaryType.ExperienceGained:
+                    value = (int)UI.instance.player.stats.levelSystem.CurrentExp();
+                    break;
+            }
+            slot.SetTotalValue(value);
+        }
+    }
+}

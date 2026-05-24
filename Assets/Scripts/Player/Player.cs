@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player : Entity
+public class Player : Entity, ITotalSummary
 {
     public ControlsManager controls { get; private set; }
     public Player_Combat combat { get; private set; }
@@ -67,5 +67,20 @@ public class Player : Entity
         Vector2 lookDir = ControlsManager.instance.lookInput;
         xIdleAndAttack = lookDir.x;
         yIdleAndAttack = lookDir.y;
+    }
+
+    public void AddDamageDealt(float damage)
+    {
+        combat.totalDamageDealt += damage;
+    }
+
+    public void AddSoulsGained(int souls)
+    {
+
+    }
+
+    public void AddEnemiesKilled(int count)
+    {
+        combat.totalEnemiesKilled += count;
     }
 }

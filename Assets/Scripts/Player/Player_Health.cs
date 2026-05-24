@@ -33,4 +33,12 @@ public class Player_Health : Entity_Health
     {
         return base.TakeDamage(isCrit, damage, damagedDealer);
     }
+
+    protected override void UnBloody()
+    {
+        if (IsDeaded() || isDead)
+        {
+            UI.instance.OpenTotalSummary();
+        }
+    }
 }

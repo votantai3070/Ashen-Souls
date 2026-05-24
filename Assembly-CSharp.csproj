@@ -9,7 +9,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{9CB05AD3-2050-8216-D0BC-635B87CD8D40}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -71,15 +72,14 @@
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_GroundState.cs" />
     <Compile Include="Assets\Scripts\Data\WaveData.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_State.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_StatSlot.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\EnemyRange_SkillManager.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_MeleeState\EnemyMelee_PrepareAttackState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_Range.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_HitState.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_PlayerStats.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillCard.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_ChaseState.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Enum\CardRarityType.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_Melee.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_MeleeState\EnemyMelee_ChaseState.cs" />
@@ -96,11 +96,14 @@
     <Compile Include="Assets\Scripts\Data\Skill_ListDataSO.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\Skill_Base.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_ResourceGroup.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_StatSlot.cs" />
     <Compile Include="Assets\Scripts\Player\PLayer_Stats.cs" />
     <Compile Include="Assets\Scripts\Player\Player_VFX.cs" />
+    <Compile Include="Assets\Scripts\Enum\TotalSummaryType.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillEnemyType.cs" />
     <Compile Include="Assets\Scripts\Enum\CardType.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillEnemy_Base.cs" />
+    <Compile Include="Assets\Scripts\Interface\ITotalSummary.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_Base.cs" />
     <Compile Include="Assets\Scripts\ControlManager\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Data\Stat_DataSO.cs" />
@@ -121,6 +124,7 @@
     <Compile Include="Assets\Scripts\StatSystem\Stat_MajorGroup.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_IdleState.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_Bar.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_TotalSummary.cs" />
     <Compile Include="Assets\Scripts\Interface\IDamageable.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObjectEnemy_EnergyBall.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
@@ -135,7 +139,6 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy_Health.cs" />
     <Compile Include="Assets\Scripts\LevelSystem.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillEnemy_EnergyBall.cs" />
-    <Compile Include="Assets\Scripts\UI\UI_Stats.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_MoveState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_DeadState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Stats.cs" />
@@ -148,6 +151,7 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_MeleeState\EnemyMelee_IdleState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_SprintState.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_Stats.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_FireSoul.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Health.cs" />
@@ -161,6 +165,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Entity\EntityState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_SoulBurst.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_TotalSlot.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSould_ShootAntecipationState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\Skill_AbsorbSoul.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_CreateState.cs" />

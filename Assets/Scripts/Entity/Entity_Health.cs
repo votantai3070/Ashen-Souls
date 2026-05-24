@@ -41,6 +41,10 @@ public class Entity_Health : MonoBehaviour, IDamageable
         if (finalDamage <= 0)
             return false;
 
+        ITotalSummary dealer = damagedDealer.GetComponent<ITotalSummary>();
+        if (dealer != null)
+            dealer.AddDamageDealt(finalDamage);
+
         bool willDie = currentHealth - finalDamage <= 0;
 
         if (!willDie)
@@ -61,7 +65,7 @@ public class Entity_Health : MonoBehaviour, IDamageable
 
         OnHealthChangedInvoke();
 
-        if (IsDead() && !isDead)
+        if (IsDeaded() && !isDead)
             Die();
     }
 
@@ -93,7 +97,12 @@ public class Entity_Health : MonoBehaviour, IDamageable
     }
 
     public int GetCurrentHealth() => currentHealth;
-    protected bool IsDead() => currentHealth <= 0;
+    protected bool IsDeaded() => currentHealth <= 0;
 
     public void OnHealthChangedInvoke() => OnHealthChanged?.Invoke();
+
+    protected virtual void OnDisable()
+    {
+        isDead = false;
+    }
 }

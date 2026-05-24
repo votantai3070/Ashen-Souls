@@ -13,6 +13,7 @@ public class UI : MonoBehaviour
     public UI_Ingame ingameUI { get; private set; }
     public UI_SkillBoard skillBoardUI { get; private set; }
     public UI_Stats statsUI { get; private set; }
+    public UI_TotalSummary totalSummaryUI { get; private set; }
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class UI : MonoBehaviour
         ingameUI = GetComponentInChildren<UI_Ingame>(true);
         skillBoardUI = GetComponentInChildren<UI_SkillBoard>(true);
         statsUI = GetComponentInChildren<UI_Stats>(true);
+        totalSummaryUI = GetComponentInChildren<UI_TotalSummary>(true);
     }
 
     public void SetPlayer(Player player)
@@ -42,9 +44,15 @@ public class UI : MonoBehaviour
     private void StopPlayerControls(bool stopControls)
     {
         if (stopControls)
+        {
+            Time.timeScale = 0f;
             ControlsManager.instance.inputActions.Player.Disable();
+        }
         else
+        {
+            Time.timeScale = 1f;
             ControlsManager.instance.inputActions.Player.Enable();
+        }
     }
 
     private void StopPlayerControlIfNeeded()
@@ -69,16 +77,17 @@ public class UI : MonoBehaviour
         objectSwitching.SetActive(true);
     }
 
-    public void OpenStatBoard()
-    {
-        SwitchTo(statsUI.gameObject);
-        StopPlayerControlIfNeeded();
-    }
-
     public void OpenSkillBoard()
     {
         SwitchTo(skillBoardUI.gameObject);
         statsUI.playerStatsUI.UpdateStatUI();
+        StopPlayerControlIfNeeded();
+    }
+
+    public void OpenTotalSummary()
+    {
+        SwitchTo(totalSummaryUI.gameObject);
+        totalSummaryUI.UpdateTotalSummary();
         StopPlayerControlIfNeeded();
     }
 

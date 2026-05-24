@@ -29,26 +29,30 @@ public class Enemy_Health : Entity_Health
 
     protected override void UnBloody()
     {
-        if (currentHealth <= 0 && !rewardGiven)
+        if (IsDeaded() && !rewardGiven)
         {
             rewardGiven = true;
             enemy.GetPlayer().stats.GainExp(enemy.stats.GetExpDrop());
             dropSystem.SpawnDrop();
+
+            enemy.player.TryGetComponent<ITotalSummary>(out var totalSummary);
+            totalSummary?.AddEnemiesKilled(1);
         }
     }
 
     protected override void KnockBack(Transform damagedDealer, float damage)
     {
-        if (isDead || currentHealth <= 0)
+        if (isDead || IsDeaded())
             return;
 
         base.KnockBack(damagedDealer, damage);
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
+        base.OnDisable();
+
         currentHealth = (int)enemy.stats.GetMaxHealth();
-        isDead = false;
         rewardGiven = false;
     }
 }

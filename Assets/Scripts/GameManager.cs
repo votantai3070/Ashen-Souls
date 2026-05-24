@@ -4,6 +4,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public int currentLevel = 1;
+
     private void Awake()
     {
         if (instance == null)
@@ -16,6 +18,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
 
     public string GetStatNameByType(StatType type)
     {

@@ -6,7 +6,7 @@ public class Player_Stats : Entity_Stats
     private List<string> activeBuff = new List<string>();
 
     private Player player;
-    [SerializeField] private LevelSystem levelSystem = new LevelSystem();
+    public LevelSystem levelSystem = new LevelSystem();
 
     private void Awake()
     {

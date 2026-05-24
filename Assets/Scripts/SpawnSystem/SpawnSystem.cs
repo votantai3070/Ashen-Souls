@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class SpawnSystem : MonoBehaviour
 {
+    public static SpawnSystem instance;
+
     [SerializeField] private PolygonCollider2D confinerBounds;
 
     [Header("Spawn Settings")]
@@ -19,6 +21,11 @@ public class SpawnSystem : MonoBehaviour
     [SerializeField] private List<GameObject> aliveEnemies = new();
 
     private WaveData currentWave;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
@@ -159,4 +166,6 @@ public class SpawnSystem : MonoBehaviour
 
         return randomPoint;
     }
+
+    public int GetElapsedTime() => Mathf.FloorToInt(elapsedTime);
 }
