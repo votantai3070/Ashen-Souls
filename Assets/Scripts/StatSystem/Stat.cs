@@ -22,6 +22,15 @@ public class Stat
         return finalValue;
     }
 
+    public void SetBaseValue(float value)
+    {
+        if (Mathf.Approximately(baseValue, value))
+            return;
+
+        baseValue = value;
+        isDirty = true;
+    }
+
     public void UpdateModifier(float newValue, string sourceName, bool isPercent)
     {
         StatModifier existing = modifiers.Find(m => m.sourceName == sourceName);
@@ -41,8 +50,7 @@ public class Stat
 
     public void AddModifier(float value, string sourceName, bool isPercent)
     {
-        StatModifier modifier = new StatModifier(value, sourceName, isPercent);
-        modifiers.Add(modifier);
+        modifiers.Add(new StatModifier(value, sourceName, isPercent));
         isDirty = true;
     }
 
@@ -60,20 +68,13 @@ public class Stat
         foreach (StatModifier modifier in modifiers)
         {
             if (modifier.isPercent)
-                percentBonus += modifier.value;   //0.1 = 10%
+                percentBonus += modifier.value;
             else
                 finalValue += modifier.value;
         }
 
-        //baseValue * %
         finalValue += baseValue * percentBonus;
-
         return finalValue;
-    }
-
-    public void SetBaseValue(float value)
-    {
-        baseValue = value;
     }
 }
 

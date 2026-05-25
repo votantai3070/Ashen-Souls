@@ -35,12 +35,8 @@ public class SkillObject_Soul : SkillObject_Base
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Soul collided with: " + collision.name);
-
         if (!collision.CompareTag("Player"))
             return;
-
-        Debug.Log("Soul collided with Player!");
 
         AbsorbSoul();
     }

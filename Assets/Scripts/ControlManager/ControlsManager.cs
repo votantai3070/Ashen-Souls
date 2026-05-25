@@ -59,7 +59,19 @@ public class ControlsManager : MonoBehaviour
         inputActions.Player.Move.canceled += ctx => moveInput = Vector2.zero;
 
         // UI
-        inputActions.UI.SwitchToInGame.performed += ctx => UI.instance.SwitchToIngameUI();
+        inputActions.UI.SwitchToInGame.performed += ctx =>
+        {
+            if (UI.instance.IsSkillBoardUI())
+                return;
+
+            if (UI.instance.IsInGameUI())
+            {
+                UI.instance.OpenSettings();
+                return;
+            }
+
+            UI.instance.SwitchToIngameUI();
+        };
     }
 
     // Attack input

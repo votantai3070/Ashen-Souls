@@ -523,7 +523,7 @@
             "id": "272f6d14-89ba-496f-b7ff-215263d3219f",
             "actions": [
                 {
-                    "name": "OpenStatBoard",
+                    "name": "Open Stat Board",
                     "type": "Button",
                     "id": "90be8f05-fdcd-4c82-bee7-56e3934e4883",
                     "expectedControlType": "",
@@ -532,7 +532,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SwitchToInGame",
+                    "name": "Switch To InGame",
                     "type": "Button",
                     "id": "bfb2b728-9c3e-443d-8197-66b736188aac",
                     "expectedControlType": "",
@@ -549,7 +549,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "OpenStatBoard",
+                    "action": "Open Stat Board",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -560,7 +560,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "SwitchToInGame",
+                    "action": "Switch To InGame",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

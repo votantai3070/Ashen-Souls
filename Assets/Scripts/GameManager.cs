@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 
     public int SoulsGained { get; set; } = 0;
     public int TotalSouls { get; set; } = 0;
+    public float TotalDamageDealt { get; set; } = 0;
+    public float TotalEnemiesKilled { get; set; } = 0;
 
     private void Awake()
     {

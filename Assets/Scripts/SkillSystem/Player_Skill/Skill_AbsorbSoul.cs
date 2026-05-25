@@ -35,12 +35,8 @@ public class Skill_AbsorbSoul : Skill_Base
 
     public void AbsorbSoul(SkillObject_Soul soul)
     {
-        Debug.Log("Absorb Soul");
-
         if (Vector3.Distance(soul.transform.position, player.transform.position) > distance)
             return;
-
-        Debug.Log("Absorbed Soul..");
 
         player.AddSoulsGained();
         ObjectPool.instance.Despawn(soul.gameObject);

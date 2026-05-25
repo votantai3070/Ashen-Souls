@@ -3,8 +3,6 @@ using UnityEngine;
 public class Player_Combat : Entity_Combat
 {
     private Player player;
-    public float totalDamageDealt = 0;
-    public float totalEnemiesKilled = 0;
 
     protected override void Awake()
     {

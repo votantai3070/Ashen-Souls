@@ -8,6 +8,7 @@ public class Player_DeadState : PlayerState
     {
         base.Enter();
 
+        player.SetVelocity(0, 0);
         stateTimer = anim.GetCurrentAnimatorStateInfo(0).length;
         player.health.DurationDied = stateTimer;
     }

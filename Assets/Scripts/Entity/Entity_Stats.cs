@@ -5,18 +5,13 @@ public class Entity_Stats : MonoBehaviour
 {
     public event Action OnStatChanged;
 
-    public Stat_SO defaultStatSetup;
+    public Stat_DataSO defaultStatSetup;
 
     [Header("Stat")]
     public Stat_ResourceGroup resource;
     public Stat_MajorGroup major;
     public Stat_OffenseGroup offense;
     public Stat_DefenseGroup defense;
-
-    private void Awake()
-    {
-        ApplyDefaultStatSetup();
-    }
 
     //public float GetElementalDamage(out ElementType element, float scaleFactor)
     //{
@@ -209,6 +204,12 @@ public class Entity_Stats : MonoBehaviour
             return;
         }
 
+        if (resource == null || major == null || offense == null || defense == null)
+        {
+            Debug.LogError($"{name}: One of the stat groups is null.");
+            return;
+        }
+
         // Default resource stats
         resource.maxHealth.SetBaseValue(defaultStatSetup.maxHealth);
         resource.regenHealth.SetBaseValue(defaultStatSetup.healthRegen);
@@ -236,6 +237,8 @@ public class Entity_Stats : MonoBehaviour
         major.agility.SetBaseValue(defaultStatSetup.agility);
         major.intelligence.SetBaseValue(defaultStatSetup.intelligence);
         major.vitality.SetBaseValue(defaultStatSetup.vitality);
+
+        OnStatChangedInvoke();
     }
 
     public void OnStatChangedInvoke() => OnStatChanged?.Invoke();

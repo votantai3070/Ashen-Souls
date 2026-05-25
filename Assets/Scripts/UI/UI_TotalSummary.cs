@@ -17,7 +17,7 @@ public class UI_TotalSummary : MonoBehaviour
             switch (slot.totalType)
             {
                 case TotalSummaryType.DamageDealt:
-                    value = (int)UI.instance.player.combat.totalDamageDealt;
+                    value = (int)GameManager.instance.TotalDamageDealt;
                     break;
                 case TotalSummaryType.Time:
                     value = FormatTime(SpawnSystem.instance.GetElapsedTime());
@@ -26,7 +26,7 @@ public class UI_TotalSummary : MonoBehaviour
                     value = GameManager.instance.SoulsGained;
                     break;
                 case TotalSummaryType.EnemiesKilled:
-                    value = (int)UI.instance.player.combat.totalEnemiesKilled;
+                    value = (int)GameManager.instance.TotalEnemiesKilled;
                     break;
                 case TotalSummaryType.LevelReached:
                     value = UI.instance.player.stats.levelSystem.CurrentLevel();

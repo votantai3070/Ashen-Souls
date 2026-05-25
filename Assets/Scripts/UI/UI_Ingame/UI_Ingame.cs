@@ -46,7 +46,7 @@ public class UI_Ingame : MonoBehaviour
         float percent = currentHealth / maxHealth;
         healthText.text = $"{currentHealth} / {maxHealth}";
 
-        healthBar.GetComponentInParent<UI_Bar>().SetFill(percent);
+        healthBar.GetComponentInParent<UI_Bar>(true).SetFill(percent);
 
         if (percent > 0.5f)
             healthBar.color = GameColors.HPHigh;

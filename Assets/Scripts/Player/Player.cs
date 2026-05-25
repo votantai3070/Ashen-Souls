@@ -80,7 +80,7 @@ public class Player : Entity, ITotalSummary
 
     public void AddDamageDealt(float damage)
     {
-        combat.totalDamageDealt += damage;
+        GameManager.instance.TotalDamageDealt += damage;
     }
 
     public void AddSoulsGained()
@@ -90,6 +90,6 @@ public class Player : Entity, ITotalSummary
 
     public void AddEnemiesKilled()
     {
-        combat.totalEnemiesKilled++;
+        GameManager.instance.TotalEnemiesKilled++;
     }
 }

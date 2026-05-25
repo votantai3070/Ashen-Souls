@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Stat", menuName = "RPG Setup/Stat/Character Stat")]
-public class Stat_SO : ScriptableObject
+public class Stat_DataSO : ScriptableObject
 {
     [Header("Resource Info")]
     public float maxHealth;

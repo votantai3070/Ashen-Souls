@@ -15,6 +15,7 @@ public class UI : MonoBehaviour
     public UI_SkillBoard skillBoardUI { get; private set; }
     public UI_Stats statsUI { get; private set; }
     public UI_TotalSummary totalSummaryUI { get; private set; }
+    public UI_Settings settingsUI { get; private set; }
 
     private Coroutine openSummaryCo;
 
@@ -26,6 +27,7 @@ public class UI : MonoBehaviour
         skillBoardUI = GetComponentInChildren<UI_SkillBoard>(true);
         statsUI = GetComponentInChildren<UI_Stats>(true);
         totalSummaryUI = GetComponentInChildren<UI_TotalSummary>(true);
+        settingsUI = GetComponentInChildren<UI_Settings>(true);
     }
 
     public void SetPlayer(Player player)
@@ -87,6 +89,12 @@ public class UI : MonoBehaviour
         StopPlayerControlIfNeeded();
     }
 
+    public void OpenSettings()
+    {
+        SwitchTo(settingsUI.gameObject);
+        StopPlayerControlIfNeeded();
+    }
+
     public void OpenSummary(float duration)
     {
         if (openSummaryCo != null)
@@ -111,6 +119,10 @@ public class UI : MonoBehaviour
         StopPlayerControls(false);
         SwitchTo(ingameUI.gameObject);
     }
+
+    public bool IsInGameUI() => ingameUI.gameObject.activeSelf;
+
+    public bool IsSkillBoardUI() => skillBoardUI.gameObject.activeSelf;
 
     public void OnSkillSlotChangeInvoke()
     {
