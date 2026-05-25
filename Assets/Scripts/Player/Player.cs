@@ -14,6 +14,7 @@ public class Player : Entity, ITotalSummary
     public Player_AttackState attackState { get; private set; }
     public Player_DashState dashState { get; private set; }
     public Player_SprintState sprintState { get; private set; }
+    public Player_DeadState deadState { get; private set; }
 
     [Space]
 
@@ -43,6 +44,7 @@ public class Player : Entity, ITotalSummary
         attackState = new(this, stateMachine, "Attack");
         dashState = new(this, stateMachine, "Dash");
         sprintState = new(this, stateMachine, "Sprint");
+        deadState = new(this, stateMachine, "Dead");
     }
 
     protected override void Start()
@@ -60,6 +62,13 @@ public class Player : Entity, ITotalSummary
         base.Update();
     }
 
+    public override void TryToDieState()
+    {
+        if (stateMachine.currentState == deadState)
+            return;
+        stateMachine.ChangeState(deadState);
+    }
+
     public void LookAttackIfNeeded()
     {
         if (canLookAttack == false) return;
@@ -74,13 +83,13 @@ public class Player : Entity, ITotalSummary
         combat.totalDamageDealt += damage;
     }
 
-    public void AddSoulsGained(int souls)
+    public void AddSoulsGained()
     {
-
+        GameManager.instance.SoulsGained++;
     }
 
-    public void AddEnemiesKilled(int count)
+    public void AddEnemiesKilled()
     {
-        combat.totalEnemiesKilled += count;
+        combat.totalEnemiesKilled++;
     }
 }

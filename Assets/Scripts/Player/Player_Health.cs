@@ -3,6 +3,7 @@ using UnityEngine;
 public class Player_Health : Entity_Health
 {
     private Player player;
+    public float DurationDied { get; set; } = 1f;
 
     protected override void Awake()
     {
@@ -38,7 +39,8 @@ public class Player_Health : Entity_Health
     {
         if (IsDeaded() || isDead)
         {
-            UI.instance.OpenTotalSummary();
+            player.TryToDieState();
+            UI.instance.OpenSummary(DurationDied);
         }
     }
 }

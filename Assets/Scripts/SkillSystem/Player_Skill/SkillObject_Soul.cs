@@ -5,7 +5,6 @@ public class SkillObject_Soul : SkillObject_Base
     public Skill_AbsorbSoul absorbSoulManager;
     private Transform target;
 
-
     protected override void Update()
     {
         if (target == null)
@@ -27,19 +26,21 @@ public class SkillObject_Soul : SkillObject_Base
 
         if (canMove)
             MoveTowardsClosestTarget(soulSpeed, target);
-
     }
 
     public void AbsorbSoul()
     {
         absorbSoulManager.AbsorbSoul(this);
-        ObjectPool.instance.Despawn(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Soul collided with: " + collision.name);
+
         if (!collision.CompareTag("Player"))
             return;
+
+        Debug.Log("Soul collided with Player!");
 
         AbsorbSoul();
     }

@@ -9,7 +9,12 @@ public class UI_TotalSlot : MonoBehaviour
 
     private void OnValidate()
     {
-        gameObject.name = $"Total Slot - {totalType}";
+        gameObject.name = $"Total Slot - {GetFormattedTotalType()}";
+    }
+
+    private void Start()
+    {
+        totalName.text = GetFormattedTotalType();
     }
 
     public void SetTotalValue(int value)
@@ -17,8 +22,18 @@ public class UI_TotalSlot : MonoBehaviour
         totalValue.text = value.ToString();
     }
 
-    private void Start()
+    private string GetFormattedTotalType()
     {
-        totalName.text = totalType.ToString();
+        return totalType switch
+        {
+            TotalSummaryType.ThreatLevel => "Threat Level",
+            TotalSummaryType.DamageDealt => "Damage Dealt",
+            TotalSummaryType.Time => "Time",
+            TotalSummaryType.SoulsGained => "Souls Gained",
+            TotalSummaryType.EnemiesKilled => "Enemies Killed",
+            TotalSummaryType.LevelReached => "Level Reached",
+            TotalSummaryType.ExperienceGained => "Experience Gained",
+            _ => totalType.ToString()
+        };
     }
 }

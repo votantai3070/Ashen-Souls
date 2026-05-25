@@ -9,8 +9,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{9CB05AD3-2050-8216-D0BC-635B87CD8D40}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -103,7 +102,6 @@
     <Compile Include="Assets\Scripts\Enum\SkillEnemyType.cs" />
     <Compile Include="Assets\Scripts\Enum\CardType.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillEnemy_Base.cs" />
-    <Compile Include="Assets\Scripts\Interface\ITotalSummary.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_Base.cs" />
     <Compile Include="Assets\Scripts\ControlManager\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Data\Stat_DataSO.cs" />
@@ -130,10 +128,12 @@
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_Ingame.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillUpgradeType.cs" />
+    <Compile Include="Assets\Scripts\Interface\ITotalSummary.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Combat.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_Soul.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Stats.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerState\Player_DeadState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_AttackState.cs" />
     <Compile Include="Assets\Scripts\Enum\StatType.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Health.cs" />

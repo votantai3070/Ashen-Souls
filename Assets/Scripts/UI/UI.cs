@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class UI : MonoBehaviour
@@ -14,6 +15,8 @@ public class UI : MonoBehaviour
     public UI_SkillBoard skillBoardUI { get; private set; }
     public UI_Stats statsUI { get; private set; }
     public UI_TotalSummary totalSummaryUI { get; private set; }
+
+    private Coroutine openSummaryCo;
 
     private void Awake()
     {
@@ -84,11 +87,23 @@ public class UI : MonoBehaviour
         StopPlayerControlIfNeeded();
     }
 
-    public void OpenTotalSummary()
+    public void OpenSummary(float duration)
     {
+        if (openSummaryCo != null)
+            StopCoroutine(openSummaryCo);
+
+        openSummaryCo = StartCoroutine(OpenTotalSummaryCo(duration));
+    }
+
+    private IEnumerator OpenTotalSummaryCo(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+
         SwitchTo(totalSummaryUI.gameObject);
         totalSummaryUI.UpdateTotalSummary();
         StopPlayerControlIfNeeded();
+
+        openSummaryCo = null;
     }
 
     public void SwitchToIngameUI()

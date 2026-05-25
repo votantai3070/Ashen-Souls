@@ -20,11 +20,11 @@ public class UI_TotalSummary : MonoBehaviour
                     value = (int)UI.instance.player.combat.totalDamageDealt;
                     break;
                 case TotalSummaryType.Time:
-                    value = SpawnSystem.instance.GetElapsedTime();
+                    value = FormatTime(SpawnSystem.instance.GetElapsedTime());
                     break;
-                //case TotalSummaryType.SoulsGained:
-                //    value = GameManager.instance.playerStats.GetSoulsGained();
-                //    break;
+                case TotalSummaryType.SoulsGained:
+                    value = GameManager.instance.SoulsGained;
+                    break;
                 case TotalSummaryType.EnemiesKilled:
                     value = (int)UI.instance.player.combat.totalEnemiesKilled;
                     break;
@@ -37,5 +37,12 @@ public class UI_TotalSummary : MonoBehaviour
             }
             slot.SetTotalValue(value);
         }
+    }
+
+    private int FormatTime(int totalSeconds)
+    {
+        int minutes = totalSeconds / 60;
+        int seconds = totalSeconds % 60;
+        return minutes * 100 + seconds; // Format as MMSS
     }
 }

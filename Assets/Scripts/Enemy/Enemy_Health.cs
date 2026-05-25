@@ -36,7 +36,7 @@ public class Enemy_Health : Entity_Health
             dropSystem.SpawnDrop();
 
             enemy.player.TryGetComponent<ITotalSummary>(out var totalSummary);
-            totalSummary?.AddEnemiesKilled(1);
+            totalSummary?.AddEnemiesKilled();
         }
     }
 

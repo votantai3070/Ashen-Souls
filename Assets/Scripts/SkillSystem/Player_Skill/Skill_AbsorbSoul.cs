@@ -2,14 +2,18 @@ using UnityEngine;
 
 public class Skill_AbsorbSoul : Skill_Base
 {
+    private Player player;
+
     [Header("Absorb Soul Settings")]
     public GameObject soul;
-    private float distance = .5f;
+    private readonly float distance = 1f;
     public float speedOfSoul = 5f;
 
     protected override void Awake()
     {
         base.Awake();
+
+        player = entity as Player;
     }
 
     public override void SetSkill(Skill_DataSO skillData)
@@ -31,7 +35,14 @@ public class Skill_AbsorbSoul : Skill_Base
 
     public void AbsorbSoul(SkillObject_Soul soul)
     {
-        if (Vector3.Distance(soul.transform.position, entity.transform.position) > distance)
+        Debug.Log("Absorb Soul");
+
+        if (Vector3.Distance(soul.transform.position, player.transform.position) > distance)
             return;
+
+        Debug.Log("Absorbed Soul..");
+
+        player.AddSoulsGained();
+        ObjectPool.instance.Despawn(soul.gameObject);
     }
 }
