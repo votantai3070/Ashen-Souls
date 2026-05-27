@@ -52,9 +52,10 @@ public class Player : Entity, ITotalSummary
         base.Start();
 
         UI.instance.SetPlayer(this);
+        AudioManager.instance.SetPlayer(this);
+        GameManager.instance.SetPlayer(this);
 
         stateMachine.Initialize(idleState);
-
     }
 
     protected override void Update()

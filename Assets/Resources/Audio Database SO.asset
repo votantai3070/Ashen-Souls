@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6bc845b5588ce446a0f10571c552470, type: 3}
+  m_Name: Audio Database SO
+  m_EditorClassIdentifier: Assembly-CSharp::AudioDatabaseSO
+  player: []
+  uiAudio:
+  - audioName: button_click
+    clips: []
+    maxVolume: 0
+  mainMenuMusic:
+  - audioName: playlist_mainMenu
+    clips:
+    - {fileID: 8300000, guid: a9931dd6b3b027e4b998119279ee0a19, type: 3}
+    - {fileID: 8300000, guid: d0424b373bc2a4046b31ca1b8693f413, type: 3}
+    - {fileID: 8300000, guid: a13601f8ae900bd40a08ccf635d1ba78, type: 3}
+    - {fileID: 8300000, guid: 1352ff4b37eba9c42a188b7cfc120fb3, type: 3}
+    - {fileID: 8300000, guid: 8f7a22adfce3fe147b550a1994e46713, type: 3}
+    maxVolume: 0.305
+  levelMusic:
+  - audioName: playlist_level
+    clips: []
+    maxVolume: 0.661

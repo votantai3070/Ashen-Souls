@@ -764,10 +764,10 @@ TextureImporter:
       name: BrownFantasyUISheet_28
       rect:
         serializedVersion: 2
-        x: 120
-        y: 120
-        width: 8
-        height: 8
+        x: 121
+        y: 121
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1050,10 +1050,10 @@ TextureImporter:
       name: BrownFantasyUISheet_41
       rect:
         serializedVersion: 2
-        x: 119
-        y: 104
-        width: 9
-        height: 9
+        x: 120
+        y: 105
+        width: 7
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1671,7 +1671,7 @@ TextureImporter:
         width: 48
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 4, y: 2, z: 4, w: 2}
       customData: 
       outline: []

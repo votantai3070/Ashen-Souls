@@ -16,6 +16,7 @@ public class UI : MonoBehaviour
     public UI_Stats statsUI { get; private set; }
     public UI_TotalSummary totalSummaryUI { get; private set; }
     public UI_Settings settingsUI { get; private set; }
+    public UI_FadeScreen fadeUI { get; private set; }
 
     private Coroutine openSummaryCo;
 
@@ -28,6 +29,7 @@ public class UI : MonoBehaviour
         statsUI = GetComponentInChildren<UI_Stats>(true);
         totalSummaryUI = GetComponentInChildren<UI_TotalSummary>(true);
         settingsUI = GetComponentInChildren<UI_Settings>(true);
+        fadeUI = GetComponentInChildren<UI_FadeScreen>(true);
     }
 
     public void SetPlayer(Player player)
