@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour, ISaveable
 
     public void SaveData(ref GameData data)
     {
-        data.souls = SoulsGained;
+        data.souls = TotalSouls;
         string currentSceneName = SceneManager.GetActiveScene().name;
 
         if (currentSceneName == "MainMenu")

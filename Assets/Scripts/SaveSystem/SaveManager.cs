@@ -16,7 +16,14 @@ public class SaveManager : MonoBehaviour
 
     private void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     private IEnumerator Start()
@@ -40,12 +47,16 @@ public class SaveManager : MonoBehaviour
             return;
         }
 
+        allSaveables = FindISaveables();
+
         foreach (var saveable in allSaveables)
             saveable.LoadData(gameData);
     }
 
     public void SaveGame()
     {
+        allSaveables = FindISaveables();
+
         foreach (ISaveable saveable in allSaveables)
             saveable.SaveData(ref gameData);
 
@@ -71,8 +82,7 @@ public class SaveManager : MonoBehaviour
 
     private List<ISaveable> FindISaveables()
     {
-        return
-            FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+        return FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None)
             .OfType<ISaveable>()
             .ToList();
     }

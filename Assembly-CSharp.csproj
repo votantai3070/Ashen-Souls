@@ -175,6 +175,7 @@
     <Compile Include="Assets\Scripts\Data\Skill_DataSO.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_SkillManager.cs" />
     <Compile Include="Assets\Scripts\Data\BuffEffectData.cs" />
+    <Compile Include="Assets\Scripts\Interface\IOpenUI.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_DashState.cs" />
     <Compile Include="Assets\Scripts\UI\UI.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />

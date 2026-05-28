@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI : MonoBehaviour
+public class UI : MonoBehaviour, IOpenUI
 {
     public event Action OnSkillSlotChange;
     public event Action OnPlayerSet;
@@ -139,6 +139,20 @@ public class UI : MonoBehaviour
     {
         StopPlayerControls(false);
         SwitchTo(ingameUI.gameObject);
+    }
+
+    public void EndGame()
+    {
+        SwitchTo(totalSummaryUI.gameObject);
+        totalSummaryUI.UpdateTotalSummary();
+        StopPlayerControlIfNeeded();
+    }
+
+    public void ReturnToMainMenu()
+    {
+        GameManager.instance.TotalSouls += GameManager.instance.SoulsGained;
+        GameManager.instance.SoulsGained = 0;
+        GameManager.instance.ChangeScene("MainMenu");
     }
 
     public bool IsInGameUI() => ingameUI.gameObject.activeSelf;

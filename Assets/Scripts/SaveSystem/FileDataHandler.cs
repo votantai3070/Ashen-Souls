@@ -36,6 +36,8 @@ public class FileDataHandler
                     write.Write(dataToSave);
                 }
             }
+
+            Debug.Log("JSON SAVE: " + JsonUtility.ToJson(gameData, true));
         }
         catch (Exception e)
         {
