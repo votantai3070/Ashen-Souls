@@ -111,8 +111,8 @@
     <Compile Include="Assets\Scripts\Enum\CardType.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillEnemy_Base.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_Base.cs" />
-    <Compile Include="Assets\Scripts\ControlManager\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\LevelSystem\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\ControlManager\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Data\Stat_DataSO.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\SerializableDictionary.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\Skill_SpinningSword.cs" />

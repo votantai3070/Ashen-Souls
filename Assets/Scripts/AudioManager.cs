@@ -160,4 +160,9 @@ public class AudioManager : MonoBehaviour
     {
         player = playerTransform.transform;
     }
+
+    public void PlayButtonClickSFX()
+    {
+        PlayGlobalSFX("button_click");
+    }
 }

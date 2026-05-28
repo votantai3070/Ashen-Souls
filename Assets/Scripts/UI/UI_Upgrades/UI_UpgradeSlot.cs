@@ -23,7 +23,7 @@ public class UI_UpgradeSlot : MonoBehaviour
         upgradeName.text = GetStatNameByType(statType);
     }
 
-    public void SetRefundedPoints()
+    public void RefundedPoints()
     {
         foreach (var point in upgradePoints)
         {

@@ -53,8 +53,8 @@ public class GameManager : MonoBehaviour, ISaveable
         fadeScreen = FindFadeScreenUI();
         fadeScreen.FadeIn(); // black -> transparent
 
-        if (player == null)
-            yield break;
+        //if (player == null)
+        //    yield break;
     }
 
     private UI_FadeScreen FindFadeScreenUI()

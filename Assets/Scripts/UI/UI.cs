@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
     public event Action OnSkillSlotChange;
     public event Action OnPlayerSet;
+
+    private Button[] buttons;
 
     public static UI instance { get; private set; }
     public Player player { get; private set; }
@@ -30,6 +33,22 @@ public class UI : MonoBehaviour
         totalSummaryUI = GetComponentInChildren<UI_TotalSummary>(true);
         settingsUI = GetComponentInChildren<UI_Settings>(true);
         fadeUI = GetComponentInChildren<UI_FadeScreen>(true);
+    }
+
+    private void Start()
+    {
+        RegisterAllButtonSounds();
+    }
+
+    private void RegisterAllButtonSounds()
+    {
+        buttons = GetComponentsInChildren<Button>(true);
+
+        foreach (Button button in buttons)
+        {
+            button.onClick.RemoveListener(AudioManager.instance.PlayButtonClickSFX);
+            button.onClick.AddListener(AudioManager.instance.PlayButtonClickSFX);
+        }
     }
 
     public void SetPlayer(Player player)

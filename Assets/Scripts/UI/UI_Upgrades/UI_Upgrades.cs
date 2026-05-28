@@ -13,7 +13,7 @@ public class UI_Upgrades : MonoBehaviour
     {
         foreach (var slot in upgradeSlots)
         {
-            slot.SetRefundedPoints();
+            slot.RefundedPoints();
         }
     }
 }

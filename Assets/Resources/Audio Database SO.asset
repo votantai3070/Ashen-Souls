@@ -15,8 +15,9 @@ MonoBehaviour:
   player: []
   uiAudio:
   - audioName: button_click
-    clips: []
-    maxVolume: 0
+    clips:
+    - {fileID: 8300000, guid: 3faa027583a484b4dbc19f5a61ceef03, type: 3}
+    maxVolume: 0.459
   mainMenuMusic:
   - audioName: playlist_mainMenu
     clips:
