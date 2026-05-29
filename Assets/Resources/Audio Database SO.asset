@@ -31,6 +31,10 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: 921aa0c679767b443bd5a0a40c81ac1e, type: 3}
     maxVolume: 0.6
+  - audioName: slime_footstep
+    clips:
+    - {fileID: 8300000, guid: b62cb324c159a734c97483df93c68abf, type: 3}
+    maxVolume: 0.7
   uiAudio:
   - audioName: button_click
     clips:

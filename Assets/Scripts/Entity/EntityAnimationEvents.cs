@@ -21,4 +21,9 @@ public class EntityAnimationEvents : MonoBehaviour
         //entity.entityCombat.Attack(entity);
         entity.entityCombat.SetAttackWindow(true);
     }
+
+    protected virtual void Footstep()
+    {
+        entity.entitySFX.PlayFootstep();
+    }
 }

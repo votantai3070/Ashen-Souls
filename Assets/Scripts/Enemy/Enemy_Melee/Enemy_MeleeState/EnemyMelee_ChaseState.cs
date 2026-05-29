@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class EnemyMelee_ChaseState : EnemyMelee_GroundState

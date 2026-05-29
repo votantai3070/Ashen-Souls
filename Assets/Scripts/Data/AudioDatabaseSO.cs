@@ -20,6 +20,7 @@ public class AudioDatabaseSO : ScriptableObject
         clipCollection = new Dictionary<string, AudioClipData>();
 
         AddToCollection(player);
+        AddToCollection(enemy);
         AddToCollection(uiAudio);
         AddToCollection(mainMenuMusic);
         AddToCollection(levelMusic);

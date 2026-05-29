@@ -7,12 +7,6 @@ public class Enemy : Entity
     public Enemy_Health health { get; private set; }
     public Enemy_Stats stats { get; private set; }
 
-
-
-    [SerializeField] private Transform[] patrolPoints;
-    private Vector3[] patrolPointsPosition;
-    private int currentPatrolIndex;
-
     public float idleTimer = 2f;
     protected bool isFacingRight = true;
 
@@ -47,7 +41,6 @@ public class Enemy : Entity
 
     protected override void Start()
     {
-        //InitializePatrolPoints();
         facingDirection = Vector2.down;
     }
 
@@ -93,29 +86,6 @@ public class Enemy : Entity
         return distance <= attackDistanceToPlayer;
     }
 
-    //public Vector3 GetPatrolDestination()
-    //{
-    //    Vector3 destination = patrolPointsPosition[currentPatrolIndex];
-
-    //    currentPatrolIndex++;
-
-    //    if (currentPatrolIndex >= patrolPoints.Length)
-    //        currentPatrolIndex = 0;
-
-    //    return destination;
-    //}
-
-    //private void InitializePatrolPoints()
-    //{
-    //    patrolPointsPosition = new Vector3[patrolPoints.Length];
-
-    //    for (int i = 0; i < patrolPoints.Length; i++)
-    //    {
-    //        patrolPointsPosition[i] = patrolPoints[i].position;
-    //        patrolPoints[i].gameObject.SetActive(false);
-    //    }
-    //}
-
     public bool CanStopChaseRange() => Vector2.Distance(transform.position, player.position) <= chaseStopDistance;
 
     private void OnDrawGizmosSelected()
@@ -128,8 +98,5 @@ public class Enemy : Entity
         Vector3 rightDir = Quaternion.Euler(0, 0, -detectionAngle / 2f) * facingDirection;
         Gizmos.DrawRay(transform.position, leftDir * detectionRadius);
         Gizmos.DrawRay(transform.position, rightDir * detectionRadius);
-
-        //Gizmos.color = Color.gray;
-        //Gizmos.DrawRay(transform.position, GetDirectionPlayer() * specialDistance);
     }
 }
