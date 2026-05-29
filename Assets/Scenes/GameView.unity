@@ -2573,7 +2573,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main menu
+  m_text: End Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b589d84d9fedb534da1d0a26bc632de5, type: 2}
   m_sharedMaterial: {fileID: -6824095170718026805, guid: b589d84d9fedb534da1d0a26bc632de5, type: 2}
@@ -9394,7 +9394,7 @@ GameObject:
   - component: {fileID: 1166462001}
   - component: {fileID: 1166462000}
   m_Layer: 5
-  m_Name: MainMenuBtn
+  m_Name: EndBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9463,7 +9463,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1166462001}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1854453082}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: EndGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1166462001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70455,7 +70467,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2108936424}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1854453082}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: SwitchToIngameUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2108936424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71925,10 +71949,6 @@ PrefabInstance:
     - target: {fileID: 9171614730211571296, guid: 387b1216e46ee274fab176c7b35fb84c, type: 3}
       propertyPath: m_Name
       value: VFX_OnHit
-      objectReference: {fileID: 0}
-    - target: {fileID: 9171614730211571296, guid: 387b1216e46ee274fab176c7b35fb84c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
