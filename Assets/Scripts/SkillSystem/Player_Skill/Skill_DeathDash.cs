@@ -27,8 +27,11 @@ public class Skill_DeathDash : Skill_Base
 
     public override bool TryUseSkill()
     {
-        DoDashEffect();
-        SetSkillOnCooldown();
+        if (skillType == SkillType.DeathDash)
+        {
+            DoDashEffect();
+            SetSkillOnCooldown();
+        }
 
         return true;
     }

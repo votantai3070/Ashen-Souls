@@ -112,11 +112,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   target: {fileID: 0}
+  damage: 0
   cooldown: 0
   speed: 0
   checkEnemyRadius: 0
   checkDamageRadius: 0
   duration: 0
+  attackCooldownGuard: 0
 --- !u!1 &3766081132235466066
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,9 +619,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16aeb9b790c4de54e86f0eb3fba55c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Entity_VFX
-  critDamageVfx: {fileID: 0}
+  critDamageVfx: {fileID: 3991962256524217329, guid: ba9d092ac2488274d85c65015c7cb46c, type: 3}
   critDamageColor: {r: 1, g: 0.84, b: 0, a: 1}
-  hitImpactVfx: {fileID: 6462340573606345299, guid: 387b1216e46ee274fab176c7b35fb84c, type: 3}
+  hitImpactVfx: {fileID: 9171614730211571296, guid: 387b1216e46ee274fab176c7b35fb84c, type: 3}
   impactColor: {r: 1, g: 1, b: 1, a: 1}
   damagedMat: {fileID: 2100000, guid: 6ab4b867473c3724ea468dabb06b0e45, type: 2}
   chillVfx: {r: 0, g: 0.75, b: 1, a: 1}

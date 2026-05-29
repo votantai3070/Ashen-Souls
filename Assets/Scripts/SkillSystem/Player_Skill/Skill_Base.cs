@@ -80,6 +80,11 @@ public class Skill_Base : MonoBehaviour
 
     public virtual bool CanUseSkill()
     {
+        if (skillType == SkillType.None)
+        {
+            return false;
+        }
+
         if (OnCooldown())
         {
             Debug.Log("On Cooldown");

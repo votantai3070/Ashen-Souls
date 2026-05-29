@@ -30,15 +30,14 @@ public class PlayerState : EntityState
 
         if (controls.inputActions.Player.Dash.WasPressedThisFrame() && CanDash())
             stateMachine.ChangeState(player.dashState);
-
-        //if (controls.inputActions.Player.Sprint.IsPressed())
-        //{
-        //    stateMachine.ChangeState(player.sprintState);
-        //}
     }
+
     private bool CanDash()
     {
         if (skillManager.deathDash.CanUseSkill() == false)
+            return false;
+
+        if (skillManager.deathDash.skillType == SkillType.None)
             return false;
 
         if (stateMachine.currentState == player.dashState)
