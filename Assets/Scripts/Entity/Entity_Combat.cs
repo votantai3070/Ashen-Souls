@@ -69,6 +69,14 @@ public class Entity_Combat : MonoBehaviour
 
                     if (entity != null && entity.entityVFX != null)
                         entity.entityVFX.GetImapctVfx(enemy.transform, isCriticalHit);
+
+                    if (entity != null && entity.entitySFX != null)
+                        entity.entitySFX.PlayAttack();
+                }
+                else
+                {
+                    if (entity != null && entity.entitySFX != null)
+                        entity.entitySFX.PlayAttackMiss();
                 }
             }
         }

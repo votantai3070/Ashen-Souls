@@ -6,6 +6,7 @@ using UnityEngine;
 public class AudioDatabaseSO : ScriptableObject
 {
     public List<AudioClipData> player;
+    public List<AudioClipData> enemy;
     public List<AudioClipData> uiAudio;
 
     [Header("Music Lists")]

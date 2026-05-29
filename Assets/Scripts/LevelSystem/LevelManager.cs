@@ -6,6 +6,6 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        //AudioManager.instance.StartBGM(musicGroupName);
+        AudioManager.instance.StartBGM(musicGroupName);
     }
 }

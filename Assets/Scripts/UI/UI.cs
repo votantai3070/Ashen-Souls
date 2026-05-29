@@ -107,12 +107,18 @@ public class UI : MonoBehaviour, IOpenUI
     {
         SwitchTo(skillBoardUI.gameObject);
         statsUI.playerStatsUI.UpdateStatUI();
+
+        AudioManager.instance.PlayGlobalSFX("ui_open");
+
         StopPlayerControlIfNeeded();
     }
 
     public void OpenSettings()
     {
         SwitchTo(settingsUI.gameObject);
+
+        AudioManager.instance.PlayGlobalSFX("ui_open");
+
         StopPlayerControlIfNeeded();
     }
 
@@ -130,6 +136,9 @@ public class UI : MonoBehaviour, IOpenUI
 
         SwitchTo(totalSummaryUI.gameObject);
         totalSummaryUI.UpdateTotalSummary();
+
+        //AudioManager.instance.PlayGlobalSFX("ui_open");
+
         StopPlayerControlIfNeeded();
 
         openSummaryCo = null;

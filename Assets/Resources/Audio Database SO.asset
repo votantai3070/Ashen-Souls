@@ -12,22 +12,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6bc845b5588ce446a0f10571c552470, type: 3}
   m_Name: Audio Database SO
   m_EditorClassIdentifier: Assembly-CSharp::AudioDatabaseSO
-  player: []
+  player:
+  - audioName: attack
+    clips:
+    - {fileID: 8300000, guid: 02a2e3ea36e9eb945b96f372ac3fdedb, type: 3}
+    maxVolume: 0.3
+  - audioName: attack_miss
+    clips:
+    - {fileID: 8300000, guid: 97b7413794ceb4848bd79047933e43f0, type: 3}
+    - {fileID: 8300000, guid: 569b70896fe147f41a7f3409c297a2df, type: 3}
+    maxVolume: 0.6
+  - audioName: level_up
+    clips:
+    - {fileID: 8300000, guid: b7b8ca8451caace4e9cca22d56c0bb52, type: 3}
+    maxVolume: 1
+  enemy:
+  - audioName: slime_dead
+    clips:
+    - {fileID: 8300000, guid: 921aa0c679767b443bd5a0a40c81ac1e, type: 3}
+    maxVolume: 0.6
   uiAudio:
   - audioName: button_click
     clips:
-    - {fileID: 8300000, guid: 3faa027583a484b4dbc19f5a61ceef03, type: 3}
-    maxVolume: 0.459
+    - {fileID: 8300000, guid: 011648c9e5a28f248b4fa3dcd23f72ef, type: 3}
+    maxVolume: 0.6
+  - audioName: ui_open
+    clips:
+    - {fileID: 8300000, guid: c105eb7b8ad2e3a4291c9b15dfa00836, type: 3}
+    maxVolume: 0.6
+  - audioName: ui_close
+    clips:
+    - {fileID: 8300000, guid: de70d832064bed24f9cbe2411e230552, type: 3}
+    maxVolume: 0.6
   mainMenuMusic:
   - audioName: playlist_mainMenu
     clips:
+    - {fileID: 8300000, guid: dd87c014090358f4baa5507610ed5e25, type: 3}
     - {fileID: 8300000, guid: a9931dd6b3b027e4b998119279ee0a19, type: 3}
+    - {fileID: 8300000, guid: db507db452d7b3b49a11e05eac8873f3, type: 3}
+    - {fileID: 8300000, guid: cdcb69344467d9a48a94add743517649, type: 3}
     - {fileID: 8300000, guid: d0424b373bc2a4046b31ca1b8693f413, type: 3}
+    - {fileID: 8300000, guid: b3ea2482f7fec5c40a5bebf6c3603e08, type: 3}
+    - {fileID: 8300000, guid: 3a778459a3d087c4fbcc8bb0856f2312, type: 3}
     - {fileID: 8300000, guid: a13601f8ae900bd40a08ccf635d1ba78, type: 3}
     - {fileID: 8300000, guid: 1352ff4b37eba9c42a188b7cfc120fb3, type: 3}
     - {fileID: 8300000, guid: 8f7a22adfce3fe147b550a1994e46713, type: 3}
-    maxVolume: 0.305
+    maxVolume: 0.6
   levelMusic:
   - audioName: playlist_level
-    clips: []
-    maxVolume: 0.661
+    clips:
+    - {fileID: 8300000, guid: 513f0d0021c83c64d9dc5f59d0b423f3, type: 3}
+    - {fileID: 8300000, guid: f885ae1a915719c40a4ea5e48a31f4e8, type: 3}
+    - {fileID: 8300000, guid: 908d734e7a99dc1459e668353e0dbb92, type: 3}
+    - {fileID: 8300000, guid: 72d7f5423ec877b46bc77af5904328da, type: 3}
+    - {fileID: 8300000, guid: d8f72da55c200e641a9188b8cdf6236c, type: 3}
+    - {fileID: 8300000, guid: 0c0ba7f71cc2a724993e3898b1c98826, type: 3}
+    maxVolume: 0.6

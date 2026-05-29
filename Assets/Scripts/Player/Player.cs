@@ -8,6 +8,7 @@ public class Player : Entity, ITotalSummary
     public Player_Health health { get; private set; }
     public Player_Stats stats { get; private set; }
     public Player_VFX vFX { get; private set; }
+    public Player_SFX sFX { get; private set; }
 
     public Player_IdleState idleState { get; private set; }
     public Player_MoveState moveState { get; private set; }
@@ -36,6 +37,7 @@ public class Player : Entity, ITotalSummary
         health = GetComponent<Player_Health>();
         stats = GetComponent<Player_Stats>();
         vFX = GetComponent<Player_VFX>();
+        sFX = GetComponentInChildren<Player_SFX>();
 
         controls.Init(this);
 

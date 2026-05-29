@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\AttackArea.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_SpinningSword.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Health.cs" />
+    <Compile Include="Assets\Scripts\Player\Player_SFX.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\PlayerState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_GroundState.cs" />
     <Compile Include="Assets\Scripts\Data\WaveData.cs" />
@@ -81,7 +82,6 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_Range.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_HitState.cs" />
-    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillCard.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_ChaseState.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_PlayerStats.cs" />
@@ -151,6 +151,7 @@
     <Compile Include="Assets\Scripts\Enum\StatType.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Health.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillEnemy_EnergyBall.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_MoveState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_DeadState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Stats.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_AttackState.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Settings.cs" />
     <Compile Include="Assets\Scripts\Data\Skill_BaseSO.cs" />
+    <Compile Include="Assets\Scripts\Entity\Entity_SFX.cs" />
     <Compile Include="Assets\Scripts\VFX_AutoController.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SkillBoard\UI_SkillCardBack.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_MeleeState\EnemyMelee_IdleState.cs" />

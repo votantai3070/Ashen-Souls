@@ -7,6 +7,7 @@ public class Entity : MonoBehaviour
     public Entity_Stats entityStats { get; private set; }
     public Entity_Health entityHealth { get; private set; }
     public Entity_VFX entityVFX { get; private set; }
+    public Entity_SFX entitySFX { get; private set; }
     public StateMachine<EntityState> stateMachine { get; private set; }
     public Rigidbody2D rb { get; private set; }
     public Animator anim { get; private set; }
@@ -40,6 +41,7 @@ public class Entity : MonoBehaviour
         entityCombat = GetComponent<Entity_Combat>();
         entityHealth = GetComponent<Entity_Health>();
         entityVFX = GetComponent<Entity_VFX>();
+        entitySFX = GetComponentInChildren<Entity_SFX>();
 
         stateMachine = new();
         rb = GetComponent<Rigidbody2D>();

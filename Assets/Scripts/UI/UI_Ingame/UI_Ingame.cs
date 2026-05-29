@@ -75,7 +75,6 @@ public class UI_Ingame : MonoBehaviour
 
     public void ShowLevelUpEffect(int newLevel)
     {
-        // animation || effect
-        Debug.Log($"[UI] Level Up → {newLevel}!");
+        UI.instance.player.sFX.PlayLevelUp();
     }
 }
