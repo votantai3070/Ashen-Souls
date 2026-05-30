@@ -14,4 +14,14 @@ public class Player_SFX : Entity_SFX
     {
         AudioManager.instance.PlaySFX("attack_miss", audioSource);
     }
+
+    public override void PlayHit()
+    {
+        AudioManager.instance.PlaySFX("hit", audioSource);
+    }
+
+    public override void PlayDeath()
+    {
+        AudioManager.instance.PlaySFX("death", audioSource);
+    }
 }

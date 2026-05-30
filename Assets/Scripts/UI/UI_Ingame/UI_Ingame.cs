@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class UI_Ingame : MonoBehaviour
 {
     public UI_SkillHolder skillHolder { get; private set; }
+    public UI_Wave waveUI { get; private set; }
 
     [Header("Health Bar")]
     [SerializeField] private Image healthBar;
@@ -18,6 +19,7 @@ public class UI_Ingame : MonoBehaviour
     private void Awake()
     {
         skillHolder = GetComponentInChildren<UI_SkillHolder>(true);
+        waveUI = GetComponentInChildren<UI_Wave>(true);
 
         if (expBar == null)
             expBar = GetComponentInParent<UI_Bar>();

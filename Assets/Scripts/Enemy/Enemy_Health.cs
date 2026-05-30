@@ -31,6 +31,7 @@ public class Enemy_Health : Entity_Health
     {
         if (IsDeaded() && !rewardGiven)
         {
+            base.UnBloody();
             rewardGiven = true;
             enemy.GetPlayer().stats.GainExp(enemy.stats.GetExpDrop());
             dropSystem.SpawnDrop();

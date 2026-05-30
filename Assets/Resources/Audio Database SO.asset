@@ -15,25 +15,43 @@ MonoBehaviour:
   player:
   - audioName: attack
     clips:
-    - {fileID: 8300000, guid: 02a2e3ea36e9eb945b96f372ac3fdedb, type: 3}
+    - {fileID: 8300000, guid: db31027953e9aca44b33e3b28baedc88, type: 3}
+    - {fileID: 8300000, guid: 71e05e39c300c4840b54e8c87a217a20, type: 3}
+    - {fileID: 8300000, guid: 9578ce196e3cc1f4f85541a9dfc70096, type: 3}
     maxVolume: 0.3
   - audioName: attack_miss
     clips:
     - {fileID: 8300000, guid: 97b7413794ceb4848bd79047933e43f0, type: 3}
-    - {fileID: 8300000, guid: 569b70896fe147f41a7f3409c297a2df, type: 3}
+    - {fileID: 8300000, guid: e013b1f14eac9424b96194b0f4390ec2, type: 3}
     maxVolume: 0.6
+  - audioName: player_dead
+    clips:
+    - {fileID: 8300000, guid: eb95a18c1303bfb4ea22dbab781533e8, type: 3}
+    maxVolume: 1
   - audioName: level_up
     clips:
     - {fileID: 8300000, guid: b7b8ca8451caace4e9cca22d56c0bb52, type: 3}
     maxVolume: 1
   enemy:
-  - audioName: slime_dead
+  - audioName: enemy_dead
     clips:
     - {fileID: 8300000, guid: 921aa0c679767b443bd5a0a40c81ac1e, type: 3}
     maxVolume: 0.6
   - audioName: slime_footstep
     clips:
     - {fileID: 8300000, guid: b62cb324c159a734c97483df93c68abf, type: 3}
+    maxVolume: 0.7
+  - audioName: bat_move
+    clips:
+    - {fileID: 8300000, guid: 258953c905d9b8247b897750414d57cc, type: 3}
+    maxVolume: 0.7
+  - audioName: monster_dead
+    clips:
+    - {fileID: 8300000, guid: b4af7866018bafa46a63640f316dcae3, type: 3}
+    maxVolume: 0.7
+  - audioName: monster_attack
+    clips:
+    - {fileID: 8300000, guid: a9bab00e63baed548b3cd873e52b3c99, type: 3}
     maxVolume: 0.7
   uiAudio:
   - audioName: button_click

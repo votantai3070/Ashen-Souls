@@ -39,6 +39,7 @@ public class Player_Health : Entity_Health
     {
         if (IsDeaded() || isDead)
         {
+            base.UnBloody();
             player.TryToDieState();
             UI.instance.OpenSummary(DurationDied);
         }

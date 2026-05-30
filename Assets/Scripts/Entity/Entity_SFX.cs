@@ -19,4 +19,8 @@ public class Entity_SFX : MonoBehaviour
     public virtual void PlayHit()
     {
     }
+
+    public virtual void PlayDeath()
+    {
+    }
 }

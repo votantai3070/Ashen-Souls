@@ -36,6 +36,11 @@ public class SpawnSystem : MonoBehaviour
     private void Update()
     {
         SpawningEnemy();
+
+        if (currentWave != null)
+        {
+            UI.instance.ingameUI.waveUI.SetWaveInfo(currentWave.waveName, elapsedTime, currentWave);
+        }
     }
 
     public void StartSpawning()

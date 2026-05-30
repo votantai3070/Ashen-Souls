@@ -49,20 +49,20 @@ MonoBehaviour:
   maxRetry: 50
   waves:
   - waveName: Wave 1
-    startTime: 100
-    endTime: 200
-    minSpawnInterval: 1
-    maxSpawnInterval: 2
-    maxEnemiesAlive: 30
-    enemies:
-    - prefab: {fileID: 3547200286111319526, guid: 8abf69ca59ab109499d2d8341210b2cd, type: 3}
-      weight: 100
-  - waveName: Wave 2
     startTime: 0
     endTime: 100
     minSpawnInterval: 1
     maxSpawnInterval: 2
     maxEnemiesAlive: 30
+    enemies:
+    - prefab: {fileID: 3968612809859968654, guid: 8abf69ca59ab109499d2d8341210b2cd, type: 3}
+      weight: 100
+  - waveName: Wave 2
+    startTime: 100
+    endTime: 200
+    minSpawnInterval: 1
+    maxSpawnInterval: 2
+    maxEnemiesAlive: 40
     enemies:
     - prefab: {fileID: 8090043777706953505, guid: 4cbb210403faedd45a331964b016ba43, type: 3}
       weight: 50
@@ -73,11 +73,11 @@ MonoBehaviour:
     endTime: 300
     minSpawnInterval: 1
     maxSpawnInterval: 2
-    maxEnemiesAlive: 20
+    maxEnemiesAlive: 50
     enemies:
     - prefab: {fileID: 3285970535671639790, guid: 2cc547d883b811240927e8e7d1bd3bb6, type: 3}
       weight: 30
-    - prefab: {fileID: 3547200286111319526, guid: 8abf69ca59ab109499d2d8341210b2cd, type: 3}
+    - prefab: {fileID: 3968612809859968654, guid: 8abf69ca59ab109499d2d8341210b2cd, type: 3}
       weight: 100
     - prefab: {fileID: 8090043777706953505, guid: 4cbb210403faedd45a331964b016ba43, type: 3}
       weight: 70

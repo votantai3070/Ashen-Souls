@@ -71,7 +71,7 @@ public class Entity_Health : MonoBehaviour, IDamageable
 
     protected virtual void UnBloody()
     {
-
+        entity.entitySFX?.PlayDeath();
     }
 
     protected virtual void KnockBack(Transform damagedDealer, float damage)
