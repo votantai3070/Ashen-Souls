@@ -42,7 +42,7 @@ public class SaveManager : MonoBehaviour
 
         if (gameData == null)
         {
-            Debug.Log("No save data found, creating new save!");
+            Debug.Log("No save upgradeData found, creating new save!");
             gameData = new GameData();
             return;
         }
@@ -57,6 +57,9 @@ public class SaveManager : MonoBehaviour
     {
         allSaveables = FindISaveables();
 
+        // Clear the upgrade points before saving, as they are calculated on load and not needed to be saved.
+        gameData.upgradePoints.Clear();
+
         foreach (ISaveable saveable in allSaveables)
             saveable.SaveData(ref gameData);
 
@@ -65,7 +68,7 @@ public class SaveManager : MonoBehaviour
 
     public GameData GetGameData() => gameData;
 
-    [ContextMenu("**** Delete save data ****")]
+    [ContextMenu("**** Delete save upgradeData ****")]
     public void DeleteSaveData()
     {
         dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, encryption);

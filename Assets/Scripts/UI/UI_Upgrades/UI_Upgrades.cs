@@ -1,8 +1,11 @@
+using System;
 using TMPro;
 using UnityEngine;
 
 public class UI_Upgrades : MonoBehaviour
 {
+    public event Action OnUpgradePoints;
+
     public UI_UpgradeSlot[] upgradeSlots;
     [SerializeField] private GameObject soulsInfo;
 
@@ -14,6 +17,12 @@ public class UI_Upgrades : MonoBehaviour
     private void OnEnable()
     {
         UpdateSoulInfo();
+        OnUpgradePoints += UpdateSoulInfo;
+    }
+
+    private void OnDisable()
+    {
+        OnUpgradePoints -= UpdateSoulInfo;
     }
 
     public void RefundedAllPoints()
@@ -22,10 +31,17 @@ public class UI_Upgrades : MonoBehaviour
         {
             slot.RefundedPoints();
         }
+
+        OnUpgradePointsInvoke();
     }
 
     private void UpdateSoulInfo()
     {
         soulsInfo.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.instance.TotalSouls.ToString();
+    }
+
+    public void OnUpgradePointsInvoke()
+    {
+        OnUpgradePoints?.Invoke();
     }
 }

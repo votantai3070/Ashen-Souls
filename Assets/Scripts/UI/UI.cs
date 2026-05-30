@@ -20,6 +20,7 @@ public class UI : MonoBehaviour, IOpenUI
     public UI_TotalSummary totalSummaryUI { get; private set; }
     public UI_Settings settingsUI { get; private set; }
     public UI_FadeScreen fadeUI { get; private set; }
+    public UI_Upgrades upgradesUI { get; private set; }
 
     private Coroutine openSummaryCo;
 
@@ -33,6 +34,7 @@ public class UI : MonoBehaviour, IOpenUI
         totalSummaryUI = GetComponentInChildren<UI_TotalSummary>(true);
         settingsUI = GetComponentInChildren<UI_Settings>(true);
         fadeUI = GetComponentInChildren<UI_FadeScreen>(true);
+        upgradesUI = GetComponentInChildren<UI_Upgrades>(true);
     }
 
     private void Start()

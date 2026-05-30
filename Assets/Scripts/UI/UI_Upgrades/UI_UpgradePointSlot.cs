@@ -2,13 +2,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
-public class UI_UpgradePoint : MonoBehaviour
+public class UI_UpgradePointSlot : MonoBehaviour
 {
+    [SerializeField] private Image connectorLine;
+    [SerializeField] private Sprite connectorUnlockedSprite;
+    [SerializeField] private Sprite connectorLockedSprite;
+
     [SerializeField] private Sprite unlockedSprite;
     [SerializeField] private Sprite lockedSprite;
     [SerializeField] private bool isUnlocked;
 
-    [SerializeField] private UI_UpgradePoint prerequisiteSkill;
+    [SerializeField] private UI_UpgradePointSlot prerequisiteSkill;
+
+    [Space]
+    [SerializeField] private int pointCost = 1;
 
     private Image upgradePointImage;
 
@@ -29,6 +36,8 @@ public class UI_UpgradePoint : MonoBehaviour
     }
 #endif
 
+    public int GetPointCost() => pointCost;
+
     public void SetUnlocked(bool unlocked)
     {
         isUnlocked = unlocked;
@@ -37,11 +46,11 @@ public class UI_UpgradePoint : MonoBehaviour
 
     public void Unlock()
     {
-        if (prerequisiteSkill != null && !prerequisiteSkill.IsUnlocked())
-        {
-            Debug.LogWarning($"{name}: Cannot unlock because prerequisite skill is not unlocked.", this);
+        if (!CanUnlock())
             return;
-        }
+
+        GameManager.instance.MinusSouls(pointCost);
+        UI.instance.upgradesUI.OnUpgradePointsInvoke();
         SetUnlocked(true);
     }
 
@@ -69,5 +78,26 @@ public class UI_UpgradePoint : MonoBehaviour
         }
 
         upgradePointImage.sprite = targetSprite;
+        if (connectorLine != null)
+        {
+            connectorLine.sprite = isUnlocked ? connectorUnlockedSprite : connectorLockedSprite;
+        }
+    }
+
+    private bool CanUnlock()
+    {
+        if (prerequisiteSkill != null && !prerequisiteSkill.IsUnlocked())
+        {
+            Debug.LogWarning($"{name}: Cannot unlock because prerequisite skill is not unlocked.", this);
+            return false;
+        }
+
+        if (GameManager.instance.TotalSouls < pointCost)
+        {
+            Debug.LogWarning($"{name}: Not enough souls to unlock. Required: {pointCost}, Available: {GameManager.instance.TotalSouls}", this);
+            return false;
+        }
+
+        return true;
     }
 }

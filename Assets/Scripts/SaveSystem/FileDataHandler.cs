@@ -42,7 +42,7 @@ public class FileDataHandler
         catch (Exception e)
         {
             // Log any error that happens
-            Debug.LogError("Error on trying tto save data to file: " + fullPath + "\n" + e);
+            Debug.LogError("Error on trying tto save upgradeData to file: " + fullPath + "\n" + e);
         }
     }
 
@@ -77,7 +77,7 @@ public class FileDataHandler
             catch (Exception e)
             {
                 // Log any error that happen
-                Debug.Log("Error on trying to load data from file: " + fullPath + "\n" + e);
+                Debug.Log("Error on trying to load upgradeData from file: " + fullPath + "\n" + e);
             }
         }
 

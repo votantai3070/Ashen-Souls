@@ -2,7 +2,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "List of skill data - ", menuName = "RPG Setup/Skill/Skill List")]
+[CreateAssetMenu(fileName = "List of skill upgradeData - ", menuName = "RPG Setup/Skill/Skill List")]
 public class Skill_ListDataSO : ScriptableObject
 {
     public Skill_BaseSO[] skillList;

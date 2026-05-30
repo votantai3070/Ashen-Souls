@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour, ISaveable
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start()
+    {
+        TotalSouls = 1000; // for testing
+    }
+
     public void ChangeScene(string sceneName)
     {
         Time.timeScale = 1;
@@ -65,6 +70,16 @@ public class GameManager : MonoBehaviour, ISaveable
             return FindFirstObjectByType<UI_FadeScreen>();
     }
 
+    public void AddSouls(int souls)
+    {
+        TotalSouls += souls;
+    }
+
+    public void MinusSouls(int souls)
+    {
+        TotalSouls -= souls;
+    }
+
     public void SetPlayer(Player player)
     {
         this.player = player;
@@ -72,7 +87,7 @@ public class GameManager : MonoBehaviour, ISaveable
 
     public void LoadData(GameData data)
     {
-        TotalSouls = data.souls;
+        //TotalSouls = data.souls;
 
         dataLoaded = true;
     }
