@@ -196,6 +196,11 @@ public class Entity_Stats : MonoBehaviour
         }
     }
 
+    public void DefaultStatSetup(Stat_DataSO data)
+    {
+        defaultStatSetup = data;
+    }
+
     public void ApplyDefaultStatSetup()
     {
         if (defaultStatSetup == null)

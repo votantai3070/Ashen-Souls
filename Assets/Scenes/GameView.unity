@@ -5219,6 +5219,9 @@ MonoBehaviour:
   - tag: VFX_OnCriticalHit
     prefab: {fileID: 3991962256524217329, guid: ba9d092ac2488274d85c65015c7cb46c, type: 3}
     initialSize: 3
+  - tag: SkillObject_SlashSword
+    prefab: {fileID: 586065914269715310, guid: 13389143cab4ba942af265bd38769878, type: 3}
+    initialSize: 3
 --- !u!4 &597912176
 Transform:
   m_ObjectHideFlags: 0
@@ -10065,6 +10068,7 @@ GameObject:
   - component: {fileID: 1261357903}
   - component: {fileID: 1261357904}
   - component: {fileID: 1261357905}
+  - component: {fileID: 1261357906}
   m_Layer: 0
   m_Name: Skills
   m_TagString: Untagged
@@ -10289,6 +10293,45 @@ MonoBehaviour:
     modifiers: []
   deadDashPrefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
   dashInterval: 0.05
+--- !u!114 &1261357906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261357899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0bc91bacd76f24084ec8a7dd95068c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Skill_SlashSword
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 64
+  target: {fileID: 0}
+  targetCheck: {fileID: 1261357900}
+  skillType: 0
+  speed: 0
+  checkEnemyRadius: 0
+  checkDamageRadius: 0
+  attackCooldownGuard: 0
+  cooldown: 0
+  duration: 5
+  currentLevel: 1
+  maxLevel: 10
+  damageSkill:
+    baseValue: 0
+    modifiers: []
+  speedSkill:
+    baseValue: 0
+    modifiers: []
+  sizeSkill:
+    baseValue: 0
+    modifiers: []
+  attackSpeedSkill:
+    baseValue: 0
+    modifiers: []
+  slashSwordGo: {fileID: 0}
 --- !u!1 &1266279449
 GameObject:
   m_ObjectHideFlags: 0
@@ -11265,7 +11308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_SkillManager
   skills:
-  - {fileID: 11400000, guid: 6f93ee8d2ae5e02469fd25a468a93217, type: 2}
+  - {fileID: 11400000, guid: 2b345ef22a1d7dd44bc790c06e918103, type: 2}
 --- !u!1 &1374141994
 GameObject:
   m_ObjectHideFlags: 0
@@ -72255,6 +72298,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &3110151967619877442 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+  m_PrefabInstance: {fileID: 9104017120435064344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3362544745905830275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72746,6 +72794,75 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &9104017120435064344
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 586065914269715310, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_Name
+      value: SkillObject_SlashSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 586065914269715310, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943254191141631616, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: targetCheck
+      value: 
+      objectReference: {fileID: 3110151967619877442}
+    - target: {fileID: 1943254191141631616, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: checkDamageRadius
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.83771
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.23616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 13389143cab4ba942af265bd38769878, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -72772,3 +72889,4 @@ SceneRoots:
   - {fileID: 1426481175}
   - {fileID: 431883581}
   - {fileID: 810876325}
+  - {fileID: 9104017120435064344}

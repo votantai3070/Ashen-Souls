@@ -18,7 +18,6 @@ public class Player : Entity, ITotalSummary
     public Player_DeadState deadState { get; private set; }
 
     [Space]
-
     public bool canLookAttack;
 
     [Header("Dash & Sprint")]
@@ -64,6 +63,12 @@ public class Player : Entity, ITotalSummary
     {
         base.Update();
     }
+
+    //public void SetupPlayer(PlayerData data)
+    //{
+    //    stats.DefaultStatSetup(data.defaultCharacterStat);
+    //    anim.runtimeAnimatorController = data.animator;
+    //}
 
     public override void TryToDieState()
     {

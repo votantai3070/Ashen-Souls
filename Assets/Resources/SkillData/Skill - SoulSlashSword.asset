@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8e413113d6c5a499648b98dc13fe60, type: 3}
+  m_Name: Skill - SoulSlashSword
+  m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
+  saveId: 2b345ef22a1d7dd44bc790c06e918103
+  skillId: 2b345ef22a1d7dd44bc790c06e918103
+  displayName: Spinning Sword
+  description: Swing your blade in a circle, dealing damage to all nearby enemies.
+  icon: {fileID: -748005180, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
+  duration: 1
+  prerequisiteSkill: {fileID: 0}
+  skillType: 7
+  cardType: 0
+  skillRarity: 300
+  skillRollChance: 70.1
+  maxSkillRollChance: 80
+  skillObjectPrefab: {fileID: 586065914269715310, guid: 13389143cab4ba942af265bd38769878, type: 3}
+  orbitRadius: 1.2
+  swordCount: 1
+  speed: 0.8
+  size: 1
+  cooldown: 3
+  distanceToAttack: 3
+  damage: 20
+  upgradeBoostChance: 30
+  attackCooldownGuard: 0.5

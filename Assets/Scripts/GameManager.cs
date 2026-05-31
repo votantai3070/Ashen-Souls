@@ -87,8 +87,7 @@ public class GameManager : MonoBehaviour, ISaveable
 
     public void LoadData(GameData data)
     {
-        //TotalSouls = data.souls;
-
+        TotalSouls = data.souls;
         dataLoaded = true;
     }
 

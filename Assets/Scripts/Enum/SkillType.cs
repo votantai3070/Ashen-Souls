@@ -13,17 +13,10 @@ public enum SkillType
     // Card Skill Attacks
     SpinningSword, // A powerful spinning attack that hits all nearby enemies.
     FireSoul, // Unleash a fiery soul blast that damages enemies in a line.
-    SoulCleave, // A sweeping attack that cleaves through enemies, dealing damage
+    SoulSlashSword, // Slash forward with a soul-infused sword, dealing damage to enemies in the path and applying a bleed effect.
     SpriritArrow, // Shoot a spirit arrow that pierces through enemies, dealing damage and applying a debuff.
     SoulBurst, // Unleash a burst of soul energy around the character, damaging and knocking back enemies.
     DeathDash, // Dash forward, dealing damage to enemies in the path and leaving a trail of soul energy that damages enemies over time.
-
-    // Card Skill Buffs
-    SoulRage, // Increase attack speed and damage for a short duration, but reduce defense.
-    WraithSpeed, // Increase movement speed and evasion for a short duration, but reduce attack power.
-    SoulShield, // Create a shield that absorbs damage for a short duration, but reduces movement speed.
-    DarkVitality, // Increase maximum health and health regeneration for a short duration, but reduce attack speed.
-    DeathArmor, // Create a protective armor that reduces incoming damage for a short duration, but reduces movement speed and attack power.
 
     // Skill Defenses
     BlockSoul, // Block incoming attacks and counter with a soul strike, dealing damage to the attacker.

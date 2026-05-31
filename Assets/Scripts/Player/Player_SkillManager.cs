@@ -9,6 +9,7 @@ public class Player_SkillManager : Entity_SkillManager
     public Skill_SpinningSword spinningSword { get; private set; }
     public Skill_SoulBurst burst { get; private set; }
     public Skill_DeathDash deathDash { get; private set; }
+    public Skill_SlashSword slashSword { get; private set; }
 
     public Skill_DataSO[] skills;
 
@@ -24,8 +25,16 @@ public class Player_SkillManager : Entity_SkillManager
         spinningSword = GetComponentInChildren<Skill_SpinningSword>();
         burst = GetComponentInChildren<Skill_SoulBurst>();
         deathDash = GetComponentInChildren<Skill_DeathDash>();
+        slashSword = GetComponentInChildren<Skill_SlashSword>();
     }
 
+    private void Start()
+    {
+        foreach (var skillData in skills)
+        {
+            GetSkillByType(skillData.skillType)?.SetSkill(skillData);
+        }
+    }
 
     public Skill_Base GetSkillByType(SkillType type)
     {
@@ -36,6 +45,7 @@ public class Player_SkillManager : Entity_SkillManager
             case SkillType.SpinningSword: return spinningSword;
             case SkillType.SoulBurst: return burst;
             case SkillType.DeathDash: return deathDash;
+            case SkillType.SoulSlashSword: return slashSword;
 
             default:
                 Debug.Log($"Skill type {type} is not implemented yet.");
