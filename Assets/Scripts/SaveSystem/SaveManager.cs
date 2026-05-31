@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveManager : MonoBehaviour
 {
@@ -26,17 +27,31 @@ public class SaveManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     private IEnumerator Start()
     {
         Debug.Log(Application.persistentDataPath);
         dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, encryption);
-        allSaveables = FindISaveables();
 
         yield return null;
         LoadGame();
     }
 
-    private void LoadGame()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        LoadGame();
+    }
+
+    public void LoadGame()
     {
         gameData = dataHandler.LoadData();
 
@@ -57,8 +72,7 @@ public class SaveManager : MonoBehaviour
     {
         allSaveables = FindISaveables();
 
-        // Clear the upgrade points before saving, as they are calculated on load and not needed to be saved.
-        gameData.upgradePoints.Clear();
+        //gameData.upgradePoints.Clear();
 
         foreach (ISaveable saveable in allSaveables)
             saveable.SaveData(ref gameData);

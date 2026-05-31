@@ -70,31 +70,35 @@ public class UI_UpgradeSlot : MonoBehaviour, ISaveable
     public void LoadData(GameData data)
     {
         upgradePoints = GetComponentsInChildren<UI_UpgradePointSlot>(true);
-        foreach (var point in upgradePoints)
+
+        int unlockedCount = 0;
+        if (data.upgradePoints.ContainsKey(statType))
+            unlockedCount = data.upgradePoints[statType];
+
+        for (int i = 0; i < upgradePoints.Length; i++)
         {
-            if (data.upgradePoints.ContainsKey(statType) && data.upgradePoints[statType] > 0)
-            {
-                point.Unlock();
-                data.upgradePoints[statType] -= 1;
-            }
+            if (i < unlockedCount)
+                upgradePoints[i].Unlock();
             else
-            {
-                point.Lock();
-            }
+                upgradePoints[i].Lock();
         }
     }
 
     public void SaveData(ref GameData data)
     {
+        upgradePoints = GetComponentsInChildren<UI_UpgradePointSlot>(true);
+
+        int unlockedCount = 0;
+
         foreach (var point in upgradePoints)
         {
             if (point.IsUnlocked())
-            {
-                if (data.upgradePoints.ContainsKey(statType))
-                    data.upgradePoints[statType] += 1;
-                else
-                    data.upgradePoints.Add(statType, 1);
-            }
+                unlockedCount++;
         }
+
+        if (unlockedCount > 0)
+            data.upgradePoints[statType] = unlockedCount;
+        else
+            data.upgradePoints.Remove(statType);
     }
 }

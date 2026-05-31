@@ -35,6 +35,7 @@ public class Entity : MonoBehaviour
     protected virtual void Awake()
     {
         entityStats = GetComponent<Entity_Stats>();
+
         // Apply default stat setup to ensure that the entity has the necessary stats initialized
         entityStats.ApplyDefaultStatSetup();
 
