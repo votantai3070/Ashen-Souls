@@ -139,6 +139,7 @@
     <Compile Include="Assets\Scripts\Interface\ISaveable.cs" />
     <Compile Include="Assets\Scripts\Interface\IDamageable.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObjectEnemy_EnergyBall.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Object\BreakableObject_Base.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_Ingame.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillUpgradeType.cs" />

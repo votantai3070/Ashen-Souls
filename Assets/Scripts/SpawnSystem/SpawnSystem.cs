@@ -12,6 +12,11 @@ public class SpawnSystem : MonoBehaviour
     [SerializeField] private float maxRetry = 50;
     [SerializeField] private List<WaveData> waves = new();
 
+    [Header("Breakable Spawn")]
+    [SerializeField] private List<GameObject> breakablePrefabs = new();
+    [SerializeField] private int minBreakablePerWave = 3;
+    [SerializeField] private int maxBreakablePerWave = 6;
+
     [Space]
     [SerializeField] private float spawnTimer;
     [SerializeField] private float nextSpawnInterval;
@@ -21,6 +26,7 @@ public class SpawnSystem : MonoBehaviour
     [SerializeField] private List<GameObject> aliveEnemies = new();
 
     private WaveData currentWave;
+    private WaveData previousWave;
 
     private void Awake()
     {
@@ -31,7 +37,6 @@ public class SpawnSystem : MonoBehaviour
     {
         StartSpawning();
     }
-
 
     private void Update()
     {
@@ -48,7 +53,13 @@ public class SpawnSystem : MonoBehaviour
         elapsedTime = 0f;
         spawnTimer = 0f;
         isSpawning = true;
+
         UpdateCurrentWave();
+        previousWave = currentWave;
+
+        if (currentWave != null)
+            SpawnBreakableObjectsAtWaveStart();
+
         SetNextInterval();
     }
 
@@ -66,7 +77,17 @@ public class SpawnSystem : MonoBehaviour
             return;
         }
 
+        WaveData oldWave = currentWave;
         UpdateCurrentWave();
+
+        if (currentWave != oldWave)
+        {
+            previousWave = oldWave;
+
+            if (currentWave != null)
+                SpawnBreakableObjectsAtWaveStart();
+        }
+
         if (currentWave == null) return;
 
         spawnTimer += Time.deltaTime;
@@ -107,6 +128,22 @@ public class SpawnSystem : MonoBehaviour
         if (enemy != null)
         {
             aliveEnemies.Add(enemy);
+        }
+    }
+
+    private void SpawnBreakableObjectsAtWaveStart()
+    {
+        if (breakablePrefabs == null || breakablePrefabs.Count == 0) return;
+
+        int spawnCount = Random.Range(minBreakablePerWave, maxBreakablePerWave + 1);
+
+        for (int i = 0; i < spawnCount; i++)
+        {
+            GameObject prefab = breakablePrefabs[Random.Range(0, breakablePrefabs.Count)];
+            if (prefab == null) continue;
+
+            Vector2 spawnPos = GetRandomPointInsidePolygon();
+            ObjectPool.instance.Spawn(prefab.name, spawnPos, Quaternion.identity);
         }
     }
 
@@ -165,6 +202,30 @@ public class SpawnSystem : MonoBehaviour
                                  viewportPos.y < 0 || viewportPos.y > 1;
 
             if (confinerBounds.OverlapPoint(randomPoint) && outsideCamera)
+                return randomPoint;
+
+        } while (attempts < maxRetry);
+
+        return randomPoint;
+    }
+
+    private Vector2 GetRandomPointInsidePolygon()
+    {
+        Bounds bounds = confinerBounds.bounds;
+
+        Vector2 randomPoint = Vector2.zero;
+        int attempts = 0;
+
+        do
+        {
+            randomPoint = new Vector2(
+                Random.Range(bounds.min.x, bounds.max.x),
+                Random.Range(bounds.min.y, bounds.max.y)
+            );
+
+            attempts++;
+
+            if (confinerBounds.OverlapPoint(randomPoint))
                 return randomPoint;
 
         } while (attempts < maxRetry);

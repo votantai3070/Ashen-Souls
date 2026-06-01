@@ -25,9 +25,17 @@ public class Entity_Health : MonoBehaviour, IDamageable
     {
     }
 
+    protected virtual void OnDisable()
+    {
+        isDead = false;
+    }
+
     public virtual bool TakeDamage(bool isCrit, float damage, Transform damagedDealer)
     {
         if (currentHealth <= 0 || isDead)
+            return false;
+
+        if (CanApplyDamage(entity) == false)
             return false;
 
         Entity_Stats attackerStats = damagedDealer.GetComponent<Entity_Stats>();
@@ -96,13 +104,27 @@ public class Entity_Health : MonoBehaviour, IDamageable
         entity?.TryToDieState();
     }
 
+    private bool CanApplyDamage(Entity target)
+    {
+        float evasion = target.entityStats.GetEvasion();
+
+        if (evasion > UnityEngine.Random.value)
+        {
+            Debug.Log("Evasion");
+            return false;
+        }
+
+        //if (target.entityCombat.becomeInvulnerable)
+        //{
+        //    Debug.Log("Become Invulnerable");
+        //    return false;
+        //}
+
+        return true;
+    }
+
     public int GetCurrentHealth() => currentHealth;
     protected bool IsDeaded() => currentHealth <= 0;
 
     public void OnHealthChangedInvoke() => OnHealthChanged?.Invoke();
-
-    protected virtual void OnDisable()
-    {
-        isDead = false;
-    }
 }

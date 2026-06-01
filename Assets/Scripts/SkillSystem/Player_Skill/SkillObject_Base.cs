@@ -68,15 +68,8 @@ public class SkillObject_Base : MonoBehaviour
         {
             if (enemy.TryGetComponent(out IDamageable damageable))
             {
-                Debug.Log($"Found damageable enemy: {damageable}");
-
-                if (CanApplyDamage(enemy.GetComponent<Entity>()) == false)
-                    return;
-
                 float dealerDamage = entity.entityStats.GetSkillDamage(damage, out bool isCriticalHit);
                 canHit = damageable.TakeDamage(isCriticalHit, dealerDamage, damageDealer.transform);
-
-                Debug.Log($"Attempting to damage {enemy.name}. Can hit: {canHit}");
 
                 if (canHit)
                 {
@@ -98,25 +91,6 @@ public class SkillObject_Base : MonoBehaviour
                 }
             }
         }
-    }
-
-    private bool CanApplyDamage(Entity target)
-    {
-        float evasion = target.entityStats.GetEvasion();
-
-        if (evasion > Random.value)
-        {
-            Debug.Log("Evasion");
-            return false;
-        }
-
-        //if (target.entityCombat.becomeInvulnerable)
-        //{
-        //    Debug.Log("Become Invulnerable");
-        //    return false;
-        //}
-
-        return true;
     }
 
     protected Collider2D[] GetEnemyAround(Transform t, float radius)

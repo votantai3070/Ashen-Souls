@@ -3,29 +3,45 @@ using UnityEngine;
 public class SkillObject_Soul : SkillObject_Base
 {
     public Skill_AbsorbSoul absorbSoulManager;
+
     private Transform target;
+    private bool canMoveToTarget;
 
     protected override void Update()
     {
         if (target == null)
             return;
 
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        if (!canMoveToTarget)
+        {
+            float distance = Vector2.Distance(transform.position, target.position);
+            if (distance <= checkEnemyRadius)
+                canMoveToTarget = true;
+        }
+
+        if (!canMoveToTarget)
+            return;
+
+        transform.position = Vector3.MoveTowards(
+            transform.position,
+            target.position,
+            speed * Time.deltaTime
+        );
     }
 
-    public void MoveTowardsClosestTarget(float speed, Transform newTarget = null)
+    private void OnEnable()
     {
-        target = newTarget == null ? absorbSoulManager.FindClosestTarget() : newTarget;
-        this.speed = speed;
+        target = null;
+        canMoveToTarget = false;
     }
 
-    public void SetupSoul(Skill_AbsorbSoul absorbSoul, bool canMove, float soulSpeed, Transform target)
+    public void SetupSoul(Skill_AbsorbSoul absorbSoul, bool canMove, float soulSpeed, Transform newTarget)
     {
         absorbSoulManager = absorbSoul;
         checkEnemyRadius = absorbSoul.checkEnemyRadius;
-
-        if (canMove)
-            MoveTowardsClosestTarget(soulSpeed, target);
+        speed = soulSpeed;
+        target = newTarget;
+        canMoveToTarget = canMove;
     }
 
     public void AbsorbSoul()
@@ -38,6 +54,8 @@ public class SkillObject_Soul : SkillObject_Base
         if (!collision.CompareTag("Player"))
             return;
 
+        canMoveToTarget = true;
+        target = collision.transform;
         AbsorbSoul();
     }
 }

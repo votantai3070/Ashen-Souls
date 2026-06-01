@@ -47,7 +47,7 @@ public class Skill_SlashSword : Skill_Base
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rot = Quaternion.Euler(0, 0, angle);
 
-        Vector3 offset = (Vector3)direction * 0.8f;
+        Vector3 offset = (Vector3)direction * 1.2f;
 
         slashSword = ObjectPool.instance.Spawn(slashSwordGo.name, transform.position + offset, rot);
         slashSword.GetComponent<SkillObject_SlashSword>().SetupSlashSword(this, duration, whatIsEnemy);
