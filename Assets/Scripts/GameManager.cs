@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour, ISaveable
 
     private void Start()
     {
-        TotalSouls = 1000; // for testing
+        //TotalSouls = 1000; // for testing
     }
 
     public void ChangeScene(string sceneName)

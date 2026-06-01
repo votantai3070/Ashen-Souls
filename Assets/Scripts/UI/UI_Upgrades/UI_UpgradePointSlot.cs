@@ -22,6 +22,10 @@ public class UI_UpgradePointSlot : MonoBehaviour
     private void Awake()
     {
         upgradePointImage = GetComponent<Image>();
+    }
+
+    private void Start()
+    {
         RefreshVisual();
     }
 
@@ -46,7 +50,7 @@ public class UI_UpgradePointSlot : MonoBehaviour
 
     public void Unlock()
     {
-        if (!CanUnlock())
+        if (!CanUnlock() || isUnlocked)
             return;
 
         GameManager.instance.MinusSouls(pointCost);
@@ -58,8 +62,6 @@ public class UI_UpgradePointSlot : MonoBehaviour
     {
         SetUnlocked(false);
     }
-
-    public bool IsUnlocked() => isUnlocked;
 
     private void RefreshVisual()
     {
@@ -78,10 +80,9 @@ public class UI_UpgradePointSlot : MonoBehaviour
         }
 
         upgradePointImage.sprite = targetSprite;
+
         if (connectorLine != null)
-        {
             connectorLine.sprite = isUnlocked ? connectorUnlockedSprite : connectorLockedSprite;
-        }
     }
 
     private bool CanUnlock()
@@ -100,4 +101,6 @@ public class UI_UpgradePointSlot : MonoBehaviour
 
         return true;
     }
+
+    public bool IsUnlocked() => isUnlocked;
 }

@@ -9,10 +9,10 @@
         base.Update();
 
         // Transition to Attack State
-        if (controls.PressedAttack())
-        {
-            stateMachine.ChangeState(player.attackState);
-        }
+        //if (controls.PressedAttack())
+        //{
+        //    stateMachine.ChangeState(player.attackState);
+        //}
 
     }
 }

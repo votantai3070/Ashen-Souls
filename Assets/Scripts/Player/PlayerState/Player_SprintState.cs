@@ -24,8 +24,8 @@ public class Player_SprintState : Player_GroundState
     {
         base.Update();
 
-        float moveInputX = controls.moveInput.x;
-        float moveInputY = controls.moveInput.y;
+        float moveInputX = controls.MoveInput.x;
+        float moveInputY = controls.MoveInput.y;
 
         anim.SetFloat("xMove", moveInputX);
         anim.SetFloat("yMove", moveInputY);
@@ -35,7 +35,7 @@ public class Player_SprintState : Player_GroundState
 
         if (controls.inputActions.Player.Sprint.WasReleasedThisFrame())
         {
-            if (controls.moveInput != Vector2.zero)
+            if (controls.MoveInput != Vector2.zero)
                 stateMachine.ChangeState(player.moveState);
             else
                 stateMachine.ChangeState(player.idleState);

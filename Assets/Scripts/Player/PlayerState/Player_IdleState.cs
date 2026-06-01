@@ -18,7 +18,7 @@ public class Player_IdleState : Player_GroundState
     {
         base.Update();
 
-        if (controls.moveInput != Vector2.zero)
+        if (controls.MoveInput != Vector2.zero)
         {
             stateMachine.ChangeState(player.moveState);
         }

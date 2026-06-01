@@ -72808,7 +72808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 586065914269715310, guid: 13389143cab4ba942af265bd38769878, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1943254191141631616, guid: 13389143cab4ba942af265bd38769878, type: 3}
       propertyPath: targetCheck
@@ -72816,7 +72816,19 @@ PrefabInstance:
       objectReference: {fileID: 3110151967619877442}
     - target: {fileID: 1943254191141631616, guid: 13389143cab4ba942af265bd38769878, type: 3}
       propertyPath: checkDamageRadius
-      value: 0.8
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5345341770284860631, guid: 13389143cab4ba942af265bd38769878, type: 3}
       propertyPath: m_LocalPosition.x

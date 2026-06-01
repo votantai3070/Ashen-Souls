@@ -10,12 +10,12 @@ public class Player_MoveState : Player_GroundState
     {
         base.Update();
 
-        Vector2 moveInput = controls.moveInput;
+        Vector2 moveInput = controls.MoveInput;
 
         anim.SetFloat("xMove", moveInput.x);
         anim.SetFloat("yMove", moveInput.y);
 
-        if (controls.moveInput != Vector2.zero)
+        if (controls.MoveInput != Vector2.zero)
         {
             player.SetValueIdleAndAttackAnimation(moveInput);
         }
@@ -23,7 +23,7 @@ public class Player_MoveState : Player_GroundState
         if (stateMachine.currentState != player.dashState)
             player.SetVelocity(moveInput.x * player.moveSpeed, moveInput.y * player.moveSpeed);
 
-        if (controls.moveInput == Vector2.zero)
+        if (controls.MoveInput == Vector2.zero)
         {
             stateMachine.ChangeState(player.idleState);
         }

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -25,6 +24,8 @@ public class SaveManager : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(gameObject);
+
+        dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, encryption);
     }
 
     private void OnEnable()
@@ -37,13 +38,10 @@ public class SaveManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    private IEnumerator Start()
+    private void Start()
     {
         Debug.Log(Application.persistentDataPath);
-        dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, encryption);
-
-        yield return null;
-        LoadGame();
+        //dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, encryption);
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -53,6 +51,12 @@ public class SaveManager : MonoBehaviour
 
     public void LoadGame()
     {
+        if (dataHandler == null)
+        {
+            Debug.LogError("DataHandler is NULL in SaveManager.LoadGame()");
+            return;
+        }
+
         gameData = dataHandler.LoadData();
 
         if (gameData == null)
@@ -70,6 +74,12 @@ public class SaveManager : MonoBehaviour
 
     public void SaveGame()
     {
+        if (dataHandler == null)
+        {
+            Debug.LogError("DataHandler is NULL in SaveManager.SaveGame()");
+            return;
+        }
+
         allSaveables = FindISaveables();
 
         //gameData.upgradePoints.Clear();

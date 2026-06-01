@@ -77,14 +77,14 @@ public class Player : Entity, ITotalSummary
         stateMachine.ChangeState(deadState);
     }
 
-    public void LookAttackIfNeeded()
-    {
-        if (canLookAttack == false) return;
+    //public void LookAttackIfNeeded()
+    //{
+    //    if (canLookAttack == false) return;
 
-        Vector2 lookDir = ControlsManager.instance.lookInput;
-        xIdleAndAttack = lookDir.x;
-        yIdleAndAttack = lookDir.y;
-    }
+    //    Vector2 lookDir = ControlsManager.instance.lookInput;
+    //    xIdleAndAttack = lookDir.x;
+    //    yIdleAndAttack = lookDir.y;
+    //}
 
     public void AddDamageDealt(float damage)
     {

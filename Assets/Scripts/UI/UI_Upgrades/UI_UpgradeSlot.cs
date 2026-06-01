@@ -78,9 +78,9 @@ public class UI_UpgradeSlot : MonoBehaviour, ISaveable
         for (int i = 0; i < upgradePoints.Length; i++)
         {
             if (i < unlockedCount)
-                upgradePoints[i].Unlock();
+                upgradePoints[i].SetUnlocked(true);
             else
-                upgradePoints[i].Lock();
+                upgradePoints[i].SetUnlocked(false);
         }
     }
 

@@ -16,7 +16,7 @@ public class Player_DashState : PlayerState
         stateTimer = skillManager.deathDash.GetDuration();
         player.skillManager.deathDash.TryUseSkill();
 
-        player.SetVelocity(player.dashSpeed * controls.moveInput.x, player.dashSpeed * controls.moveInput.y);
+        player.SetVelocity(player.dashSpeed * controls.MoveInput.x, player.dashSpeed * controls.MoveInput.y);
     }
 
     public override void Exit()
@@ -31,9 +31,8 @@ public class Player_DashState : PlayerState
     {
         base.Update();
 
-
         if (stateTimer < 0)
-            if (controls.moveInput != Vector2.zero)
+            if (controls.MoveInput != Vector2.zero)
                 stateMachine.ChangeState(player.moveState);
             else
                 stateMachine.ChangeState(player.idleState);

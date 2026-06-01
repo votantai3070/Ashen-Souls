@@ -11,7 +11,7 @@ public class Player_AttackState : PlayerState
         player.canLookAttack = true;
         player.canTrigger = false;
 
-        player.LookAttackIfNeeded();
+        //player.LookAttackIfNeeded();
 
         anim.SetFloat("AttackSpeed", player.attackSpeed);
         anim.SetFloat("xIdleAndAttack", player.xIdleAndAttack);
