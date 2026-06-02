@@ -132,6 +132,7 @@
     <Compile Include="Assets\Scripts\Enum\PlayerType.cs" />
     <Compile Include="Assets\Scripts\Enum\SkillType.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\GameData.cs" />
+    <Compile Include="Assets\Scripts\FlickerLight2D.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_DeathDash.cs" />
     <Compile Include="Assets\Scripts\StatSystem\Stat_MajorGroup.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\FireSoulState\FireSoul_IdleState.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="Assets\Scripts\Enum\SkillUpgradeType.cs" />
     <Compile Include="Assets\Scripts\UI\U_TotalSummary\UI_TotalSummary.cs" />
     <Compile Include="Assets\Scripts\Interface\ITotalSummary.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Toolltip\UI_Tooltip.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Combat.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_Soul.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_Stats.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_MoveState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Range\Enemy_RangeState\EnemyRange_DeadState.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_Toolltip\UI_StatTooltip.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Stats.cs" />
     <Compile Include="Assets\Scripts\Data\SkillEnemy_DataSO.cs" />
     <Compile Include="Assets\Scripts\Player\Player_AnimationEvents.cs" />

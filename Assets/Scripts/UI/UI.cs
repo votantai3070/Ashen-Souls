@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour, IOpenUI
 {
+    public static UI instance { get; private set; }
+
     public event Action OnSkillSlotChange;
     public event Action OnPlayerSet;
 
     private Button[] buttons;
-
-    public static UI instance { get; private set; }
     public Player player { get; private set; }
+
 
     public GameObject[] uiElements;
     public UI_Ingame ingameUI { get; private set; }
@@ -21,6 +22,8 @@ public class UI : MonoBehaviour, IOpenUI
     public UI_Settings settingsUI { get; private set; }
     public UI_FadeScreen fadeUI { get; private set; }
     public UI_Upgrades upgradesUI { get; private set; }
+
+    public UI_StatTooltip statTooltip { get; private set; }
 
     private Coroutine openSummaryCo;
 
@@ -35,6 +38,7 @@ public class UI : MonoBehaviour, IOpenUI
         settingsUI = GetComponentInChildren<UI_Settings>(true);
         fadeUI = GetComponentInChildren<UI_FadeScreen>(true);
         upgradesUI = GetComponentInChildren<UI_Upgrades>(true);
+        statTooltip = GetComponentInChildren<UI_StatTooltip>(true);
     }
 
     private void Start()

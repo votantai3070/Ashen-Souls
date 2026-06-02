@@ -17,7 +17,7 @@ MonoBehaviour:
   displayName: Spinning Sword
   description: Swing your blade in a circle, dealing damage to all nearby enemies.
   icon: {fileID: -748005180, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
-  duration: 1
+  duration: 0.5
   prerequisiteSkill: {fileID: 0}
   skillType: 7
   cardType: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
   speed: 0.8
   size: 1
   cooldown: 3
-  distanceToAttack: 3
+  distanceToAttack: 1.5
   damage: 20
   upgradeBoostChance: 30
-  attackCooldownGuard: 0.5
+  attackCooldownGuard: 1

@@ -81,6 +81,11 @@ MonoBehaviour:
       weight: 100
     - prefab: {fileID: 8090043777706953505, guid: 4cbb210403faedd45a331964b016ba43, type: 3}
       weight: 70
+  breakablePrefabs:
+  - {fileID: 0}
+  - {fileID: 3859248582534214187, guid: 64fe7c75165e34f4c90c6cfbba7f5db6, type: 3}
+  minBreakablePerWave: 5
+  maxBreakablePerWave: 10
   spawnTimer: 0
   nextSpawnInterval: 0
   elapsedTime: 0

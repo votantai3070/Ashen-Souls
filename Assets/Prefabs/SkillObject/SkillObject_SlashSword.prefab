@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.83771, y: 0.23616, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7840839567299419862}
@@ -47,11 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb10c132d3ff78b4489d258391bcb94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillObject_SlashSword
-  checkDamageRadius: 3
+  checkDamageRadius: 1.6
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
-  targetCheck: {fileID: 0}
+  targetCheck: {fileID: 5345341770284860631}
   checkEnemyRadius: 3
   defaultImpactDuration: 0.2
 --- !u!50 &5779329355121769984

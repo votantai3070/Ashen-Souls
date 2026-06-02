@@ -1,7 +1,8 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class UI_StatSlot : MonoBehaviour
+public class UI_StatSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private RectTransform rectTransform;
     private Entity_Stats playerStats;
@@ -10,6 +11,10 @@ public class UI_StatSlot : MonoBehaviour
     [SerializeField] private TextMeshProUGUI statName;
     [SerializeField] private TextMeshProUGUI statValue;
 
+    private void Awake()
+    {
+        rectTransform = GetComponent<RectTransform>();
+    }
 
     private void OnValidate()
     {
@@ -107,7 +112,7 @@ public class UI_StatSlot : MonoBehaviour
         statValue.text = IsPercentageStat(statSlotType) ? $"{value:0.#}%" : $"{value:0.#}";
     }
 
-    private string GetStatNameByType(StatType type)
+    public string GetStatNameByType(StatType type)
     {
         switch (type)
         {
@@ -156,5 +161,20 @@ public class UI_StatSlot : MonoBehaviour
 
             default: return false;
         }
+    }
+
+    public StatType GetStatType() => statSlotType;
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (statSlotType == StatType.Agility || statSlotType == StatType.Vitality || statSlotType == StatType.Strength)
+            UI.instance.statTooltip.ShowTooltip(true, rectTransform, this);
+        else
+            UI.instance.statTooltip.ShowTooltip(false, rectTransform);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        UI.instance.statTooltip.ShowTooltip(false, rectTransform);
     }
 }
