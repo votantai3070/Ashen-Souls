@@ -4786,7 +4786,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd51cfe2d2d14e44a2ee27cab21b5d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Stats
-  defaultStatSetup: {fileID: 11400000, guid: 88b44131fbacb964e9decefca3de8aec, type: 2}
+  playerStatDatas:
+  - {fileID: 11400000, guid: 46969f985946c80488fb743a462526d3, type: 2}
+  - {fileID: 11400000, guid: 69ce9aca07813904c85581735781262f, type: 2}
+  defaultStatSetup: {fileID: 0}
   resource:
     maxHealth:
       baseValue: 100

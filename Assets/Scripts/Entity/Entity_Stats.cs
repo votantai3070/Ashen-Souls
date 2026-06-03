@@ -5,6 +5,7 @@ public class Entity_Stats : MonoBehaviour
 {
     public event Action OnStatChanged;
 
+    public PlayerDataSO[] playerStatDatas;
     public Stat_DataSO defaultStatSetup;
 
     [Header("Stat")]
@@ -215,6 +216,8 @@ public class Entity_Stats : MonoBehaviour
             return;
         }
 
+        Debug.Log($"{name}: Applying default stat setup.");
+
         // Default resource stats
         resource.maxHealth.SetBaseValue(defaultStatSetup.maxHealth);
         resource.regenHealth.SetBaseValue(defaultStatSetup.healthRegen);
@@ -247,4 +250,6 @@ public class Entity_Stats : MonoBehaviour
     }
 
     public void OnStatChangedInvoke() => OnStatChanged?.Invoke();
+
+
 }

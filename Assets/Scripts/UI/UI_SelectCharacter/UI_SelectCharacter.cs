@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UI_SelectCharacter : MonoBehaviour
+public class UI_SelectCharacter : MonoBehaviour, ISaveable
 {
     private PlayerDataSO playerData;
 
@@ -15,7 +15,15 @@ public class UI_SelectCharacter : MonoBehaviour
     {
         this.playerData = playerData;
         characterStatUI.SetCharacterStatData(playerData);
+    }
 
-        PlayerPrefs.SetString("SelectedCharacterId", playerData.characterId);
+    public void LoadData(GameData data)
+    {
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        if (playerData != null)
+            data.selectedCharacterId = playerData.characterId;
     }
 }

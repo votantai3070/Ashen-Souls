@@ -2758,7 +2758,7 @@ GameObject:
   - component: {fileID: 214340449}
   - component: {fileID: 214340452}
   m_Layer: 5
-  m_Name: UI_CharacterSlot - Knight
+  m_Name: UI_CharacterSlot - Mage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2834,7 +2834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f9fac7ba589e1242bf69294fe194d9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_CharacterSlot
-  characterData: {fileID: 11400000, guid: 46969f985946c80488fb743a462526d3, type: 2}
+  characterData: {fileID: 11400000, guid: 69ce9aca07813904c85581735781262f, type: 2}
   characterIcon: {fileID: 1079146757}
 --- !u!114 &214340452
 MonoBehaviour:
@@ -9945,22 +9945,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1921249971}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1179789085}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1921249972}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PlayBtn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -22983,17 +22971,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1921249971 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7556749006970375732, guid: cbcb542cbc4613e4aa843ca9977ab6c5, type: 3}
-  m_PrefabInstance: {fileID: 875600259}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1921249972 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2516071994976975009, guid: cbcb542cbc4613e4aa843ca9977ab6c5, type: 3}
   m_PrefabInstance: {fileID: 875600259}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921249971}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cd52b5edb8c99d4d84646c07d52cdcd, type: 3}

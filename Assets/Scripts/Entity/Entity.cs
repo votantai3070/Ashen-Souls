@@ -36,8 +36,9 @@ public class Entity : MonoBehaviour
     {
         entityStats = GetComponent<Entity_Stats>();
 
-        // Apply default stat setup to ensure that the entity has the necessary stats initialized
-        entityStats.ApplyDefaultStatSetup();
+        //// Apply default stat setup to ensure that the entity has the necessary stats initialized
+        //if (entityStats.defaultStatSetup != null)
+        //    entityStats.ApplyDefaultStatSetup();
 
         entityCombat = GetComponent<Entity_Combat>();
         entityHealth = GetComponent<Entity_Health>();

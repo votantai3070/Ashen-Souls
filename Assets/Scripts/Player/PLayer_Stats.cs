@@ -10,6 +10,8 @@ public class Player_Stats : Entity_Stats, ISaveable
 
     private void Awake()
     {
+        PlayerDataSO defaultPlayerStat = FindDefaultPlayerStatData(PlayerPrefs.GetString("SelectedCharacterId", "1"));
+        defaultStatSetup = defaultPlayerStat.defaultCharacterStat;
         player = GetComponent<Player>();
     }
 
@@ -37,8 +39,18 @@ public class Player_Stats : Entity_Stats, ISaveable
         player.health.IncreaseHealth(Mathf.RoundToInt(buff.value), buff.type);
     }
 
-    public void GainExp(float amount) => levelSystem.AddExp(amount);
-    public int GetLevel() => levelSystem.CurrentLevel();
+    private PlayerDataSO FindDefaultPlayerStatData(string statId)
+    {
+        foreach (var data in playerStatDatas)
+        {
+            if (data.characterId == statId)
+            {
+                return data;
+            }
+        }
+
+        return null;
+    }
 
     private void HandleLevelUp(int newLevel)
     {
@@ -51,6 +63,9 @@ public class Player_Stats : Entity_Stats, ISaveable
         UI.instance?.ingameUI?.UpdateExpBar(current, max);
         UI.instance?.ingameUI?.UpdateLevelText(levelSystem.CurrentLevel());
     }
+
+    public void GainExp(float amount) => levelSystem.AddExp(amount);
+    public int GetLevel() => levelSystem.CurrentLevel();
 
     private float GetBuffValue(StatType type)
     {
@@ -88,36 +103,36 @@ public class Player_Stats : Entity_Stats, ISaveable
 
     public void LoadData(GameData data)
     {
-        if (data.upgradePoints == null && data.upgradePoints.Count == 0)
+        // Load selected character
+        if (!string.IsNullOrEmpty(data.selectedCharacterId))
         {
-            return;
+            PlayerDataSO selectedData = FindDefaultPlayerStatData(data.selectedCharacterId);
+            if (selectedData != null)
+            {
+                DefaultStatSetup(selectedData.defaultCharacterStat);
+                ApplyDefaultStatSetup();
+            }
+            else
+            {
+                Debug.LogWarning($"PlayerDataSO not found for id: {data.selectedCharacterId}");
+            }
         }
+
+        if (data.upgradePoints == null || data.upgradePoints.Count == 0)
+            return;
 
         foreach (var point in data.upgradePoints)
         {
             var stat = point.Key;
             var value = point.Value * GetBuffValue(stat);
-
             string source = $"UpgradePoint_{stat}";
             bool isPercent = IsPercentageStat(stat);
-
             GetStatByType(stat).AddModifier(value, source, isPercent);
         }
     }
 
     public void SaveData(ref GameData data)
     {
-        //if (data.upgradePoints == null && data.upgradePoints.Count == 0)
-        //{
-        //    return;
-        //}
 
-        //foreach (var point in data.upgradePoints)
-        //{
-        //    var stat = point.Key;
-        //    string source = $"UpgradePoint_{stat}";
-
-        //    GetStatByType(stat).RemoveModifier(source);
-        //}
     }
 }
