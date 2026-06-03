@@ -67,6 +67,8 @@ public class UI_UpgradeSlot : MonoBehaviour, ISaveable
         }
     }
 
+    public UI_UpgradePointSlot[] GetUpgradePoints() => upgradePoints;
+
     public void LoadData(GameData data)
     {
         upgradePoints = GetComponentsInChildren<UI_UpgradePointSlot>(true);

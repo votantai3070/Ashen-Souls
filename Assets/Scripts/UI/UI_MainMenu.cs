@@ -10,13 +10,5 @@ public class UI_MainMenu : MonoBehaviour
         AudioManager.instance.StartBGM("playlist_mainMenu");
     }
 
-    public void PlayBtn()
-    {
-        GameManager.instance.ChangeScene("GameView");
-    }
 
-    public void QuitBtn()
-    {
-        Application.Quit();
-    }
 }

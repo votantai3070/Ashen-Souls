@@ -13,8 +13,9 @@ public class UI : MonoBehaviour, IOpenUI
     private Button[] buttons;
     public Player player { get; private set; }
 
-
     public GameObject[] uiElements;
+
+    #region UI Screens
     public UI_Ingame ingameUI { get; private set; }
     public UI_SkillBoard skillBoardUI { get; private set; }
     public UI_Stats statsUI { get; private set; }
@@ -22,8 +23,13 @@ public class UI : MonoBehaviour, IOpenUI
     public UI_Settings settingsUI { get; private set; }
     public UI_FadeScreen fadeUI { get; private set; }
     public UI_Upgrades upgradesUI { get; private set; }
+    public UI_SelectCharacter selectCharacter { get; private set; }
+    #endregion
 
+    #region Tooltips
     public UI_StatTooltip statTooltip { get; private set; }
+    public UI_UpgradeStatPointTooltip upgradeStatPointTooltip { get; private set; }
+    #endregion
 
     private Coroutine openSummaryCo;
 
@@ -39,6 +45,8 @@ public class UI : MonoBehaviour, IOpenUI
         fadeUI = GetComponentInChildren<UI_FadeScreen>(true);
         upgradesUI = GetComponentInChildren<UI_Upgrades>(true);
         statTooltip = GetComponentInChildren<UI_StatTooltip>(true);
+        upgradeStatPointTooltip = GetComponentInChildren<UI_UpgradeStatPointTooltip>(true);
+        selectCharacter = GetComponentInChildren<UI_SelectCharacter>(true);
     }
 
     private void Start()
@@ -169,6 +177,8 @@ public class UI : MonoBehaviour, IOpenUI
         GameManager.instance.SoulsGained = 0;
         GameManager.instance.ChangeScene("MainMenu");
     }
+
+
 
     public bool IsInGameUI() => ingameUI.gameObject.activeSelf;
 

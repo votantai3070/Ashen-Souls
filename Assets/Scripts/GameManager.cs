@@ -85,6 +85,16 @@ public class GameManager : MonoBehaviour, ISaveable
         this.player = player;
     }
 
+    public void PlayBtn()
+    {
+        ChangeScene("GameView");
+    }
+
+    public void QuitBtn()
+    {
+        Application.Quit();
+    }
+
     public void LoadData(GameData data)
     {
         TotalSouls = data.souls;

@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class PlayerData
+[CreateAssetMenu(fileName = "Player Data", menuName = "RPG Setup/Player Data")]
+public class PlayerDataSO : ScriptableObject
 {
     public string characterId;
-    public string displayName;
+    public string characterName;
     public RuntimeAnimatorController animator;
     public Sprite portrait;
     public GameObject weaponPrefab;

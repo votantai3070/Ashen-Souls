@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
-public class UI_UpgradePointSlot : MonoBehaviour
+public class UI_UpgradePointSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private Image connectorLine;
     [SerializeField] private Sprite connectorUnlockedSprite;
@@ -40,7 +41,6 @@ public class UI_UpgradePointSlot : MonoBehaviour
     }
 #endif
 
-    public int GetPointCost() => pointCost;
 
     public void SetUnlocked(bool unlocked)
     {
@@ -103,4 +103,18 @@ public class UI_UpgradePointSlot : MonoBehaviour
     }
 
     public bool IsUnlocked() => isUnlocked;
+    public int GetPointCost() => pointCost;
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (isUnlocked || pointCost <= 0)
+            return;
+
+        UI.instance.upgradeStatPointTooltip.ShowTooltip(true, (RectTransform)transform, this);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        UI.instance.upgradeStatPointTooltip.ShowTooltip(false, (RectTransform)transform, this);
+    }
 }

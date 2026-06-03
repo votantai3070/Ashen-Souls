@@ -7,9 +7,9 @@ public class UI_StatSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private RectTransform rectTransform;
     private Entity_Stats playerStats;
 
-    [SerializeField] private StatType statSlotType;
+    [SerializeField] protected StatType statSlotType;
     [SerializeField] private TextMeshProUGUI statName;
-    [SerializeField] private TextMeshProUGUI statValue;
+    [SerializeField] protected TextMeshProUGUI statValue;
 
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class UI_StatSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         statName.text = GetStatNameByType(statSlotType);
     }
 
-    public void UpdateStatValue()
+    public virtual void UpdateStatValue()
     {
         playerStats = UI.instance.player.stats;
 
@@ -145,7 +145,7 @@ public class UI_StatSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         }
     }
 
-    private bool IsPercentageStat(StatType type)
+    protected bool IsPercentageStat(StatType type)
     {
         switch (type)
         {
@@ -167,14 +167,14 @@ public class UI_StatSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (statSlotType == StatType.Agility || statSlotType == StatType.Vitality || statSlotType == StatType.Strength)
-            UI.instance.statTooltip.ShowTooltip(true, rectTransform, this);
-        else
-            UI.instance.statTooltip.ShowTooltip(false, rectTransform);
+        //if (statSlotType == StatType.Agility || statSlotType == StatType.Vitality || statSlotType == StatType.Strength)
+        //    UI.instance.statTooltip.ShowTooltip(true, rectTransform, this);
+        //else
+        //    UI.instance.statTooltip.ShowTooltip(false, rectTransform);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        UI.instance.statTooltip.ShowTooltip(false, rectTransform);
+        //UI.instance.statTooltip.ShowTooltip(false, rectTransform);
     }
 }
