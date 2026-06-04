@@ -536,6 +536,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyRange_SkillManager
   skillData:
   - {fileID: 11400000, guid: 420a98dd6bbae0341b8e0463e8c9ba68, type: 2}
+--- !u!1 &7626600791551934366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2893573071213802527}
+  - component: {fileID: 8167917904745926965}
+  m_Layer: 10
+  m_Name: DetectedWall (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2893573071213802527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7626600791551934366}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8016689569130248356}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &8167917904745926965
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7626600791551934366}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.013448238, y: -0.1747238}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.2334261, y: 1.4664329}
+  m_EdgeRadius: 0
 --- !u!1 &8090043777706953505
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,6 +655,7 @@ Transform:
   - {fileID: 3057481437411536779}
   - {fileID: 2190336164500215080}
   - {fileID: 7381313034598051012}
+  - {fileID: 2893573071213802527}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1328577198656539125
@@ -719,6 +798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a264d33956daf4ab23d0c2ea95edbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Stats
+  playerStatDatas: []
   defaultStatSetup: {fileID: 11400000, guid: 6f1d2f3e6ec0a5e4b819c2e244acc6c9, type: 2}
   resource:
     maxHealth:
@@ -782,6 +862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  dropCount: 1
 --- !u!114 &5113666054424985337
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ public class SpawnSystem : MonoBehaviour
 
     [Header("Breakable Spawn")]
     [SerializeField] private List<GameObject> breakablePrefabs = new();
+    [SerializeField] private float breakableCheckRadius = 0.5f;
+    [SerializeField] private LayerMask breakableObstacleLayer;
     [SerializeField] private int minBreakablePerWave = 3;
     [SerializeField] private int maxBreakablePerWave = 6;
 
@@ -58,7 +60,7 @@ public class SpawnSystem : MonoBehaviour
         previousWave = currentWave;
 
         if (currentWave != null)
-            SpawnBreakableObjectsAtWaveStart();
+            SpawnBreakableAndObstacleObjectsAtWaveStart();
 
         SetNextInterval();
     }
@@ -77,16 +79,7 @@ public class SpawnSystem : MonoBehaviour
             return;
         }
 
-        WaveData oldWave = currentWave;
         UpdateCurrentWave();
-
-        if (currentWave != oldWave)
-        {
-            previousWave = oldWave;
-
-            if (currentWave != null)
-                SpawnBreakableObjectsAtWaveStart();
-        }
 
         if (currentWave == null) return;
 
@@ -131,7 +124,7 @@ public class SpawnSystem : MonoBehaviour
         }
     }
 
-    private void SpawnBreakableObjectsAtWaveStart()
+    private void SpawnBreakableAndObstacleObjectsAtWaveStart()
     {
         if (breakablePrefabs == null || breakablePrefabs.Count == 0) return;
 
@@ -142,9 +135,29 @@ public class SpawnSystem : MonoBehaviour
             GameObject prefab = breakablePrefabs[Random.Range(0, breakablePrefabs.Count)];
             if (prefab == null) continue;
 
-            Vector2 spawnPos = GetRandomPointInsidePolygon();
+            Vector2 spawnPos = GetValidBreakablePosition();
+            if (spawnPos == Vector2.zero) continue;
+
             ObjectPool.instance.Spawn(prefab.name, spawnPos, Quaternion.identity);
         }
+    }
+
+    private Vector2 GetValidBreakablePosition()
+    {
+        int attempts = 0;
+
+        while (attempts < maxRetry)
+        {
+            attempts++;
+            Vector2 candidate = GetRandomPointInsidePolygon();
+
+            Collider2D hit = Physics2D.OverlapCircle(candidate, breakableCheckRadius, breakableObstacleLayer);
+
+            if (hit == null)
+                return candidate;
+        }
+
+        return Vector2.zero;
     }
 
     private void SetNextInterval()

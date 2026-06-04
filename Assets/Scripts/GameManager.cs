@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour, ISaveable
 
     public void PlayBtn()
     {
-        ChangeScene("GameView");
+        ChangeScene("Level 1");
     }
 
     public void QuitBtn()
