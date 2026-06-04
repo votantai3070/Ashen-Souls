@@ -10,8 +10,6 @@ public class Player_Stats : Entity_Stats, ISaveable
 
     private void Awake()
     {
-        PlayerDataSO defaultPlayerStat = FindDefaultPlayerStatData(PlayerPrefs.GetString("SelectedCharacterId", "1"));
-        defaultStatSetup = defaultPlayerStat.defaultCharacterStat;
         player = GetComponent<Player>();
     }
 
@@ -37,19 +35,6 @@ public class Player_Stats : Entity_Stats, ISaveable
         OnStatChangedInvoke();
 
         player.health.IncreaseHealth(Mathf.RoundToInt(buff.value), buff.type);
-    }
-
-    private PlayerDataSO FindDefaultPlayerStatData(string statId)
-    {
-        foreach (var data in playerStatDatas)
-        {
-            if (data.characterId == statId)
-            {
-                return data;
-            }
-        }
-
-        return null;
     }
 
     private void HandleLevelUp(int newLevel)
@@ -106,7 +91,7 @@ public class Player_Stats : Entity_Stats, ISaveable
         // Load selected character
         if (!string.IsNullOrEmpty(data.selectedCharacterId))
         {
-            PlayerDataSO selectedData = FindDefaultPlayerStatData(data.selectedCharacterId);
+            PlayerDataSO selectedData = characterList.GetCharacterData(data.selectedCharacterId);
             if (selectedData != null)
             {
                 DefaultStatSetup(selectedData.defaultCharacterStat);

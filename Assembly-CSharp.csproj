@@ -171,6 +171,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_AttackState.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Settings.cs" />
     <Compile Include="Assets\Scripts\Data\Skill_BaseSO.cs" />
+    <Compile Include="Assets\Scripts\Data\Character_ListDataSO.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_SFX.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SelectCharacter\UI_SelectCharacter.cs" />
     <Compile Include="Assets\Scripts\VFX_AutoController.cs" />
