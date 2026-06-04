@@ -33258,8 +33258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f56ed4eac862bf4095638ba3c2710ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_SkillManager
-  skills:
-  - {fileID: 11400000, guid: 2b345ef22a1d7dd44bc790c06e918103, type: 2}
+  characterList: {fileID: 11400000, guid: dcad5ca19015430408aa2ac92e30d7a6, type: 2}
+  skills: []
 --- !u!1 &1374141994
 GameObject:
   m_ObjectHideFlags: 0

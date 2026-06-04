@@ -7,7 +7,7 @@ public class PlayerDataSO : ScriptableObject
     public string characterName;
     public RuntimeAnimatorController animator;
     public Sprite portrait;
-    public GameObject weaponPrefab;
+    public Skill_DataSO skillData;
 
     [Space]
     public Stat_DataSO defaultCharacterStat;
