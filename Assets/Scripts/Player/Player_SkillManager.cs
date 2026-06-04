@@ -33,6 +33,7 @@ public class Player_SkillManager : Entity_SkillManager
         foreach (var skillData in skills)
         {
             GetSkillByType(skillData.skillType)?.SetSkill(skillData);
+            SkillProgressManager.instance.UnlockSkill(skillData);
         }
     }
 

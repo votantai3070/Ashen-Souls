@@ -15,6 +15,7 @@ MonoBehaviour:
   skillList:
   - {fileID: 11400000, guid: f8cda36d25245d04b90e589ac332c889, type: 2}
   - {fileID: 11400000, guid: 7babedffdcf203143b53e44a9a148fd5, type: 2}
+  - {fileID: 11400000, guid: 2b345ef22a1d7dd44bc790c06e918103, type: 2}
   - {fileID: 11400000, guid: 6f93ee8d2ae5e02469fd25a468a93217, type: 2}
   - {fileID: 11400000, guid: c7db3f2e1bca2504eba21b9fe44147d5, type: 2}
   - {fileID: 11400000, guid: 892eb18b6d1f007448b455513b9d6ee5, type: 2}
@@ -56,6 +57,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 71d910dd05f92c34ba008ed354707a7a, type: 2}
   - {fileID: 11400000, guid: cfcee32d2f61063499a80a33856a924e, type: 2}
   - {fileID: 11400000, guid: 5299e43de28e9664699aca11c0da0a5f, type: 2}
+  - {fileID: 11400000, guid: 5efc9991ded6164438be81c6471a7958, type: 2}
+  - {fileID: 11400000, guid: d48d2de6e271efb46a81de8223f23f83, type: 2}
+  - {fileID: 11400000, guid: 646e06f6200e54647ac9a347f57db758, type: 2}
+  - {fileID: 11400000, guid: 50bac1308c3dd374683a8b423d37a521, type: 2}
+  - {fileID: 11400000, guid: a11d6b86927a2904b84ee098bc0b8c6c, type: 2}
+  - {fileID: 11400000, guid: 347453e0c710c9542a97da7dc572263c, type: 2}
+  - {fileID: 11400000, guid: 2dc2a7c6cce8d094bb703733ff9d650f, type: 2}
+  - {fileID: 11400000, guid: cbd575a1b3686424db1a2efcd8c3cc55, type: 2}
+  - {fileID: 11400000, guid: 50b1a347fec12bf4588136a523bfd4cf, type: 2}
+  - {fileID: 11400000, guid: bc84ca3c29c3a3542be09e7e0a2393e0, type: 2}
+  - {fileID: 11400000, guid: caffed7025d743542926da37e65d310c, type: 2}
+  - {fileID: 11400000, guid: a50fa1400bf5dbc429b7b13d6d7d90d1, type: 2}
+  - {fileID: 11400000, guid: 85db4e97bd040ec43ae88ab51de834ef, type: 2}
+  - {fileID: 11400000, guid: b5071a245ec0c1446a6d4bce1bd195e8, type: 2}
+  - {fileID: 11400000, guid: 1d5ec5643dafe4f48a89bc46cfd1c33e, type: 2}
   - {fileID: 11400000, guid: b4632b485a633be45bd002e9c6ff8995, type: 2}
   - {fileID: 11400000, guid: 4937b5a72d66bed4e864dd1a7d41f62c, type: 2}
   - {fileID: 11400000, guid: d8a230c3b52704f478f70ae6b56a0587, type: 2}

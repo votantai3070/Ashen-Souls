@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UI_SkillBoard : MonoBehaviour
 {
-
     [SerializeField] private Skill_ListDataSO skillsData;
     [SerializeField] private UI_SkillCard[] cards;
 
