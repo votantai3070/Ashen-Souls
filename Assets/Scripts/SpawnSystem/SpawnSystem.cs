@@ -9,15 +9,18 @@ public class SpawnSystem : MonoBehaviour
 
     [Header("Spawn Settings")]
     [SerializeField] private float totalSpawnDuration = 300f;
-    [SerializeField] private float maxRetry = 50;
+    [SerializeField] private int maxRetry = 50;
     [SerializeField] private List<WaveData> waves = new();
+
+    [Header("Enemy Spawn Check")]
+    [SerializeField] private float enemySpawnCheckRadius = 0.8f;
+    [SerializeField] private LayerMask blockedSpawnLayer; // Obstacle + Breakable (+ Wall nếu cần)
 
     [Header("Breakable Spawn")]
     [SerializeField] private List<GameObject> breakablePrefabs = new();
-    [SerializeField] private float breakableCheckRadius = 0.5f;
-    [SerializeField] private LayerMask breakableObstacleLayer;
     [SerializeField] private int minBreakablePerWave = 3;
     [SerializeField] private int maxBreakablePerWave = 6;
+    [SerializeField] private float breakableSpawnCheckRadius = 0.8f;
 
     [Space]
     [SerializeField] private float spawnTimer;
@@ -113,7 +116,9 @@ public class SpawnSystem : MonoBehaviour
         if (aliveEnemies.Count >= currentWave.maxEnemiesAlive) return;
         if (currentWave.enemies == null || currentWave.enemies.Count == 0) return;
 
-        Vector2 spawnPos = GetRandomPointInBounds();
+        if (!TryGetValidEnemySpawnPoint(out Vector2 spawnPos))
+            return;
+
         GameObject prefab = GetRandomEnemyByWeight(currentWave.enemies);
         if (prefab == null) return;
 
@@ -122,6 +127,39 @@ public class SpawnSystem : MonoBehaviour
         {
             aliveEnemies.Add(enemy);
         }
+    }
+
+    private bool TryGetValidEnemySpawnPoint(out Vector2 validPoint)
+    {
+        Bounds bounds = confinerBounds.bounds;
+        Camera cam = Camera.main;
+
+        for (int attempts = 0; attempts < maxRetry; attempts++)
+        {
+            Vector2 candidate = new Vector2(
+                Random.Range(bounds.min.x, bounds.max.x),
+                Random.Range(bounds.min.y, bounds.max.y)
+            );
+
+            Vector3 viewportPos = cam.WorldToViewportPoint(candidate);
+            bool outsideCamera = viewportPos.x < 0 || viewportPos.x > 1 ||
+                                 viewportPos.y < 0 || viewportPos.y > 1;
+
+            if (!confinerBounds.OverlapPoint(candidate))
+                continue;
+
+            if (!outsideCamera)
+                continue;
+
+            if (Physics2D.OverlapCircle(candidate, enemySpawnCheckRadius, blockedSpawnLayer) != null)
+                continue;
+
+            validPoint = candidate;
+            return true;
+        }
+
+        validPoint = Vector2.zero;
+        return false;
     }
 
     private void SpawnBreakableAndObstacleObjectsAtWaveStart()
@@ -135,35 +173,41 @@ public class SpawnSystem : MonoBehaviour
             GameObject prefab = breakablePrefabs[Random.Range(0, breakablePrefabs.Count)];
             if (prefab == null) continue;
 
-            Vector2 spawnPos = GetValidBreakablePosition();
-            if (spawnPos == Vector2.zero) continue;
+            if (!TryGetValidBreakableSpawnPoint(out Vector2 spawnPos))
+                continue;
 
             ObjectPool.instance.Spawn(prefab.name, spawnPos, Quaternion.identity);
         }
     }
 
-    private Vector2 GetValidBreakablePosition()
+    private bool TryGetValidBreakableSpawnPoint(out Vector2 validPoint)
     {
-        int attempts = 0;
+        Bounds bounds = confinerBounds.bounds;
 
-        while (attempts < maxRetry)
+        for (int attempts = 0; attempts < maxRetry; attempts++)
         {
-            attempts++;
-            Vector2 candidate = GetRandomPointInsidePolygon();
+            Vector2 candidate = new Vector2(
+                Random.Range(bounds.min.x, bounds.max.x),
+                Random.Range(bounds.min.y, bounds.max.y)
+            );
 
-            Collider2D hit = Physics2D.OverlapCircle(candidate, breakableCheckRadius, breakableObstacleLayer);
+            if (!confinerBounds.OverlapPoint(candidate))
+                continue;
 
-            if (hit == null)
-                return candidate;
+            if (Physics2D.OverlapCircle(candidate, breakableSpawnCheckRadius, blockedSpawnLayer) != null)
+                continue;
+
+            validPoint = candidate;
+            return true;
         }
 
-        return Vector2.zero;
+        validPoint = Vector2.zero;
+        return false;
     }
 
     private void SetNextInterval()
     {
         if (currentWave == null) return;
-
         nextSpawnInterval = Random.Range(currentWave.minSpawnInterval, currentWave.maxSpawnInterval);
     }
 
@@ -193,58 +237,13 @@ public class SpawnSystem : MonoBehaviour
         return null;
     }
 
-    private Vector2 GetRandomPointInBounds()
-    {
-        Bounds bounds = confinerBounds.bounds;
-        Camera cam = Camera.main;
-
-        Vector2 randomPoint = Vector2.zero;
-        int attempts = 0;
-
-        do
-        {
-            randomPoint = new Vector2(
-                Random.Range(bounds.min.x, bounds.max.x),
-                Random.Range(bounds.min.y, bounds.max.y)
-            );
-
-            attempts++;
-
-            Vector3 viewportPos = cam.WorldToViewportPoint(randomPoint);
-            bool outsideCamera = viewportPos.x < 0 || viewportPos.x > 1 ||
-                                 viewportPos.y < 0 || viewportPos.y > 1;
-
-            if (confinerBounds.OverlapPoint(randomPoint) && outsideCamera)
-                return randomPoint;
-
-        } while (attempts < maxRetry);
-
-        return randomPoint;
-    }
-
-    private Vector2 GetRandomPointInsidePolygon()
-    {
-        Bounds bounds = confinerBounds.bounds;
-
-        Vector2 randomPoint = Vector2.zero;
-        int attempts = 0;
-
-        do
-        {
-            randomPoint = new Vector2(
-                Random.Range(bounds.min.x, bounds.max.x),
-                Random.Range(bounds.min.y, bounds.max.y)
-            );
-
-            attempts++;
-
-            if (confinerBounds.OverlapPoint(randomPoint))
-                return randomPoint;
-
-        } while (attempts < maxRetry);
-
-        return randomPoint;
-    }
-
     public int GetElapsedTime() => Mathf.FloorToInt(elapsedTime);
+
+#if UNITY_EDITOR
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, enemySpawnCheckRadius);
+    }
+#endif
 }

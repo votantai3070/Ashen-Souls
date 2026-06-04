@@ -81,17 +81,18 @@ MonoBehaviour:
       weight: 100
     - prefab: {fileID: 8090043777706953505, guid: 4cbb210403faedd45a331964b016ba43, type: 3}
       weight: 70
+  enemySpawnCheckRadius: 0.8
+  blockedSpawnLayer:
+    serializedVersion: 2
+    m_Bits: 768
   breakablePrefabs:
   - {fileID: 0}
   - {fileID: 3859248582534214187, guid: 64fe7c75165e34f4c90c6cfbba7f5db6, type: 3}
   - {fileID: 2278201268880847735, guid: 3d8d58048be23dd43be4d23b91de0dd6, type: 3}
   - {fileID: 4016103629615155990, guid: eaef294e4d745be4f8ee466433fa5123, type: 3}
-  breakableCheckRadius: 0.5
-  breakableObstacleLayer:
-    serializedVersion: 2
-    m_Bits: 768
   minBreakablePerWave: 10
   maxBreakablePerWave: 15
+  breakableSpawnCheckRadius: 0.8
   spawnTimer: 0
   nextSpawnInterval: 0
   elapsedTime: 0
