@@ -3,7 +3,6 @@ using UnityEngine;
 public class Player_SkillManager : Entity_SkillManager, ISaveable
 {
     private Player player;
-    [SerializeField] private Character_ListDataSO characterList;
 
     public Skill_AbsorbSoul absorbSoul { get; private set; }
     public Skill_FireSoul fireSoul { get; private set; }
@@ -12,14 +11,11 @@ public class Player_SkillManager : Entity_SkillManager, ISaveable
     public Skill_DeathDash deathDash { get; private set; }
     public Skill_SlashSword slashSword { get; private set; }
 
-    //public List<Skill_DataSO> skills;
-
-
     protected override void Awake()
     {
         base.Awake();
 
-        player = GetComponent<Player>();
+        player = GetComponentInParent<Player>();
 
         absorbSoul = GetComponentInChildren<Skill_AbsorbSoul>();
         fireSoul = GetComponentInChildren<Skill_FireSoul>();
@@ -28,15 +24,6 @@ public class Player_SkillManager : Entity_SkillManager, ISaveable
         deathDash = GetComponentInChildren<Skill_DeathDash>();
         slashSword = GetComponentInChildren<Skill_SlashSword>();
     }
-
-    //private void Start()
-    //{
-    //    foreach (var skillData in skills)
-    //    {
-    //        GetSkillByType(skillData.skillType)?.SetSkill(skillData);
-    //        SkillProgressManager.instance.UnlockSkill(skillData);
-    //    }
-    //}
 
     public Skill_Base GetSkillByType(SkillType type)
     {
@@ -57,30 +44,33 @@ public class Player_SkillManager : Entity_SkillManager, ISaveable
 
     public void LoadData(GameData data)
     {
-        PlayerDataSO character = characterList.GetCharacterData(data.selectedCharacterId);
-        if (character == null)
+        if (!string.IsNullOrEmpty(data.selectedCharacterId))
         {
-            Debug.LogWarning($"Character with ID {data.selectedCharacterId} not found.");
-            return;
+            PlayerDataSO character = player.characterList.GetCharacterData(data.selectedCharacterId);
+            if (character == null)
+            {
+                Debug.LogWarning($"Character with ID {data.selectedCharacterId} not found.");
+                return;
+            }
+
+            if (character.skillData == null)
+            {
+                Debug.LogWarning($"Character {character.characterName} has null skillData.");
+                return;
+            }
+
+            Skill_Base skill = GetSkillByType(character.skillData.skillType);
+            if (skill == null)
+            {
+                Debug.LogWarning($"No Skill_Base found for {character.skillData.skillType}.");
+                return;
+            }
+
+            skill.SetSkill(character.skillData);
+
+            if (SkillProgressManager.instance != null)
+                SkillProgressManager.instance.UnlockSkill(character.skillData);
         }
-
-        if (character.skillData == null)
-        {
-            Debug.LogWarning($"Character {character.characterName} has null skillData.");
-            return;
-        }
-
-        Skill_Base skill = GetSkillByType(character.skillData.skillType);
-        if (skill == null)
-        {
-            Debug.LogWarning($"No Skill_Base found for {character.skillData.skillType}.");
-            return;
-        }
-
-        skill.SetSkill(character.skillData);
-
-        if (SkillProgressManager.instance != null)
-            SkillProgressManager.instance.UnlockSkill(character.skillData);
     }
 
     public void SaveData(ref GameData data)

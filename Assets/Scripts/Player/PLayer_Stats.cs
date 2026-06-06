@@ -91,7 +91,7 @@ public class Player_Stats : Entity_Stats, ISaveable
         // Load selected character
         if (!string.IsNullOrEmpty(data.selectedCharacterId))
         {
-            PlayerDataSO selectedData = characterList.GetCharacterData(data.selectedCharacterId);
+            PlayerDataSO selectedData = player.characterList.GetCharacterData(data.selectedCharacterId);
             if (selectedData != null)
             {
                 DefaultStatSetup(selectedData.defaultCharacterStat);

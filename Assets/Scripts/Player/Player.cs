@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class Player : Entity, ITotalSummary
+public class Player : Entity, ITotalSummary, ISaveable
 {
+    public Character_ListDataSO characterList;
+
     public ControlsManager controls { get; private set; }
     public Player_Combat combat { get; private set; }
     public Player_SkillManager skillManager { get; private set; }
@@ -99,5 +101,19 @@ public class Player : Entity, ITotalSummary
     public void AddEnemiesKilled()
     {
         GameManager.instance.TotalEnemiesKilled++;
+    }
+
+    public void LoadData(GameData data)
+    {
+        if (!string.IsNullOrEmpty(data.selectedCharacterId))
+        {
+            PlayerDataSO characterData = characterList.GetCharacterData(data.selectedCharacterId);
+            if (characterData != null)
+                anim.runtimeAnimatorController = characterData.animator;
+        }
+    }
+
+    public void SaveData(ref GameData data)
+    {
     }
 }

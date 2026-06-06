@@ -31,6 +31,6 @@ MonoBehaviour:
   size: 1
   cooldown: 3
   distanceToAttack: 1.5
-  damage: 20
+  damage: 5
   upgradeBoostChance: 30
   attackCooldownGuard: 1

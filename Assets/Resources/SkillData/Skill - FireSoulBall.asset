@@ -27,12 +27,11 @@ MonoBehaviour:
   maxSkillRollChance: 80
   skillObjectPrefab: {fileID: 1168510075856658422, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
   orbitRadius: 1.5
-  orbitSpeed: 180
   swordCount: 3
   speed: 3
   size: 3
   cooldown: 3
   distanceToAttack: 7
-  damage: 5
+  damage: 10
   upgradeBoostChance: 30
   attackCooldownGuard: 0.5

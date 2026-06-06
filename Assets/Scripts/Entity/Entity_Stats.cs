@@ -5,7 +5,6 @@ public class Entity_Stats : MonoBehaviour
 {
     public event Action OnStatChanged;
 
-    public Character_ListDataSO characterList;
     public Stat_DataSO defaultStatSetup;
 
     [Header("Stat")]

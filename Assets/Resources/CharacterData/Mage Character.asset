@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDataSO
   characterId: 2
   characterName: Mage
-  animator: {fileID: 0}
+  animator: {fileID: 22100000, guid: 2a3d6c8f22fa50a45845e9b809378b53, type: 2}
   portrait: {fileID: 0}
-  weaponPrefab: {fileID: 0}
-  defaultCharacterStat: {fileID: 11400000, guid: 36be5c44f620eb54da1d398445b63858, type: 2}
+  skillData: {fileID: 11400000, guid: f8cda36d25245d04b90e589ac332c889, type: 2}
+  defaultCharacterStat: {fileID: 11400000, guid: 83a5772a0dfaad943bb3cbd311b25a2b, type: 2}
