@@ -19,6 +19,11 @@ public class UI_StatSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private void OnValidate()
     {
         gameObject.name = "UI_Stat - " + GetStatNameByType(statSlotType);
+    }
+
+    [ContextMenu("Update Stat Name")]
+    public void UpdateStatName()
+    {
         statName.text = GetStatNameByType(statSlotType);
     }
 
@@ -167,14 +172,14 @@ public class UI_StatSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        //if (statSlotType == StatType.Agility || statSlotType == StatType.Vitality || statSlotType == StatType.Strength)
-        //    UI.instance.statTooltip.ShowTooltip(true, rectTransform, this);
-        //else
-        //    UI.instance.statTooltip.ShowTooltip(false, rectTransform);
+        if (statSlotType == StatType.Agility || statSlotType == StatType.Vitality || statSlotType == StatType.Strength)
+            UI.instance.statTooltip.ShowTooltip(true, rectTransform, this);
+        else
+            UI.instance.statTooltip.ShowTooltip(false, rectTransform);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //UI.instance.statTooltip.ShowTooltip(false, rectTransform);
+        UI.instance.statTooltip.ShowTooltip(false, rectTransform);
     }
 }

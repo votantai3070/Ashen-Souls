@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &696354882024499677
 Transform:
   m_ObjectHideFlags: 0
@@ -183,8 +183,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.010670304, y: -0.10136759}
-  m_Radius: 0.49466503
+  m_Offset: {x: -0.016322613, y: -0.09006244}
+  m_Radius: 0.34769613
 --- !u!114 &703944224447775937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Melee
   moveSpeed: 4
   attackSpeed: 1
-  attackRange: 2
+  attackRange: 0.5
   attackRadius: 1
   knockBackPower: {x: 5, y: 5}
   heavyKnockBackPower: {x: 10, y: 10}
@@ -588,7 +588,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1690453453
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 368543389579951487, guid: b029f9947fa3a274c918131d2c5278ed, type: 3}
