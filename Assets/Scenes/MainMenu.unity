@@ -468,7 +468,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Max Health
+  m_text: Health Regeneration
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bab363e3a9663ad449ac231ed7bc77bf, type: 2}
   m_sharedMaterial: {fileID: 1166830152110465633, guid: bab363e3a9663ad449ac231ed7bc77bf, type: 2}
@@ -10170,8 +10170,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1921249972}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1854453082}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: PlayBtn
         m_Mode: 1
         m_Arguments:
@@ -13538,8 +13538,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1921249972}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1854453082}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: QuitBtn
         m_Mode: 1
         m_Arguments:
@@ -23334,17 +23334,6 @@ RectTransform:
   m_AnchoredPosition: {x: 198.13, y: -50}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1921249972 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2516071994976975009, guid: cbcb542cbc4613e4aa843ca9977ab6c5, type: 3}
-  m_PrefabInstance: {fileID: 875600259}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cd52b5edb8c99d4d84646c07d52cdcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManager
 --- !u!1 &1923315050
 GameObject:
   m_ObjectHideFlags: 0

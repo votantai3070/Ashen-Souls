@@ -178,7 +178,19 @@ public class UI : MonoBehaviour, IOpenUI
         GameManager.instance.ChangeScene("MainMenu");
     }
 
+    public void PlayBtn()
+    {
+        GameManager.instance.ChangeScene("Level 1");
+    }
 
+
+    public void QuitBtn()
+    {
+        StopAllCoroutines();
+        Time.timeScale = 1f; // Reset timeScale nếu game đang pause
+
+        Application.Quit();
+    }
 
     public bool IsInGameUI() => ingameUI.gameObject.activeSelf;
 

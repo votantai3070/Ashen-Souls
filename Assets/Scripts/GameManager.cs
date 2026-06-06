@@ -85,15 +85,6 @@ public class GameManager : MonoBehaviour, ISaveable
         this.player = player;
     }
 
-    public void PlayBtn()
-    {
-        ChangeScene("Level 1");
-    }
-
-    public void QuitBtn()
-    {
-        Application.Quit();
-    }
 
     public void LoadData(GameData data)
     {
