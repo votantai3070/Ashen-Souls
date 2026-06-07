@@ -21,8 +21,8 @@ MonoBehaviour:
   prerequisiteSkill: {fileID: 11400000, guid: 7babedffdcf203143b53e44a9a148fd5, type: 2}
   skillType: 9
   cardType: 0
-  skillRarity: 750
-  skillRollChance: 25.1
+  skillRarity: 450
+  skillRollChance: 55.1
   maxSkillRollChance: 75
   isPercent: 0
   skillStatData:

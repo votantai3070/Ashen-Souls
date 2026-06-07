@@ -69,10 +69,13 @@ public class SkillObject_FireSoul : SkillObject_Base
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision == null || !collision.CompareTag("Enemy")) return;
+        if (collision == null) return;
 
-        DamageEnemiesInRadius(transform, entity.transform);
-        OnHit();
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Breakable"))
+        {
+            DamageEnemiesInRadius(transform, entity.transform);
+            OnHit();
+        }
     }
 
     protected override void CheckDuration()
