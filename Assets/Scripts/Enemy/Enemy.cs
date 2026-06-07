@@ -16,6 +16,7 @@ public class Enemy : Entity
 
 
     [Header("Chase Info")]
+    public float baseChaseSpeed = 5f;
     public float chaseSpeed = 8f;
     public float chaseStopDistance = 1.5f;
 
@@ -41,6 +42,8 @@ public class Enemy : Entity
 
     protected override void Start()
     {
+        base.Start();
+
         facingDirection = Vector2.down;
     }
 
@@ -69,6 +72,13 @@ public class Enemy : Entity
     public virtual void TryToHitState()
     {
 
+    }
+
+    protected override void RefreshStats()
+    {
+        base.RefreshStats();
+
+        chaseSpeed = entityStats.GetSpeed();
     }
 
     public void SetPlayer(Transform player)

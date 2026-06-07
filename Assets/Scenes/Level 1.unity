@@ -33253,7 +33253,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369479939}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f56ed4eac862bf4095638ba3c2710ba, type: 3}
   m_Name: 
@@ -100556,6 +100556,18 @@ PrefabInstance:
       propertyPath: confinerBounds
       value: 
       objectReference: {fileID: 1257635985}
+    - target: {fileID: 6636224208332005114, guid: 1a01e79980f515d4eaf2dca11da41442, type: 3}
+      propertyPath: waves.Array.data[0].maxEnemiesAlive
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6636224208332005114, guid: 1a01e79980f515d4eaf2dca11da41442, type: 3}
+      propertyPath: waves.Array.data[1].maxEnemiesAlive
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6636224208332005114, guid: 1a01e79980f515d4eaf2dca11da41442, type: 3}
+      propertyPath: waves.Array.data[2].maxEnemiesAlive
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 6936646080490105410, guid: 1a01e79980f515d4eaf2dca11da41442, type: 3}
       propertyPath: m_Name
       value: SPAWN SYSTEM

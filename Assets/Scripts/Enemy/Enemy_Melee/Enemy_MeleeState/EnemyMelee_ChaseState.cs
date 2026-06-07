@@ -10,7 +10,7 @@ public class EnemyMelee_ChaseState : EnemyMelee_GroundState
     {
         base.Enter();
 
-        float animSpeed = enemyMelee.chaseSpeed / enemyMelee.moveSpeed;
+        float animSpeed = enemyMelee.chaseSpeed / enemyMelee.baseChaseSpeed;
         anim.SetFloat("ChaseSpeed", animSpeed);
     }
 

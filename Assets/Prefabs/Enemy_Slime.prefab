@@ -210,6 +210,7 @@ MonoBehaviour:
   idleTimer: 2
   detectionRadius: 100
   detectionAngle: 360
+  baseChaseSpeed: 5
   chaseSpeed: 5
   chaseStopDistance: 1.5
   backOffset: {x: 10, y: 10}

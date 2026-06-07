@@ -87,7 +87,7 @@ public class Entity : MonoBehaviour
 
     }
 
-    private void RefreshStats()
+    protected virtual void RefreshStats()
     {
         moveSpeed = entityStats.GetSpeed();
         attackSpeed = entityStats.GetStatByType(StatType.AttackSpeed).GetValue();
