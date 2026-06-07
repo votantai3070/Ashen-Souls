@@ -31,6 +31,8 @@ public class EnemyRange_DeadState : EnemyRange_State
     {
         base.Exit();
 
+        enemyRange.xIdleAndAttack = 0f;
+
         enemyRange.rb.simulated = true;
 
         Collider2D col = enemyRange.GetComponent<Collider2D>();

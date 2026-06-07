@@ -11,6 +11,7 @@ public class EnemyRange_IdleState : EnemyRange_State
         stateTimer = enemyRange.idleTimer;
 
         enemyRange.SetVelocity(0f, 0f);
+        enemyRange.SetAnimIdleAndAttackAnimation();
     }
 
     public override void Exit()

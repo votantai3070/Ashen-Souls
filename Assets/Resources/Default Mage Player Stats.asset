@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65a6dac87e284d429dbac4348b9f8a0, type: 3}
   m_Name: Default Mage Player Stats
   m_EditorClassIdentifier: Assembly-CSharp::Stat_SO
-  maxHealth: 50
+  maxHealth: 100
   healthRegen: 0
   attackSpeed: 1
   speed: 5
-  damage: 5
+  damage: 10
   critChance: 0.5
   critDamage: 50
   armorReduction: 0
-  armor: 5
+  armor: 0
   evasion: 0
   strength: 0
   agility: 0

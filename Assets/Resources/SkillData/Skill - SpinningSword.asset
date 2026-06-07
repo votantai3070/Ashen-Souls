@@ -23,7 +23,7 @@ MonoBehaviour:
   cardType: 0
   skillRarity: 300
   skillRollChance: 70.1
-  maxSkillRollChance: 80
+  maxSkillRollChance: 90
   skillObjectPrefab: {fileID: 4526101274153675507, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
   orbitRadius: 1.2
   swordCount: 1

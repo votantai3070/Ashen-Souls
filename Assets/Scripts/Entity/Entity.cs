@@ -12,6 +12,7 @@ public class Entity : MonoBehaviour
     public Rigidbody2D rb { get; private set; }
     public Animator anim { get; private set; }
     public Collider2D col { get; private set; }
+    public SpriteRenderer sr { get; private set; }
 
     public float xIdleAndAttack { get; set; }
     public float yIdleAndAttack { get; set; }
@@ -49,6 +50,7 @@ public class Entity : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
         col = GetComponent<Collider2D>();
+        sr = GetComponentInChildren<SpriteRenderer>();
 
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         rb.gravityScale = 0f;
@@ -99,6 +101,15 @@ public class Entity : MonoBehaviour
             return;
 
         rb.linearVelocity = new(x, y);
+        RotateFace(new Vector2(x, y));
+    }
+
+    public void RotateFace(Vector2 direction)
+    {
+        if (Mathf.Abs(direction.x) < 0.001f)
+            return;
+
+        sr.flipX = direction.x < 0;
     }
 
     public void KnockBack(Transform damagedDealer, float averangeDamage)
@@ -131,21 +142,20 @@ public class Entity : MonoBehaviour
         return knockback;
     }
 
-    public void SetAnimIdleAndAttackAnimation()
-    {
-        anim.SetFloat("xIdleAndAttack", xIdleAndAttack);
-        anim.SetFloat("yIdleAndAttack", yIdleAndAttack);
-    }
-
     public void MovementAnimation(Vector2 direction)
     {
         anim.SetFloat("xMove", Mathf.Round(direction.x));
-        anim.SetFloat("yMove", Mathf.Round(direction.y));
     }
 
     public void SetValueIdleAndAttackAnimation(Vector2 direction)
     {
-        xIdleAndAttack = direction.x;
-        yIdleAndAttack = direction.y;
+        xIdleAndAttack = Mathf.Sign(direction.x);
+        yIdleAndAttack = Mathf.Sign(direction.y);
+    }
+
+    public void SetAnimIdleAndAttackAnimation()
+    {
+        anim.SetFloat("xIdleAndAttack", xIdleAndAttack);
+        anim.SetFloat("yIdleAndAttack", yIdleAndAttack);
     }
 }

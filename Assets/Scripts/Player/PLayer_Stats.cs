@@ -56,18 +56,18 @@ public class Player_Stats : Entity_Stats, ISaveable
     {
         switch (type)
         {
-            case StatType.Strength: return 5;
-            case StatType.Agility: return 3;
-            case StatType.Vitality: return 10;
+            case StatType.Strength: return 2;
+            case StatType.Agility: return 2;
+            case StatType.Vitality: return 5;
             case StatType.Speed: return .2f;
             case StatType.CriticalChance: return 4f;
             case StatType.CriticalDamage: return 10f;
             case StatType.ArmorReduction: return 5f;
-            case StatType.Damage: return 5f;
-            case StatType.MaxHealth: return 100;
+            case StatType.Damage: return 3f;
+            case StatType.MaxHealth: return 20f;
             case StatType.RegenHealth: return .1f;
             case StatType.Armor: return 5f;
-            case StatType.Evasion: return 20;
+            case StatType.Evasion: return 5f;
 
             default: return 0f;
         }

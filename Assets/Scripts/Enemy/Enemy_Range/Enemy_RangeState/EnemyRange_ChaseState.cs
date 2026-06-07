@@ -27,6 +27,7 @@ public class EnemyRange_ChaseState : EnemyRange_State
             stateMachine.ChangeState(enemyRange.moveState);
 
         Vector2 direction = enemyRange.GetDirectionPlayer();
+        enemyRange.RotateFace(direction);
 
         if (direction != Vector2.zero)
             enemyRange.Flip(direction);

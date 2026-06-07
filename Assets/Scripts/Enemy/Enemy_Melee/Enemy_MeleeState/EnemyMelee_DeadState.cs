@@ -29,6 +29,14 @@ public class EnemyMelee_DeadState : EnemyMelee_State
     public override void Exit()
     {
         base.Exit();
+
+        enemyMelee.xIdleAndAttack = 0f;
+
+        enemyMelee.rb.simulated = true;
+
+        Collider2D col = enemyMelee.GetComponent<Collider2D>();
+        if (col != null)
+            col.enabled = true;
     }
 
     public override void Update()

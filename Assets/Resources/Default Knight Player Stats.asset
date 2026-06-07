@@ -15,12 +15,12 @@ MonoBehaviour:
   maxHealth: 100
   healthRegen: 0
   attackSpeed: 1
-  speed: 5
+  speed: 3
   damage: 5
   critChance: 0.5
   critDamage: 50
   armorReduction: 0
-  armor: 5
+  armor: 10
   evasion: 0
   strength: 0
   agility: 0

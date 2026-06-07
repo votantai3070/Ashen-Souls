@@ -27,4 +27,4 @@ MonoBehaviour:
   isPercent: 0
   skillStatData:
     type: 2
-    value: 50
+    value: 7

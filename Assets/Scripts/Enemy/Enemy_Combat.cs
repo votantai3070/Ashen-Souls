@@ -25,9 +25,6 @@ public class Enemy_Combat : Entity_Combat
 
         Vector2 dirToPlayer = enemy.player.position - transform.position;
 
-        float angle = Vector2.Angle(enemy.facingDirection, dirToPlayer);
-        if (angle > enemy.detectionAngle / 2f) return false;
-
         RaycastHit2D hit = Physics2D.Raycast(transform.position, dirToPlayer.normalized, enemy.detectionRadius, enemyLayer);
 
         return hit.collider != null && hit.collider.CompareTag("Player");

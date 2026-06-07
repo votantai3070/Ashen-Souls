@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65a6dac87e284d429dbac4348b9f8a0, type: 3}
   m_Name: Default Bat Enemy
   m_EditorClassIdentifier: Assembly-CSharp::Stat_SO
-  maxHealth: 25
+  maxHealth: 40
   healthRegen: 0
   attackSpeed: 1
   speed: 4
-  damage: 5
+  damage: 10
   critChance: 0
   critDamage: 0
   armorReduction: 0

@@ -29,7 +29,6 @@ public class Enemy : Entity
     public float specialSpeed;
     public float specialDashDuration;
 
-    public Vector2 facingDirection { get; private set; }
 
     protected override void Awake()
     {
@@ -44,16 +43,13 @@ public class Enemy : Entity
     {
         base.Start();
 
-        facingDirection = Vector2.down;
     }
 
     protected override void Update()
     {
         base.Update();
 
-        Vector2 input = new(anim.GetFloat("xMove"), anim.GetFloat("yMove"));
-        if (input != Vector2.zero)
-            facingDirection = input.normalized;
+
     }
 
     protected override void OnEnable()
@@ -104,9 +100,5 @@ public class Enemy : Entity
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
 
         Gizmos.color = Color.red;
-        Vector3 leftDir = Quaternion.Euler(0, 0, detectionAngle / 2f) * facingDirection;
-        Vector3 rightDir = Quaternion.Euler(0, 0, -detectionAngle / 2f) * facingDirection;
-        Gizmos.DrawRay(transform.position, leftDir * detectionRadius);
-        Gizmos.DrawRay(transform.position, rightDir * detectionRadius);
     }
 }
