@@ -92,13 +92,11 @@ public class FileDataHandler
 
     private string EncryptDecrypt(string data)
     {
-        string modifiedData = "";
+        char[] result = new char[data.Length];
 
         for (int i = 0; i < data.Length; i++)
-        {
-            modifiedData += (char)(data[i] ^ codeWord[i % codeWord.Length]);
-        }
+            result[i] = (char)(data[i] ^ codeWord[i % codeWord.Length]);
 
-        return modifiedData;
+        return new string(result);
     }
 }

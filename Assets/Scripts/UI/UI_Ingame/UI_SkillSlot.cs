@@ -27,8 +27,18 @@ public class UI_SkillSlot : MonoBehaviour
         cooldownSkillImage.fillAmount = 0;
     }
 
+    public void ResetCooldown()
+    {
+        if (cooldownCoroutine != null)
+            StopCoroutine(cooldownCoroutine);
+        cooldownSkillImage.fillAmount = 0f;
+    }
+
     public void StartCooldown(float cooldownDuration)
     {
+        if (!gameObject.activeInHierarchy)
+            return;
+
         if (cooldownCoroutine != null)
             StopCoroutine(cooldownCoroutine);
 

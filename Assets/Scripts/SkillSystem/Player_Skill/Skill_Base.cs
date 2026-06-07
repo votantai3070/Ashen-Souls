@@ -76,6 +76,7 @@ public class Skill_Base : MonoBehaviour
     {
         string buffName = $"{skillData.displayName} + {skillData.skillId}";
         GetStat(skillData.skillStatData.type).AddModifier(skillData.skillStatData.value, buffName, skillData.isPercent);
+        ResetCooldown();
     }
 
     public virtual bool CanUseSkill()
@@ -132,7 +133,7 @@ public class Skill_Base : MonoBehaviour
     public void ReduceCooldownBy(float cooldownReduction) => lastTimeUsed = lastTimeUsed + cooldownReduction;
     public void ResetCooldown()
     {
-        //player.ui.ingameUI.GetSkillSlot(skillType).ResetCooldown();
+        UI.instance.ingameUI.skillHolder.ResetCooldown(skillType);
         lastTimeUsed = Time.time - cooldown;
     }
 

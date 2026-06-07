@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +8,7 @@ public class SaveManager : MonoBehaviour
 
     private FileDataHandler dataHandler;
     private GameData gameData;
-    private List<ISaveable> allSaveables;
+    private readonly List<ISaveable> allSaveables = new();
 
     [SerializeField] private string fileName = "save.json";
     [SerializeField] private bool encryption = true;
@@ -38,15 +37,28 @@ public class SaveManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    private void Start()
-    {
-        Debug.Log(Application.persistentDataPath);
-        //dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, encryption);
-    }
-
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        RefreshSaveables();
         LoadGame();
+    }
+
+    private void RefreshSaveables()
+    {
+        allSaveables.Clear();
+
+        MonoBehaviour[] behaviours = FindObjectsByType<MonoBehaviour>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None
+        );
+
+        for (int i = 0; i < behaviours.Length; i++)
+        {
+            if (behaviours[i] is ISaveable saveable)
+            {
+                allSaveables.Add(saveable);
+            }
+        }
     }
 
     public void LoadGame()
@@ -61,15 +73,15 @@ public class SaveManager : MonoBehaviour
 
         if (gameData == null)
         {
-            Debug.Log("No save upgradeData found, creating new save!");
+            Debug.Log("No save data found, creating new save!");
             gameData = new GameData();
             return;
         }
 
-        allSaveables = FindISaveables();
-
-        foreach (var saveable in allSaveables)
-            saveable.LoadData(gameData);
+        for (int i = 0; i < allSaveables.Count; i++)
+        {
+            allSaveables[i].LoadData(gameData);
+        }
     }
 
     public void SaveGame()
@@ -80,37 +92,39 @@ public class SaveManager : MonoBehaviour
             return;
         }
 
-        allSaveables = FindISaveables();
-
-        //gameData.upgradePoints.Clear();
-
-        foreach (ISaveable saveable in allSaveables)
-            saveable.SaveData(ref gameData);
+        for (int i = 0; i < allSaveables.Count; i++)
+        {
+            allSaveables[i].SaveData(ref gameData);
+        }
 
         dataHandler.SaveData(gameData);
     }
 
     public GameData GetGameData() => gameData;
 
-    [ContextMenu("**** Delete save upgradeData ****")]
+    [ContextMenu("**** Delete save data ****")]
     public void DeleteSaveData()
     {
-        dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, encryption);
         dataHandler.Delete();
-
+        gameData = new GameData();
+        RefreshSaveables();
         LoadGame();
+    }
+
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        if (pauseStatus)
+            SaveGame();
+    }
+
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (!hasFocus)
+            SaveGame();
     }
 
     private void OnApplicationQuit()
     {
         SaveGame();
-    }
-
-
-    private List<ISaveable> FindISaveables()
-    {
-        return FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None)
-            .OfType<ISaveable>()
-            .ToList();
     }
 }

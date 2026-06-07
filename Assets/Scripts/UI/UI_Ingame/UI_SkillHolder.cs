@@ -25,6 +25,20 @@ public class UI_SkillHolder : MonoBehaviour
         }
     }
 
+    public void ResetCooldown(SkillType skillType)
+    {
+        foreach (var slot in slots)
+        {
+            if (slot.skillData == null) continue;
+
+            if (slot.skillData.skillType == skillType)
+            {
+                slot.ResetCooldown();
+                return;
+            }
+        }
+    }
+
     public void SetupSkillSlots()
     {
         skillList.Clear();
