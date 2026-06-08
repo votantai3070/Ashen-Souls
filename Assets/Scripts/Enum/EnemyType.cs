@@ -1,4 +1,4 @@
 public enum EnemyType
 {
-    EnemyMelee, EnemyRange, EnemyBoss
+    Melee, Range, Boss, Elite
 }

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8e413113d6c5a499648b98dc13fe60, type: 3}
+  m_Name: Skill - FireBall
+  m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
+  saveId: 4017768f60c1ddf459e991ea4216e865
+  skillId: 4017768f60c1ddf459e991ea4216e865
+  displayName: Fire Soul Ball
+  description: Launch a fire soul toward an enemy, dealing damage.
+  icon: {fileID: 128636590, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
+  duration: 5
+  prerequisiteSkill: {fileID: 0}
+  skillType: 7
+  cardType: 0
+  skillRarity: 150
+  skillRollChance: 85.1
+  maxSkillRollChance: 90
+  skillObjectPrefab: {fileID: 604700590831976314, guid: 02fdf9101e899ee4890d1bae143e5d71, type: 3}
+  orbitRadius: 1.5
+  swordCount: 3
+  speed: 4
+  size: 1
+  cooldown: 2.5
+  distanceToAttack: 7
+  damage: 10
+  upgradeBoostChance: 30
+  attackCooldownGuard: 1

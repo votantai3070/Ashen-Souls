@@ -44,9 +44,9 @@ public class EnemyMelee_ChaseState : EnemyMelee_GroundState
             enemyMelee.SetVelocity(dir.x * enemyMelee.chaseSpeed, dir.y * enemyMelee.chaseSpeed);
             if (enemyMelee.IsPlayerInAttackRange())
             {
-                if (enemyMelee.enemyType == EnemyMeleeType.Normal)
+                if (enemyMelee.enemyType == EnemyType.Melee)
                     stateMachine.ChangeState(enemyMelee.attackState);
-                else if (enemyMelee.enemyType == EnemyMeleeType.Special)
+                else if (enemyMelee.enemyType == EnemyType.Elite)
                     stateMachine.ChangeState(enemyMelee.prepareAttackState);
             }
         }

@@ -2,6 +2,7 @@
 
 public class Enemy : Entity
 {
+    public EnemyType enemyType;
     public Transform player { get; private set; }
     public Enemy_Combat combat { get; private set; }
     public Enemy_Health health { get; private set; }

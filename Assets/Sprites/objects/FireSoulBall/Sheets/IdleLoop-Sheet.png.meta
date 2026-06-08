@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: e5bad395dcd2e46429769291ca1a1347
+guid: 013c3900c3dfd004bbbca903c568d8ab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4120824295220174772
-    second: ShootAntecipation-Sheet_0
+      213: 666707874238751407
+    second: IdleLoop-Sheet_0
   - first:
-      213: 8556029478534002118
-    second: ShootAntecipation-Sheet_1
+      213: 6273344030401321015
+    second: IdleLoop-Sheet_1
   - first:
-      213: 1527193567990150260
-    second: ShootAntecipation-Sheet_2
+      213: -2709957714759192536
+    second: IdleLoop-Sheet_2
+  - first:
+      213: 6457908520318748368
+    second: IdleLoop-Sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -145,7 +148,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ShootAntecipation-Sheet_0
+      name: IdleLoop-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4bfd56a0ddb103930800000000000000
-      internalID: 4120824295220174772
+      spriteID: fa2e4fc774f904900800000000000000
+      internalID: 666707874238751407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAntecipation-Sheet_1
+      name: IdleLoop-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
@@ -182,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c53acb9a7f1db670800000000000000
-      internalID: 8556029478534002118
+      spriteID: 73853e578256f0750800000000000000
+      internalID: 6273344030401321015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ShootAntecipation-Sheet_2
+      name: IdleLoop-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
@@ -204,8 +207,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 474705b657ea13510800000000000000
-      internalID: 1527193567990150260
+      spriteID: 820f27ff0db446ad0800000000000000
+      internalID: -2709957714759192536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleLoop-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6419175991f9950800000000000000
+      internalID: 6457908520318748368
       vertices: []
       indices: 
       edges: []
@@ -214,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4fa359ac4057ca74a9e74f57a4abf001
+    spriteID: 359606ac60005fe4db6fdea6122ac96b
     internalID: 0
     vertices: []
     indices: 
@@ -226,9 +251,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ShootAntecipation-Sheet_0: 4120824295220174772
-      ShootAntecipation-Sheet_1: 8556029478534002118
-      ShootAntecipation-Sheet_2: 1527193567990150260
+      IdleLoop-Sheet_0: 666707874238751407
+      IdleLoop-Sheet_1: 6273344030401321015
+      IdleLoop-Sheet_2: -2709957714759192536
+      IdleLoop-Sheet_3: 6457908520318748368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

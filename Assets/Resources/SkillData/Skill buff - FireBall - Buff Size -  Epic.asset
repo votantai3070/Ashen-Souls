@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
+  m_Name: Skill buff - FireBall - Buff Size -  Epic
+  m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
+  saveId: 944fef487a104414192b7531cf0f02d3
+  skillId: 944fef487a104414192b7531cf0f02d3
+  displayName: Fire Ball
+  description: 
+  icon: {fileID: 0}
+  duration: 5
+  prerequisiteSkill: {fileID: 11400000, guid: 4017768f60c1ddf459e991ea4216e865, type: 2}
+  skillType: 7
+  cardType: 0
+  skillRarity: 750
+  skillRollChance: 25.1
+  maxSkillRollChance: 75
+  isPercent: 1
+  skillStatData:
+    type: 14
+    value: 0.8

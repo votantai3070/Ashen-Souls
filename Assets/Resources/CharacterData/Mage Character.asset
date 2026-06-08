@@ -16,5 +16,5 @@ MonoBehaviour:
   characterName: Mage
   animator: {fileID: 22100000, guid: 2a3d6c8f22fa50a45845e9b809378b53, type: 2}
   portrait: {fileID: -5908238798454654921, guid: bdf31c21559f9c8469e1ad7dd4aac6c2, type: 3}
-  skillData: {fileID: 11400000, guid: f8cda36d25245d04b90e589ac332c889, type: 2}
+  skillData: {fileID: 11400000, guid: 4017768f60c1ddf459e991ea4216e865, type: 2}
   defaultCharacterStat: {fileID: 11400000, guid: 83a5772a0dfaad943bb3cbd311b25a2b, type: 2}

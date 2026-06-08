@@ -18,7 +18,7 @@ public class EnemyMelee_AttackState : EnemyMelee_State
         specialAttackStarted = false;
         specialAttackFinished = false;
 
-        if (enemyMelee.enemyType == EnemyMeleeType.Special)
+        if (enemyMelee.enemyType == EnemyType.Elite)
         {
             specialAttackStarted = true;
             enemyMelee.telegraph.StartDash(OnSpecialAttackFinished);
@@ -38,11 +38,11 @@ public class EnemyMelee_AttackState : EnemyMelee_State
 
         switch (enemyMelee.enemyType)
         {
-            case EnemyMeleeType.Normal:
+            case EnemyType.Melee:
                 HandleNormalEnemy();
                 break;
 
-            case EnemyMeleeType.Special:
+            case EnemyType.Elite:
                 HandleSpecialEnemy();
                 break;
         }

@@ -19,7 +19,7 @@ MonoBehaviour:
   icon: {fileID: -748005180, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 0.5
   prerequisiteSkill: {fileID: 0}
-  skillType: 7
+  skillType: 8
   cardType: 0
   skillRarity: 300
   skillRollChance: 70.1
@@ -30,7 +30,7 @@ MonoBehaviour:
   speed: 0.8
   size: 1
   cooldown: 3
-  distanceToAttack: 1.5
+  distanceToAttack: 2
   damage: 5
   upgradeBoostChance: 30
   attackCooldownGuard: 2

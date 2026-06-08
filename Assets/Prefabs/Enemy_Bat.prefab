@@ -670,6 +670,7 @@ MonoBehaviour:
   heavyKnockBackThreshold: 0.3
   isKnockBack: 0
   canTrigger: 0
+  enemyType: 1
   idleTimer: 2
   detectionRadius: 100
   detectionAngle: 360

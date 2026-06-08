@@ -7,6 +7,8 @@ public class UI_SkillBoard : MonoBehaviour
     [SerializeField] private Skill_ListDataSO skillsData;
     [SerializeField] private UI_SkillCard[] cards;
 
+    List<Skill_BaseSO> availableSkills;
+
     [Header("Card restrictions")]
     [SerializeField] private int maxRarityAmount = 1200;
     [SerializeField] private int maxSkillToRoll = 3;
@@ -75,7 +77,7 @@ public class UI_SkillBoard : MonoBehaviour
 
     private List<Skill_BaseSO> InitializeSkills()
     {
-        List<Skill_BaseSO> availableSkills = new();
+        availableSkills = new();
         var progress = SkillProgressManager.instance;
 
         foreach (var skill in skillsData.skillList)

@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3740375926418904314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6443162266112615788}
+  - component: {fileID: 7291102452288045975}
+  m_Layer: 0
+  m_Name: OBJECT POOL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6443162266112615788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3740375926418904314}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.09925, y: -0.94163, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7291102452288045975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3740375926418904314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23f5f7e0ada16d64a98a3eaf9940ad02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
+  pools:
+  - tag: Enemy_Slime
+    prefab: {fileID: 3968612809859968654, guid: 8abf69ca59ab109499d2d8341210b2cd, type: 3}
+    initialSize: 3
+  - tag: SkillObject_Soul
+    prefab: {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+    initialSize: 3
+  - tag: SkillObject_FireSoul
+    prefab: {fileID: 1168510075856658422, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
+    initialSize: 3
+  - tag: SkillObject_SpinningSword
+    prefab: {fileID: 4526101274153675507, guid: 10f88ec3e81a2d046a870bd5627c32d3, type: 3}
+    initialSize: 3
+  - tag: SkillObject_SoulBurst
+    prefab: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
+    initialSize: 3
+  - tag: VFX_DeathDash
+    prefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
+    initialSize: 3
+  - tag: VFX_OnHit
+    prefab: {fileID: 9171614730211571296, guid: 387b1216e46ee274fab176c7b35fb84c, type: 3}
+    initialSize: 3
+  - tag: SkillObjectEnemy_EnergyBall
+    prefab: {fileID: 5612906296824489825, guid: 8f02cc9443d691644a7c0c992c2b984b, type: 3}
+    initialSize: 3
+  - tag: Enemy_Bat
+    prefab: {fileID: 8090043777706953505, guid: 4cbb210403faedd45a331964b016ba43, type: 3}
+    initialSize: 3
+  - tag: Enemy_GoblinDash
+    prefab: {fileID: 3285970535671639790, guid: 2cc547d883b811240927e8e7d1bd3bb6, type: 3}
+    initialSize: 3
+  - tag: VFX_OnCriticalHit
+    prefab: {fileID: 3991962256524217329, guid: ba9d092ac2488274d85c65015c7cb46c, type: 3}
+    initialSize: 3
+  - tag: SkillObject_SlashSword
+    prefab: {fileID: 586065914269715310, guid: 13389143cab4ba942af265bd38769878, type: 3}
+    initialSize: 3
+  - tag: UIObject_Bone
+    prefab: {fileID: 3859248582534214187, guid: 64fe7c75165e34f4c90c6cfbba7f5db6, type: 3}
+    initialSize: 3
+  - tag: UIObject_Moss
+    prefab: {fileID: 5635045889416784739, guid: 96e748748b205814683f62388043e405, type: 3}
+    initialSize: 3
+  - tag: UIObject_Stone
+    prefab: {fileID: 4016103629615155990, guid: eaef294e4d745be4f8ee466433fa5123, type: 3}
+    initialSize: 3
+  - tag: UIObject_BigStone
+    prefab: {fileID: 2278201268880847735, guid: 3d8d58048be23dd43be4d23b91de0dd6, type: 3}
+    initialSize: 3
+  - tag: Enemy_CursedSlime
+    prefab: {fileID: 2783164664844586445, guid: 7aae1675c9e106042b3680e00e50a481, type: 3}
+    initialSize: 3
+  - tag: SkillObject_FireBall
+    prefab: {fileID: 604700590831976314, guid: 02fdf9101e899ee4890d1bae143e5d71, type: 3}
+    initialSize: 3

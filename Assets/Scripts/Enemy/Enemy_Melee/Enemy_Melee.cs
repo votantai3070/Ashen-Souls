@@ -1,11 +1,5 @@
-public enum EnemyMeleeType
-{
-    Normal, Special
-}
-
 public class Enemy_Melee : Enemy
 {
-    public EnemyMeleeType enemyType;
     public EnemyMeleeAttackTelegraph telegraph { get; private set; }
 
     public EnemyMelee_IdleState idleState { get; private set; }
