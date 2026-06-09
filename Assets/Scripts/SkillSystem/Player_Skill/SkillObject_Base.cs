@@ -80,7 +80,7 @@ public class SkillObject_Base : MonoBehaviour
             }
         }
 
-        if (hitAny)
+        if (hitAny && skillType != SkillType.SpinningSword)
         {
             SetPhysicsActive(false);
             OnHit?.Invoke();

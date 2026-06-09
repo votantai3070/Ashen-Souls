@@ -25,6 +25,7 @@ public class SkillObject_SlashSword : SkillObject_Base
         this.slashSword = slashSword;
         this.whatIsEnemy = whatIsEnemy;
         entity = slashSword.entity;
+        skillType = slashSword.skillType;
 
         speed = slashSword.speedSkill.GetValue();
         damage = slashSword.damageSkill.GetValue();

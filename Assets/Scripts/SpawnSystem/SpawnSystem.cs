@@ -112,6 +112,11 @@ public class SpawnSystem : MonoBehaviour
                 currentWave = waves[i];
                 return;
             }
+            else if (waves[i].startTime > totalSpawnDuration && waves[i].lastWave)
+            {
+                currentWave = waves[i];
+                return;
+            }
         }
     }
 

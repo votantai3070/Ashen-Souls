@@ -39,17 +39,17 @@ public class SkillObject_FireBall : SkillObject_Base
         CheckDuration();
     }
 
-    public void SetupFireBall(Skill_FireBall skill, float duration, LayerMask whatIsEnemy)
+    public void SetupFireBall(Skill_FireBall fireBall, float duration, LayerMask whatIsEnemy)
     {
-        fireBallManager = skill;
+        fireBallManager = fireBall;
         this.whatIsEnemy = whatIsEnemy;
         entity = fireBallManager.entity;
+        skillType = fireBall.skillType;
 
         speed = fireBallManager.speedSkill.GetValue();
         damage = fireBallManager.damageSkill.GetValue();
         size = fireBallManager.sizeSkill.GetValue();
 
-        skillType = skill.skillType;
         target = fireBallManager.target;
         checkEnemyRadius = fireBallManager.checkEnemyRadius;
         checkDamageRadius = size * 0.4f; // The explosion radius is smaller than the visual size of the fire soul, so we use a fraction of the size for the damage radius.

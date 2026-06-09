@@ -40,6 +40,7 @@ public class SkillObject_FireSoul : SkillObject_Base
         this.fireSoulManager = fireSoulManager;
         whatIsEnemy = enemyLayer;
         entity = fireSoulManager.entity;
+        skillType = fireSoulManager.skillType;
 
         speed = fireSoulManager.speedSkill.GetValue();
         damage = fireSoulManager.damageSkill.GetValue();

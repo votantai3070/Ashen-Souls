@@ -14,12 +14,13 @@ public class SkillObject_SpinningSword : SkillObject_Base
         base.Awake();
     }
 
-    public void SetupSword(Skill_SpinningSword spinSwordManager, Entity owner, float radius, float dur, LayerMask whatIsEnemy, float startAngle = 0f)
+    public void SetupSword(Skill_SpinningSword spinSwordManager, Entity owner, float radius, float duration, LayerMask whatIsEnemy, float startAngle = 0f)
     {
         swordManager = spinSwordManager;
         entity = owner;
         centerTarget = owner.transform;
         this.whatIsEnemy = whatIsEnemy;
+        skillType = spinSwordManager.skillType;
 
         speed = spinSwordManager.speedSkill.GetValue();
         damage = spinSwordManager.damageSkill.GetValue();
@@ -28,7 +29,7 @@ public class SkillObject_SpinningSword : SkillObject_Base
         orbitRadius = radius;
         orbitSpeed = speed;
         currentAngle = startAngle;
-        duration = dur;
+        this.duration = duration;
 
         checkDamageRadius = size * 0.6f;
         checkEnemyRadius = size * 0.6f;
@@ -37,7 +38,6 @@ public class SkillObject_SpinningSword : SkillObject_Base
         transform.localScale = Vector3.one * size;
 
         spawnTime = Time.time;
-        SetPhysicsActive(true);
     }
 
     protected override void Update()

@@ -20,6 +20,7 @@ public class SkillObject_SoulBurst : SkillObject_Base
         entity = soulBurstManager.entity;
         this.soulBurstManager = soulBurstManager;
         whatIsEnemy = enemyLayer;
+        skillType = soulBurstManager.skillType;
 
         speed = soulBurstManager.speedSkill.GetValue();
         damage = soulBurstManager.damageSkill.GetValue();
