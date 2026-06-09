@@ -88,7 +88,6 @@ public class Skill_Base : MonoBehaviour
 
         if (OnCooldown())
         {
-            Debug.Log("On Cooldown");
             return false;
         }
 
@@ -97,7 +96,6 @@ public class Skill_Base : MonoBehaviour
 
         if (target == null)
         {
-            Debug.Log("No Target");
             return false;
         }
 

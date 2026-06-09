@@ -42,6 +42,7 @@ public class SkillObject_Soul : SkillObject_Base
         speed = soulSpeed;
         target = newTarget;
         canMoveToTarget = canMove;
+        SetPhysicsActive(true);
     }
 
     public void AbsorbSoul()

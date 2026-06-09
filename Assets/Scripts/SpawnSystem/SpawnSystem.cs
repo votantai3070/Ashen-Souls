@@ -31,7 +31,6 @@ public class SpawnSystem : MonoBehaviour
     [SerializeField] private List<GameObject> aliveEnemies = new();
 
     private WaveData currentWave;
-    private WaveData previousWave;
 
     private void Awake()
     {
@@ -60,7 +59,6 @@ public class SpawnSystem : MonoBehaviour
         isSpawning = true;
 
         UpdateCurrentWave();
-        previousWave = currentWave;
 
         if (currentWave != null)
             SpawnBreakableAndObstacleObjectsAtWaveStart();
@@ -79,6 +77,13 @@ public class SpawnSystem : MonoBehaviour
         {
             isSpawning = false;
             Debug.Log("Spawn phase ended!");
+            return;
+        }
+
+        if (currentWave.lastWave)
+        {
+            isSpawning = false;
+            Debug.Log("Spawn ended!");
             return;
         }
 

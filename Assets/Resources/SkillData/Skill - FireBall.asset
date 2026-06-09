@@ -32,5 +32,4 @@ MonoBehaviour:
   cooldown: 2.5
   distanceToAttack: 7
   damage: 10
-  upgradeBoostChance: 30
-  attackCooldownGuard: 0.5
+  attackCooldownGuard: 0

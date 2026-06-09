@@ -41,6 +41,7 @@ public class SkillObject_SoulBurst : SkillObject_Base
         spawnTime = Time.time;
 
         transform.localScale = Vector3.one * size;
+        SetPhysicsActive(true);
     }
 
     protected override void CheckDuration()

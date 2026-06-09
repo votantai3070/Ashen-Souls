@@ -73,7 +73,7 @@ public class SkillObject_FireSoul : SkillObject_Base
 
         if (collision.CompareTag("Enemy") || collision.CompareTag("Breakable"))
         {
-            DamageEnemiesInRadius(transform, entity.transform);
+            DamageEnemiesInRadius(collision.transform, entity.transform);
             OnHit();
         }
     }

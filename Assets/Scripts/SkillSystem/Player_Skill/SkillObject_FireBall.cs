@@ -37,7 +37,6 @@ public class SkillObject_FireBall : SkillObject_Base
         base.Update();
 
         CheckDuration();
-        DamageEnemiesInRadius(transform, entity.transform, OnHitSkill);
     }
 
     public void SetupFireBall(Skill_FireBall skill, float duration, LayerMask whatIsEnemy)
@@ -53,7 +52,7 @@ public class SkillObject_FireBall : SkillObject_Base
         skillType = skill.skillType;
         target = fireBallManager.target;
         checkEnemyRadius = fireBallManager.checkEnemyRadius;
-        checkDamageRadius = size * .26f; // The explosion radius is smaller than the visual size of the fire soul, so we use a fraction of the size for the damage radius.
+        checkDamageRadius = size * 0.4f; // The explosion radius is smaller than the visual size of the fire soul, so we use a fraction of the size for the damage radius.
         attackCooldownGuard = fireBallManager.attackCooldownGuard;
         this.duration = duration;
 
@@ -69,8 +68,6 @@ public class SkillObject_FireBall : SkillObject_Base
         target = null;
         fireBallManager.OnBallBurstExpired();
         ObjectPool.instance.Despawn(gameObject);
-
-        SetPhysicsActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -79,6 +76,7 @@ public class SkillObject_FireBall : SkillObject_Base
 
         if (collision.CompareTag("Enemy") || collision.CompareTag("Breakable"))
         {
+            DamageEnemiesInRadius(collision.transform, entity.transform, OnHitSkill);
         }
     }
 
@@ -86,8 +84,7 @@ public class SkillObject_FireBall : SkillObject_Base
     {
         if (Time.time > spawnTime + duration)
         {
-            fireBallManager.OnBallBurstExpired();
-            ObjectPool.instance.Despawn(gameObject);
+            OnHit();
         }
     }
 }

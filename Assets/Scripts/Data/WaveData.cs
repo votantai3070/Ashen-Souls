@@ -5,6 +5,8 @@ using UnityEngine;
 [Serializable]
 public class WaveData
 {
+    public bool lastWave;
+    [Space]
     public string waveName;
     public float startTime;
     public float endTime = 30f;

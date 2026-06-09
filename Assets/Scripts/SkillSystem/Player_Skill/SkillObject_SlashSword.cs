@@ -40,6 +40,7 @@ public class SkillObject_SlashSword : SkillObject_Base
 
         SetSpeedAnim(speed);
         transform.localScale = Vector3.one * size;
+        SetPhysicsActive(true);
     }
 
     private void OnHit()

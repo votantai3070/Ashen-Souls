@@ -37,6 +37,7 @@ public class SkillObject_SpinningSword : SkillObject_Base
         transform.localScale = Vector3.one * size;
 
         spawnTime = Time.time;
+        SetPhysicsActive(true);
     }
 
     protected override void Update()

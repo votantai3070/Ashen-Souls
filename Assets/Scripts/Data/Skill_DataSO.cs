@@ -15,10 +15,7 @@ public class Skill_DataSO : Skill_BaseSO
     public float cooldown;
     public float distanceToAttack;
     public float damage;
-
-    [Header("Upgrade")]
-    [Range(0, 100)]
-    public float upgradeBoostChance = 30f;
+    [Space]
     public float attackCooldownGuard = .5f;
 
     public override string GetUpgradeDescription()

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 public class SkillObject_Base : MonoBehaviour
@@ -48,6 +48,7 @@ public class SkillObject_Base : MonoBehaviour
 
     protected virtual void Start()
     {
+
     }
 
     protected virtual void Update()
@@ -57,41 +58,32 @@ public class SkillObject_Base : MonoBehaviour
 
     protected void DamageEnemiesInRadius(Transform t, Transform damageDealer, Action OnHit = null)
     {
-        if (!CanAttack()) // Guard against attacking too frequently
+        if (!CanAttack())
             return;
 
         lastAttackTime = Time.time;
+        bool hitAny = false;
 
         foreach (var enemy in GetEnemyAround(t, checkDamageRadius))
         {
             if (enemy.TryGetComponent(out IDamageable damageable))
             {
                 float dealerDamage = entity.entityStats.GetSkillDamage(damage, out bool isCriticalHit);
-                canHit = damageable.TakeDamage(isCriticalHit, dealerDamage, damageDealer.transform);
+                bool didHit = damageable.TakeDamage(isCriticalHit, dealerDamage, damageDealer);
 
-                if (canHit)
+                if (didHit)
                 {
-                    if (skillType == SkillType.FireSoul || skillType == SkillType.FireBall)
-                    {
-                        enemy.GetComponent<Entity_VFX>().DamageVfx(defaultImpactDuration);
-                        entity?.entityVFX?.GetImapctVfx(enemy.transform, isCriticalHit);
-                        SetPhysicsActive(false);
-                        OnHit.Invoke();
-                        return;
-                    }
-
-                    Entity_VFX targetVfx = enemy.GetComponent<Entity_VFX>();
-
-                    if (targetVfx != null && enemy.gameObject.activeInHierarchy)
-                        targetVfx.DamageVfx(defaultImpactDuration);
-
-                    if (entity != null && entity.entityVFX != null)
-                        entity.entityVFX.GetImapctVfx(enemy.transform, isCriticalHit);
-
-                    if (OnHit != null)
-                        OnHit.Invoke();
+                    enemy.GetComponent<Entity_VFX>()?.DamageVfx(defaultImpactDuration);
+                    entity?.entityVFX?.GetImapctVfx(enemy.transform, isCriticalHit);
+                    hitAny = true;
                 }
             }
+        }
+
+        if (hitAny)
+        {
+            SetPhysicsActive(false);
+            OnHit?.Invoke();
         }
     }
 
@@ -102,7 +94,10 @@ public class SkillObject_Base : MonoBehaviour
 
     public bool CanAttack()
     {
-        return Time.time > lastAttackTime + attackCooldownGuard;
+        bool canAttack = Time.time > lastAttackTime + attackCooldownGuard;
+        Debug.Log("Can Attack: " + canAttack);
+
+        return canAttack;
     }
 
     public void SetPhysicsActive(bool active)

@@ -215,8 +215,6 @@ public class Entity_Stats : MonoBehaviour
             return;
         }
 
-        Debug.Log($"{name}: Applying default stat setup.");
-
         // Default resource stats
         resource.maxHealth.SetBaseValue(defaultStatSetup.maxHealth);
         resource.regenHealth.SetBaseValue(defaultStatSetup.healthRegen);

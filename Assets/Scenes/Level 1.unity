@@ -44208,10 +44208,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Slime
       objectReference: {fileID: 0}
-    - target: {fileID: 3968612809859968654, guid: 8abf69ca59ab109499d2d8341210b2cd, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -100796,17 +100792,9 @@ PrefabInstance:
       propertyPath: confinerBounds
       value: 
       objectReference: {fileID: 1257635985}
-    - target: {fileID: 6636224208332005114, guid: 1a01e79980f515d4eaf2dca11da41442, type: 3}
-      propertyPath: waves.Array.data[0].enemies.Array.data[0].prefab
-      value: 
-      objectReference: {fileID: 3968612809859968654, guid: 8abf69ca59ab109499d2d8341210b2cd, type: 3}
     - target: {fileID: 6936646080490105410, guid: 1a01e79980f515d4eaf2dca11da41442, type: 3}
       propertyPath: m_Name
       value: SPAWN SYSTEM
-      objectReference: {fileID: 0}
-    - target: {fileID: 6936646080490105410, guid: 1a01e79980f515d4eaf2dca11da41442, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -101173,6 +101161,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3747283088403662344, guid: 02fdf9101e899ee4890d1bae143e5d71, type: 3}
+      propertyPath: checkEnemyRadius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3747283088403662344, guid: 02fdf9101e899ee4890d1bae143e5d71, type: 3}
+      propertyPath: checkDamageRadius
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289415789525827172, guid: 02fdf9101e899ee4890d1bae143e5d71, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289415789525827172, guid: 02fdf9101e899ee4890d1bae143e5d71, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -101192,7 +101196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1154154707009388935, guid: 9f868c57efb9bcc459a7c56780b51a5c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2910741485820433398, guid: 9f868c57efb9bcc459a7c56780b51a5c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -101233,18 +101237,6 @@ PrefabInstance:
     - target: {fileID: 2910741485820433398, guid: 9f868c57efb9bcc459a7c56780b51a5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8462058564074626305, guid: 9f868c57efb9bcc459a7c56780b51a5c, type: 3}
-      propertyPath: m_Radius
-      value: 1.2068255
-      objectReference: {fileID: 0}
-    - target: {fileID: 8462058564074626305, guid: 9f868c57efb9bcc459a7c56780b51a5c, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.39713728
-      objectReference: {fileID: 0}
-    - target: {fileID: 8462058564074626305, guid: 9f868c57efb9bcc459a7c56780b51a5c, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.05892478
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
