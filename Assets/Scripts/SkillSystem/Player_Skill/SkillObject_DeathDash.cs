@@ -1,8 +1,13 @@
+using System;
 using UnityEngine;
 
 public class SkillObject_DeathDash : SkillObject_Base
 {
+    public Action OnHitSkill;
+
+
     private Skill_DeathDash deathDashManager;
+
 
     public void SetDeathDash(Skill_DeathDash deathDashManager, float duration, LayerMask enemyLayer)
     {

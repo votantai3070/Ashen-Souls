@@ -1,13 +1,14 @@
 using UnityEngine;
 
-public class EnemyRange_SkillManager : Entity_SkillManager
+public class Enemy_SkillManager : Entity_SkillManager
 {
     [SerializeField] private SkillEnemy_DataSO[] skillData;
 
     public SkillEnemy_Base[] skills { get; private set; }
     public Enemy enemy { get; private set; }
 
-    public SkillEnemy_Base energyBall { get; private set; }
+    public SkillEnemy_EnergyBall energyBall { get; private set; }
+    public SkillBoss_WerebearShockwave shockwave { get; private set; }
 
     protected override void Awake()
     {
@@ -15,6 +16,7 @@ public class EnemyRange_SkillManager : Entity_SkillManager
 
         skills = GetComponentsInChildren<SkillEnemy_Base>();
         energyBall = GetComponentInChildren<SkillEnemy_EnergyBall>();
+        shockwave = GetComponentInChildren<SkillBoss_WerebearShockwave>();
     }
 
     private void Start()
@@ -37,6 +39,7 @@ public class EnemyRange_SkillManager : Entity_SkillManager
         switch (type)
         {
             case SkillEnemyType.EnergyBall: return energyBall;
+            case SkillEnemyType.WerebearShockwave: return shockwave;
 
             default:
                 Debug.Log($"Skill enemy type {type} is not implemented yet.");

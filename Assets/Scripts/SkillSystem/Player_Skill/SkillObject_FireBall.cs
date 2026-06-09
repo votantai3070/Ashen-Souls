@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class SkillObject_FireBall : SkillObject_Base
 {
+    public Action OnHitSkill;
+
     private Skill_FireBall fireBallManager;
     public Transform target { get; private set; }
 
@@ -20,6 +23,13 @@ public class SkillObject_FireBall : SkillObject_Base
     protected override void Start()
     {
         stateMachine.Initialize(shotState);
+
+        OnHitSkill += OnHit;
+    }
+
+    private void OnDestroy()
+    {
+        OnHitSkill -= OnHit;
     }
 
     protected override void Update()
@@ -27,6 +37,7 @@ public class SkillObject_FireBall : SkillObject_Base
         base.Update();
 
         CheckDuration();
+        DamageEnemiesInRadius(transform, entity.transform, OnHitSkill);
     }
 
     public void SetupFireBall(Skill_FireBall skill, float duration, LayerMask whatIsEnemy)
@@ -39,6 +50,7 @@ public class SkillObject_FireBall : SkillObject_Base
         damage = fireBallManager.damageSkill.GetValue();
         size = fireBallManager.sizeSkill.GetValue();
 
+        skillType = skill.skillType;
         target = fireBallManager.target;
         checkEnemyRadius = fireBallManager.checkEnemyRadius;
         checkDamageRadius = size * .26f; // The explosion radius is smaller than the visual size of the fire soul, so we use a fraction of the size for the damage radius.
@@ -67,8 +79,6 @@ public class SkillObject_FireBall : SkillObject_Base
 
         if (collision.CompareTag("Enemy") || collision.CompareTag("Breakable"))
         {
-            DamageEnemiesInRadius(transform, entity.transform);
-            OnHit();
         }
     }
 

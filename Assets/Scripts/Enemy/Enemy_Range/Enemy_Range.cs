@@ -2,7 +2,7 @@
 
 public class Enemy_Range : Enemy
 {
-    public EnemyRange_SkillManager skillManager { get; private set; }
+    public Enemy_SkillManager skillManager { get; private set; }
 
     public EnemyRange_IdleState idleState { get; private set; }
     public EnemyRange_MoveState moveState { get; private set; }
@@ -15,7 +15,7 @@ public class Enemy_Range : Enemy
     {
         base.Awake();
 
-        skillManager = GetComponentInChildren<EnemyRange_SkillManager>();
+        skillManager = GetComponentInChildren<Enemy_SkillManager>();
 
         idleState = new(this, stateMachine, "Idle");
         moveState = new(this, stateMachine, "Move");

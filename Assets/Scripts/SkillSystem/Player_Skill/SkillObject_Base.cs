@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class SkillObject_Base : MonoBehaviour
@@ -8,7 +9,7 @@ public class SkillObject_Base : MonoBehaviour
     public Collider2D col { get; private set; }
 
     protected Entity entity;
-    protected SkillUpgradeType upgradeType;
+    protected SkillType skillType;
 
     [Header("Detected Settings")]
     public float checkDamageRadius = 3;
@@ -34,8 +35,6 @@ public class SkillObject_Base : MonoBehaviour
     protected float duration;
 
     private bool canHit;
-    //private bool becomeInvulnerable;
-    private bool attackWindow;
 
     protected virtual void Awake()
     {
@@ -56,11 +55,10 @@ public class SkillObject_Base : MonoBehaviour
         stateMachine.currentState?.Update();
     }
 
-    protected void DamageEnemiesInRadius(Transform t, Transform damageDealer)
+    protected void DamageEnemiesInRadius(Transform t, Transform damageDealer, Action OnHit = null)
     {
-        if (!CanAttack()) return; // Guard against attacking too frequently
-
-        Debug.Log("DamageEnemiesInRadius called");
+        if (!CanAttack()) // Guard against attacking too frequently
+            return;
 
         lastAttackTime = Time.time;
 
@@ -73,11 +71,12 @@ public class SkillObject_Base : MonoBehaviour
 
                 if (canHit)
                 {
-                    if (upgradeType == SkillUpgradeType.FireSoul || upgradeType == SkillUpgradeType.FireSoulUpgrade)
+                    if (skillType == SkillType.FireSoul || skillType == SkillType.FireBall)
                     {
                         enemy.GetComponent<Entity_VFX>().DamageVfx(defaultImpactDuration);
                         entity?.entityVFX?.GetImapctVfx(enemy.transform, isCriticalHit);
                         SetPhysicsActive(false);
+                        OnHit.Invoke();
                         return;
                     }
 
@@ -88,6 +87,9 @@ public class SkillObject_Base : MonoBehaviour
 
                     if (entity != null && entity.entityVFX != null)
                         entity.entityVFX.GetImapctVfx(enemy.transform, isCriticalHit);
+
+                    if (OnHit != null)
+                        OnHit.Invoke();
                 }
             }
         }
@@ -100,7 +102,7 @@ public class SkillObject_Base : MonoBehaviour
 
     public bool CanAttack()
     {
-        return Time.time >= lastAttackTime + attackCooldownGuard;
+        return Time.time > lastAttackTime + attackCooldownGuard;
     }
 
     public void SetPhysicsActive(bool active)

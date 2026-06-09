@@ -29,7 +29,7 @@ MonoBehaviour:
     m_Bits: 128
   upgradeData:
     enemyType: 0
-    damage: 5
+    damage: 30
     cooldown: 1
     distanceToAttack: 5
     attackRadius: 1.5

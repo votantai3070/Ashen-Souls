@@ -12,7 +12,7 @@ public class SkillEnemy_Base : MonoBehaviour
     [SerializeField] private LayerMask whatIsEnemy;
     public Transform target;
 
-    private GameObject skillObject;
+    public GameObject skillObject { get; private set; }
 
     [Header("Settings")]
     public float damage;
@@ -82,10 +82,27 @@ public class SkillEnemy_Base : MonoBehaviour
         direction = enemy.GetDirectionPlayer();
 
         skillObject = ObjectPool.instance.Spawn(skillObjectGo.name, transform.position, Quaternion.identity);
-        skillObject.GetComponent<SkillObjectEnemy_EnergyBall>().SetupEnergyBall(this, duration, direction, whatIsEnemy);
+
+        SwitchToSkillEnemyByType(skillEnemyType);
     }
 
-    public void OnSoulBurstExpired()
+    private void SwitchToSkillEnemyByType(SkillEnemyType type)
+    {
+        switch (type)
+        {
+            case SkillEnemyType.WerebearShockwave:
+                skillObject.GetComponent<SkillObjectBoss_WerebearShockwave>().SetupShockWave(this, duration, direction, whatIsEnemy);
+                break;
+            case SkillEnemyType.EnergyBall:
+                skillObject.GetComponent<SkillObjectEnemy_EnergyBall>().SetupEnergyBall(this, duration, direction, whatIsEnemy);
+                break;
+            default:
+                Debug.LogWarning("Unknown skill enemy type: " + type);
+                break;
+        }
+    }
+
+    public void OnSkillExpired()
     {
         skillObject = null;
     }

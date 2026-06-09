@@ -1,4 +1,5 @@
 public enum SkillEnemyType
 {
-    EnergyBall
+    EnergyBall,
+    WerebearShockwave,
 }

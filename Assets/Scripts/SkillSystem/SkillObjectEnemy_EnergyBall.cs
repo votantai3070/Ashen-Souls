@@ -39,7 +39,7 @@ public class SkillObjectEnemy_EnergyBall : SkillObject_Base
     public void OnHit()
     {
         target = null;
-        energyBallManager.OnSoulBurstExpired();
+        energyBallManager.OnSkillExpired();
         ObjectPool.instance.Despawn(gameObject);
 
         SetPhysicsActive(false);

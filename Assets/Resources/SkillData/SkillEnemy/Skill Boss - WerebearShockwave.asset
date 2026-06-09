@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf30d8d7509aea4aa9e0e6b2a097b6c, type: 3}
+  m_Name: Skill Boss - WerebearShockwave
+  m_EditorClassIdentifier: Assembly-CSharp::SkillEnemy_DataSO
+  saveId: 295af82011b596f4aba293808751356f
+  skillId: 295af82011b596f4aba293808751356f
+  displayName: Shockwave
+  description: 
+  icon: {fileID: 0}
+  duration: 3
+  prerequisiteSkill: {fileID: 0}
+  skillType: 0
+  cardType: 0
+  skillRarity: 100
+  skillRollChance: 65
+  maxSkillRollChance: 65
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 128
+  upgradeData:
+    enemyType: 1
+    damage: 60
+    cooldown: 0
+    distanceToAttack: 5
+    attackRadius: 10
+    speed: 6
+    attackCooldownGuard: 0.1
+  skillObjectPrefab: {fileID: 3433185196576861620, guid: b2c1518699be9804a9ef126030e79618, type: 3}

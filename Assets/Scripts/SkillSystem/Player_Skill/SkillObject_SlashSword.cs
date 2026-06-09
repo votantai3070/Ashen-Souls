@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class SkillObject_SlashSword : SkillObject_Base
 {
+    public Action OnHitSkill;
+
     private Skill_SlashSword slashSword;
     public Transform target { get; private set; }
 
@@ -13,6 +16,7 @@ public class SkillObject_SlashSword : SkillObject_Base
     protected override void Update()
     {
         CheckDuration();
+
         DamageEnemiesInRadius(transform, entity.transform);
     }
 
@@ -30,6 +34,7 @@ public class SkillObject_SlashSword : SkillObject_Base
         checkEnemyRadius = slashSword.checkEnemyRadius;
         checkDamageRadius = size * .8f;
         this.duration = duration;
+        attackCooldownGuard = slashSword.attackCooldownGuard;
 
         spawnTime = Time.time;
 
@@ -37,12 +42,18 @@ public class SkillObject_SlashSword : SkillObject_Base
         transform.localScale = Vector3.one * size;
     }
 
+    private void OnHit()
+    {
+        target = null;
+        slashSword.OnSlashSwordExpired();
+        ObjectPool.instance.Despawn(gameObject);
+    }
+
     protected override void CheckDuration()
     {
         if (Time.time >= spawnTime + duration)
         {
-            slashSword.OnSlashSwordExpired();
-            ObjectPool.instance.Despawn(gameObject);
+            OnHit();
         }
     }
 }

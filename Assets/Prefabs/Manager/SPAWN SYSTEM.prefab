@@ -55,7 +55,7 @@ MonoBehaviour:
     maxSpawnInterval: 2
     maxEnemiesAlive: 100
     enemies:
-    - prefab: {fileID: 3968612809859968654, guid: 8abf69ca59ab109499d2d8341210b2cd, type: 3}
+    - prefab: {fileID: 2783164664844586445, guid: 7aae1675c9e106042b3680e00e50a481, type: 3}
       weight: 100
   - waveName: Wave 2
     startTime: 100

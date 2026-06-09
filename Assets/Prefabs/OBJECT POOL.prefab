@@ -99,3 +99,9 @@ MonoBehaviour:
   - tag: SkillObject_FireBall
     prefab: {fileID: 604700590831976314, guid: 02fdf9101e899ee4890d1bae143e5d71, type: 3}
     initialSize: 3
+  - tag: SkillObject_WerebearShockwave
+    prefab: {fileID: 3433185196576861620, guid: b2c1518699be9804a9ef126030e79618, type: 3}
+    initialSize: 3
+  - tag: EnemyBoss_WereBear
+    prefab: {fileID: 1154154707009388935, guid: 9f868c57efb9bcc459a7c56780b51a5c, type: 3}
+    initialSize: 3

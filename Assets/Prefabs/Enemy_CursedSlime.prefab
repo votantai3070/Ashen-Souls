@@ -339,6 +339,7 @@ MonoBehaviour:
   heavyKnockBackThreshold: 0.3
   isKnockBack: 0
   canTrigger: 0
+  enemyType: 0
   idleTimer: 2
   detectionRadius: 100
   detectionAngle: 360
@@ -350,7 +351,6 @@ MonoBehaviour:
   specialDistance: 0
   specialSpeed: 0
   specialDashDuration: 0
-  enemyType: 0
 --- !u!114 &5429567846425842175
 MonoBehaviour:
   m_ObjectHideFlags: 0
