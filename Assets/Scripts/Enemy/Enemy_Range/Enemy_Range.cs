@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class Enemy_Range : Enemy
+﻿public class Enemy_Range : Enemy
 {
     public Enemy_SkillManager skillManager { get; private set; }
 
@@ -57,19 +55,5 @@ public class Enemy_Range : Enemy
         if (stateMachine.currentState == hitState)
             return;
         stateMachine.ChangeState(hitState);
-    }
-
-    public void Flip(Vector2 direction)
-    {
-        if (direction.x < 0 && isFacingRight)
-        {
-            isFacingRight = false;
-            transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-        else if (direction.x > 0 && !isFacingRight)
-        {
-            isFacingRight = true;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
     }
 }

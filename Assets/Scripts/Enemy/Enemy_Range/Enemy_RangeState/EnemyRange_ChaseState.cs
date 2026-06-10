@@ -23,14 +23,10 @@ public class EnemyRange_ChaseState : EnemyRange_State
     {
         base.Update();
 
-        if (enemyRange.combat.CanSeePlayer() == false)
-            stateMachine.ChangeState(enemyRange.moveState);
-
         Vector2 direction = enemyRange.GetDirectionPlayer();
-        enemyRange.RotateFace(direction);
 
-        if (direction != Vector2.zero)
-            enemyRange.Flip(direction);
+        enemyRange.MovementAnimation(direction);
+        enemyRange.SetValueIdleAndAttackAnimation(direction);
 
         if (enemyRange.combat.CanAttack())
         {
@@ -39,7 +35,8 @@ public class EnemyRange_ChaseState : EnemyRange_State
             else
                 enemyRange.SetVelocity(direction.x * enemyRange.chaseSpeed, direction.y * enemyRange.chaseSpeed);
 
-            if (enemyRange.IsPlayerInAttackRange())
+            if (enemyRange.IsPlayerInAttackRange()
+                && enemyRange.skillManager.GetSkillEnemyByType(SkillEnemyType.EnergyBall).skillObject == null)
                 stateMachine.ChangeState(enemyRange.attackState);
         }
     }

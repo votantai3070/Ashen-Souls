@@ -110,7 +110,7 @@ MonoBehaviour:
     spawnMinionWithBoss: 1
   - isBossWave: 0
     isRewardWave: 1
-    waveName: Boss Wave
+    waveName: Reward Wave
     startTime: 1000
     endTime: 1010
     minSpawnInterval: 1

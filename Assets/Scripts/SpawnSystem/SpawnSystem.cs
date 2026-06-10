@@ -251,6 +251,7 @@ public class SpawnSystem : MonoBehaviour
                     continue;
             }
 
+            enemy.GetComponent<Enemy>().GetComponent<DropSystem>().SpawnDrop();
             enemy.GetComponent<Enemy>().TryToDieState();
         }
 

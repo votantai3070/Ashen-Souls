@@ -47,12 +47,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76260c17168edb44a9d45e125f1aef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillObject_FireBall
-  checkDamageRadius: 3
+  checkDamageRadius: 0.38
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 64
   targetCheck: {fileID: 1808105778139133351}
-  checkEnemyRadius: 3
+  checkEnemyRadius: 0.4
   defaultImpactDuration: 0.2
 --- !u!50 &5289415789525827172
 Rigidbody2D:
@@ -77,9 +77,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!70 &1991504727947026564
 CapsuleCollider2D:
