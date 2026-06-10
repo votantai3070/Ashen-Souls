@@ -6,7 +6,6 @@ public class Player_Stats : Entity_Stats, ISaveable
     private List<string> activeBuff = new List<string>();
 
     private Player player;
-    public LevelSystem levelSystem = new LevelSystem();
 
     private void Awake()
     {
@@ -15,9 +14,9 @@ public class Player_Stats : Entity_Stats, ISaveable
 
     private void Start()
     {
-        levelSystem.OnLevelUp += HandleLevelUp;
-        levelSystem.OnExpChanged += HandleExpChanged;
-        HandleExpChanged(levelSystem.CurrentExp(), levelSystem.CurrentMaxExp());
+        LevelManager.instance.levelSystem.OnLevelUp += HandleLevelUp;
+        LevelManager.instance.levelSystem.OnExpChanged += HandleExpChanged;
+        HandleExpChanged(LevelManager.instance.levelSystem.CurrentExp(), LevelManager.instance.levelSystem.CurrentMaxExp());
     }
 
     public void ApplyBuff(BuffEffectData buff, string source, bool isPercent)
@@ -46,11 +45,11 @@ public class Player_Stats : Entity_Stats, ISaveable
     private void HandleExpChanged(float current, float max)
     {
         UI.instance?.ingameUI?.UpdateExpBar(current, max);
-        UI.instance?.ingameUI?.UpdateLevelText(levelSystem.CurrentLevel());
+        UI.instance?.ingameUI?.UpdateLevelText(LevelManager.instance.levelSystem.CurrentLevel());
     }
 
-    public void GainExp(float amount) => levelSystem.AddExp(amount);
-    public int GetLevel() => levelSystem.CurrentLevel();
+    public void GainExp(float amount) => LevelManager.instance.levelSystem.AddExp(amount);
+    public int GetLevel() => LevelManager.instance.levelSystem.CurrentLevel();
 
     private float GetBuffValue(StatType type)
     {

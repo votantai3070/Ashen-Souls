@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
   saveId: 25c550a5ad9419f4a8fc64c66dfd09c7
   skillId: 25c550a5ad9419f4a8fc64c66dfd09c7
+  skillMilestoneType: 1
   displayName: Evasion
   description: Max Health + 100
   icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}

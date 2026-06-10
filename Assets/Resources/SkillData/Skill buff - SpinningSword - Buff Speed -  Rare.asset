@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
   saveId: 68653c5e2ca5ce740a1f360216cf597d
   skillId: 68653c5e2ca5ce740a1f360216cf597d
+  skillMilestoneType: 1
   displayName: Spinning Sword
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: -748005180, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 11400000, guid: 6f93ee8d2ae5e02469fd25a468a93217, type: 2}
   skillType: 5

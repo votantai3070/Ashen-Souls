@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Skill_BuffDataSO
   saveId: c7db3f2e1bca2504eba21b9fe44147d5
   skillId: c7db3f2e1bca2504eba21b9fe44147d5
+  skillMilestoneType: 1
   displayName: Agility
   description: 
   icon: {fileID: 1814028019, guid: 2dce6810664a724449b5179afc6542bf, type: 3}

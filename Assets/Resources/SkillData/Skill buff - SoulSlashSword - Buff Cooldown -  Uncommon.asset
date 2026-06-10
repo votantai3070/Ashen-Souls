@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
   saveId: 50bac1308c3dd374683a8b423d37a521
   skillId: 50bac1308c3dd374683a8b423d37a521
+  skillMilestoneType: 1
   displayName: Soul Slash Sword
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 477856853, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 11400000, guid: 2b345ef22a1d7dd44bc790c06e918103, type: 2}
   skillType: 8

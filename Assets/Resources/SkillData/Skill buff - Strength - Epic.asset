@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
   saveId: cdcda4916d7352d41b7475a1c9959f28
   skillId: cdcda4916d7352d41b7475a1c9959f28
+  skillMilestoneType: 1
   displayName: Strength
   description: Max Health + 100
-  icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
+  icon: {fileID: 1072495987, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
   skillType: 0

@@ -29,10 +29,10 @@ public class UI_TotalSummary : MonoBehaviour
                     value = (int)GameManager.instance.TotalEnemiesKilled;
                     break;
                 case TotalSummaryType.LevelReached:
-                    value = UI.instance.player.stats.levelSystem.CurrentLevel();
+                    value = LevelManager.instance.levelSystem.CurrentLevel();
                     break;
                 case TotalSummaryType.ExperienceGained:
-                    value = (int)UI.instance.player.stats.levelSystem.CurrentExp();
+                    value = (int)LevelManager.instance.levelSystem.CurrentExp();
                     break;
             }
             slot.SetTotalValue(value);

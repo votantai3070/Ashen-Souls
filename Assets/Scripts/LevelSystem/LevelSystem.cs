@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
 public class LevelSystem
 {
-    public event Action<int> OnLevelUp;       // level mới
-    public event Action<float, float> OnExpChanged; // currentExp, maxExp
+    public event Action<int> OnLevelUp;
+    public event Action<float, float> OnExpChanged;
+
+    [SerializeField] private List<int> levelRewardMilestones = new() { 5, 10, 15, 20 };
 
     [Header("Config")]
     [SerializeField] private int maxLevel = 99;
@@ -23,6 +26,17 @@ public class LevelSystem
     public float ExpProgress() => currentExp / CurrentMaxExp(); // 0 → 1 for Slider
 
     public float MaxExpForLevel(int level) => Mathf.Floor(baseExp * Mathf.Pow(level, expScalingFactor));
+
+    public bool SkillCardReward()
+    {
+        foreach (var levelMilestone in levelRewardMilestones)
+        {
+            if (currentLevel == levelMilestone)
+                return true;
+        }
+
+        return false;
+    }
 
     public void AddExp(float amount)
     {

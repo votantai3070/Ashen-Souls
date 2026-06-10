@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
   m_Name: Skill buff - Strength - Common 1
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: 6cb6bd0aa4c6b5a468a7bbc880d7ff33
-  skillId: 6cb6bd0aa4c6b5a468a7bbc880d7ff33
+  saveId: 81bcd2ccdbf732c40843468529756420
+  skillId: 81bcd2ccdbf732c40843468529756420
+  skillMilestoneType: 1
   displayName: Strength
   description: Max Health + 100
-  icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
+  icon: {fileID: 1072495987, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
   skillType: 0

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
   m_Name: Skill buff - Evasion - Epic 1
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: d6ba905ff48041d46a646667f960b29d
-  skillId: d6ba905ff48041d46a646667f960b29d
+  saveId: 55b25d6725c40ff4eb8d3829014ed297
+  skillId: 55b25d6725c40ff4eb8d3829014ed297
+  skillMilestoneType: 1
   displayName: Evasion
   description: Max Health + 100
   icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}

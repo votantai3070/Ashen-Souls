@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
   m_Name: Skill buff - Vitality - Common 1
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
-  saveId: 2337cb57d64cf374d8464a7d1b5c6976
-  skillId: 2337cb57d64cf374d8464a7d1b5c6976
+  saveId: deb790251768afb43b10444e8bb7f068
+  skillId: deb790251768afb43b10444e8bb7f068
+  skillMilestoneType: 1
   displayName: Vitality
   description: Max Health + 100
-  icon: {fileID: -1446724417, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
+  icon: {fileID: -626296528, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
   skillType: 0

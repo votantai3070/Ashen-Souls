@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
   m_Name: Skill buff - Agility - Epic 1
   m_EditorClassIdentifier: Assembly-CSharp::Skill_BuffDataSO
-  saveId: 892eb18b6d1f007448b455513b9d6ee5
-  skillId: 892eb18b6d1f007448b455513b9d6ee5
+  saveId: 06b53c02ed788f94b88b998de462a43c
+  skillId: 06b53c02ed788f94b88b998de462a43c
+  skillMilestoneType: 1
   displayName: Agility
   description: 
   icon: {fileID: 1814028019, guid: 2dce6810664a724449b5179afc6542bf, type: 3}

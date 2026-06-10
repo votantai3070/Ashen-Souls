@@ -14671,10 +14671,6 @@ MonoBehaviour:
     evasion:
       baseValue: 0
       modifiers: []
-  levelSystem:
-    maxLevel: 99
-    baseExp: 50
-    expScalingFactor: 1.5
 --- !u!114 &575607136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26895,7 +26891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI_SkillBoard
   skillsData: {fileID: 11400000, guid: bf66faf5be2010f429b7a8ede1664708, type: 2}
   cards: []
-  maxRarityAmount: 3000
+  maxRarityAmount: 10000
   maxSkillToRoll: 3
 --- !u!1 &1143405360
 GameObject:
@@ -100899,6 +100895,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1043951764277984609, guid: cb3a0130226597d48ba4402a08b617f1, type: 3}
+      propertyPath: levelSystem.baseExp
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043951764277984609, guid: cb3a0130226597d48ba4402a08b617f1, type: 3}
+      propertyPath: levelSystem.expScalingFactor
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5897814014717497360, guid: cb3a0130226597d48ba4402a08b617f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.66581

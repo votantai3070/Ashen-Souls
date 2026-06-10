@@ -25,6 +25,7 @@ public static class GameColors
     public static readonly string Rare = "#006494";
     public static readonly string Epic = "#7A39BB";
     public static readonly string Legendary = "#E8C840";
+    public static readonly string SkillCardColor = "#8B0000";
 
     // ── Soul ──────────────────────────────
     public static readonly Color Soul = HexToColor("#8A7DFF");

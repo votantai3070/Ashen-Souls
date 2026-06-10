@@ -55,7 +55,9 @@ public class UI_SkillBoard : MonoBehaviour
         {
             float rollChance = skill.GetSkillRollChance();
 
-            if (Random.Range(0, 100) < rollChance)
+            bool isMilestoneSkill = skill.skillMilestoneType == SkillMilestoneType.SkillMilestone;
+
+            if (isMilestoneSkill || Random.Range(0, 100) < rollChance)
                 possibleSkills.Add(skill);
         }
 
@@ -79,10 +81,18 @@ public class UI_SkillBoard : MonoBehaviour
     {
         availableSkills = new();
         var progress = SkillProgressManager.instance;
+        bool isMilestoneReward = LevelManager.instance.CanRewardMilestone();
 
         foreach (var skill in skillsData.skillList)
         {
+            if (skill == null) continue;
             if (progress.IsUnlocked(skill)) continue;
+
+            if (!isMilestoneReward && skill.skillMilestoneType == SkillMilestoneType.SkillMilestone)
+                continue;
+
+            if (isMilestoneReward && skill.skillMilestoneType != SkillMilestoneType.SkillMilestone)
+                continue;
 
             if (skill.prerequisiteSkill == null)
             {
@@ -105,6 +115,7 @@ public class UI_SkillBoard : MonoBehaviour
         if (rarity <= 400) return GameColors.Uncommon; // Uncommon
         if (rarity <= 600) return GameColors.Rare; // Rare
         if (rarity <= 900) return GameColors.Epic; // Epic
-        return GameColors.Legendary;               // Legendary
+        if (rarity < 1000) return GameColors.Legendary;  // Legendary
+        return GameColors.SkillCardColor; // Skill Card     
     }
 }

@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillBuff_DataSO
   saveId: 4cd8fca7a2c5e9d40b9c992d0b83cde7
   skillId: 4cd8fca7a2c5e9d40b9c992d0b83cde7
+  skillMilestoneType: 1
   displayName: Fire Ball
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: -763230067, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 11400000, guid: 4017768f60c1ddf459e991ea4216e865, type: 2}
   skillType: 7

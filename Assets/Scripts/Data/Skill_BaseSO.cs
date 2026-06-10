@@ -1,10 +1,19 @@
 using UnityEditor;
 using UnityEngine;
 
+public enum SkillMilestoneType
+{
+    SkillMilestone,
+    SkillBuff,
+}
+
 public class Skill_BaseSO : ScriptableObject
 {
     public string saveId;
     public string skillId;
+
+    [Header("Skill Milestones")]
+    public SkillMilestoneType skillMilestoneType;
 
     [Header("Skill Description")]
     public string displayName;
