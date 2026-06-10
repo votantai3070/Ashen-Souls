@@ -32,11 +32,18 @@ public class Enemy_Health : Entity_Health
         if (IsDeaded() && !rewardGiven)
         {
             base.UnBloody();
-            rewardGiven = true;
-            enemy.GetPlayer().stats.GainExp(enemy.stats.GetExpDrop());
-            dropSystem.SpawnDrop();
 
             enemy.player.TryGetComponent<ITotalSummary>(out var totalSummary);
+
+            if (enemy.enemyType == EnemyType.Boss)
+            {
+                SpawnSystem.instance.OnBossDefeated();
+            }
+
+            dropSystem.SpawnDrop();
+            rewardGiven = true;
+            enemy.GetPlayer().stats.GainExp(enemy.stats.GetExpDrop());
+
             totalSummary?.AddEnemiesKilled();
         }
     }

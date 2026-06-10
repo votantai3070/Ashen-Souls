@@ -5,6 +5,7 @@ public class Boss_WereBear : EnemyBoss
     public WereBear_IdleState idleState { get; private set; }
     public WereBear_ChaseState chaseState { get; private set; }
     public WereBear_AttackState attackState { get; private set; }
+    public WereBear_DeadState deadState { get; private set; }
 
     protected override void Awake()
     {
@@ -15,6 +16,7 @@ public class Boss_WereBear : EnemyBoss
         idleState = new WereBear_IdleState(this, stateMachine, "Idle");
         chaseState = new WereBear_ChaseState(this, stateMachine, "Chase");
         attackState = new WereBear_AttackState(this, stateMachine, "Attack");
+        deadState = new WereBear_DeadState(this, stateMachine, "Dead");
     }
 
     protected override void Start()
@@ -30,6 +32,10 @@ public class Boss_WereBear : EnemyBoss
 
     public override void TryToDieState()
     {
+        if (stateMachine.currentState == deadState)
+            return;
+
+        stateMachine.ChangeState(deadState);
     }
 
     public override void TryToHitState()

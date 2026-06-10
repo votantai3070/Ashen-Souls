@@ -32,7 +32,7 @@ public class SkillObject_SlashSword : SkillObject_Base
         size = slashSword.sizeSkill.GetValue();
 
         target = slashSword.target;
-        checkEnemyRadius = slashSword.checkEnemyRadius;
+        checkEnemyRadius = size * .8f;
         checkDamageRadius = size * .8f;
         this.duration = duration;
         attackCooldownGuard = slashSword.attackCooldownGuard;

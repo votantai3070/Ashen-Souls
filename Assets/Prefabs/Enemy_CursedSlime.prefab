@@ -443,7 +443,7 @@ MonoBehaviour:
     evasion:
       baseValue: 0
       modifiers: []
-  baseExpDrop: 20
+  baseExpDrop: 40
   expScalingPerLevel: 0.2
 --- !u!114 &2765004952775230303
 MonoBehaviour:
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
-  dropCount: 1
+  dropCount: 5
 --- !u!114 &1698685590203341087
 MonoBehaviour:
   m_ObjectHideFlags: 0

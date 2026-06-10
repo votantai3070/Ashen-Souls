@@ -16,5 +16,5 @@ MonoBehaviour:
   characterName: Knight
   animator: {fileID: 9100000, guid: 2443dc848a4034c47b2ce53001c1ac40, type: 2}
   portrait: {fileID: -2875184811977189179, guid: c5b0a38f1d25e424bb55f8fb49fa3689, type: 3}
-  skillData: {fileID: 11400000, guid: 6f93ee8d2ae5e02469fd25a468a93217, type: 2}
+  skillData: {fileID: 11400000, guid: 2b345ef22a1d7dd44bc790c06e918103, type: 2}
   defaultCharacterStat: {fileID: 11400000, guid: 88b44131fbacb964e9decefca3de8aec, type: 2}

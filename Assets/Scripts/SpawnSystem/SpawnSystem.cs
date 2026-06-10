@@ -31,6 +31,8 @@ public class SpawnSystem : MonoBehaviour
     [SerializeField] private List<GameObject> aliveEnemies = new();
 
     private WaveData currentWave;
+    private WaveData previousWave;
+    private bool hasEndedGame;
 
     private void Awake()
     {
@@ -49,6 +51,12 @@ public class SpawnSystem : MonoBehaviour
         if (currentWave != null)
         {
             UI.instance.ingameUI.waveUI.SetWaveInfo(currentWave.waveName, elapsedTime, currentWave);
+
+            if (!hasEndedGame && currentWave.isRewardWave && elapsedTime >= currentWave.endTime)
+            {
+                hasEndedGame = true;
+                UI.instance.EndGame();
+            }
         }
     }
 
@@ -57,6 +65,7 @@ public class SpawnSystem : MonoBehaviour
         elapsedTime = 0f;
         spawnTimer = 0f;
         isSpawning = true;
+        hasEndedGame = false;
 
         UpdateCurrentWave();
 
@@ -68,22 +77,15 @@ public class SpawnSystem : MonoBehaviour
 
     private void SpawningEnemy()
     {
+        elapsedTime += Time.deltaTime;
         if (!isSpawning) return;
 
-        elapsedTime += Time.deltaTime;
         aliveEnemies.RemoveAll(e => e == null || !e.activeSelf);
 
         if (elapsedTime >= totalSpawnDuration)
         {
             isSpawning = false;
             Debug.Log("Spawn phase ended!");
-            return;
-        }
-
-        if (currentWave.lastWave)
-        {
-            isSpawning = false;
-            Debug.Log("Spawn ended!");
             return;
         }
 
@@ -103,6 +105,7 @@ public class SpawnSystem : MonoBehaviour
 
     private void UpdateCurrentWave()
     {
+        previousWave = currentWave;
         currentWave = null;
 
         for (int i = 0; i < waves.Count; i++)
@@ -110,19 +113,33 @@ public class SpawnSystem : MonoBehaviour
             if (elapsedTime >= waves[i].startTime && elapsedTime < waves[i].endTime)
             {
                 currentWave = waves[i];
-                return;
+                break;
             }
-            else if (waves[i].startTime > totalSpawnDuration && waves[i].lastWave)
-            {
-                currentWave = waves[i];
-                return;
-            }
+        }
+
+        if (currentWave != null && currentWave != previousWave && currentWave.isBossWave)
+            SpawnBoss();
+
+    }
+
+    private void SpawnBoss()
+    {
+        if (currentWave.bossPrefab == null) return;
+
+        if (TryGetValidEnemySpawnPoint(out Vector2 spawnPos))
+        {
+            GameObject boss = ObjectPool.instance.Spawn(currentWave.bossPrefab.name, spawnPos, Quaternion.identity);
+            if (boss != null)
+                aliveEnemies.Add(boss);
         }
     }
 
     private void TrySpawnEnemy()
     {
         if (currentWave == null) return;
+
+        if (currentWave.isBossWave && !currentWave.spawnMinionWithBoss) return;
+
         if (aliveEnemies.Count >= currentWave.maxEnemiesAlive) return;
         if (currentWave.enemies == null || currentWave.enemies.Count == 0) return;
 
@@ -213,6 +230,60 @@ public class SpawnSystem : MonoBehaviour
 
         validPoint = Vector2.zero;
         return false;
+    }
+
+    public void OnBossDefeated()
+    {
+        KillAllAliveMinions();
+        GoToRewardPhase();
+    }
+
+    private void KillAllAliveMinions()
+    {
+        for (int i = aliveEnemies.Count - 1; i >= 0; i--)
+        {
+            GameObject enemy = aliveEnemies[i];
+            if (enemy == null) continue;
+
+            if (currentWave != null && currentWave.isBossWave && currentWave.bossPrefab != null)
+            {
+                if (enemy.name.Contains(currentWave.bossPrefab.name))
+                    continue;
+            }
+
+            enemy.GetComponent<Enemy>().TryToDieState();
+        }
+
+        aliveEnemies.RemoveAll(e => e == null || !e.activeSelf);
+    }
+
+    private void GoToRewardPhase()
+    {
+        WaveData rewardWave = null;
+
+        for (int i = 0; i < waves.Count; i++)
+        {
+            if (waves[i].isRewardWave)
+            {
+                rewardWave = waves[i];
+                break;
+            }
+        }
+
+        if (rewardWave == null)
+        {
+            isSpawning = false;
+            return;
+        }
+
+        previousWave = currentWave;
+        currentWave = rewardWave;
+
+        elapsedTime = currentWave.startTime;
+        spawnTimer = 0f;
+        nextSpawnInterval = 0f;
+
+        isSpawning = false;
     }
 
     private void SetNextInterval()

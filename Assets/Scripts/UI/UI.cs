@@ -31,6 +31,7 @@ public class UI : MonoBehaviour, IOpenUI
     public UI_UpgradeStatPointTooltip upgradeStatPointTooltip { get; private set; }
     #endregion
 
+    private bool hasEndedGame;
     private Coroutine openSummaryCo;
 
     private void Awake()
@@ -81,7 +82,7 @@ public class UI : MonoBehaviour, IOpenUI
             OnSkillSlotChange -= ingameUI.skillHolder.SetupSkillSlots;
     }
 
-    private void StopPlayerControls(bool stopControls)
+    public void StopPlayerControls(bool stopControls)
     {
         if (stopControls)
         {
@@ -166,9 +167,12 @@ public class UI : MonoBehaviour, IOpenUI
 
     public void EndGame()
     {
+        if (hasEndedGame) return;
+        hasEndedGame = true;
+
         SwitchTo(totalSummaryUI.gameObject);
         totalSummaryUI.UpdateTotalSummary();
-        StopPlayerControlIfNeeded();
+        Time.timeScale = 0f;
     }
 
     public void ReturnToMainMenu()

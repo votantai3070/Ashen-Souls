@@ -100792,10 +100792,6 @@ PrefabInstance:
       propertyPath: confinerBounds
       value: 
       objectReference: {fileID: 1257635985}
-    - target: {fileID: 6636224208332005114, guid: 1a01e79980f515d4eaf2dca11da41442, type: 3}
-      propertyPath: waves.Array.data[0].enemies.Array.data[0].prefab
-      value: 
-      objectReference: {fileID: 3968612809859968654, guid: 8abf69ca59ab109499d2d8341210b2cd, type: 3}
     - target: {fileID: 6936646080490105410, guid: 1a01e79980f515d4eaf2dca11da41442, type: 3}
       propertyPath: m_Name
       value: SPAWN SYSTEM
@@ -101197,10 +101193,6 @@ PrefabInstance:
     - target: {fileID: 1154154707009388935, guid: 9f868c57efb9bcc459a7c56780b51a5c, type: 3}
       propertyPath: m_Name
       value: EnemyBoss_WereBear
-      objectReference: {fileID: 0}
-    - target: {fileID: 1154154707009388935, guid: 9f868c57efb9bcc459a7c56780b51a5c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2910741485820433398, guid: 9f868c57efb9bcc459a7c56780b51a5c, type: 3}
       propertyPath: m_LocalPosition.x
