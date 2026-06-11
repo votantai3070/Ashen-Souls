@@ -4,9 +4,11 @@ using UnityEngine;
 public class Entity_Health : MonoBehaviour, IDamageable
 {
     public event Action OnHealthChanged;
+    public Action<int, bool> OnDamagePopup;
 
     protected Entity entity;
 
+    [SerializeField] private GameObject damagePopupPrefab;
     [Space]
     [SerializeField] protected int currentHealth;
     public bool isDead;
@@ -19,6 +21,8 @@ public class Entity_Health : MonoBehaviour, IDamageable
     protected virtual void Start()
     {
         currentHealth = (int)entity.entityStats.GetMaxHealth();
+
+        OnDamagePopup += CreateDamagePopup;
     }
 
     protected virtual void Update()
@@ -48,6 +52,9 @@ public class Entity_Health : MonoBehaviour, IDamageable
 
         if (finalDamage <= 0)
             return false;
+
+        if (damagePopupPrefab != null)
+            OnDamagePopup?.Invoke((int)finalDamage, isCrit);
 
         ITotalSummary dealer = damagedDealer.GetComponent<ITotalSummary>();
         if (dealer != null)
@@ -114,13 +121,23 @@ public class Entity_Health : MonoBehaviour, IDamageable
             return false;
         }
 
-        //if (target.entityCombat.becomeInvulnerable)
-        //{
-        //    Debug.Log("Become Invulnerable");
-        //    return false;
-        //}
-
         return true;
+    }
+
+    public void CreateDamagePopup(int damage, bool isCrit)
+    {
+        Color popupColor = isCrit ? GameColors.DamageCrit : GameColors.DamageNormal;
+
+        GameObject damagePopup = ObjectPool.instance.Spawn(
+            damagePopupPrefab.name,
+            transform.position,
+            Quaternion.identity
+        );
+
+        DamagePopup popup = damagePopup.GetComponent<DamagePopup>();
+        popup.Setup(damage.ToString(), popupColor);
+
+        ObjectPool.instance.Despawn(damagePopup, 1f);
     }
 
     public int GetCurrentHealth() => currentHealth;

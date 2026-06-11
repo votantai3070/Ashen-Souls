@@ -154,6 +154,7 @@
     <Compile Include="Assets\Scripts\UI\UI_Ingame\UI_Bar.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Boss\WereBear_AttackState.cs" />
     <Compile Include="Assets\Scripts\Interface\ISaveable.cs" />
+    <Compile Include="Assets\Scripts\DamagePopup.cs" />
     <Compile Include="Assets\Scripts\Interface\IDamageable.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillObjectEnemy_EnergyBall.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Object\BreakableObject_Base.cs" />
@@ -172,7 +173,6 @@
     <Compile Include="Assets\Scripts\Enum\StatType.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Health.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Boss\EnemyBoss_State.cs" />
-    <Compile Include="Assets\Scripts\Player_LevelMilestoneReward.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\SkillEnemy_EnergyBall.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_MoveState.cs" />

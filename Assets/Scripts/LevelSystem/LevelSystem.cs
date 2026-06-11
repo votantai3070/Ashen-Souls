@@ -8,7 +8,7 @@ public class LevelSystem
     public event Action<int> OnLevelUp;
     public event Action<float, float> OnExpChanged;
 
-    [SerializeField] private List<int> levelRewardMilestones = new() { 5, 10, 15, 20 };
+    [SerializeField] private List<int> levelRewardMilestones = new() { 5, 10, 15, 20, 25 };
 
     [Header("Config")]
     [SerializeField] private int maxLevel = 99;
