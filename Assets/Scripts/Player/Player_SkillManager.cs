@@ -11,6 +11,7 @@ public class Player_SkillManager : Entity_SkillManager, ISaveable
     public Skill_DeathDash deathDash { get; private set; }
     public Skill_SlashSword slashSword { get; private set; }
     public Skill_FireBall fireBall { get; private set; }
+    public Skill_FallingArrow fallingArrow { get; private set; }
 
     protected override void Awake()
     {
@@ -25,6 +26,7 @@ public class Player_SkillManager : Entity_SkillManager, ISaveable
         deathDash = GetComponentInChildren<Skill_DeathDash>();
         slashSword = GetComponentInChildren<Skill_SlashSword>();
         fireBall = GetComponentInChildren<Skill_FireBall>();
+        fallingArrow = GetComponentInChildren<Skill_FallingArrow>();
     }
 
     public Skill_Base GetSkillByType(SkillType type)
@@ -38,6 +40,7 @@ public class Player_SkillManager : Entity_SkillManager, ISaveable
             case SkillType.DeathDash: return deathDash;
             case SkillType.SoulSlashSword: return slashSword;
             case SkillType.FireBall: return fireBall;
+            case SkillType.FallingArrow: return fallingArrow;
 
             default:
                 Debug.Log($"Skill type {type} is not implemented yet.");

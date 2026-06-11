@@ -34,8 +34,6 @@ public class SkillObject_Base : MonoBehaviour
     protected float spawnTime;
     protected float duration;
 
-    private bool canHit;
-
     protected virtual void Awake()
     {
         col = GetComponent<Collider2D>();

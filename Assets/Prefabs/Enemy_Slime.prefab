@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 8820047833850315696}
   - component: {fileID: 5867379644220190471}
   m_Layer: 10
-  m_Name: DetectedWall
+  m_Name: DetectedWall&Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -15,7 +15,7 @@ public enum SkillType
     FireSoul, // Unleash a fiery soul blast that damages enemies in a line.
     FireBall, // Summon a fireball that explodes on impact, dealing area damage.
     SoulSlashSword, // Slash forward with a soul-infused sword, dealing damage to enemies in the path and applying a bleed effect.
-    SpriritArrow, // Shoot a spirit arrow that pierces through enemies, dealing damage and applying a debuff.
+    FallingArrow, // Shoot a spirit arrow that pierces through enemies, dealing damage and applying a debuff.
     SoulBurst, // Unleash a burst of soul energy around the character, damaging and knocking back enemies.
     DeathDash, // Dash forward, dealing damage to enemies in the path and leaving a trail of soul energy that damages enemies over time.
 

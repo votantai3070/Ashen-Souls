@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: List of skill data
   m_EditorClassIdentifier: Assembly-CSharp::Skill_ListDataSO
   skillList:
+  - {fileID: 11400000, guid: f442d17acaa5c944bbcb551ffcd21fdd, type: 2}
   - {fileID: 11400000, guid: 4017768f60c1ddf459e991ea4216e865, type: 2}
   - {fileID: 11400000, guid: f8cda36d25245d04b90e589ac332c889, type: 2}
   - {fileID: 11400000, guid: 7babedffdcf203143b53e44a9a148fd5, type: 2}
@@ -51,6 +52,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 89410ceb0892b9641b59541535ecd74b, type: 2}
   - {fileID: 11400000, guid: f46fdfa7138388642b649c281c79c1c2, type: 2}
   - {fileID: 11400000, guid: caa81fbd328ae324d88fc415c8b3f97d, type: 2}
+  - {fileID: 11400000, guid: 304153db3432fc845b892aff11df2546, type: 2}
+  - {fileID: 11400000, guid: e5808230a881e464fa3fe27d102051f8, type: 2}
+  - {fileID: 11400000, guid: 10196bd51668bb8458b88e7c8f9723b4, type: 2}
+  - {fileID: 11400000, guid: 56c3481d718796644a113bf3a4b425d2, type: 2}
+  - {fileID: 11400000, guid: 72ca6df2fcad3b44580627a4c715bd14, type: 2}
+  - {fileID: 11400000, guid: 8f942786fa5346646ae81562334a3f6d, type: 2}
+  - {fileID: 11400000, guid: 59349596284e04944ab4736ee05929f5, type: 2}
+  - {fileID: 11400000, guid: 0d3bca6e3d703014d95de5a3e143cc9c, type: 2}
+  - {fileID: 11400000, guid: 3f18d183d14b96c4188be61d6b4f6a60, type: 2}
+  - {fileID: 11400000, guid: c012281c00baf114c964a3e56059cbff, type: 2}
+  - {fileID: 11400000, guid: 29941194711af5e4c8aec7fef3c7ce25, type: 2}
+  - {fileID: 11400000, guid: 61d7f8abf7ef6b446b43272dd2f46db1, type: 2}
+  - {fileID: 11400000, guid: 4b6254fd1674226488cb5d77a982f323, type: 2}
+  - {fileID: 11400000, guid: 0583d7ed1545299438dabeb176da2476, type: 2}
+  - {fileID: 11400000, guid: 00f9bbad14d68124ea33be80c536b40b, type: 2}
+  - {fileID: 11400000, guid: f52a7c6244cdc45489a912f187459a0a, type: 2}
+  - {fileID: 11400000, guid: 18ae141e49449774aad69b2da53986a7, type: 2}
   - {fileID: 11400000, guid: 361019c5b72baf24c8262c018f98570a, type: 2}
   - {fileID: 11400000, guid: 6e874d8dcbb6bb74a879eb2c430b5881, type: 2}
   - {fileID: 11400000, guid: 6b53c6cdb5340d2498e52f39ce1a9853, type: 2}

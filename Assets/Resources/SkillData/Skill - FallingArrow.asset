@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8e413113d6c5a499648b98dc13fe60, type: 3}
+  m_Name: Skill - FallingArrow
+  m_EditorClassIdentifier: Assembly-CSharp::Skill_DataSO
+  saveId: f442d17acaa5c944bbcb551ffcd21fdd
+  skillId: f442d17acaa5c944bbcb551ffcd21fdd
+  skillMilestoneType: 0
+  displayName: Falling Arrow
+  description: 
+  icon: {fileID: 1877322410, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
+  duration: 2
+  prerequisiteSkill: {fileID: 0}
+  skillType: 9
+  cardType: 0
+  skillRarity: 1000
+  skillRollChance: 0.1
+  maxSkillRollChance: 65
+  skillObjectPrefab: {fileID: 1929615433480285770, guid: 63366280d5f920949bea57da6374e421, type: 3}
+  radius: 1.5
+  count: 1
+  speed: 10
+  size: 1
+  cooldown: 3
+  distanceToAttack: 5
+  damage: 10
+  attackCooldownGuard: 2

@@ -54,7 +54,7 @@ public class Entity_Health : MonoBehaviour, IDamageable
             return false;
 
         if (damagePopupPrefab != null)
-            OnDamagePopup?.Invoke((int)finalDamage, isCrit);
+            OnDamagePopup?.Invoke(finalDamage, isCrit);
 
         ITotalSummary dealer = damagedDealer.GetComponent<ITotalSummary>();
         if (dealer != null)

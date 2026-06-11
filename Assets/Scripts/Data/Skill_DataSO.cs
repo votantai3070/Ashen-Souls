@@ -5,9 +5,9 @@ public class Skill_DataSO : Skill_BaseSO
 {
     public GameObject skillObjectPrefab;
 
-    [Header("Spinning Sword Skill")]
-    public float orbitRadius = 1.5f;
-    public int swordCount = 3;
+    [Header("Special Skill")]
+    public float radius = 1.5f;
+    public int count = 3;
 
     [Header("Default Skill")]
     public float speed;

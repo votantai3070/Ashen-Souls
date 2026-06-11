@@ -69,7 +69,9 @@ public class Entity_Stats : MonoBehaviour
         float baseCritDamage = GetCritDamage();
 
         isCriticalHit = IsCriticalHit(baseCritChance);
-        float finalDamage = isCriticalHit ? baseDamage * baseCritDamage : baseDamage;
+
+        float critMultiplier = 1f + (baseCritDamage / 100f);
+        float finalDamage = isCriticalHit ? baseDamage * critMultiplier : baseDamage;
 
         return finalDamage;
     }
@@ -83,7 +85,8 @@ public class Entity_Stats : MonoBehaviour
 
         isCriticalHit = IsCriticalHit(baseCritChance);
 
-        float finalDamage = isCriticalHit ? baseDamage * baseCritDamage : baseDamage;
+        float critMultiplier = 1f + (baseCritDamage / 100f);
+        float finalDamage = isCriticalHit ? baseDamage * critMultiplier : baseDamage;
 
         return finalDamage;
     }

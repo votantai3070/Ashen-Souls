@@ -19,8 +19,8 @@ public class Skill_SpinningSword : Skill_Base
     {
         base.SetSkill(skillData);
 
-        swordCount.SetBaseValue(skillData.swordCount);
-        orbitRadius = skillData.orbitRadius;
+        swordCount.SetBaseValue(skillData.count);
+        orbitRadius = skillData.radius;
 
         swordPrefab = skillData.skillObjectPrefab;
     }
@@ -66,7 +66,7 @@ public class Skill_SpinningSword : Skill_Base
             StatType.Speed => speedSkill,
             StatType.Size => sizeSkill,
             StatType.AttackSpeed => attackSpeedSkill,
-            StatType.SwordCount => swordCount,
+            StatType.Count => swordCount,
             _ => null
         };
     }

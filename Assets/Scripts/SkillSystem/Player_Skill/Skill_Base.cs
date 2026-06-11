@@ -179,6 +179,4 @@ public class Skill_Base : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(targetCheck.position, checkEnemyRadius);
     }
-
-
 }

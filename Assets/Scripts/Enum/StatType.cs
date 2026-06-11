@@ -25,5 +25,5 @@ public enum StatType
     Damage,
     Speed,
     Size,
-    SwordCount,
+    Count,
 }

@@ -29516,6 +29516,7 @@ GameObject:
   - component: {fileID: 1261357905}
   - component: {fileID: 1261357906}
   - component: {fileID: 1261357907}
+  - component: {fileID: 1261357908}
   m_Layer: 0
   m_Name: Skills
   m_TagString: Untagged
@@ -29818,6 +29819,51 @@ MonoBehaviour:
     baseValue: 0
     modifiers: []
   fireBallGo: {fileID: 604700590831976314, guid: 02fdf9101e899ee4890d1bae143e5d71, type: 3}
+--- !u!114 &1261357908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261357899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f00c7be7e7f24348bbdcaa191ef51c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Skill_FallingArrow
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 64
+  target: {fileID: 0}
+  targetCheck: {fileID: 1261357900}
+  skillType: 0
+  speed: 0
+  checkEnemyRadius: 0
+  checkDamageRadius: 0
+  attackCooldownGuard: 0
+  cooldown: 0
+  duration: 5
+  currentLevel: 1
+  maxLevel: 10
+  damageSkill:
+    baseValue: 0
+    modifiers: []
+  speedSkill:
+    baseValue: 0
+    modifiers: []
+  sizeSkill:
+    baseValue: 0
+    modifiers: []
+  attackSpeedSkill:
+    baseValue: 0
+    modifiers: []
+  arrowCount:
+    baseValue: 0
+    modifiers: []
+  arrowGo: {fileID: 0}
+  createArrowPos: 5
+  minOffsetX: -2
+  maxOffsetX: 2
 --- !u!1 &1265932201
 GameObject:
   m_ObjectHideFlags: 0
@@ -46368,7 +46414,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: cc5d7c9ba75fb2d4d9b8ecc78c8f39da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100840,18 +100886,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
       propertyPath: pools.Array.size
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
       propertyPath: pools.Array.data[20].tag
       value: DamagePopup
       objectReference: {fileID: 0}
     - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
+      propertyPath: pools.Array.data[21].tag
+      value: SkillObject_FallingArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
       propertyPath: pools.Array.data[20].prefab
       value: 
       objectReference: {fileID: 5558207806145181949, guid: 4c08d95c5f2ac814d9c0dc38fa67bc78, type: 3}
     - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
+      propertyPath: pools.Array.data[21].prefab
+      value: 
+      objectReference: {fileID: 1929615433480285770, guid: 63366280d5f920949bea57da6374e421, type: 3}
+    - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
       propertyPath: pools.Array.data[20].initialSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
+      propertyPath: pools.Array.data[21].initialSize
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -100965,6 +101023,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
   m_HorizontalFit: 0
   m_VerticalFit: 0
+--- !u!1001 &4963430762140381126
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1929615433480285770, guid: 63366280d5f920949bea57da6374e421, type: 3}
+      propertyPath: m_Name
+      value: SkillObject_FallingArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932848286379014837, guid: 63366280d5f920949bea57da6374e421, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.5224533
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932848286379014837, guid: 63366280d5f920949bea57da6374e421, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.41099566
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932848286379014837, guid: 63366280d5f920949bea57da6374e421, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932848286379014837, guid: 63366280d5f920949bea57da6374e421, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932848286379014837, guid: 63366280d5f920949bea57da6374e421, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932848286379014837, guid: 63366280d5f920949bea57da6374e421, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932848286379014837, guid: 63366280d5f920949bea57da6374e421, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932848286379014837, guid: 63366280d5f920949bea57da6374e421, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932848286379014837, guid: 63366280d5f920949bea57da6374e421, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932848286379014837, guid: 63366280d5f920949bea57da6374e421, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63366280d5f920949bea57da6374e421, type: 3}
 --- !u!1001 &5168895421391938391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101380,3 +101495,4 @@ SceneRoots:
   - {fileID: 505557500284194786}
   - {fileID: 674024360}
   - {fileID: 940047350534036150}
+  - {fileID: 4963430762140381126}
