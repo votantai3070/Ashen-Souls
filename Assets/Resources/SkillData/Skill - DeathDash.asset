@@ -16,7 +16,8 @@ MonoBehaviour:
   skillId: ee41b42d9ec621249b8b0b4e32d57554
   skillMilestoneType: 0
   displayName: Death Dash
-  description: Dash forward at the speed of shadow, dealing damage along the path.
+  description: Dash forward in a deadly surge, damaging enemies you pass through
+    while becoming temporarily invulnerable.
   icon: {fileID: -1623334351, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 0.2
   prerequisiteSkill: {fileID: 0}
@@ -26,8 +27,8 @@ MonoBehaviour:
   skillRollChance: 0.1
   maxSkillRollChance: 90
   skillObjectPrefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
-  orbitRadius: 1.5
-  swordCount: 3
+  radius: 1.5
+  count: 3
   speed: 0
   size: 0
   cooldown: 3

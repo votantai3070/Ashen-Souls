@@ -16,7 +16,8 @@ MonoBehaviour:
   skillId: 7babedffdcf203143b53e44a9a148fd5
   skillMilestoneType: 0
   displayName: Soul Burst
-  description: Release pent-up soul energy in a wide burst around yourself.
+  description: Stomp the ground and release a burst of soul energy, damaging nearby
+    enemies.
   icon: {fileID: 1734541318, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
@@ -26,8 +27,8 @@ MonoBehaviour:
   skillRollChance: 0.1
   maxSkillRollChance: 90
   skillObjectPrefab: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
-  orbitRadius: 1.5
-  swordCount: 3
+  radius: 1.5
+  count: 3
   speed: 1
   size: 1
   cooldown: 5

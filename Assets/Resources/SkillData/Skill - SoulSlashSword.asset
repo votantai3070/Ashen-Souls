@@ -16,7 +16,7 @@ MonoBehaviour:
   skillId: 2b345ef22a1d7dd44bc790c06e918103
   skillMilestoneType: 0
   displayName: Slash Sword
-  description: Swing your blade in a circle, dealing damage to all nearby enemies.
+  description: Unleash a blade wave that cuts through nearby enemies.
   icon: {fileID: 477856853, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 0.5
   prerequisiteSkill: {fileID: 0}
@@ -26,8 +26,8 @@ MonoBehaviour:
   skillRollChance: 0.1
   maxSkillRollChance: 90
   skillObjectPrefab: {fileID: 586065914269715310, guid: 13389143cab4ba942af265bd38769878, type: 3}
-  orbitRadius: 1.2
-  swordCount: 1
+  radius: 1.5
+  count: 3
   speed: 0.8
   size: 1
   cooldown: 3

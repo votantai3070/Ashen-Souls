@@ -16,8 +16,8 @@ MonoBehaviour:
   skillId: f8cda36d25245d04b90e589ac332c889
   skillMilestoneType: 0
   displayName: Fire Soul Ball
-  description: Launch a fire soul toward an enemy, dealing damage and applying a
-    burn over time.
+  description: Conjure a large soul-infused fireball that crashes into the nearest
+    enemy.
   icon: {fileID: 128636590, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 5
   prerequisiteSkill: {fileID: 0}
@@ -27,8 +27,8 @@ MonoBehaviour:
   skillRollChance: 0.1
   maxSkillRollChance: 90
   skillObjectPrefab: {fileID: 1168510075856658422, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
-  orbitRadius: 1.5
-  swordCount: 3
+  radius: 1.5
+  count: 3
   speed: 4
   size: 3
   cooldown: 3

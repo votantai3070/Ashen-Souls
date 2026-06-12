@@ -16,7 +16,7 @@ MonoBehaviour:
   skillId: f442d17acaa5c944bbcb551ffcd21fdd
   skillMilestoneType: 0
   displayName: Falling Arrow
-  description: 
+  description: Call down a falling arrow from above to strike the nearest enemy.
   icon: {fileID: 1877322410, guid: 2dce6810664a724449b5179afc6542bf, type: 3}
   duration: 2
   prerequisiteSkill: {fileID: 0}

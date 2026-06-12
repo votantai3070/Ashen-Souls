@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.0025999546, y: 0.0097}
+  m_SizeDelta: {x: -0.4457, y: -0.2018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4650878697631457238
 CanvasRenderer:
@@ -234,7 +234,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   showTargetEnemies: []
-  attackCooldownGuard: 0.5
+  attackCooldownGuard: 0.65
   defaultImpactDuration: 0.1
   becomeInvulnerable: 0
 --- !u!114 &6446767129213381940
@@ -383,8 +383,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0026, y: 0.0097}
+  m_SizeDelta: {x: 4.5543, y: 0.2982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5885894799487212271
 CanvasRenderer:
@@ -962,11 +962,11 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 15
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
