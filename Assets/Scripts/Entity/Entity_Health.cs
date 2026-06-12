@@ -4,7 +4,7 @@ using UnityEngine;
 public class Entity_Health : MonoBehaviour, IDamageable
 {
     public event Action OnHealthChanged;
-    public Action<int, bool> OnDamagePopup;
+    public Action<string, bool, bool> OnDamagePopup;
 
     protected Entity entity;
 
@@ -54,7 +54,7 @@ public class Entity_Health : MonoBehaviour, IDamageable
             return false;
 
         if (damagePopupPrefab != null)
-            OnDamagePopup?.Invoke(finalDamage, isCrit);
+            OnDamagePopup?.Invoke(finalDamage.ToString(), isCrit, false);
 
         ITotalSummary dealer = damagedDealer.GetComponent<ITotalSummary>();
         if (dealer != null)
@@ -117,14 +117,15 @@ public class Entity_Health : MonoBehaviour, IDamageable
 
         if (evasion > UnityEngine.Random.value)
         {
-            Debug.Log("Evasion");
+            if (damagePopupPrefab != null)
+                OnDamagePopup?.Invoke("Evasion", false, true);
             return false;
         }
 
         return true;
     }
 
-    public void CreateDamagePopup(int damage, bool isCrit)
+    public void CreateDamagePopup(string text, bool isCrit, bool isEvasion)
     {
         Color popupColor = isCrit ? GameColors.DamageCrit : GameColors.DamageNormal;
 
@@ -135,7 +136,7 @@ public class Entity_Health : MonoBehaviour, IDamageable
         );
 
         DamagePopup popup = damagePopup.GetComponent<DamagePopup>();
-        popup.Setup(damage.ToString(), popupColor);
+        popup.Setup(text, popupColor, isEvasion);
 
         ObjectPool.instance.Despawn(damagePopup, 1f);
     }

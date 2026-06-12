@@ -23,7 +23,7 @@ public class DamagePopup : MonoBehaviour
         origin = transform.position;
     }
 
-    public void Setup(string damageText, Color color)
+    public void Setup(string damageText, Color color, bool isEvasion = false)
     {
         if (tmp == null)
             tmp = GetComponent<TextMeshPro>();
@@ -31,9 +31,15 @@ public class DamagePopup : MonoBehaviour
         time = 0f;
         origin = transform.position;
         baseColor = color;
+        tmp.color = baseColor;
+
+        if (isEvasion)
+        {
+            tmp.text = $"<i>{damageText}</i>";
+            return;
+        }
 
         tmp.text = damageText;
-        tmp.color = baseColor;
     }
 
     private void Update()

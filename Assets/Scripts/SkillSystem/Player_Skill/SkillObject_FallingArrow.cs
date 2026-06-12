@@ -98,7 +98,8 @@ public class SkillObject_FallingArrow : SkillObject_Base
         }
 
         if (target.GetComponent<Collider2D>() == collision)
-            DamageEnemiesInRadius(collision.transform, entity.transform, OnHitSkill);
+            DamageEnemiesInRadius(target.transform, entity.transform, OnHitSkill);
+
     }
 
     protected override void CheckDuration()

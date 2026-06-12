@@ -10,11 +10,9 @@ public class Entity_VFX : MonoBehaviour
 
     [Header("Crit Damage Vfx")]
     [SerializeField] private GameObject critDamageVfx;
-    [SerializeField] private Color critDamageColor = new Color(1f, 0.84f, 0f);
 
     [Header("Impact Vfx")]
     [SerializeField] private GameObject hitImpactVfx;
-    [SerializeField] private Color impactColor = Color.white;
 
     [Header("Damage Vfx")]
     [SerializeField] private Material damagedMat;
@@ -54,7 +52,7 @@ public class Entity_VFX : MonoBehaviour
         GameObject hitPrefab = isCrit ? critDamageVfx : hitImpactVfx;
         GameObject vfx = ObjectPool.instance.Spawn(hitPrefab.name, target.position, Quaternion.identity);
 
-        vfx.GetComponentInChildren<SpriteRenderer>().color = isCrit ? critDamageColor : impactColor;
+        vfx.GetComponentInChildren<SpriteRenderer>().color = isCrit ? GameColors.DamageCrit : GameColors.DamageNormal;
     }
 
     //public void GetElementVfx(float duration, ElementType element)

@@ -67,7 +67,13 @@ public class UI_SkillBoard : MonoBehaviour
         //Step 3: Add items to final drop list until rarity limit in entity is reached
         foreach (var skill in possibleSkills)
         {
-            if (maxRarityAmount > skill.skillRarity)
+            bool isMilestoneSkill = skill.skillMilestoneType == SkillMilestoneType.SkillMilestone;
+
+            if (isMilestoneSkill)
+            {
+                finalSkills.Add(skill);
+            }
+            else if (!isMilestoneSkill && maxRarityAmount > skill.skillRarity)
             {
                 finalSkills.Add(skill);
                 maxRarityAmount -= skill.skillRarity;

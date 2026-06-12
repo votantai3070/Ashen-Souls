@@ -28,7 +28,7 @@ MonoBehaviour:
   skillObjectPrefab: {fileID: 1929615433480285770, guid: 63366280d5f920949bea57da6374e421, type: 3}
   radius: 1.5
   count: 1
-  speed: 10
+  speed: 8
   size: 1
   cooldown: 3
   distanceToAttack: 5

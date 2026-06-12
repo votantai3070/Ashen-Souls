@@ -729,9 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Entity_VFX
   critDamageVfx: {fileID: 3991962256524217329, guid: ba9d092ac2488274d85c65015c7cb46c, type: 3}
-  critDamageColor: {r: 1, g: 0.84, b: 0, a: 1}
   hitImpactVfx: {fileID: 9171614730211571296, guid: 387b1216e46ee274fab176c7b35fb84c, type: 3}
-  impactColor: {r: 1, g: 1, b: 1, a: 1}
   damagedMat: {fileID: 2100000, guid: 6ab4b867473c3724ea468dabb06b0e45, type: 2}
   chillVfx: {r: 0, g: 0.75, b: 1, a: 1}
   fireColor: {r: 1, g: 0.27, b: 0, a: 1}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d5f2578447d014a9ea832130e204df, type: 3}
+  m_Name: Archer Character
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDataSO
+  characterId: 3
+  characterName: Archer
+  animator: {fileID: 22100000, guid: 075a576bde6de494bbd0ed3bd2347c1a, type: 2}
+  portrait: {fileID: 5420657165879536120, guid: 0e4f788feb68729458780d94b6a853d6, type: 3}
+  skillData: {fileID: 11400000, guid: f442d17acaa5c944bbcb551ffcd21fdd, type: 2}
+  defaultCharacterStat: {fileID: 11400000, guid: bfcd0d0eb710a824e9d39dc99c0f6c71, type: 2}

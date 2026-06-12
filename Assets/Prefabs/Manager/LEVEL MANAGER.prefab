@@ -45,3 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   musicGroupName: playlist_level
+  levelSystem:
+    levelRewardMilestones: 050000000a0000000f00000014000000
+    maxLevel: 99
+    baseExp: 50
+    expScalingFactor: 1.2
