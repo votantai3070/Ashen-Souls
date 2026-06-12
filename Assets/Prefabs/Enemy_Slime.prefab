@@ -204,6 +204,7 @@ MonoBehaviour:
   showTargetEnemies: []
   attackCooldownGuard: 0.5
   defaultImpactDuration: 0.1
+  becomeInvulnerable: 0
 --- !u!114 &4410601603728900705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +220,8 @@ MonoBehaviour:
   damagePopupPrefab: {fileID: 5558207806145181949, guid: 4c08d95c5f2ac814d9c0dc38fa67bc78, type: 3}
   currentHealth: 0
   isDead: 0
+  healthBar: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!114 &5377813416737006577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,7 +526,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1690453453
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -7854738478779454800, guid: 4d4b15797be62134aa996d0ed55a3f0a, type: 3}

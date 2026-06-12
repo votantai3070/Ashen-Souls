@@ -74,6 +74,8 @@ public class UI : MonoBehaviour, IOpenUI
         OnPlayerSet?.Invoke();
 
         ingameUI.skillHolder.SetupSkillSlots();
+
+        ingameUI.Bind(player);
     }
 
     private void OnDestroy()

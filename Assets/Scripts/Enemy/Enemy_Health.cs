@@ -1,9 +1,15 @@
+using TMPro;
 using UnityEngine;
 
 public class Enemy_Health : Entity_Health
 {
     private Enemy enemy;
     private DropSystem dropSystem;
+
+    [Header("Health Bar")]
+    [SerializeField] private UI_Bar healthBar;
+    [SerializeField] private TextMeshProUGUI healthText;
+    [Space]
     private bool rewardGiven;
 
     protected override void Awake()
@@ -12,6 +18,18 @@ public class Enemy_Health : Entity_Health
 
         enemy = GetComponent<Enemy>();
         dropSystem = GetComponent<DropSystem>();
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+        OnHealthChanged += UpdateHealthBarUI;
+        UpdateHealthBarUI();
+    }
+
+    private void OnDestroy()
+    {
+        OnHealthChanged -= UpdateHealthBarUI;
     }
 
     public override bool TakeDamage(bool isCrit, float damage, Transform damagedDealer)
@@ -26,6 +44,21 @@ public class Enemy_Health : Entity_Health
 
         return result;
     }
+
+    private void UpdateHealthBarUI()
+    {
+        if (healthBar != null)
+        {
+            float percent = currentHealth / enemy.stats.GetMaxHealth();
+            healthBar.SetFill(percent);
+        }
+
+        if (healthText != null)
+        {
+            healthText.text = currentHealth.ToString();
+        }
+    }
+
 
     protected override void UnBloody()
     {

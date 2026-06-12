@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class UI_Ingame : MonoBehaviour
 {
+    private Player player;
     public UI_SkillHolder skillHolder { get; private set; }
     public UI_Wave waveUI { get; private set; }
 
@@ -16,6 +17,9 @@ public class UI_Ingame : MonoBehaviour
     [SerializeField] private TextMeshProUGUI expText;
     [SerializeField] private TextMeshProUGUI levelText;
 
+    [Header("Avatar")]
+    [SerializeField] private Image avatarChar;
+
     private void Awake()
     {
         skillHolder = GetComponentInChildren<UI_SkillHolder>(true);
@@ -23,12 +27,47 @@ public class UI_Ingame : MonoBehaviour
 
         if (expBar == null)
             expBar = GetComponentInParent<UI_Bar>();
+
     }
 
     private void Start()
     {
-        UI.instance.player.health.OnHealthChanged += UpdateHealthBar;
+        player.health.OnHealthChanged += UpdateHealthBar;
         UpdateHealthBar();
+    }
+
+    public void Bind(Player newPlayer)
+    {
+        player = newPlayer;
+
+        if (player == null)
+            return;
+
+        player.OnAvatarCharChanged += UpdateAvatarCharacter;
+
+        if (player.playerData != null)
+            UpdateAvatarCharacter(player.playerData);
+    }
+
+
+    public void Unbind()
+    {
+        if (player == null) return;
+
+        player.OnAvatarCharChanged -= UpdateAvatarCharacter;
+        player.health.OnHealthChanged -= UpdateHealthBar;
+        player = null;
+    }
+
+    private void OnDestroy()
+    {
+        Unbind();
+    }
+
+    private void UpdateAvatarCharacter(PlayerDataSO playerData)
+    {
+        Debug.Log("Player Data: " + playerData);
+        avatarChar.sprite = playerData.portrait;
     }
 
     public void UpdateHealthBar()

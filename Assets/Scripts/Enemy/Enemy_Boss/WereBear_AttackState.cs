@@ -33,7 +33,8 @@ public class WereBear_AttackState : WereBearBoss_State
     {
         base.Update();
 
-        wereBear.combat.PerformAttack(wereBear);
+        if (currentAttack != 3)
+            wereBear.combat.PerformAttack(wereBear);
 
         if (wereBear.canTrigger)
         {

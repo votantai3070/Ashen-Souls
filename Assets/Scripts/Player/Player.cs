@@ -1,8 +1,12 @@
+using System;
 using UnityEngine;
 
 public class Player : Entity, ITotalSummary, ISaveable
 {
+    public Action<PlayerDataSO> OnAvatarCharChanged;
+
     public Character_ListDataSO characterList;
+    public PlayerDataSO playerData;
 
     public ControlsManager controls { get; private set; }
     public Player_Combat combat { get; private set; }
@@ -107,9 +111,12 @@ public class Player : Entity, ITotalSummary, ISaveable
     {
         if (!string.IsNullOrEmpty(data.selectedCharacterId))
         {
-            PlayerDataSO characterData = characterList.GetCharacterData(data.selectedCharacterId);
-            if (characterData != null)
-                anim.runtimeAnimatorController = characterData.animator;
+            playerData = characterList.GetCharacterData(data.selectedCharacterId);
+            if (playerData != null)
+            {
+                anim.runtimeAnimatorController = playerData.animator;
+                OnAvatarCharChanged?.Invoke(playerData);
+            }
         }
     }
 

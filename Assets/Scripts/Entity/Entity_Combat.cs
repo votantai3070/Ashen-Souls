@@ -20,7 +20,7 @@ public class Entity_Combat : MonoBehaviour
     [SerializeField] private float defaultImpactDuration = .1f;
 
     private bool canHit;
-    private bool becomeInvulnerable;
+    public bool becomeInvulnerable;
     private bool attackWindow;
 
     protected virtual void Awake()
@@ -54,9 +54,6 @@ public class Entity_Combat : MonoBehaviour
                 if (hitThisAttack.Contains(damageable)) continue;
                 hitThisAttack.Add(damageable);
 
-                if (CanApplyDamage(enemy.GetComponent<Entity>()) == false)
-                    return;
-
                 float dealerDamage = entity.entityStats.GetPhysicalDamage(out bool isCriticalHit);
                 canHit = damageable.TakeDamage(isCriticalHit, dealerDamage, dealer.transform);
 
@@ -80,25 +77,6 @@ public class Entity_Combat : MonoBehaviour
                 }
             }
         }
-    }
-
-    private bool CanApplyDamage(Entity target)
-    {
-        float evasion = target.entityStats.GetEvasion();
-
-        if (evasion > Random.value)
-        {
-            Debug.Log("Evasion");
-            return false;
-        }
-
-        if (target.entityCombat.becomeInvulnerable)
-        {
-            Debug.Log("Become Invulnerable");
-            return false;
-        }
-
-        return true;
     }
 
     public virtual Collider2D[] FindAttackTarget(Transform attackArea)

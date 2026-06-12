@@ -128,7 +128,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -730829229
-  m_SortingLayer: 6
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Positions:
@@ -625,6 +625,7 @@ MonoBehaviour:
   showTargetEnemies: []
   attackCooldownGuard: 0.5
   defaultImpactDuration: 0.1
+  becomeInvulnerable: 0
 --- !u!114 &2986421873402899743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,6 +641,8 @@ MonoBehaviour:
   damagePopupPrefab: {fileID: 0}
   currentHealth: 0
   isDead: 0
+  healthBar: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!114 &4525553160033171715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,7 +880,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1690453453
-  m_SortingLayer: 8
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6945687001858032550, guid: cc0c47fc747a8c24e8d47bd7e1359e94, type: 3}

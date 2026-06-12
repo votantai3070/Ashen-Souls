@@ -122,6 +122,13 @@ public class Entity_Health : MonoBehaviour, IDamageable
             return false;
         }
 
+        if (target.entityCombat.becomeInvulnerable)
+        {
+            if (damagePopupPrefab != null)
+                OnDamagePopup?.Invoke("Invulnerable", false, true);
+            return false;
+        }
+
         return true;
     }
 

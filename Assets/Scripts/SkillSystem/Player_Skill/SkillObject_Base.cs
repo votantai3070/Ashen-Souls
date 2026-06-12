@@ -93,7 +93,6 @@ public class SkillObject_Base : MonoBehaviour
     public bool CanAttack()
     {
         bool canAttack = Time.time > lastAttackTime + attackCooldownGuard;
-        Debug.Log("Can Attack: " + canAttack);
 
         return canAttack;
     }
