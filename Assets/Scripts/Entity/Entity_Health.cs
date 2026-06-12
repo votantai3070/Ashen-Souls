@@ -127,7 +127,9 @@ public class Entity_Health : MonoBehaviour, IDamageable
 
     public void CreateDamagePopup(string text, bool isCrit, bool isEvasion)
     {
-        Color popupColor = isCrit ? GameColors.DamageCrit : GameColors.DamageNormal;
+        Color popupColor = isCrit
+            ? GameColors.DamageCrit : isEvasion
+            ? GameColors.TextEvasion : GameColors.DamageNormal;
 
         GameObject damagePopup = ObjectPool.instance.Spawn(
             damagePopupPrefab.name,
@@ -143,6 +145,5 @@ public class Entity_Health : MonoBehaviour, IDamageable
 
     public int GetCurrentHealth() => currentHealth;
     protected bool IsDeaded() => currentHealth <= 0;
-
     public void OnHealthChangedInvoke() => OnHealthChanged?.Invoke();
 }
