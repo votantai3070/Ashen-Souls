@@ -26,4 +26,5 @@ public enum StatType
     Speed,
     Size,
     Count,
+    Cooldown
 }

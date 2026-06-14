@@ -54,7 +54,7 @@ public class BreakableObject_Base : MonoBehaviour, IDamageable
 
     private void DestroyObject()
     {
-        dropSystem?.SpawnDrop();
+        dropSystem?.SpawnDrop(transform.position);
         ObjectPool.instance.Despawn(gameObject);
     }
 

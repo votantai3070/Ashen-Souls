@@ -204,9 +204,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &4319290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,9 +450,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &19513128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,9 +679,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &28787285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -808,9 +817,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &34002625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,9 +955,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &35013594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1232,9 +1247,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &50106622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1877,9 +1895,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &86145504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2355,9 +2376,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &103899291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2555,9 +2579,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &117575646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2918,9 +2945,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &130833813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3053,9 +3083,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &140746079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3188,9 +3221,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &144798187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3534,9 +3570,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &160106955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3669,9 +3708,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &163812257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3973,9 +4015,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &179663264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5036,9 +5081,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &236544753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5886,9 +5934,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &275148760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6509,9 +6560,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &297601818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6644,9 +6698,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &302433828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7043,9 +7100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &307906867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7360,9 +7420,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &311807763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7723,9 +7786,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &315382078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7858,9 +7924,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &322340397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8084,9 +8153,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &324763527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8219,9 +8291,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &330436940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8595,9 +8670,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &337401642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9056,9 +9134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &361089784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9748,9 +9829,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &393604619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9974,9 +10058,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &395098314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10109,9 +10196,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &405176933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10791,9 +10881,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &432709105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11235,9 +11328,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &446932277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11461,9 +11557,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &455309182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11905,9 +12004,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &478458496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12588,9 +12690,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &507749450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12723,9 +12828,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &513311421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13110,9 +13218,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &520297687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13747,9 +13858,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &537840835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13973,9 +14087,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &544206566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14108,9 +14225,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &547410384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14516,9 +14636,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &558986426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14879,9 +15002,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &567727401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15014,9 +15140,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &569948917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15416,9 +15545,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &584695320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15551,9 +15683,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &586969532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15823,9 +15958,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &591279859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16189,9 +16327,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &618469634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16408,9 +16549,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &620663809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16661,9 +16805,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &627087179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17088,9 +17235,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &651474058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17314,9 +17464,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &669070408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17510,9 +17663,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &685287236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17919,9 +18075,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &693107137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18054,9 +18213,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &699878670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18298,9 +18460,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &710597377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18656,9 +18821,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &724275441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18791,9 +18959,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &724936668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19064,9 +19235,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &729255869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19609,9 +19783,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &780830100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20171,9 +20348,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &810437151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20579,9 +20759,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &828558429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20959,9 +21142,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &848815341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21094,9 +21280,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &848833452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21551,9 +21740,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &873115640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22347,9 +22539,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &907240321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22482,9 +22677,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &907574691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22617,9 +22815,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &907659437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22752,9 +22953,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &919698898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22887,9 +23091,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &922165495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23798,9 +24005,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &967070831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24024,9 +24234,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &972866590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24363,9 +24576,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &988433680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24498,9 +24714,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &989031712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25257,9 +25476,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1026055798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25467,9 +25689,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1032576224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25678,9 +25903,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1046941810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25813,9 +26041,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1056507747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25948,9 +26179,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1058244406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26608,9 +26842,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1088404301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26881,9 +27118,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1104613457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27168,9 +27408,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1113577228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27440,9 +27683,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1127661808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28253,9 +28499,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1161696216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28388,9 +28637,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1164847879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28913,9 +29165,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1180194098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29476,9 +29731,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1198950156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29884,9 +30142,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1242325824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30331,9 +30592,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1261136493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30455,11 +30719,11 @@ MonoBehaviour:
   sizeSkill:
     baseValue: 0
     modifiers: []
-  attackSpeedSkill:
+  cooldownSkill:
     baseValue: 0
     modifiers: []
   soul: {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
-  speedOfSoul: 5
+  defaultSpeedOfSoul: 8
 --- !u!114 &1261357902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30495,7 +30759,7 @@ MonoBehaviour:
   sizeSkill:
     baseValue: 0
     modifiers: []
-  attackSpeedSkill:
+  cooldownSkill:
     baseValue: 0
     modifiers: []
   fireSoulGo: {fileID: 1168510075856658422, guid: 2c4d90c89e9a6a0478f0bc2f0c8721d2, type: 3}
@@ -30534,7 +30798,7 @@ MonoBehaviour:
   sizeSkill:
     baseValue: 0
     modifiers: []
-  attackSpeedSkill:
+  cooldownSkill:
     baseValue: 0
     modifiers: []
   swordCount:
@@ -30578,7 +30842,7 @@ MonoBehaviour:
   sizeSkill:
     baseValue: 0
     modifiers: []
-  attackSpeedSkill:
+  cooldownSkill:
     baseValue: 0
     modifiers: []
   soulExplodeGo: {fileID: 6166342453479778696, guid: 0a6c6af3c5234a44a936083c2012a37a, type: 3}
@@ -30617,7 +30881,7 @@ MonoBehaviour:
   sizeSkill:
     baseValue: 0
     modifiers: []
-  attackSpeedSkill:
+  cooldownSkill:
     baseValue: 0
     modifiers: []
   deadDashPrefab: {fileID: 397943091315647349, guid: 4ac0400baa0146a4db3daab47c660077, type: 3}
@@ -30657,7 +30921,7 @@ MonoBehaviour:
   sizeSkill:
     baseValue: 0
     modifiers: []
-  attackSpeedSkill:
+  cooldownSkill:
     baseValue: 0
     modifiers: []
   slashSwordGo: {fileID: 0}
@@ -30696,7 +30960,7 @@ MonoBehaviour:
   sizeSkill:
     baseValue: 0
     modifiers: []
-  attackSpeedSkill:
+  cooldownSkill:
     baseValue: 0
     modifiers: []
   fireBallGo: {fileID: 604700590831976314, guid: 02fdf9101e899ee4890d1bae143e5d71, type: 3}
@@ -30735,7 +30999,7 @@ MonoBehaviour:
   sizeSkill:
     baseValue: 0
     modifiers: []
-  attackSpeedSkill:
+  cooldownSkill:
     baseValue: 0
     modifiers: []
   arrowCount:
@@ -30831,9 +31095,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1265932205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31363,9 +31630,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1279776845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31573,9 +31843,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1283204252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31957,9 +32230,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1290310560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32183,9 +32459,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1301728952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32637,9 +32916,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1337149128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33083,9 +33365,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1348174050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33218,9 +33503,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1356843131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33520,9 +33808,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1361596195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34082,9 +34373,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1367886545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34492,9 +34786,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1386097291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34793,9 +35090,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1403331803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35247,9 +35547,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1433921376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35382,9 +35685,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1437857101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35517,9 +35823,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1438520413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35652,9 +35961,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1439403426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36095,9 +36407,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1458382830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36713,9 +37028,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1486683227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36939,9 +37257,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1493469994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37167,9 +37488,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1499277641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37606,9 +37930,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1508406701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37741,9 +38068,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1511238198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38802,9 +39132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1541893917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39119,9 +39452,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1545883705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39408,9 +39744,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1554407153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39698,9 +40037,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1564302879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40015,9 +40357,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1572553887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40150,9 +40495,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1578893418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40360,9 +40708,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1588028828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40547,6 +40898,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588744919}
   m_CullTransparentMesh: 1
+--- !u!1001 &1590559362
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1565188200101951542, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+      propertyPath: m_Name
+      value: Magnets
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565188200101951542, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961029408486864021, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.0682487
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961029408486864021, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1202462
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961029408486864021, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961029408486864021, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961029408486864021, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961029408486864021, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961029408486864021, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961029408486864021, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961029408486864021, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961029408486864021, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
 --- !u!1 &1592639601
 GameObject:
   m_ObjectHideFlags: 0
@@ -40632,9 +41044,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1592639605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40767,9 +41182,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1596651598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41296,9 +41714,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1637800831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41431,9 +41852,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1638979006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41949,9 +42373,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1667791210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42175,9 +42602,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1678816142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42447,9 +42877,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1693299016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42582,9 +43015,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1694320558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43226,9 +43662,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1706953322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43361,9 +43800,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1733157531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43496,9 +43938,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1734067048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43631,9 +44076,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1739662580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44205,9 +44653,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1746446510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44848,9 +45299,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1768184482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44983,9 +45437,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1775436253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45300,9 +45757,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1791648306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47544,9 +48004,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1868417564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47679,9 +48142,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1877928853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47936,7 +48402,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cc5d7c9ba75fb2d4d9b8ecc78c8f39da, type: 2}
+  - {fileID: 2100000, guid: a4bdbc88b3619894abb98172532a0093, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96022,9 +96488,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1884194981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96294,9 +96763,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1900370976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96429,9 +96901,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1901749787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96807,9 +97282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1916624955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97238,9 +97716,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1945002375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97651,9 +98132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1984872709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97786,9 +98270,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1986078813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98013,9 +98500,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &1996554303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99895,9 +100385,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &2091752661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100303,9 +100796,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &2101244714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101174,9 +101670,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
+  definitelyFallDropPrefabs: []
   dropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
+  definitelyFallDropCount: 1
   dropCount: 5
+  dropRadius: 1.5
 --- !u!114 &2146895590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102343,7 +102842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
       propertyPath: pools.Array.size
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
       propertyPath: pools.Array.data[20].tag
@@ -102354,6 +102853,10 @@ PrefabInstance:
       value: SkillObject_FallingArrow
       objectReference: {fileID: 0}
     - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
+      propertyPath: pools.Array.data[22].tag
+      value: Magnets
+      objectReference: {fileID: 0}
+    - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
       propertyPath: pools.Array.data[20].prefab
       value: 
       objectReference: {fileID: 5558207806145181949, guid: 4c08d95c5f2ac814d9c0dc38fa67bc78, type: 3}
@@ -102362,11 +102865,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1929615433480285770, guid: 63366280d5f920949bea57da6374e421, type: 3}
     - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
+      propertyPath: pools.Array.data[22].prefab
+      value: 
+      objectReference: {fileID: 1565188200101951542, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+    - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
       propertyPath: pools.Array.data[20].initialSize
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
       propertyPath: pools.Array.data[21].initialSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7291102452288045975, guid: 8b792621b831c6b45899d0b2a10f6b85, type: 3}
+      propertyPath: pools.Array.data[22].initialSize
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -102891,3 +103402,4 @@ SceneRoots:
   - {fileID: 674024360}
   - {fileID: 4963430762140381126}
   - {fileID: 1852725781}
+  - {fileID: 1590559362}

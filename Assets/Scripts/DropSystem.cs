@@ -5,8 +5,13 @@ public class DropSystem : MonoBehaviour
     private Enemy enemy;
     private BreakableObject_Base breakableObject;
 
+    [SerializeField] private GameObject[] definitelyFallDropPrefabs;
     [SerializeField] private GameObject[] dropPrefabs;
+    [SerializeField] private int definitelyFallDropCount = 1;
     [SerializeField] private int dropCount = 1;
+
+    [Space]
+    [SerializeField] private float dropRadius = 1.5f;
 
     private void Awake()
     {
@@ -14,31 +19,64 @@ public class DropSystem : MonoBehaviour
         breakableObject = GetComponent<BreakableObject_Base>();
     }
 
-    public void SpawnDrop()
+    public void SpawnDrop(Vector3 originalPos)
     {
-        if (dropPrefabs == null || dropPrefabs.Length == 0) return;
+        if (definitelyFallDropCount <= 0) return;
+
+        for (int i = 0; i < definitelyFallDropCount; i++)
+        {
+            SpawnSingleItemDefiniteDrop(originalPos);
+        }
+
         if (dropCount <= 0) return;
 
         for (int i = 0; i < dropCount; i++)
         {
-            SpawnSingleDrop();
+            SpawnSingleDrop(originalPos);
+        }
+
+    }
+
+    private void SpawnSingleItemDefiniteDrop(Vector3 originalPos)
+    {
+        foreach (var item in definitelyFallDropPrefabs)
+        {
+            if (item == null) continue;
+
+            Vector3 dropPos = GetRandomDropPosition(originalPos);
+            GameObject itemGo = ObjectPool.instance.Spawn(item.name, dropPos, Quaternion.identity);
+
+            itemGo.transform.position = dropPos;
+
+            if (itemGo.TryGetComponent(out SkillObject_Soul soul))
+            {
+                SetupSoulDrop(soul);
+            }
         }
     }
 
-    private void SpawnSingleDrop()
+    private void SpawnSingleDrop(Vector3 originalPos)
     {
+        if (dropPrefabs == null || dropPrefabs.Length == 0) return;
+
         int randomIndex = Random.Range(0, dropPrefabs.Length);
         GameObject prefab = dropPrefabs[randomIndex];
 
-        if (prefab == null) return;
+        Vector3 randomDropPos = GetRandomDropPosition(originalPos);
+        GameObject go = ObjectPool.instance.Spawn(prefab.name, randomDropPos, Quaternion.identity);
 
-        GameObject go = ObjectPool.instance.Spawn(prefab.name, transform.position, Quaternion.identity);
-        if (go == null) return;
+        go.transform.position = randomDropPos;
 
-        if (go.TryGetComponent(out SkillObject_Soul soul))
+        if (go.TryGetComponent(out SkillObject_Soul randomSoul))
         {
-            SetupSoulDrop(soul);
+            SetupSoulDrop(randomSoul);
         }
+    }
+
+    private Vector3 GetRandomDropPosition(Vector3 originalPos)
+    {
+        Vector2 randomOffset = Random.insideUnitCircle.normalized * Random.Range(0.5f, dropRadius);
+        return originalPos + new Vector3(randomOffset.x, randomOffset.y, 0f);
     }
 
     private void SetupSoulDrop(SkillObject_Soul soul)
@@ -77,7 +115,7 @@ public class DropSystem : MonoBehaviour
         soul.SetupSoul(
             player.skillManager.absorbSoul,
             canMove,
-            player.skillManager.absorbSoul.speedOfSoul,
+            player.skillManager.absorbSoul.defaultSpeedOfSoul,
             playerTransform
         );
     }

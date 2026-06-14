@@ -16,7 +16,7 @@ MonoBehaviour:
   healthRegen: 0
   attackSpeed: 1
   speed: 7
-  damage: 50
+  damage: 40
   critChance: 0
   critDamage: 0
   armorReduction: 0

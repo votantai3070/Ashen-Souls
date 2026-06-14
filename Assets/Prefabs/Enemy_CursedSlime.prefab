@@ -461,9 +461,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9458fe9d6c7dfa94784dfc37075903d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSystem
-  dropPrefabs:
+  definitelyFallDropPrefabs:
   - {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
-  dropCount: 5
+  dropPrefabs: []
+  definitelyFallDropCount: 5
+  dropCount: 0
+  dropRadius: 1.5
 --- !u!114 &1698685590203341087
 MonoBehaviour:
   m_ObjectHideFlags: 0

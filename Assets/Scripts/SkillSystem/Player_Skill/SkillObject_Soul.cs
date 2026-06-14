@@ -14,6 +14,7 @@ public class SkillObject_Soul : SkillObject_Base
 
         if (!canMoveToTarget)
         {
+
             float distance = Vector2.Distance(transform.position, target.position);
             if (distance <= checkEnemyRadius)
                 canMoveToTarget = true;
@@ -21,6 +22,7 @@ public class SkillObject_Soul : SkillObject_Base
 
         if (!canMoveToTarget)
             return;
+
 
         transform.position = Vector3.MoveTowards(
             transform.position,
@@ -49,13 +51,20 @@ public class SkillObject_Soul : SkillObject_Base
         absorbSoulManager.AbsorbSoul(this);
     }
 
+    public void SetCanMove(Transform player)
+    {
+        canMoveToTarget = true;
+        target = player.transform;
+        AbsorbSoul();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Player"))
-            return;
-
-        canMoveToTarget = true;
-        target = collision.transform;
-        AbsorbSoul();
+        if (collision.CompareTag("Player"))
+        {
+            canMoveToTarget = true;
+            target = collision.transform;
+            AbsorbSoul();
+        }
     }
 }

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillEnemy_DataSO
   saveId: 295af82011b596f4aba293808751356f
   skillId: 295af82011b596f4aba293808751356f
+  skillMilestoneType: 0
   displayName: Shockwave
   description: 
   icon: {fileID: 0}
@@ -29,7 +30,7 @@ MonoBehaviour:
     m_Bits: 128
   upgradeData:
     enemyType: 1
-    damage: 60
+    damage: 50
     cooldown: 0
     distanceToAttack: 5
     attackRadius: 10

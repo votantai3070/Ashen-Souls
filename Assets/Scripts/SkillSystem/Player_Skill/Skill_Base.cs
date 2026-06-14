@@ -29,7 +29,7 @@ public class Skill_Base : MonoBehaviour
     public Stat damageSkill;
     public Stat speedSkill;
     public Stat sizeSkill;
-    public Stat attackSpeedSkill;
+    public Stat cooldownSkill;
 
     private float lastTimeUsed;
 
@@ -56,12 +56,12 @@ public class Skill_Base : MonoBehaviour
         this.skillData = skillData;
         skillType = skillData.skillType;
 
-        attackSpeedSkill.SetBaseValue(skillData.cooldown);
+        cooldownSkill.SetBaseValue(skillData.cooldown);
         speedSkill.SetBaseValue(skillData.speed);
         sizeSkill.SetBaseValue(skillData.size);
         damageSkill.SetBaseValue(skillData.damage);
 
-        cooldown = attackSpeedSkill.GetValue();
+        cooldown = cooldownSkill.GetValue();
         checkEnemyRadius = skillData.distanceToAttack;
         checkDamageRadius = skillData.size;
         duration = skillData.duration;
@@ -110,7 +110,7 @@ public class Skill_Base : MonoBehaviour
             StatType.Damage => damageSkill,
             StatType.Speed => speedSkill,
             StatType.Size => sizeSkill,
-            StatType.AttackSpeed => attackSpeedSkill,
+            StatType.Cooldown => cooldownSkill,
             _ => null
         };
     }
@@ -120,9 +120,9 @@ public class Skill_Base : MonoBehaviour
     protected bool OnCooldown() => Time.time < lastTimeUsed + cooldown;
     public void SetSkillOnCooldown()
     {
-        if (attackSpeedSkill.GetValue() != cooldown)
+        if (cooldownSkill.GetValue() != cooldown)
         {
-            cooldown = attackSpeedSkill.GetValue();
+            cooldown = cooldownSkill.GetValue();
         }
 
         UI.instance.ingameUI.skillHolder.StartCooldownSkillSlot(skillType, cooldown);

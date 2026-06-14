@@ -124,9 +124,10 @@ GameObject:
   m_Component:
   - component: {fileID: 514162354064977459}
   - component: {fileID: 3294557559115563109}
+  - component: {fileID: 1350185284444960564}
   - component: {fileID: 1857434937596383297}
   - component: {fileID: 8751032049493259371}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SkillObject_Soul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,14 +162,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e8bada8c905ad4a8e1bd9d46ee8ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillObject_Soul
+  checkDamageRadius: 1
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
   targetCheck: {fileID: 514162354064977459}
   checkEnemyRadius: 3
-  checkDamageRadius: 1
-  attackCooldownGuard: 0.1
+  defaultImpactDuration: 0.2
   absorbSoulManager: {fileID: 0}
+--- !u!114 &1350185284444960564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2304869432924025883}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69fcd6c98dbfcaa41bc35602a77446cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemObject_Base
+  floatSpeed: 1.5
+  floatRange: 0.1
 --- !u!50 &1857434937596383297
 Rigidbody2D:
   serializedVersion: 5

@@ -65,7 +65,7 @@ public class Skill_SpinningSword : Skill_Base
             StatType.Damage => damageSkill,
             StatType.Speed => speedSkill,
             StatType.Size => sizeSkill,
-            StatType.AttackSpeed => attackSpeedSkill,
+            StatType.AttackSpeed => cooldownSkill,
             StatType.Count => swordCount,
             _ => null
         };

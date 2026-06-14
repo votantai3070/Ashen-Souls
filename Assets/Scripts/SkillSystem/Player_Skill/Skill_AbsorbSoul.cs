@@ -7,7 +7,9 @@ public class Skill_AbsorbSoul : Skill_Base
     [Header("Absorb Soul Settings")]
     public GameObject soul;
     private readonly float distance = 1f;
-    public float speedOfSoul = 5f;
+    public float defaultSpeedOfSoul = 5f;
+    [Space]
+    private bool canMove;
 
     protected override void Awake()
     {

@@ -21,7 +21,7 @@ MonoBehaviour:
   critDamage: 100
   armorReduction: 0
   armor: 0
-  evasion: 80
+  evasion: 10
   strength: 0
   agility: 0
   intelligence: 0

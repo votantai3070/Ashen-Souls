@@ -83,7 +83,7 @@ public class Skill_FallingArrow : Skill_Base
             StatType.Damage => damageSkill,
             StatType.Speed => speedSkill,
             StatType.Size => sizeSkill,
-            StatType.AttackSpeed => attackSpeedSkill,
+            StatType.AttackSpeed => cooldownSkill,
             StatType.Count => arrowCount,
             _ => null
         };

@@ -35,7 +35,7 @@ public class SkillObject_SoulBurst : SkillObject_Base
         //transform.GetComponentInChildren<Image>().color = GameColors.Soul;
 
         checkDamageRadius = size * 3f;
-        checkEnemyRadius = size * 2f;
+        checkEnemyRadius = size * 3f;
         attackCooldownGuard = soulBurstManager.attackCooldownGuard;
         duration = actualDuration;
 

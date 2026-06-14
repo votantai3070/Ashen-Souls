@@ -19,7 +19,7 @@ TagManager:
   - Obstacle
   - DetectedWall
   - DetectedWall&Enemy
-  - 
+  - InteractionItem
   - 
   - 
   - 

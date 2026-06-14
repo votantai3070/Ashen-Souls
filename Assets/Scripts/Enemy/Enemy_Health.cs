@@ -73,7 +73,7 @@ public class Enemy_Health : Entity_Health
                 SpawnSystem.instance.OnBossDefeated();
             }
 
-            dropSystem.SpawnDrop();
+            dropSystem.SpawnDrop(enemy.transform.position);
             rewardGiven = true;
             enemy.GetPlayer().stats.GainExp(enemy.stats.GetExpDrop());
 

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillEnemy_DataSO
   saveId: 420a98dd6bbae0341b8e0463e8c9ba68
   skillId: 420a98dd6bbae0341b8e0463e8c9ba68
+  skillMilestoneType: 0
   displayName: Energy Ball
   description: 
   icon: {fileID: 0}
@@ -29,7 +30,7 @@ MonoBehaviour:
     m_Bits: 128
   upgradeData:
     enemyType: 0
-    damage: 30
+    damage: 15
     cooldown: 1
     distanceToAttack: 5
     attackRadius: 1.5
