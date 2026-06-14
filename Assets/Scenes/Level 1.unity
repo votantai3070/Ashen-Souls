@@ -30723,7 +30723,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: []
   soul: {fileID: 2304869432924025883, guid: 400abfd31abe9e64590bdc316d855097, type: 3}
-  defaultSpeedOfSoul: 8
+  defaultSpeedOfSoul: 6
 --- !u!114 &1261357902
 MonoBehaviour:
   m_ObjectHideFlags: 0

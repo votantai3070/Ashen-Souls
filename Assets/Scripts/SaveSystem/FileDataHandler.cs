@@ -7,7 +7,6 @@ public class FileDataHandler
     private string fullPath;
     private bool encryptData;
     private string codeWord = "dorlaz.com";
-    private const string WebGLSaveKey = "ASHEN_SOULS_SAVE";
 
     public FileDataHandler(string dataDirPath, string dataFileName, bool encryptData)
     {
@@ -19,91 +18,87 @@ public class FileDataHandler
     {
         try
         {
+            // 1. Create direction if it doesn't exist
+            Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
+
+            // 2. Convert GameData to JSON string
             string dataToSave = JsonUtility.ToJson(gameData, true);
 
             if (encryptData)
                 dataToSave = EncryptDecrypt(dataToSave);
 
-#if UNITY_WEBGL && !UNITY_EDITOR
-            PlayerPrefs.SetString(WebGLSaveKey, dataToSave);
-            PlayerPrefs.Save();
-#else
-            Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
-
+            // 3. Open/create a new file
             using (FileStream stream = new FileStream(fullPath, FileMode.Create))
-            using (StreamWriter writer = new StreamWriter(stream))
             {
-                writer.Write(dataToSave);
+                // 4. Write the JSON text to the file
+                using (StreamWriter write = new StreamWriter(stream))
+                {
+                    write.Write(dataToSave);
+                }
             }
-#endif
 
-            Debug.Log("SAVE SUCCESS");
+            Debug.Log("JSON SAVE: " + JsonUtility.ToJson(gameData, true));
         }
         catch (Exception e)
         {
-            Debug.LogError("Error while saving data: " + fullPath + "\n" + e);
+            // Log any error that happens
+            Debug.LogError("Error on trying tto save upgradeData to file: " + fullPath + "\n" + e);
         }
     }
 
     public GameData LoadData()
     {
-        GameData loadedData = null;
+        GameData loadData = null;
 
-        try
+        // 1. Check if the save file exists
+        if (File.Exists(fullPath))
         {
-            string dataToLoad = null;
-
-#if UNITY_WEBGL && !UNITY_EDITOR
-            if (PlayerPrefs.HasKey(WebGLSaveKey))
-                dataToLoad = PlayerPrefs.GetString(WebGLSaveKey);
-#else
-            if (File.Exists(fullPath))
+            try
             {
+                string dataToLoad = "";
+
+                // 2. Open the file
                 using (FileStream stream = new FileStream(fullPath, FileMode.Open))
-                using (StreamReader reader = new StreamReader(stream))
                 {
-                    dataToLoad = reader.ReadToEnd();
+                    // 3 Read file's text content
+                    using (StreamReader reader = new StreamReader(stream))
+                    {
+                        dataToLoad = reader.ReadToEnd();
+                    }
                 }
-            }
-#endif
 
-            if (!string.IsNullOrEmpty(dataToLoad))
-            {
                 if (encryptData)
                     dataToLoad = EncryptDecrypt(dataToLoad);
 
-                loadedData = JsonUtility.FromJson<GameData>(dataToLoad);
+                // 4. Convert the JSON string back into a GameData object
+                loadData = JsonUtility.FromJson<GameData>(dataToLoad);
+            }
+
+            catch (Exception e)
+            {
+                // Log any error that happen
+                Debug.Log("Error on trying to load upgradeData from file: " + fullPath + "\n" + e);
             }
         }
-        catch (Exception e)
-        {
-            Debug.LogError("Error while loading data: " + fullPath + "\n" + e);
-        }
 
-        return loadedData;
+        return loadData;
     }
 
     public void Delete()
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        if (PlayerPrefs.HasKey(WebGLSaveKey))
-        {
-            PlayerPrefs.DeleteKey(WebGLSaveKey);
-            PlayerPrefs.Save();
-        }
-#else
         if (File.Exists(fullPath))
             File.Delete(fullPath);
-#endif
     }
 
     private string EncryptDecrypt(string data)
     {
-        char[] result = new char[data.Length];
+        string modifiedData = "";
 
         for (int i = 0; i < data.Length; i++)
-            result[i] = (char)(data[i] ^ codeWord[i % codeWord.Length]);
+        {
+            modifiedData += (char)(data[i] ^ codeWord[i % codeWord.Length]);
+        }
 
-        return new string(result);
+        return modifiedData;
     }
 }

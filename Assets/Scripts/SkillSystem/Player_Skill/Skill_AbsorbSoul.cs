@@ -6,10 +6,7 @@ public class Skill_AbsorbSoul : Skill_Base
 
     [Header("Absorb Soul Settings")]
     public GameObject soul;
-    private readonly float distance = 1f;
     public float defaultSpeedOfSoul = 5f;
-    [Space]
-    private bool canMove;
 
     protected override void Awake()
     {
@@ -37,9 +34,6 @@ public class Skill_AbsorbSoul : Skill_Base
 
     public void AbsorbSoul(SkillObject_Soul soul)
     {
-        if (Vector3.Distance(soul.transform.position, player.transform.position) > distance)
-            return;
-
         player.AddSoulsGained();
         ObjectPool.instance.Despawn(soul.gameObject);
     }
