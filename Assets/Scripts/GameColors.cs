@@ -10,6 +10,7 @@ public static class GameColors
     public static readonly Color TextHP = HexToColor("#FFD0C0");
     public static readonly Color TextLevel = HexToColor("#E8C840");
     public static readonly Color TextEvasion = HexToColor("#9AA7B0");
+    public static readonly Color TextRegenHealth = HexToColor("#53C66B");
 
     // ── Level Badge ─────────────────────────
     public static readonly Color BadgeBG = HexToColor("#1A3A6A");

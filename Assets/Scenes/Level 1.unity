@@ -15266,6 +15266,8 @@ MonoBehaviour:
   sprintSpeed: 10
   holdTimer: 0
   holdThreshold: 1
+  soulsGained: 0
+  totalSouls: 0
 --- !u!50 &575607129
 Rigidbody2D:
   serializedVersion: 5
@@ -15354,6 +15356,8 @@ MonoBehaviour:
   damagePopupPrefab: {fileID: 5558207806145181949, guid: 4c08d95c5f2ac814d9c0dc38fa67bc78, type: 3}
   currentHealth: 0
   isDead: 0
+  regenDelay: 3
+  regenHealthBuffer: 0
 --- !u!114 &575607135
 MonoBehaviour:
   m_ObjectHideFlags: 0

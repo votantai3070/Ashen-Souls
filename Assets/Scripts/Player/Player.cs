@@ -42,8 +42,8 @@ public class Player : Entity, ITotalSummary, ISaveable
         controls = ControlsManager.instance;
         skillManager = GetComponentInChildren<Player_SkillManager>();
         combat = GetComponent<Player_Combat>();
-        health = GetComponent<Player_Health>();
         stats = GetComponent<Player_Stats>();
+        health = GetComponent<Player_Health>();
         vFX = GetComponent<Player_VFX>();
         sFX = GetComponentInChildren<Player_SFX>();
 
@@ -73,27 +73,12 @@ public class Player : Entity, ITotalSummary, ISaveable
         base.Update();
     }
 
-    //public void SetupPlayer(PlayerData data)
-    //{
-    //    stats.DefaultStatSetup(data.defaultCharacterStat);
-    //    anim.runtimeAnimatorController = data.animator;
-    //}
-
     public override void TryToDieState()
     {
         if (stateMachine.currentState == deadState)
             return;
         stateMachine.ChangeState(deadState);
     }
-
-    //public void LookAttackIfNeeded()
-    //{
-    //    if (canLookAttack == false) return;
-
-    //    Vector2 lookDir = ControlsManager.instance.lookInput;
-    //    xIdleAndAttack = lookDir.x;
-    //    yIdleAndAttack = lookDir.y;
-    //}
 
     public void AddDamageDealt(float damage)
     {

@@ -4,11 +4,11 @@ using UnityEngine;
 public class Entity_Health : MonoBehaviour, IDamageable
 {
     public event Action OnHealthChanged;
-    public Action<string, bool, bool> OnDamagePopup;
+    public Action<string, bool, bool, bool> OnDamagePopup;
 
     protected Entity entity;
 
-    [SerializeField] private GameObject damagePopupPrefab;
+    [SerializeField] protected GameObject damagePopupPrefab;
     [Space]
     [SerializeField] protected int currentHealth;
     public bool isDead;
@@ -54,7 +54,7 @@ public class Entity_Health : MonoBehaviour, IDamageable
             return false;
 
         if (damagePopupPrefab != null)
-            OnDamagePopup?.Invoke(finalDamage.ToString(), isCrit, false);
+            OnDamagePopup?.Invoke(finalDamage.ToString(), isCrit, false, false);
 
         ITotalSummary dealer = damagedDealer.GetComponent<ITotalSummary>();
         if (dealer != null)
@@ -118,25 +118,26 @@ public class Entity_Health : MonoBehaviour, IDamageable
         if (evasion > UnityEngine.Random.value)
         {
             if (damagePopupPrefab != null)
-                OnDamagePopup?.Invoke("Evasion", false, true);
+                OnDamagePopup?.Invoke("Evasion", false, true, false);
             return false;
         }
 
         if (target.entityCombat.becomeInvulnerable)
         {
             if (damagePopupPrefab != null)
-                OnDamagePopup?.Invoke("Invulnerable", false, true);
+                OnDamagePopup?.Invoke("Invulnerable", false, true, false);
             return false;
         }
 
         return true;
     }
 
-    public void CreateDamagePopup(string text, bool isCrit, bool isEvasion)
+    public void CreateDamagePopup(string text, bool isCrit, bool isEvasion, bool isRegenHealth)
     {
         Color popupColor = isCrit
             ? GameColors.DamageCrit : isEvasion
-            ? GameColors.TextEvasion : GameColors.DamageNormal;
+            ? GameColors.TextEvasion : isRegenHealth
+            ? GameColors.TextRegenHealth : GameColors.DamageNormal;
 
         GameObject damagePopup = ObjectPool.instance.Spawn(
             damagePopupPrefab.name,

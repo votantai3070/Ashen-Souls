@@ -52,6 +52,12 @@ public class Entity_Stats : MonoBehaviour
     //    return totalElementalDamage * scaleFactor;
     //}
 
+    public float GetRegenHealth()
+    {
+        float baseRegenHealth = resource.regenHealth.GetValue();
+        return baseRegenHealth;
+    }
+
     public float GetSpeed()
     {
         float baseSpeed = offense.speed.GetValue();

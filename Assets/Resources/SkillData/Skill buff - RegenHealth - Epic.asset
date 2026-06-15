@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - Agility - Uncommon 4
+  m_Name: Skill buff - RegenHealth - Epic
   m_EditorClassIdentifier: Assembly-CSharp::Skill_BuffDataSO
-  saveId: 6d2a2ca54a24d96498ab1265eeb50c22
-  skillId: 6d2a2ca54a24d96498ab1265eeb50c22
+  saveId: 0e497d6877c3a994aa3285e6e8e0d49f
+  skillId: 0e497d6877c3a994aa3285e6e8e0d49f
   skillMilestoneType: 1
   displayName: Agility
   description: 
@@ -22,10 +22,10 @@ MonoBehaviour:
   prerequisiteSkill: {fileID: 0}
   skillType: 0
   cardType: 1
-  skillRarity: 150
-  skillRollChance: 75
+  skillRarity: 750
+  skillRollChance: 25.1
   maxSkillRollChance: 75
   isPercent: 0
   skillStatData:
-    type: 3
-    value: 2
+    type: 1
+    value: 4

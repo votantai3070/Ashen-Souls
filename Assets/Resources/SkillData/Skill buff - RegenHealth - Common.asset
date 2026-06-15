@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d8775b2c551252469f177a9ba648464, type: 3}
-  m_Name: Skill buff - Agility - Common 5
+  m_Name: Skill buff - RegenHealth - Common
   m_EditorClassIdentifier: Assembly-CSharp::Skill_BuffDataSO
-  saveId: e6208960217d08b47a54c9acbabf6c34
-  skillId: e6208960217d08b47a54c9acbabf6c34
+  saveId: 5d18cb533edddd1458934ee16d23bcb3
+  skillId: 5d18cb533edddd1458934ee16d23bcb3
   skillMilestoneType: 1
   displayName: Agility
   description: 
@@ -27,5 +27,5 @@ MonoBehaviour:
   maxSkillRollChance: 75
   isPercent: 0
   skillStatData:
-    type: 3
+    type: 1
     value: 1

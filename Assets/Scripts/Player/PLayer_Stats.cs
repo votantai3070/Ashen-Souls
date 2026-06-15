@@ -33,7 +33,7 @@ public class Player_Stats : Entity_Stats, ISaveable
 
         OnStatChangedInvoke();
 
-        player.health.IncreaseHealth(Mathf.RoundToInt(buff.value), buff.type);
+        player.health.IncreaseHealthByType(Mathf.RoundToInt(buff.value), buff.type);
     }
 
     private void HandleLevelUp(int newLevel)
@@ -64,7 +64,7 @@ public class Player_Stats : Entity_Stats, ISaveable
             case StatType.ArmorReduction: return 5f;
             case StatType.Damage: return 3f;
             case StatType.MaxHealth: return 20f;
-            case StatType.RegenHealth: return .1f;
+            case StatType.RegenHealth: return 1f;
             case StatType.Armor: return 5f;
             case StatType.Evasion: return 5f;
 
@@ -78,7 +78,6 @@ public class Player_Stats : Entity_Stats, ISaveable
         {
             case StatType.Speed:
             case StatType.ArmorReduction:
-            case StatType.RegenHealth:
                 return true;
 
             default: return false;
