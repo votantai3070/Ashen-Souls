@@ -2,12 +2,13 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class UI_Upgrades : MonoBehaviour
+public class UI_Upgrades : MonoBehaviour, ISaveable
 {
     public event Action OnUpgradePoints;
 
     public UI_UpgradeSlot[] upgradeSlots;
     [SerializeField] private GameObject soulsInfo;
+    public int totalSouls;
 
     private void Awake()
     {
@@ -37,11 +38,32 @@ public class UI_Upgrades : MonoBehaviour
 
     private void UpdateSoulInfo()
     {
-        soulsInfo.GetComponentInChildren<TextMeshProUGUI>().text = GameManager.instance.TotalSouls.ToString();
+        soulsInfo.GetComponentInChildren<TextMeshProUGUI>().text = totalSouls.ToString();
+    }
+
+    public void AddSouls(int souls)
+    {
+        totalSouls += souls;
+    }
+
+    public void MinusSouls(int souls)
+    {
+        totalSouls -= souls;
     }
 
     public void OnUpgradePointsInvoke()
     {
         OnUpgradePoints?.Invoke();
+    }
+
+
+    public void LoadData(GameData data)
+    {
+        totalSouls = data.souls;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.souls = totalSouls;
     }
 }

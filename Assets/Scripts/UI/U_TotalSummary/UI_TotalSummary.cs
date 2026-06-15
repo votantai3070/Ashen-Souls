@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class UI_TotalSummary : MonoBehaviour
 {
+    private UI ui;
     public UI_TotalSlot[] totalSlots;
 
     private void Awake()
     {
+        ui = GetComponentInParent<UI>();
         totalSlots = GetComponentsInChildren<UI_TotalSlot>(true);
     }
 
@@ -23,7 +25,7 @@ public class UI_TotalSummary : MonoBehaviour
                     value = FormatTime(SpawnSystem.instance.GetElapsedTime());
                     break;
                 case TotalSummaryType.SoulsGained:
-                    value = GameManager.instance.SoulsGained;
+                    value = ui.player.soulsGained;
                     break;
                 case TotalSummaryType.EnemiesKilled:
                     value = (int)GameManager.instance.TotalEnemiesKilled;

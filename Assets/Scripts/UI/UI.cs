@@ -179,8 +179,8 @@ public class UI : MonoBehaviour, IOpenUI
 
     public void ReturnToMainMenu()
     {
-        GameManager.instance.TotalSouls += GameManager.instance.SoulsGained;
-        GameManager.instance.SoulsGained = 0;
+        player.totalSouls += player.soulsGained;
+        player.soulsGained = 0;
         GameManager.instance.ChangeScene("MainMenu");
     }
 

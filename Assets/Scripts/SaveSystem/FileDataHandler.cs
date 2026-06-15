@@ -86,8 +86,13 @@ public class FileDataHandler
 
     public void Delete()
     {
+        Debug.Log("Delete path: " + fullPath);
+        Debug.Log("Exists before delete: " + File.Exists(fullPath));
+
         if (File.Exists(fullPath))
             File.Delete(fullPath);
+
+        Debug.Log("Exists after delete: " + File.Exists(fullPath));
     }
 
     private string EncryptDecrypt(string data)

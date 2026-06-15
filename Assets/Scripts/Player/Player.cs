@@ -31,6 +31,9 @@ public class Player : Entity, ITotalSummary, ISaveable
     public float sprintSpeed = 10f;
     public float holdTimer = 0f;
     public float holdThreshold = 0.2f;
+    [Space]
+    public int soulsGained;
+    public int totalSouls;
 
     protected override void Awake()
     {
@@ -99,7 +102,7 @@ public class Player : Entity, ITotalSummary, ISaveable
 
     public void AddSoulsGained()
     {
-        GameManager.instance.SoulsGained++;
+        soulsGained++;
     }
 
     public void AddEnemiesKilled()
@@ -118,9 +121,12 @@ public class Player : Entity, ITotalSummary, ISaveable
                 OnAvatarCharChanged?.Invoke(playerData);
             }
         }
+
+        totalSouls = data.souls;
     }
 
     public void SaveData(ref GameData data)
     {
+        data.souls = totalSouls;
     }
 }

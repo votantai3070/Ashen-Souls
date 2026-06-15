@@ -5,6 +5,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class UI_UpgradePointSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    private UI ui;
+
     [SerializeField] private Image connectorLine;
     [SerializeField] private Sprite connectorUnlockedSprite;
     [SerializeField] private Sprite connectorLockedSprite;
@@ -22,6 +24,7 @@ public class UI_UpgradePointSlot : MonoBehaviour, IPointerEnterHandler, IPointer
 
     private void Awake()
     {
+        ui = GetComponentInParent<UI>();
         upgradePointImage = GetComponent<Image>();
     }
 
@@ -53,7 +56,7 @@ public class UI_UpgradePointSlot : MonoBehaviour, IPointerEnterHandler, IPointer
         if (!CanUnlock() || isUnlocked)
             return;
 
-        GameManager.instance.MinusSouls(pointCost);
+        ui.upgradesUI.MinusSouls(pointCost);
         UI.instance.upgradesUI.OnUpgradePointsInvoke();
         SetUnlocked(true);
     }
@@ -93,9 +96,9 @@ public class UI_UpgradePointSlot : MonoBehaviour, IPointerEnterHandler, IPointer
             return false;
         }
 
-        if (GameManager.instance.TotalSouls < pointCost)
+        if (ui.upgradesUI.totalSouls < pointCost)
         {
-            Debug.LogWarning($"{name}: Not enough souls to unlock. Required: {pointCost}, Available: {GameManager.instance.TotalSouls}", this);
+            Debug.LogWarning($"{name}: Not enough souls to unlock. Required: {pointCost}, Available: {ui.upgradesUI.totalSouls}", this);
             return false;
         }
 

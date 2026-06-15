@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class UI_UpgradeSlot : MonoBehaviour, ISaveable
 {
+    private UI ui;
     public StatType statType;
 
     public TextMeshProUGUI upgradeName;
@@ -10,6 +11,7 @@ public class UI_UpgradeSlot : MonoBehaviour, ISaveable
 
     private void Awake()
     {
+        ui = GetComponentInParent<UI>();
         upgradePoints = GetComponentsInChildren<UI_UpgradePointSlot>(true);
     }
 
@@ -29,7 +31,7 @@ public class UI_UpgradeSlot : MonoBehaviour, ISaveable
         foreach (var point in upgradePoints)
         {
             int soulRefunded = point.IsUnlocked() ? point.GetPointCost() : 0;
-            GameManager.instance.AddSouls(soulRefunded);
+            ui.upgradesUI.AddSouls(soulRefunded);
             point.Lock();
         }
     }

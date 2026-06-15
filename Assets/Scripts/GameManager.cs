@@ -8,8 +8,6 @@ public class GameManager : MonoBehaviour, ISaveable
 
     private bool dataLoaded;
 
-    public int SoulsGained { get; set; } = 0;
-    public int TotalSouls { get; set; } = 0;
     public float TotalDamageDealt { get; set; } = 0;
     public float TotalEnemiesKilled { get; set; } = 0;
 
@@ -70,15 +68,7 @@ public class GameManager : MonoBehaviour, ISaveable
             return FindFirstObjectByType<UI_FadeScreen>();
     }
 
-    public void AddSouls(int souls)
-    {
-        TotalSouls += souls;
-    }
 
-    public void MinusSouls(int souls)
-    {
-        TotalSouls -= souls;
-    }
 
     public void SetPlayer(Player player)
     {
@@ -88,13 +78,11 @@ public class GameManager : MonoBehaviour, ISaveable
 
     public void LoadData(GameData data)
     {
-        TotalSouls = data.souls;
         dataLoaded = true;
     }
 
     public void SaveData(ref GameData data)
     {
-        data.souls = TotalSouls;
         string currentSceneName = SceneManager.GetActiveScene().name;
 
         if (currentSceneName == "MainMenu")
