@@ -95,5 +95,4 @@ public class Player_Health : Entity_Health
             UI.instance.OpenSummary(DurationDied);
         }
     }
-
 }
