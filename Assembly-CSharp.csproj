@@ -192,6 +192,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_AttackState.cs" />
     <Compile Include="Assets\Scripts\Data\Skill_BaseSO.cs" />
     <Compile Include="Assets\Scripts\Data\Character_ListDataSO.cs" />
+    <Compile Include="Assets\Scripts\Enum\EnvironmentType.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity_SFX.cs" />
     <Compile Include="Assets\Scripts\UI\UI_SelectCharacter\UI_SelectCharacter.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Boss\WereBearBoss_State.cs" />
@@ -200,6 +201,7 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_MeleeState\EnemyMelee_IdleState.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Boss\EnemyBoss.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState\Player_SprintState.cs" />
+    <Compile Include="Assets\Scripts\EnvironmentSlot.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_SFX.cs" />
     <Compile Include="Assets\Scripts\Entity\Entity.cs" />
     <Compile Include="Assets\Scripts\UI\U_TotalSummary\UI_TotalSlot.cs" />
@@ -222,6 +224,7 @@
     <Compile Include="Assets\Scripts\Entity\EntityState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_SoulBurst.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Upgrades\UI_UpgradePointSlot.cs" />
+    <Compile Include="Assets\Scripts\EnvironmentSystem.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\Skill_AbsorbSoul.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\SkillObject_SlashSword.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Combat.cs" />

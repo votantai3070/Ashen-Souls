@@ -113,6 +113,7 @@ public class SpawnSystem : MonoBehaviour
             if (elapsedTime >= waves[i].startTime && elapsedTime < waves[i].endTime)
             {
                 currentWave = waves[i];
+                EnvironmentSystem.instance.GetRandomEnvironment();
                 break;
             }
         }
