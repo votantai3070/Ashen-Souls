@@ -70,7 +70,9 @@ public class SpawnSystem : MonoBehaviour
         UpdateCurrentWave();
 
         if (currentWave != null)
+        {
             SpawnBreakableAndObstacleObjectsAtWaveStart();
+        }
 
         SetNextInterval();
     }
@@ -105,22 +107,30 @@ public class SpawnSystem : MonoBehaviour
 
     private void UpdateCurrentWave()
     {
-        previousWave = currentWave;
-        currentWave = null;
+        WaveData newWave = null;
 
         for (int i = 0; i < waves.Count; i++)
         {
             if (elapsedTime >= waves[i].startTime && elapsedTime < waves[i].endTime)
             {
-                currentWave = waves[i];
-                EnvironmentSystem.instance.GetRandomEnvironment();
+                newWave = waves[i];
                 break;
             }
         }
 
-        if (currentWave != null && currentWave != previousWave && currentWave.isBossWave)
-            SpawnBoss();
+        if (newWave != currentWave)
+        {
+            previousWave = currentWave;
+            currentWave = newWave;
 
+            if (currentWave != null)
+            {
+                EnvironmentSystem.instance.GetRandomEnvironment();
+
+                if (currentWave.isBossWave)
+                    SpawnBoss();
+            }
+        }
     }
 
     private void SpawnBoss()

@@ -1,4 +1,4 @@
 public enum EnvironmentType
 {
-    Fog, Rain
+    None, Fog, Rain
 }
