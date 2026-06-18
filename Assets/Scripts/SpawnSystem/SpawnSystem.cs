@@ -5,6 +5,8 @@ public class SpawnSystem : MonoBehaviour
 {
     public static SpawnSystem instance;
 
+    private EnvironmentSystem environment;
+
     [SerializeField] private PolygonCollider2D confinerBounds;
 
     [Header("Spawn Settings")]
@@ -41,6 +43,8 @@ public class SpawnSystem : MonoBehaviour
 
     private void Start()
     {
+        environment = EnvironmentSystem.instance;
+
         StartSpawning();
     }
 
@@ -125,7 +129,15 @@ public class SpawnSystem : MonoBehaviour
 
             if (currentWave != null)
             {
-                EnvironmentSystem.instance.GetRandomEnvironment();
+                environment.GetRandomEnvironment();
+
+                Debug.Log("CurrentEnvironment: " + environment.CurrentEnvironment);
+
+                if (environment.CurrentEnvironment.environmentType == EnvironmentType.Rain)
+                    if (TryGetValidEnemySpawnPoint(out Vector2 spawnPos))
+                    {
+                        environment.CurrentEnvironment.SpawnTornadoByCount(spawnPos);
+                    }
 
                 if (currentWave.isBossWave)
                     SpawnBoss();

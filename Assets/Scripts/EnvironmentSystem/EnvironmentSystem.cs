@@ -8,6 +8,10 @@ public class EnvironmentSystem : MonoBehaviour
     [SerializeField] private Light2D light2D;
     [SerializeField] private EnvironmentSlot[] environmentSlots;
 
+    public EnvironmentSlot CurrentEnvironment { get; private set; }
+
+    private int previousIndex;
+
     private void Awake()
     {
         instance = this;
@@ -20,11 +24,20 @@ public class EnvironmentSystem : MonoBehaviour
         if (environmentSlots == null || environmentSlots.Length == 0)
             return;
 
-        int random = Random.Range(0, environmentSlots.Length);
+        int random;
+
+        do
+        {
+            random = Random.Range(0, environmentSlots.Length);
+        }
+        while (environmentSlots.Length > 1 && random == previousIndex);
+
+        previousIndex = random;
 
         for (int i = 0; i < environmentSlots.Length; i++)
         {
             environmentSlots[i].gameObject.SetActive(i == random);
+            CurrentEnvironment = environmentSlots[random];
         }
 
         SwitchToEnvironmentLight(environmentSlots[random].environmentType);
