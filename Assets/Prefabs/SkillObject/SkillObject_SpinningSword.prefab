@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3990599435661183462}
   - component: {fileID: 4598356630358608365}
   - component: {fileID: -4412923069133037970}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SkillObject_SpinningSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -730829229
-  m_SortingLayer: 6
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4855083040135353222, guid: a44a911bbb53cc246b2e5b904b526191, type: 3}

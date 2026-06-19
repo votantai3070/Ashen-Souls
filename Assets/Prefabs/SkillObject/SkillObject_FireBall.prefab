@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3747283088403662344}
   - component: {fileID: 5289415789525827172}
   - component: {fileID: 1991504727947026564}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SkillObject_FireBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -730829229
-  m_SortingLayer: 6
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8704788006095434069, guid: f51aa1f07aaf2af438dcd8d60fa4c215, type: 3}

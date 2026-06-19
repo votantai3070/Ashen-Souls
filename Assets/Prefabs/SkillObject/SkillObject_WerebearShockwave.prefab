@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -730829229
-  m_SortingLayer: 6
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6229439081792069522, guid: 506886b16086a0641b460530c1ac10f2, type: 3}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 4708711648465488793}
   - component: {fileID: 6020472572373903033}
   - component: {fileID: 5974432507757697583}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SkillObject_WerebearShockwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}

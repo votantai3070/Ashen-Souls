@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1943254191141631616}
   - component: {fileID: 5779329355121769984}
   - component: {fileID: 7511060482310665634}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SkillObject_SlashSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -730829229
-  m_SortingLayer: 6
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -7009910177008921706, guid: 2aca0bc3a093642408577c26c7534b6e, type: 3}

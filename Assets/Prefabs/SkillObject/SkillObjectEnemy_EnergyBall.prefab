@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3435177559589729457}
   - component: {fileID: 7877188189649032343}
   - component: {fileID: 3319866658819946732}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SkillObjectEnemy_EnergyBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,14 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a714e9862c76dca4f9014af344a4a91a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillObjectEnemy_EnergyBall
+  checkDamageRadius: 3
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
   targetCheck: {fileID: 3644426057815748430}
   checkEnemyRadius: 3
-  checkDamageRadius: 3
   defaultImpactDuration: 0.2
-  attackCooldownGuard: 0.1
 --- !u!50 &7877188189649032343
 Rigidbody2D:
   serializedVersion: 5
@@ -197,7 +196,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -730829229
-  m_SortingLayer: 6
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1446323835, guid: 13924a15bfa0974409135aa49d307575, type: 3}

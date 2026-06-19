@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2219977109176108139}
   - component: {fileID: 837175262728270496}
   - component: {fileID: 3208065793470831792}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SkillObject_FireSoul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -730829229
-  m_SortingLayer: 6
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3230212471028358374, guid: 63488dc3474c1454b95015c651f13d01, type: 3}

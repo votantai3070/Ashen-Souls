@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_Melee.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_MeleeState\EnemyMelee_ChaseState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\Skill_SoulBurst.cs" />
+    <Compile Include="Assets\Scripts\SpawnSystem\SpawnAroundPolygon.cs" />
     <Compile Include="Assets\Scripts\SpawnSystem\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy_Melee\Enemy_MeleeState\EnemyMelee_GroundState.cs" />
     <Compile Include="Assets\Scripts\SkillSystem\Player_Skill\FireSoulState\FireSoul_ShotState.cs" />
