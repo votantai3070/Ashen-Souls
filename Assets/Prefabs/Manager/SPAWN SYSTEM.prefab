@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6361478132330051926}
   - component: {fileID: 6636224208332005114}
+  - component: {fileID: 1532945614872373973}
   m_Layer: 0
   m_Name: SPAWN SYSTEM
   m_TagString: Untagged
@@ -122,7 +123,7 @@ MonoBehaviour:
   enemySpawnCheckRadius: 0.8
   blockedSpawnLayer:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 17152
   breakablePrefabs:
   - {fileID: 5635045889416784739, guid: 96e748748b205814683f62388043e405, type: 3}
   - {fileID: 3859248582534214187, guid: 64fe7c75165e34f4c90c6cfbba7f5db6, type: 3}
@@ -135,3 +136,19 @@ MonoBehaviour:
   nextSpawnInterval: 0
   elapsedTime: 0
   aliveEnemies: []
+--- !u!114 &1532945614872373973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6936646080490105410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2cc17bbb8dd25a47a33c55078eade00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnAroundPolygon
+  polygonCollider: {fileID: 0}
+  prefab: {fileID: 2675367405442133830, guid: f5fd0d6d0fafa1d4cbe37df870e2b212, type: 3}
+  spacing: 1.5
+  parent: {fileID: 0}

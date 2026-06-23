@@ -72,9 +72,6 @@ MonoBehaviour:
   - tag: Enemy_Bat
     prefab: {fileID: 8090043777706953505, guid: 4cbb210403faedd45a331964b016ba43, type: 3}
     initialSize: 3
-  - tag: Enemy_GoblinDash
-    prefab: {fileID: 3285970535671639790, guid: 2cc547d883b811240927e8e7d1bd3bb6, type: 3}
-    initialSize: 3
   - tag: VFX_OnCriticalHit
     prefab: {fileID: 3991962256524217329, guid: ba9d092ac2488274d85c65015c7cb46c, type: 3}
     initialSize: 3
@@ -104,4 +101,16 @@ MonoBehaviour:
     initialSize: 3
   - tag: EnemyBoss_WereBear
     prefab: {fileID: 1154154707009388935, guid: 9f868c57efb9bcc459a7c56780b51a5c, type: 3}
+    initialSize: 3
+  - tag: DamagePopup
+    prefab: {fileID: 5558207806145181949, guid: 4c08d95c5f2ac814d9c0dc38fa67bc78, type: 3}
+    initialSize: 3
+  - tag: SkillObject_FallingArrow
+    prefab: {fileID: 1929615433480285770, guid: 63366280d5f920949bea57da6374e421, type: 3}
+    initialSize: 3
+  - tag: Magnets
+    prefab: {fileID: 1565188200101951542, guid: 596b316d672227e48a0642aa3b7d9a04, type: 3}
+    initialSize: 3
+  - tag: Tornado
+    prefab: {fileID: 7900408240601618696, guid: 4e9632f987029d244bbdc708f97565d7, type: 3}
     initialSize: 3
